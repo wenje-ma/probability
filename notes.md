@@ -262,7 +262,7 @@ $$
 
 **例 1.6.13** (泊松分布)
 
-$Z$ 服从参数为 $\lambda$ 的**泊松分布**, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
+$Z$ 服从参数为 $\lambda$ 的**泊松分布**, 记 $Z\sim\mathrm{Possion}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
 
 **习题 2.1.10** (卷积公式)
 
@@ -340,9 +340,9 @@ $X_{n}\Rightarrow X_{\infty}$ (依分布收敛) 指分布函数 $F_{n}\left(x\ri
 
 ## 博雷尔-坎泰利引理与几乎必然收敛
 
-**记号** ($A_{n}\ \text{无穷多次}$)
+**记号** ($A_{n}\ \text{i.o.}$)
 
-$A_{n}\ \text{无穷多次}$ (无穷多次发生) 指
+$A_{n}\ \text{i.o.}$ (无穷多次发生) 指
 
 $$
 \limsup_{n}A_{n}=\cap_{n}\cup_{m\ge n}A_{m}.
@@ -350,11 +350,11 @@ $$
 
 **定理 2.3.1** (博雷尔-坎泰利引理)
 
-若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)< \infty$ 得 $N=\sum\mathbf{1}_{A_{k}}< \infty$ 几乎处处)
+若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, 则 $P\left(A_{n}\ \text{i.o.}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)< \infty$ 得 $N=\sum\mathbf{1}_{A_{k}}< \infty$ 几乎处处)
 
 **定理 2.3.7** (第二博雷尔-坎泰利引理)
 
-若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=1$. (用 $1-x\le e^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
+若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\ \text{i.o.}\right)=1$. (用 $1-x\le e^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
 
 ## 特征函数
 
