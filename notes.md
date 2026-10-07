@@ -72,19 +72,19 @@ $X$ 在 $\left(\mathbb R,\mathcal R\right)$ 上诱导的概率测度 $\mu\left(A
 
 (3) $F$ 右连续, 即 $\lim_{y\downarrow x}F\left(y\right)=F\left(x\right)$;
 
-(4) 若 $F\left(x-\right)=\lim_{y\uparrow x}F\left(y\right)$, 则 $F\left(x-\right)=P\left(X<x\right)$;
+(4) 若 $F\left(x-\right)=\lim_{y\uparrow x}F\left(y\right)$, 则 $F\left(x-\right)=P\left(X< x\right)$;
 
 (5) $P\left(X=x\right)=F\left(x\right)-F\left(x-\right)$.
 
 **定理 1.2.2** (分布函数的逆)
 
-设 $F$ 是分布函数. 定义其逆 $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)<y\right\}$, $y\in\left(0,1\right)$. 若 $U$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $F^{-1}\left(U\right)$ 以 $F$ 为分布函数. 该构造也是计算机生成随机变量的标准方法.
+设 $F$ 是分布函数. 定义其逆 $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)< y\right\}$, $y\in\left(0,1\right)$. 若 $U$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $F^{-1}\left(U\right)$ 以 $F$ 为分布函数. 该构造也是计算机生成随机变量的标准方法.
 
 ## 可测映射与可测函数
 
 **定义 1.3.1** (可测映射)
 
-设 $\left(\Omega,\mathcal F\right)$、$\left(S,\mathcal S\right)$ 为可测空间. 若对一切 $B\in\mathcal S$ 有 $X^{-1}\left(B\right)\in\mathcal F$, 则称 $X:\Omega\to S$ 为**可测映射**. 当 $S=\mathbb R^{d}$、$\mathcal S=\mathcal R^{d}$ 且 $d>1$ 时, $X$ 称为**随机向量**; $d=1$ 时称为**随机变量**.
+设 $\left(\Omega,\mathcal F\right)$、$\left(S,\mathcal S\right)$ 为可测空间. 若对一切 $B\in\mathcal S$ 有 $X^{-1}\left(B\right)\in\mathcal F$, 则称 $X:\Omega\to S$ 为**可测映射**. 当 $S=\mathbb R^{d}$、$\mathcal S=\mathcal R^{d}$ 且 $d> 1$ 时, $X$ 称为**随机向量**; $d=1$ 时称为**随机变量**.
 
 **定理 1.3.1** (可测性的生成元判据)
 
@@ -92,7 +92,7 @@ $X$ 在 $\left(\mathbb R,\mathcal R\right)$ 上诱导的概率测度 $\mu\left(A
 
 **例 1.3.2** (生成元的选择)
 
-在 $\left(\mathbb R,\mathcal R\right)$ 上, 生成元可取 $\left\{\left(-\infty,x\right]:x\in\mathbb R\right\}$ 或 $\left\{\left(-\infty,x\right):x\in\mathbb Q\right\}$; 在 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 上, 可取 $\left\{\left(a_{1},b_{1}\right)\times\cdots\times\left(a_{d},b_{d}\right):a_{i}<b_{i}\right\}$ 或开集族.
+在 $\left(\mathbb R,\mathcal R\right)$ 上, 生成元可取 $\left\{\left(-\infty,x\right]:x\in\mathbb R\right\}$ 或 $\left\{\left(-\infty,x\right):x\in\mathbb Q\right\}$; 在 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 上, 可取 $\left\{\left(a_{1},b_{1}\right)\times\cdots\times\left(a_{d},b_{d}\right):a_{i}< b_{i}\right\}$ 或开集族.
 
 **定理 1.3.4** (复合可测)
 
@@ -128,7 +128,7 @@ $\sigma\left(X\right)=\left\{\left\{X\in B\right\}:B\in\mathcal S\right\}$ 是�
 
 设 $\mu$ 是 $\left(\Omega,\mathcal F\right)$ 上的 $\sigma$-有限测度.
 
-(1) 简单函数 $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ 两两不交, $\mu\left(A_{i}\right)<\infty$) 的积分为
+(1) 简单函数 $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ 两两不交, $\mu\left(A_{i}\right)< \infty$) 的积分为
 
 $$
 \int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right);
@@ -143,10 +143,10 @@ $$
 (3) 非负可测 $f$ 的积分为
 
 $$
-\int f\,\mathrm{d}\mu=\sup\left\{\int h\,\mathrm{d}\mu:0\le h\le f,\ h\text{ 有界且 }\mu\left(\left\{h>0\right\}\right)<\infty\right\};
+\int f\,\mathrm{d}\mu=\sup\left\{\int h\,\mathrm{d}\mu:0\le h\le f,\ h\text{ 有界且 }\mu\left(\left\{h> 0\right\}\right)< \infty\right\};
 $$
 
-(4) 一般可测 $f$ 若 $\int\left|f\right|\,\mathrm{d}\mu<\infty$ 称**可积**, 则
+(4) 一般可测 $f$ 若 $\int\left|f\right|\,\mathrm{d}\mu< \infty$ 称**可积**, 则
 
 $$
 \int f\,\mathrm{d}\mu=\int f^{+}\,\mathrm{d}\mu-\int f^{-}\,\mathrm{d}\mu,
@@ -188,7 +188,7 @@ $$
 
 **定理 1.6.9** (换元公式)
 
-设 $X$ 是取值于 $\left(S,\mathcal S\right)$ 的随机元, 分布为 $\mu$ (即 $\mu\left(A\right)=P\left(X\in A\right)$). 若 $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ 可测且 $f\ge 0$ 或 $E\left|f\left(X\right)\right|<\infty$, 则
+设 $X$ 是取值于 $\left(S,\mathcal S\right)$ 的随机元, 分布为 $\mu$ (即 $\mu\left(A\right)=P\left(X\in A\right)$). 若 $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ 可测且 $f\ge 0$ 或 $E\left|f\left(X\right)\right|< \infty$, 则
 
 $$
 Ef\left(X\right)=\int_{S}f\left(y\right)\,\mu\left(\mathrm{d}y\right).
@@ -208,7 +208,7 @@ $$
 \end{aligned}
 $$
 
-若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)<\infty$, 则同样的三重等式成立 (富比尼).
+若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的三重等式成立 (富比尼).
 
 ## 独立性与数字特征
 
@@ -240,7 +240,7 @@ $$
 
 **定理 2.1.13** (独立变量的乘积期望)
 
-若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|<\infty$, 则
+若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则
 
 $$
 E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.
@@ -248,7 +248,7 @@ $$
 
 **定义 2.1.3** (不相关)
 
-若 $EX^{2},EY^{2}<\infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ **不相关**. 独立蕴含不相关, 但不相关不蕴含独立.
+若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ **不相关**. 独立蕴含不相关, 但不相关不蕴含独立.
 
 **定理 2.2.1** (不相关变量的方差可加)
 
@@ -288,38 +288,38 @@ $$
 
 **引理 2.2.13** (矩的尾部公式)
 
-若 $Y\ge 0$ 且 $p>0$, 则
+若 $Y\ge 0$ 且 $p> 0$, 则
 
 $$
-E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y>y\right)\,\mathrm{d}y.
+E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y> y\right)\,\mathrm{d}y.
 $$
 
-它是"对尾部 $P\left(Y>y\right)$ 逐层积分"思想的体现.
+它是"对尾部 $P\left(Y> y\right)$ 逐层积分"思想的体现.
 
 ## 不等式
 
 **定理 1.6.4** (切比雪夫不等式)
 
-若 $\phi:\mathbb R\to\mathbb R$ 非负、非降, $\phi\left(a\right)>0$, 则
+若 $\phi:\mathbb R\to\mathbb R$ 非负、非降, $\phi\left(a\right)> 0$, 则
 
 $$
 P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right).
 $$
 
-取 $\phi\left(x\right)=x^{2}$ 得 $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y>a\right)\le EY/a$.
+取 $\phi\left(x\right)=x^{2}$ 得 $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
 
 **引理 2.2.2** (L$^{p}$ 收敛蕴含依概率收敛)
 
-若 $p>0$ 且 $E\left|Z_{n}\right|^{p}\to 0$, 则 $Z_{n}\to 0$ 依概率. 它是切比雪夫不等式取 $\phi\left(x\right)=x^{p}$ 的直接推论.
+若 $p> 0$ 且 $E\left|Z_{n}\right|^{p}\to 0$, 则 $Z_{n}\to 0$ 依概率. 它是切比雪夫不等式取 $\phi\left(x\right)=x^{p}$ 的直接推论.
 
 ## 收敛性与大数定律
 
 **定义 2.3.1** (依概率收敛)
 
-$X_{n}\to X$ 依概率指对任意 $\epsilon>0$,
+$X_{n}\to X$ 依概率指对任意 $\epsilon> 0$,
 
 $$
-P\left(\left|X_{n}-X\right|>\epsilon\right)\to 0.
+P\left(\left|X_{n}-X\right|> \epsilon\right)\to 0.
 $$
 
 **定义 3.2.1** (依分布收敛)
@@ -328,7 +328,7 @@ $X_{n}\Rightarrow X_{\infty}$ (依分布收敛) 指分布函数 $F_{n}\left(x\ri
 
 **定理 2.2.3** (L$^{2}$ 弱大数定律)
 
-若 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C<\infty$, $S_{n}=X_{1}+\dots+X_{n}$, 则当 $n\to\infty$ 时 $S_{n}/n\to\mu$ 在 $L^{2}$ 中且依概率.
+若 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, $S_{n}=X_{1}+\dots+X_{n}$, 则当 $n\to\infty$ 时 $S_{n}/n\to\mu$ 在 $L^{2}$ 中且依概率.
 
 **定理 3.2.8** (斯科罗霍德表示)
 
@@ -350,7 +350,7 @@ $$
 
 **定理 2.3.1** (博雷尔-坎泰利引理)
 
-若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)<\infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)<\infty$ 得 $N=\sum\mathbf{1}_{A_{k}}<\infty$ 几乎处处)
+若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)< \infty$ 得 $N=\sum\mathbf{1}_{A_{k}}< \infty$ 几乎处处)
 
 **定理 2.3.7** (第二博雷尔-坎泰利引理)
 
