@@ -31,8 +31,7 @@ $$
 (1) 指示函数. 设 $g=\mathbf{1}_{B}$ ($B\in\mathcal R$), 则由假设
 
 $$
-\begin{aligned}
-&\quad\;\int\mathbf{1}_{B}\left(x\right)\,\mu\left(\mathrm{d}x\right)\\
+\begin{aligned}&\quad\;\int\mathbf{1}_{B}\left(x\right)\,\mu\left(\mathrm{d}x\right)\\
 &=\mu\left(B\right)\\
 &=\int_{B}f\left(x\right)\,\mathrm{d}x\\
 &=\int\mathbf{1}_{B}\left(x\right)f\left(x\right)\,\mathrm{d}x.
@@ -42,8 +41,7 @@ $$
 (2) 简单函数. 设 $g=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ ($c_{m}\in\mathbb R$, $B_{m}\in\mathcal R$), 由积分与期望的线性 (**定理 1.4.7**),
 
 $$
-\begin{aligned}
-&\quad\;\int g\,\mathrm{d}\mu\\
+\begin{aligned}&\quad\;\int g\,\mathrm{d}\mu\\
 &=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}\,\mathrm{d}\mu\\
 &=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}f\,\mathrm{d}x\\
 &=\int gf\,\mathrm{d}x.
@@ -53,8 +51,7 @@ $$
 (3) 非负函数. 设 $g\ge 0$, 取 $g_{n}=\left(\left[2^{n}g\right]/2^{n}\right)\wedge n$, 则 $g_{n}$ 是简单函数且 $g_{n}\uparrow g$. 由 (2) 与**定理 1.5.7** (单调收敛),
 
 $$
-\begin{aligned}
-&\quad\;\int g\,\mathrm{d}\mu\\
+\begin{aligned}&\quad\;\int g\,\mathrm{d}\mu\\
 &=\lim_{n}\int g_{n}\,\mathrm{d}\mu\\
 &=\lim_{n}\int g_{n}f\,\mathrm{d}x\\
 &=\int gf\,\mathrm{d}x.
@@ -76,8 +73,7 @@ $$
 相减得
 
 $$
-\begin{aligned}
-&\quad\;\int g\,\mathrm{d}\mu\\
+\begin{aligned}&\quad\;\int g\,\mathrm{d}\mu\\
 &=\int g^{+}\,\mathrm{d}\mu-\int g^{-}\,\mathrm{d}\mu\\
 &=\int g^{+}f\,\mathrm{d}x-\int g^{-}f\,\mathrm{d}x\\
 &=\int gf\,\mathrm{d}x.
@@ -97,8 +93,7 @@ $$
 证明
 
 $$
-\begin{aligned}
-&\quad\;\int_{X}\int_{Y}f\left(x,y\right)\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)\\
+\begin{aligned}&\quad\;\int_{X}\int_{Y}f\left(x,y\right)\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)\\
 &=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\
 &=\int_{Y}\int_{X}f\left(x,y\right)\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 \end{aligned}
@@ -115,8 +110,7 @@ $$
 故 $f$ 关于 $\nu$ 可积. 依据**定理 1.7.2** (富比尼), 可积函数 $f$ 满足
 
 $$
-\begin{aligned}
-&\quad\;\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)\\
+\begin{aligned}&\quad\;\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)\\
 &=\int_{X\times Y}f\,\mathrm{d}\nu\\
 &=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right),
 \end{aligned}

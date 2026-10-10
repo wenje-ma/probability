@@ -51,8 +51,7 @@ $$
 故
 
 $$
-\begin{aligned}
-&\quad\;\phi'\left(t\right)\\
+\begin{aligned}&\quad\;\phi'\left(t\right)\\
 &=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\left(e^{-x^{2}/2}\right)\,\mathrm{d}x\\
 &=-\int_{-\infty}^{\infty}t\cos\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x\\
 &=-t\phi\left(t\right).
@@ -62,8 +61,7 @@ $$
 第四步, 解微分方程 $\phi'\left(t\right)=-t\phi\left(t\right)$. 令 $\psi\left(t\right)=\phi\left(t\right)e^{t^{2}/2}$, 则
 
 $$
-\begin{aligned}
-&\quad\;\psi'\left(t\right)\\
+\begin{aligned}&\quad\;\psi'\left(t\right)\\
 &=e^{t^{2}/2}\left(\phi'\left(t\right)+t\phi\left(t\right)\right)\\
 &=0.
 \end{aligned}
@@ -72,8 +70,7 @@ $$
 故 $\psi$ 为常数,
 
 $$
-\begin{aligned}
-&\quad\;\psi\left(t\right)\\
+\begin{aligned}&\quad\;\psi\left(t\right)\\
 &=\psi\left(0\right)\\
 &=\phi\left(0\right)e^{0}\\
 &=1
@@ -109,8 +106,7 @@ $$
 $g\ge 0$ 且 $g\left(Y_{n}\right)\ge 0$, 由**定理 1.6.5** (法图引理):
 
 $$
-\begin{aligned}
-&\quad\;\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\\
+\begin{aligned}&\quad\;\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\\
 &\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)\\
 &=E\,g\left(Y_{\infty}\right).
 \end{aligned}

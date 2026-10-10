@@ -27,8 +27,7 @@ $$
 令 $N\to\infty$ 得
 
 $$
-\begin{aligned}
-&\quad\;\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)\\
+\begin{aligned}&\quad\;\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)\\
 &=P\left(\cap_{n}A_{n}^{c}\right)\\
 &=0.
 \end{aligned}
@@ -67,8 +66,7 @@ $$
 蕴含
 
 $$
-\begin{aligned}
-&\quad\;P\left(X_{n}>A\ \text{无穷多次}\right)\\
+\begin{aligned}&\quad\;P\left(X_{n}>A\ \text{无穷多次}\right)\\
 &\le P\left(\sup_{n}X_{n}>A\right)\\
 &=1-P\left(\sup_{n}X_{n}\le A\right)\\
 &<1.

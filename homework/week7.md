@@ -27,8 +27,7 @@ $$
 于是
 
 $$
-\begin{aligned}
-&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
+\begin{aligned}&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
 &=\int\mu\left(\left(x,x+c\right]\right)\,\mathrm{d}x\\
 &=\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x.
 \end{aligned}
@@ -49,8 +48,7 @@ $$
 是长度为 $c$ 的区间 $\left[y-c,y\right)$ 的勒贝格测度, 等于 $c$. 故
 
 $$
-\begin{aligned}
-&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
+\begin{aligned}&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
 &=\int c\,\mu\left(\mathrm{d}y\right)\\
 &=c\mu\left(\mathbb R\right).
 \end{aligned}
@@ -67,8 +65,7 @@ $\blacksquare$
 对任意博雷尔集 $A,B\in\mathcal R$, 记
 
 $$
-\begin{aligned}
-\left\{f\left(X\right)\in A\right\}&=\left\{X\in f^{-1}\left(A\right)\right\},\\
+\begin{aligned}\left\{f\left(X\right)\in A\right\}&=\left\{X\in f^{-1}\left(A\right)\right\},\\
 \left\{g\left(Y\right)\in B\right\}&=\left\{Y\in g^{-1}\left(B\right)\right\}.
 \end{aligned}
 $$

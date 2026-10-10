@@ -25,8 +25,7 @@ $$
 (a)(1) 因 $g\ge 0$ 且 $g\left(t\right)=0$ 当且仅当 $t=0$, 由**习题 1.4.1** (非负函数积分为零蕴含几乎处处为零),
 
 $$
-\begin{aligned}
-&\quad\;d\left(X,Y\right)\\
+\begin{aligned}&\quad\;d\left(X,Y\right)\\
 &=0\\
 &\iff E\,g\left(\left|X-Y\right|\right)=0\\
 &\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\\
@@ -54,8 +53,7 @@ $$
 (b) 先证"依概率收敛 $\Rightarrow$ 度量收敛". 设 $X_{n}\to X$ 依概率. 对 $\epsilon>0$, 因 $g\le 1$ 且在 $\left[0,\epsilon\right]$ 上 $g\le g\left(\epsilon\right)$,
 
 $$
-\begin{aligned}
-&\quad\;d\left(X_{n},X\right)\\
+\begin{aligned}&\quad\;d\left(X_{n},X\right)\\
 &=E\,g\left(\left|X_{n}-X\right|\right)\\
 &\le g\left(\epsilon\right)P\left(\left|X_{n}-X\right|\le\epsilon\right)+P\left(\left|X_{n}-X\right|>\epsilon\right)\\
 &\le g\left(\epsilon\right)+P\left(\left|X_{n}-X\right|>\epsilon\right).
@@ -79,8 +77,7 @@ $$
 由马尔可夫不等式 (**定理 1.6.4**),
 
 $$
-\begin{aligned}
-&\quad\;P\left(\left|X_{n}-X\right|>\epsilon\right)\\
+\begin{aligned}&\quad\;P\left(\left|X_{n}-X\right|>\epsilon\right)\\
 &=P\left(g\left(\left|X_{n}-X\right|\right)>g\left(\epsilon\right)\right)\\
 &\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\epsilon\right)}\\
 &=\frac{d\left(X_{n},X\right)}{g\left(\epsilon\right)}\\

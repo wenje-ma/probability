@@ -31,8 +31,7 @@ $$
 对任意博雷尔集 $A_{1},\dots,A_{n}$, 由联合密度与托内利定理 (**定理 1.7.2**, 被积函数非负可分离):
 
 $$
-\begin{aligned}
-&\quad\;P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right)\\
+\begin{aligned}&\quad\;P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right)\\
 &=\int_{A_{1}\times\cdots\times A_{n}}f\left(x\right)\,\mathrm{d}x\\
 &=\prod_{i=1}^{n}\int_{A_{i}}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}.
 \end{aligned}
@@ -47,8 +46,7 @@ $$
 而 $X_{i}$ 的边缘分布为
 
 $$
-\begin{aligned}
-&\quad\;P\left(X_{i}\in A_{i}\right)\\
+\begin{aligned}&\quad\;P\left(X_{i}\in A_{i}\right)\\
 &=\int_{\mathbb R^{n}}\mathbf{1}_{A_{i}}\left(x_{i}\right)g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)\,\mathrm{d}x\\
 &=\left(\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}.
 \end{aligned}
@@ -57,8 +55,7 @@ $$
 于是
 
 $$
-\begin{aligned}
-&\quad\;\prod_{i=1}^{n}P\left(X_{i}\in A_{i}\right)\\
+\begin{aligned}&\quad\;\prod_{i=1}^{n}P\left(X_{i}\in A_{i}\right)\\
 &=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{i=1}^{n}\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\\
 &=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\left(\prod_{j=1}^{n}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\right)^{n-1}.
 \end{aligned}
@@ -67,8 +64,7 @@ $$
 因 $\prod_{j}\int_{\mathbb R}g_{j}=1$, 故
 
 $$
-\begin{aligned}
-&\quad\;\prod_{i}P\left(X_{i}\in A_{i}\right)\\
+\begin{aligned}&\quad\;\prod_{i}P\left(X_{i}\in A_{i}\right)\\
 &=\prod_{i}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\\
 &=P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right).
 \end{aligned}
@@ -85,8 +81,7 @@ $$
 先证两两不相关. 对任意正整数 $n$,
 
 $$
-\begin{aligned}
-&\quad\;EX_{n}\\
+\begin{aligned}&\quad\;EX_{n}\\
 &=\int_{0}^{1}\sin\left(2\pi n\omega\right)\,\mathrm{d}\omega\\
 &=0,
 \end{aligned}
@@ -107,8 +102,7 @@ $$
 对一切整数 $k\ne 0$ 成立 ($n\ne m$ 时 $n-m\ne 0$ 且 $n+m\ne 0$), 故
 
 $$
-\begin{aligned}
-&\quad\;EX_{n}X_{m}\\
+\begin{aligned}&\quad\;EX_{n}X_{m}\\
 &=\frac{1}{2}\int_{0}^{1}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right)\,\mathrm{d}\omega\\
 &=0\\
 &=EX_{n}EX_{m}.
@@ -126,8 +120,7 @@ $$
 即 $\omega\in\left(1/12,5/12\right)$, 故 $P\left(X_{1}>1/2\right)=\lambda\left(1/12,5/12\right)=1/3>0$; 由 $\sin\left(4\pi\omega\right)>\sqrt{3}/2$ 得
 
 $$
-\begin{aligned}
-&\quad\;P\left(X_{2}>\sqrt{3}/2\right)\\
+\begin{aligned}&\quad\;P\left(X_{2}>\sqrt{3}/2\right)\\
 &=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)\\
 &=1/6>0.
 \end{aligned}
@@ -156,8 +149,7 @@ $$
 $X,Y$ 独立且取非负整数值, 由卷积公式 (**习题 2.1.10**), 对 $n\ge 0$,
 
 $$
-\begin{aligned}
-&\quad\;P\left(X+Y=n\right)\\
+\begin{aligned}&\quad\;P\left(X+Y=n\right)\\
 &=\sum_{m=0}^{n}P\left(X=m\right)P\left(Y=n-m\right)\\
 &=\sum_{m=0}^{n}\frac{e^{-\lambda}\lambda^{m}}{m!}\cdot\frac{e^{-\mu}\mu^{n-m}}{\left(n-m\right)!}.
 \end{aligned}
@@ -166,8 +158,7 @@ $$
 提出公因子并用二项式定理:
 
 $$
-\begin{aligned}
-&\quad\;P\left(X+Y=n\right)\\
+\begin{aligned}&\quad\;P\left(X+Y=n\right)\\
 &=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\sum_{m=0}^{n}\frac{n!}{m!\left(n-m\right)!}\lambda^{m}\mu^{n-m}\\
 &=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\left(\lambda+\mu\right)^{n}.
 \end{aligned}

@@ -23,8 +23,7 @@ $$
 反设 $\mu\left(E\right)>0$, 则存在 $n$ 使 $\mu\left(E_{n}\right)>0$. 由 $f\ge\left(1/n\right)\mathbf{1}_{E_{n}}$ 及积分的单调性 (**定理 1.4.7** (1)(4)),
 
 $$
-\begin{aligned}
-&\quad\;\int f\,\mathrm{d}\mu\\
+\begin{aligned}&\quad\;\int f\,\mathrm{d}\mu\\
 &\ge\int\frac{1}{n}\mathbf{1}_{E_{n}}\,\mathrm{d}\mu\\
 &=\frac{1}{n}\mu\left(E_{n}\right)\\
 &>0,

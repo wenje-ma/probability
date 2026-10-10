@@ -43,8 +43,7 @@ $$
 另一方面, 对任意开集 $U\subset\mathbb R^{d}$, 令 $g_{U}\left(x\right)=d\left(x,U^{c}\right)$ 为 $x$ 到闭集 $U^{c}$ 的距离. 函数 $g_{U}$ 连续, 且 $g_{U}\left(x\right)>0$ 当且仅当 $x\notin U^{c}$, 即 $x\in U$. 于是
 
 $$
-\begin{aligned}
-&\quad\;U\\
+\begin{aligned}&\quad\;U\\
 &=\left\{x:g_{U}\left(x\right)>0\right\}\\
 &=g_{U}^{-1}\left(\left(0,\infty\right)\right).
 \end{aligned}

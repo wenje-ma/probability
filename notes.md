@@ -203,8 +203,7 @@ $$
 若 $f\ge 0$, 则 (托内利)
 
 $$
-\begin{aligned}
-&\quad\;\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)\\&=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\&=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
+\begin{aligned}\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)&=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\&=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 \end{aligned}
 $$
 
@@ -363,8 +362,7 @@ $$
 随机变量 $X$ 的特征函数为
 
 $$
-\begin{aligned}
-&\quad\;\phi_{X}\left(t\right)\\&=Ee^{itX}\\&=\int e^{itx}\,\mu\left(\mathrm{d}x\right),
+\begin{aligned}\phi_{X}\left(t\right)&=Ee^{itX}\\&=\int e^{itx}\,\mu\left(\mathrm{d}x\right),
 \end{aligned}
 $$
 

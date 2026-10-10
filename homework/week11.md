@@ -19,8 +19,7 @@ $$
 将 $X^{2}$ 写成二重和并按 $\max$ 重组: 使 $\max\left(i,j\right)=n$ 的有序正整数对 $\left(i,j\right)$ 恰有 $2n-1$ 个, 故
 
 $$
-\begin{aligned}
-&\quad\;X^{2}\\
+\begin{aligned}&\quad\;X^{2}\\
 &=\left(\sum_{i\ge 1}\mathbf{1}_{\left\{X\ge i\right\}}\right)\left(\sum_{j\ge 1}\mathbf{1}_{\left\{X\ge j\right\}}\right)\\
 &=\sum_{i,j\ge 1}\mathbf{1}_{\left\{X\ge\max\left(i,j\right)\right\}}\\
 &=\sum_{n\ge 1}\left(2n-1\right)\mathbf{1}_{\left\{X\ge n\right\}}.
@@ -62,8 +61,7 @@ $$
 代入 $X$ 得
 
 $$
-\begin{aligned}
-&\quad\;H\left(X\right)\\
+\begin{aligned}&\quad\;H\left(X\right)\\
 &=\int_{\left(-\infty,X\right]}h\left(y\right)\,\mathrm{d}y\\
 &=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{y\le X\right\}}\,\mathrm{d}y\\
 &=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{X\ge y\right\}}\,\mathrm{d}y.
@@ -73,8 +71,7 @@ $$
 被积函数非负, 由托内利定理 (**定理 1.7.2**) 交换期望与积分:
 
 $$
-\begin{aligned}
-&\quad\;EH\left(X\right)\\
+\begin{aligned}&\quad\;EH\left(X\right)\\
 &=\int_{-\infty}^{\infty}h\left(y\right)E\left[\mathbf{1}_{\left\{X\ge y\right\}}\right]\,\mathrm{d}y\\
 &=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
 \end{aligned}

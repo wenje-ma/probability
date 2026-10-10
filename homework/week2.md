@@ -41,8 +41,7 @@ $$
 (1) 当 $0<y<1$ 时, 由 $F\left(X\right)\le y$ 与 $X\le G\left(y\right)$ 等价,
 
 $$
-\begin{aligned}
-&\quad\;P\left(Y\le y\right)\\
+\begin{aligned}&\quad\;P\left(Y\le y\right)\\
 &=P\left(F\left(X\right)\le y\right)\\
 &=P\left(X\le G\left(y\right)\right)\\
 &=F\left(G\left(y\right)\right)\\
@@ -53,8 +52,7 @@ $$
 (2) 当 $y=0$ 时,
 
 $$
-\begin{aligned}
-&\quad\;G\left(0\right)\\
+\begin{aligned}&\quad\;G\left(0\right)\\
 &=\inf\left\{x:F\left(x\right)\ge 0\right\}\\
 &=-\infty,
 \end{aligned}
@@ -63,8 +61,7 @@ $$
 故
 
 $$
-\begin{aligned}
-&\quad\;P\left(Y\le 0\right)\\
+\begin{aligned}&\quad\;P\left(Y\le 0\right)\\
 &=P\left(F\left(X\right)=0\right)\\
 &=P\left(X\le G\left(0\right)\right)\\
 &=0;

@@ -31,8 +31,7 @@ $$
 由 $U_{1}$ 服从 $\left(0,1\right)$ 上的均匀分布及**定理 1.6.9** (换元公式),
 
 $$
-\begin{aligned}
-&\quad\;Ef\left(U_{1}\right)\\
+\begin{aligned}&\quad\;Ef\left(U_{1}\right)\\
 &=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x\\
 &=I,
 \end{aligned}
@@ -47,8 +46,7 @@ $$
 由 $U_{i}$ 独立同分布,
 
 $$
-\begin{aligned}
-&\quad\;\mathrm{var}\left(I_{n}\right)\\
+\begin{aligned}&\quad\;\mathrm{var}\left(I_{n}\right)\\
 &=\frac{1}{n}\mathrm{var}\left(f\left(U_{1}\right)\right)\\
 &\le\frac{1}{n}Ef\left(U_{1}\right)^{2}\\
 &=\frac{\sigma^{2}}{n},
@@ -58,8 +56,7 @@ $$
 其中
 
 $$
-\begin{aligned}
-&\quad\;\mathrm{var}\left(Y\right)
+\begin{aligned}&\quad\;\mathrm{var}\left(Y\right)
 &=EY^{2}-\left(EY\right)^{2}
 &\le EY^{2}.
 \end{aligned}
@@ -68,8 +65,7 @@ $$
 由切比雪夫不等式 (**定理 1.6.4**, 取 $\phi\left(x\right)=x^{2}$, 均值 $I$),
 
 $$
-\begin{aligned}
-&\quad\;P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\\
+\begin{aligned}&\quad\;P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\\
 &\le\frac{\mathrm{var}\left(I_{n}\right)}{\left(a/n^{1/2}\right)^{2}}\\
 &\le\frac{\sigma^{2}/n}{a^{2}/n}\\
 &=\frac{\sigma^{2}}{a^{2}}.
@@ -93,8 +89,7 @@ $\blacksquare$
 对任意 $\omega$, 记 $X\left(\omega\right)=N$ (非负整数). 则 $\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)=1$ 当且仅当 $k\le N$, 故
 
 $$
-\begin{aligned}
-&\quad\;\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)\\
+\begin{aligned}&\quad\;\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)\\
 &=\#\left\{k\ge 1:k\le N\right\}\\
 &=N\\
 &=X\left(\omega\right).
@@ -110,8 +105,7 @@ $$
 逐点成立. 各项非负, 由期望的单调收敛定理 (**定理 1.5.7**) 取期望:
 
 $$
-\begin{aligned}
-&\quad\;EX\\
+\begin{aligned}&\quad\;EX\\
 &=E\left[\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\right]\\
 &=\sum_{k=1}^{\infty}P\left(X\ge k\right),
 \end{aligned}
