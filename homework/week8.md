@@ -50,7 +50,7 @@ $$
 \begin{aligned}
 &\quad\;P\left(X_{i}\in A_{i}\right)\\
 &=\int_{\mathbb R^{n}}\mathbf{1}_{A_{i}}\left(x_{i}\right)g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)\,\mathrm{d}x\\
-&=\Bigl(\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\Bigr)\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}.
+&=\left(\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}.
 \end{aligned}
 $$
 
@@ -59,8 +59,8 @@ $$
 $$
 \begin{aligned}
 &\quad\;\prod_{i=1}^{n}P\left(X_{i}\in A_{i}\right)\\
-&=\Bigl(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\Bigr)\prod_{i=1}^{n}\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\\
-&=\Bigl(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\Bigr)\Bigl(\prod_{j=1}^{n}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\Bigr)^{n-1}.
+&=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{i=1}^{n}\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\\
+&=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\left(\prod_{j=1}^{n}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\right)^{n-1}.
 \end{aligned}
 $$
 
@@ -95,7 +95,7 @@ $$
 (正弦在一个整周期上的积分为零). 对 $n\ne m$, 由积化和差公式
 
 $$
-\sin\left(2\pi n\omega\right)\sin\left(2\pi m\omega\right)=\frac{1}{2}\Bigl(\cos\bigl(2\pi\left(n-m\right)\omega\bigr)-\cos\bigl(2\pi\left(n+m\right)\omega\bigr)\Bigr).
+\sin\left(2\pi n\omega\right)\sin\left(2\pi m\omega\right)=\frac{1}{2}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right).
 $$
 
 而
@@ -109,7 +109,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;EX_{n}X_{m}\\
-&=\frac{1}{2}\int_{0}^{1}\Bigl(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\Bigr)\,\mathrm{d}\omega\\
+&=\frac{1}{2}\int_{0}^{1}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right)\,\mathrm{d}\omega\\
 &=0\\
 &=EX_{n}EX_{m}.
 \end{aligned}
@@ -128,7 +128,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;P\left(X_{2}>\sqrt{3}/2\right)\\
-&=\lambda\bigl(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\bigr)\\
+&=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)\\
 &=1/6>0.
 \end{aligned}
 $$

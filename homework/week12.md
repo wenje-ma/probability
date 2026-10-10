@@ -13,7 +13,7 @@
 证明 (a)
 
 $$
-d\left(X,Y\right)=E\Bigl(\dfrac{\left|X-Y\right|}{1+\left|X-Y\right|}\Bigr)
+d\left(X,Y\right)=E\left(\dfrac{\left|X-Y\right|}{1+\left|X-Y\right|}\right)
 $$
 
 在随机变量集合上定义了一个度量, 即满足: (1) $d\left(X,Y\right)=0$ 当且仅当 $X=Y$ 几乎处处; (2) $d\left(X,Y\right)=d\left(Y,X\right)$; (3) $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$; (b) $d\left(X_{n},X\right)\to 0$ ($n\to\infty$) 当且仅当 $X_{n}\to X$ 依概率.
@@ -81,7 +81,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;P\left(\left|X_{n}-X\right|>\epsilon\right)\\
-&=P\bigl(g\left(\left|X_{n}-X\right|\right)>g\left(\epsilon\right)\bigr)\\
+&=P\left(g\left(\left|X_{n}-X\right|\right)>g\left(\epsilon\right)\right)\\
 &\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\epsilon\right)}\\
 &=\frac{d\left(X_{n},X\right)}{g\left(\epsilon\right)}\\
 &\to 0.

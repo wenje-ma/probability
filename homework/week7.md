@@ -13,7 +13,7 @@
 设 $\mu$ 是 $\mathbb R$ 上的有限测度, $F\left(x\right)=\mu\left(\left(-\infty,x\right]\right)$. 证明
 
 $$
-\int\bigl(F\left(x+c\right)-F\left(x\right)\bigr)\,\mathrm{d}x=c\mu\left(\mathbb R\right).
+\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x=c\mu\left(\mathbb R\right).
 $$
 
 ### 解答 习题一
@@ -28,7 +28,7 @@ $$
 
 $$
 \begin{aligned}
-&\quad\;\int\bigl(F\left(x+c\right)-F\left(x\right)\bigr)\,\mathrm{d}x\\
+&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
 &=\int\mu\left(\left(x,x+c\right]\right)\,\mathrm{d}x\\
 &=\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x.
 \end{aligned}
@@ -50,7 +50,7 @@ $$
 
 $$
 \begin{aligned}
-&\quad\;\int\bigl(F\left(x+c\right)-F\left(x\right)\bigr)\,\mathrm{d}x\\
+&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
 &=\int c\,\mu\left(\mathrm{d}y\right)\\
 &=c\mu\left(\mathbb R\right).
 \end{aligned}
@@ -76,13 +76,13 @@ $$
 因 $f,g$ 可测, $f^{-1}\left(A\right),g^{-1}\left(B\right)\in\mathcal R$. 由 $X,Y$ 独立的定义 (**定义 2.1.2**, 对一切博雷尔集成立),
 
 $$
-P\bigl(X\in f^{-1}\left(A\right),\,Y\in g^{-1}\left(B\right)\bigr)=P\bigl(X\in f^{-1}\left(A\right)\bigr)P\bigl(Y\in g^{-1}\left(B\right)\bigr).
+P\left(X\in f^{-1}\left(A\right),\,Y\in g^{-1}\left(B\right)\right)=P\left(X\in f^{-1}\left(A\right)\right)P\left(Y\in g^{-1}\left(B\right)\right).
 $$
 
 即
 
 $$
-P\bigl(f\left(X\right)\in A,\,g\left(Y\right)\in B\bigr)=P\bigl(f\left(X\right)\in A\bigr)P\bigl(g\left(Y\right)\in B\bigr).
+P\left(f\left(X\right)\in A,\,g\left(Y\right)\in B\right)=P\left(f\left(X\right)\in A\right)P\left(g\left(Y\right)\in B\right).
 $$
 
 由于 $A,B$ 任意, $f\left(X\right)$ 与 $g\left(Y\right)$ 独立. $\blacksquare$

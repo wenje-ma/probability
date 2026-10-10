@@ -21,14 +21,14 @@ $$
 故对每个 $N$,
 
 $$
-P\Bigl(\bigcap_{n=1}^{N}A_{n}^{c}\Bigr)=\prod_{n=1}^{N}\bigl(1-P\left(A_{n}\right)\bigr).
+P\left(\bigcap_{n=1}^{N}A_{n}^{c}\right)=\prod_{n=1}^{N}\left(1-P\left(A_{n}\right)\right).
 $$
 
 令 $N\to\infty$ 得
 
 $$
 \begin{aligned}
-&\quad\;\prod_{n=1}^{\infty}\bigl(1-P\left(A_{n}\right)\bigr)\\
+&\quad\;\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)\\
 &=P\left(\cap_{n}A_{n}^{c}\right)\\
 &=0.
 \end{aligned}

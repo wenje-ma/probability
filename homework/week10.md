@@ -17,14 +17,14 @@ $$
 $U_{1},U_{2},\dots$ 独立且均服从 $\left[0,1\right]$ 上的均匀分布,
 
 $$
-I_{n}=n^{-1}\bigl(f\left(U_{1}\right)+\dots+f\left(U_{n}\right)\bigr),
+I_{n}=n^{-1}\left(f\left(U_{1}\right)+\dots+f\left(U_{n}\right)\right),
 $$
 
 $$
 I=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x.
 $$
 
-用切比雪夫不等式估计 $P\bigl(\left|I_{n}-I\right|>a/n^{1/2}\bigr)$.
+用切比雪夫不等式估计 $P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)$.
 
 ### 解答 习题一
 
@@ -49,7 +49,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;\mathrm{var}\left(I_{n}\right)\\
-&=\frac{1}{n}\mathrm{var}\bigl(f\left(U_{1}\right)\bigr)\\
+&=\frac{1}{n}\mathrm{var}\left(f\left(U_{1}\right)\right)\\
 &\le\frac{1}{n}Ef\left(U_{1}\right)^{2}\\
 &=\frac{\sigma^{2}}{n},
 \end{aligned}
@@ -69,7 +69,7 @@ $$
 
 $$
 \begin{aligned}
-&\quad\;P\bigl(\left|I_{n}-I\right|>a/n^{1/2}\bigr)\\
+&\quad\;P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\\
 &\le\frac{\mathrm{var}\left(I_{n}\right)}{\left(a/n^{1/2}\right)^{2}}\\
 &\le\frac{\sigma^{2}/n}{a^{2}/n}\\
 &=\frac{\sigma^{2}}{a^{2}}.
@@ -79,7 +79,7 @@ $$
 即
 
 $$
-P\bigl(\left|I_{n}-I\right|>a/n^{1/2}\bigr)\le\frac{1}{a^{2}}\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x.
+P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x.
 $$
 
 $\blacksquare$
@@ -112,7 +112,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;EX\\
-&=E\Bigl[\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\Bigr]\\
+&=E\left[\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\right]\\
 &=\sum_{k=1}^{\infty}P\left(X\ge k\right),
 \end{aligned}
 $$

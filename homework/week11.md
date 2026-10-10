@@ -21,7 +21,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;X^{2}\\
-&=\Bigl(\sum_{i\ge 1}\mathbf{1}_{\left\{X\ge i\right\}}\Bigr)\Bigl(\sum_{j\ge 1}\mathbf{1}_{\left\{X\ge j\right\}}\Bigr)\\
+&=\left(\sum_{i\ge 1}\mathbf{1}_{\left\{X\ge i\right\}}\right)\left(\sum_{j\ge 1}\mathbf{1}_{\left\{X\ge j\right\}}\right)\\
 &=\sum_{i,j\ge 1}\mathbf{1}_{\left\{X\ge\max\left(i,j\right)\right\}}\\
 &=\sum_{n\ge 1}\left(2n-1\right)\mathbf{1}_{\left\{X\ge n\right\}}.
 \end{aligned}
@@ -75,7 +75,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;EH\left(X\right)\\
-&=\int_{-\infty}^{\infty}h\left(y\right)E\bigl[\mathbf{1}_{\left\{X\ge y\right\}}\bigr]\,\mathrm{d}y\\
+&=\int_{-\infty}^{\infty}h\left(y\right)E\left[\mathbf{1}_{\left\{X\ge y\right\}}\right]\,\mathrm{d}y\\
 &=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
 \end{aligned}
 $$

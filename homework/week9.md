@@ -18,8 +18,8 @@
 
 $$
 \begin{aligned}
-&\quad\;E\Bigl(\frac{S_{n}}{n}-\nu_{n}\Bigr)^{2}\\
-&=\mathrm{var}\Bigl(\frac{S_{n}}{n}\Bigr)\\
+&\quad\;E\left(\frac{S_{n}}{n}-\nu_{n}\right)^{2}\\
+&=\mathrm{var}\left(\frac{S_{n}}{n}\right)\\
 &=\frac{1}{n^{2}}\mathrm{var}\left(S_{n}\right).
 \end{aligned}
 $$
@@ -95,7 +95,7 @@ $$
 
 $$
 \begin{aligned}
-&\quad\;E\Bigl(\frac{S_{n}}{n}\Bigr)^{2}\\
+&\quad\;E\left(\frac{S_{n}}{n}\right)^{2}\\
 &=\frac{E\left(S_{n}^{2}\right)}{n^{2}}\\
 &\le\frac{r\left(0\right)}{n}+\frac{2}{n}\sum_{k=1}^{n-1}r\left(k\right).
 \end{aligned}

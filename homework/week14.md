@@ -45,7 +45,7 @@ $$
 第三步, 对上式分部积分. 令 $u=\sin\left(tx\right)$, $\mathrm{d}v=\left(-x\right)e^{-x^{2}/2}\,\mathrm{d}x$, 则 $v=e^{-x^{2}/2}$, 边界项
 
 $$
-\bigl[\sin\left(tx\right)e^{-x^{2}/2}\bigr]_{-\infty}^{\infty}=0,
+\left[\sin\left(tx\right)e^{-x^{2}/2}\right]_{-\infty}^{\infty}=0,
 $$
 
 故
@@ -53,7 +53,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;\phi'\left(t\right)\\
-&=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\Bigl(e^{-x^{2}/2}\Bigr)\,\mathrm{d}x\\
+&=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\left(e^{-x^{2}/2}\right)\,\mathrm{d}x\\
 &=-\int_{-\infty}^{\infty}t\cos\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x\\
 &=-t\phi\left(t\right).
 \end{aligned}
@@ -64,7 +64,7 @@ $$
 $$
 \begin{aligned}
 &\quad\;\psi'\left(t\right)\\
-&=e^{t^{2}/2}\bigl(\phi'\left(t\right)+t\phi\left(t\right)\bigr)\\
+&=e^{t^{2}/2}\left(\phi'\left(t\right)+t\phi\left(t\right)\right)\\
 &=0.
 \end{aligned}
 $$
