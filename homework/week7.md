@@ -6,7 +6,11 @@
 
 > **定义 2.1.2** (独立随机变量)<br>随机变量 $X_{1},\dots,X_{n}$ 独立指对一切博雷尔集 $B_{1},\dots,B_{n}$ 有 $$P\left(X_{1}\in B_{1},\dots,X_{n}\in B_{n}\right)=\prod_{i=1}^{n}P\left(X_{i}\in B_{i}\right).$$
 
-> **定理 2.1.1** (独立与 $\sigma$-代数)<br>(1) 若 $X,Y$ 独立, 则 $\sigma\left(X\right)$ 与 $\sigma\left(Y\right)$ 独立;<br>(2) 若 $\mathcal A_{1},\dots,\mathcal A_{n}$ 独立, 则 $\sigma\left(\mathcal A_{1}\right),\dots,\sigma\left(\mathcal A_{n}\right)$ 独立 (定理 2.1.7). 故验证随机变量独立可只对生成元进行.
+> **定理 2.1.1** (独立与 $\sigma$-代数)
+>
+> (1) 若 $X,Y$ 独立, 则 $\sigma\left(X\right)$ 与 $\sigma\left(Y\right)$ 独立;
+>
+> (2) 若 $\mathcal A_{1},\dots,\mathcal A_{n}$ 独立, 则 $\sigma\left(\mathcal A_{1}\right),\dots,\sigma\left(\mathcal A_{n}\right)$ 独立 (定理 2.1.7). 故验证随机变量独立可只对生成元进行.
 
 ### 习题一
 
@@ -27,7 +31,7 @@ $$
 于是
 
 $$
-\begin{aligned}&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
+\begin{aligned}&\;\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
 &=\int\mu\left(\left(x,x+c\right]\right)\,\mathrm{d}x\\
 &=\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x.
 \end{aligned}
@@ -48,7 +52,7 @@ $$
 是长度为 $c$ 的区间 $\left[y-c,y\right)$ 的勒贝格测度, 等于 $c$. 故
 
 $$
-\begin{aligned}&\quad\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
+\begin{aligned}&\;\;\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x\\
 &=\int c\,\mu\left(\mathrm{d}y\right)\\
 &=c\mu\left(\mathbb R\right).
 \end{aligned}

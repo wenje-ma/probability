@@ -2,7 +2,17 @@
 
 > **定义 3.3.1** (特征函数)<br>随机变量 $X$ 的特征函数为 $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, 其中 $\mu$ 为 $X$ 的分布.
 
-> **定理 3.3.1** (特征函数的性质)<br>(1) $\phi\left(0\right)=1$;<br>(2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$;<br>(3) $\left|\phi\left(t\right)\right|\le 1$;<br>(4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, 故 $\phi$ 在 $\mathbb R$ 上一致连续;<br>(5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
+> **定理 3.3.1** (特征函数的性质)
+>
+> (1) $\phi\left(0\right)=1$;
+>
+> (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$;
+>
+> (3) $\left|\phi\left(t\right)\right|\le 1$;
+>
+> (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, 故 $\phi$ 在 $\mathbb R$ 上一致连续;
+>
+> (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
 
 > **定理 3.3.2** (独立和的特征函数)<br>若 $X_{1},X_{2}$ 独立且特征函数为 $\phi_{1},\phi_{2}$, 则 $X_{1}+X_{2}$ 的特征函数为 $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.
 
@@ -51,7 +61,7 @@ $$
 故
 
 $$
-\begin{aligned}&\quad\;\phi'\left(t\right)\\
+\begin{aligned}&\;\;\phi'\left(t\right)\\
 &=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\left(e^{-x^{2}/2}\right)\,\mathrm{d}x\\
 &=-\int_{-\infty}^{\infty}t\cos\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x\\
 &=-t\phi\left(t\right).
@@ -61,7 +71,7 @@ $$
 第四步, 解微分方程 $\phi'\left(t\right)=-t\phi\left(t\right)$. 令 $\psi\left(t\right)=\phi\left(t\right)e^{t^{2}/2}$, 则
 
 $$
-\begin{aligned}&\quad\;\psi'\left(t\right)\\
+\begin{aligned}&\;\;\psi'\left(t\right)\\
 &=e^{t^{2}/2}\left(\phi'\left(t\right)+t\phi\left(t\right)\right)\\
 &=0.
 \end{aligned}
@@ -70,7 +80,7 @@ $$
 故 $\psi$ 为常数,
 
 $$
-\begin{aligned}&\quad\;\psi\left(t\right)\\
+\begin{aligned}&\;\;\psi\left(t\right)\\
 &=\psi\left(0\right)\\
 &=\phi\left(0\right)e^{0}\\
 &=1
@@ -106,7 +116,7 @@ $$
 $g\ge 0$ 且 $g\left(Y_{n}\right)\ge 0$, 由**定理 1.6.5** (法图引理):
 
 $$
-\begin{aligned}&\quad\;\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\\
+\begin{aligned}&\;\;\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\\
 &\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)\\
 &=E\,g\left(Y_{\infty}\right).
 \end{aligned}
