@@ -13,7 +13,7 @@
 证明 (a)
 
 $$
-d\left(X,Y\right)=E\left(\dfrac{\left|X-Y\right|}{1+\left|X-Y\right|}\right)
+d\left(X,Y\right)=E\left(\frac{\left|X-Y\right|}{1+\left|X-Y\right|}\right)
 $$
 
 在随机变量集合上定义了一个度量, 即满足:
