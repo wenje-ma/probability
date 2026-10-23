@@ -35,12 +35,12 @@ $$
 \frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\to 0.
 $$
 
-由 $\mathrm{var}\left(X_{i}\right)/i\to 0$, 对任意 $\epsilon>0$ 存在 $N$ 使 $i\ge N$ 时 $\mathrm{var}\left(X_{i}\right)<\epsilon i$. 于是
+由 $\mathrm{var}\left(X_{i}\right)/i\to 0$, 对任意 $\varepsilon>0$ 存在 $N$ 使 $i\ge N$ 时 $\mathrm{var}\left(X_{i}\right)<\varepsilon i$. 于是
 
 $$
 \begin{aligned}&\;\;\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\\
-&\le\frac{1}{n^{2}}\sum_{i<N}\mathrm{var}\left(X_{i}\right)+\frac{\epsilon}{n^{2}}\sum_{i=N}^{n}i\\
-&\le\frac{C}{n^{2}}+\frac{\epsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
+&\le\frac{1}{n^{2}}\sum_{i<N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\\
+&\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
 \end{aligned}
 $$
 
@@ -53,10 +53,10 @@ $$
 为常数. 令 $n\to\infty$ 得
 
 $$
-\limsup_{n}\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\epsilon/2,
+\limsup_{n}\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\varepsilon/2,
 $$
 
-再令 $\epsilon\to 0$ 得极限为 $0$. 故 $S_{n}/n-\nu_{n}\to 0$ 在 $L^{2}$ 中.
+再令 $\varepsilon\to 0$ 得极限为 $0$. 故 $S_{n}/n-\nu_{n}\to 0$ 在 $L^{2}$ 中.
 
 又由**引理 2.2.2** (取 $p=2$, $Z_{n}=S_{n}/n-\nu_{n}$), $L^{2}$ 收敛蕴含依概率收敛, 故 $S_{n}/n-\nu_{n}\to 0$ 依概率. $\blacksquare$
 

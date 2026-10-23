@@ -315,10 +315,10 @@ $$
 
 **定义 2.3.1** (依概率收敛)
 
-$X_{n}\to X$ 依概率指对任意 $\epsilon> 0$,
+$X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$,
 
 $$
-P\left(\left|X_{n}-X\right|> \epsilon\right)\to 0.
+P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0.
 $$
 
 **定义 3.2.1** (依分布收敛)

@@ -35,12 +35,12 @@ $$
 \frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\to 0.
 $$
 
-Since $\mathrm{var}\left(X_{i}\right)/i\to 0$, for any $\epsilon>0$ there exists $N$ such that $\mathrm{var}\left(X_{i}\right)<\epsilon i$ whenever $i\ge N$. Hence
+Since $\mathrm{var}\left(X_{i}\right)/i\to 0$, for any $\varepsilon>0$ there exists $N$ such that $\mathrm{var}\left(X_{i}\right)<\varepsilon i$ whenever $i\ge N$. Hence
 
 $$
 \begin{aligned}&\;\;\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\\
-&\le\frac{1}{n^{2}}\sum_{i<N}\mathrm{var}\left(X_{i}\right)+\frac{\epsilon}{n^{2}}\sum_{i=N}^{n}i\\
-&\le\frac{C}{n^{2}}+\frac{\epsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
+&\le\frac{1}{n^{2}}\sum_{i<N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\\
+&\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
 \end{aligned}
 $$
 
@@ -53,10 +53,10 @@ $$
 is a constant. Letting $n\to\infty$ gives
 
 $$
-\limsup_{n}\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\epsilon/2,
+\limsup_{n}\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\varepsilon/2,
 $$
 
-then letting $\epsilon\to 0$ gives limit $0$. Hence $S_{n}/n-\nu_{n}\to 0$ in $L^{2}$.
+then letting $\varepsilon\to 0$ gives limit $0$. Hence $S_{n}/n-\nu_{n}\to 0$ in $L^{2}$.
 
 Moreover, by **Lemma 2.2.2** (taking $p=2$ and $Z_{n}=S_{n}/n-\nu_{n}$), $L^{2}$ convergence implies convergence in probability, so $S_{n}/n-\nu_{n}\to 0$ in probability. $\blacksquare$
 

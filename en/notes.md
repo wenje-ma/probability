@@ -315,10 +315,10 @@ If $p> 0$ and $E\left|Z_{n}\right|^{p}\to 0$, then $Z_{n}\to 0$ in probability. 
 
 **Definition 2.3.1** (Convergence in Probability)
 
-$X_{n}\to X$ in probability means that for every $\epsilon> 0$,
+$X_{n}\to X$ in probability means that for every $\varepsilon> 0$,
 
 $$
-P\left(\left|X_{n}-X\right|> \epsilon\right)\to 0.
+P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0.
 $$
 
 **Definition 3.2.1** (Convergence in Distribution)

@@ -1,6 +1,6 @@
 # Assignment 12
 
-> **Definition 2.3.1** (Convergence in Probability)<br>$X_{n}\to X$ in probability means that for every $\epsilon>0$, $P\left(\left|X_{n}-X\right|>\epsilon\right)\to 0$.
+> **Definition 2.3.1** (Convergence in Probability)<br>$X_{n}\to X$ in probability means that for every $\varepsilon>0$, $P\left(\left|X_{n}-X\right|>\varepsilon\right)\to 0$.
 
 > **Theorem 1.6.4** (Chebyshev's Inequality)<br>If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing and $\phi\left(a\right)>0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(y\right)=y$ gives Markov's inequality $P\left(Y>a\right)\le EY/a$.
 
@@ -58,37 +58,37 @@ $$
 
 Taking expectation gives $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$. In summary, $d$ is a metric.
 
-(b) We first prove "convergence in probability $\Rightarrow$ metric convergence". Suppose $X_{n}\to X$ in probability. For $\epsilon>0$, since $g\le 1$ and on $\left[0,\epsilon\right]$ we have $g\le g\left(\epsilon\right)$,
+(b) We first prove "convergence in probability $\Rightarrow$ metric convergence". Suppose $X_{n}\to X$ in probability. For $\varepsilon>0$, since $g\le 1$ and on $\left[0,\varepsilon\right]$ we have $g\le g\left(\varepsilon\right)$,
 
 $$
 \begin{aligned}&\;\;d\left(X_{n},X\right)\\
 &=E\,g\left(\left|X_{n}-X\right|\right)\\
-&\le g\left(\epsilon\right)P\left(\left|X_{n}-X\right|\le\epsilon\right)+P\left(\left|X_{n}-X\right|>\epsilon\right)\\
-&\le g\left(\epsilon\right)+P\left(\left|X_{n}-X\right|>\epsilon\right).
+&\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|>\varepsilon\right)\\
+&\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|>\varepsilon\right).
 \end{aligned}
 $$
 
 Letting $n\to\infty$ gives
 
 $$
-\limsup_{n}d\left(X_{n},X\right)\le g\left(\epsilon\right),
+\limsup_{n}d\left(X_{n},X\right)\le g\left(\varepsilon\right),
 $$
 
-then letting $\epsilon\to 0$ gives $d\left(X_{n},X\right)\to 0$.
+then letting $\varepsilon\to 0$ gives $d\left(X_{n},X\right)\to 0$.
 
 Next, we prove "metric convergence $\Rightarrow$ convergence in probability". Suppose $d\left(X_{n},X\right)\to 0$. Since $g$ is strictly increasing,
 
 $$
-\left\{\left|X_{n}-X\right|>\epsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)>g\left(\epsilon\right)\right\},
+\left\{\left|X_{n}-X\right|>\varepsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)>g\left(\varepsilon\right)\right\},
 $$
 
 by Markov's inequality (**Theorem 1.6.4**),
 
 $$
-\begin{aligned}&\;\;P\left(\left|X_{n}-X\right|>\epsilon\right)\\
-&=P\left(g\left(\left|X_{n}-X\right|\right)>g\left(\epsilon\right)\right)\\
-&\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\epsilon\right)}\\
-&=\frac{d\left(X_{n},X\right)}{g\left(\epsilon\right)}\\
+\begin{aligned}&\;\;P\left(\left|X_{n}-X\right|>\varepsilon\right)\\
+&=P\left(g\left(\left|X_{n}-X\right|\right)>g\left(\varepsilon\right)\right)\\
+&\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}\\
+&=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\\
 &\to 0.
 \end{aligned}
 $$
