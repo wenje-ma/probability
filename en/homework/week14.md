@@ -3,15 +3,15 @@
 > **Definition 3.3.1** (Characteristic Function)<br>The characteristic function of a random variable $X$ is $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, where $\mu$ is the distribution of $X$.
 
 > **Theorem 3.3.1** (Properties of Characteristic Functions)
->
+> 
 > (1) $\phi\left(0\right)=1$;
->
+> 
 > (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$;
->
+> 
 > (3) $\left|\phi\left(t\right)\right|\le 1$;
->
+> 
 > (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, so $\phi$ is uniformly continuous on $\mathbb R$;
->
+> 
 > (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
 
 > **Theorem 3.3.2** (Characteristic Function of an Independent Sum)<br>If $X_{1},X_{2}$ are independent with characteristic functions $\phi_{1},\phi_{2}$, then the characteristic function of $X_{1}+X_{2}$ is $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.

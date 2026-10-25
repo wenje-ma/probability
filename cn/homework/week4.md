@@ -86,7 +86,7 @@ $$
 给出习题二的构造性证明: 由
 
 $$
-\left\{m2^{-n}\le Y<\left(m+1\right)2^{-n}\right\}=\left\{X\in B_{m,n}\right\}
+\left\{m2^{-n}\le Y< \left(m+1\right)2^{-n}\right\}=\left\{X\in B_{m,n}\right\}
 $$
 
 (某 $B_{m,n}\in\mathcal R$), 令 $f_{n}\left(x\right)=m2^{-n}$ ($x\in B_{m,n}$), 证明当 $n\to\infty$ 时 $f_{n}\left(x\right)\to f\left(x\right)$ 且 $Y=f\left(X\right)$.
@@ -96,7 +96,7 @@ $$
 因 $Y$ 关于 $\sigma\left(X\right)$ 可测, 集合
 
 $$
-\left\{m2^{-n}\le Y<\left(m+1\right)2^{-n}\right\}\in\sigma\left(X\right),
+\left\{m2^{-n}\le Y< \left(m+1\right)2^{-n}\right\}\in\sigma\left(X\right),
 $$
 
 故存在 $B_{m,n}\in\mathcal R$ 使该集合等于 $\left\{X\in B_{m,n}\right\}$. 对每个 $n$, 令
@@ -105,16 +105,16 @@ $$
 f_{n}\left(x\right)=\sum_{m}m2^{-n}\mathbf{1}_{B_{m,n}}\left(x\right),
 $$
 
-$f_{n}$ 是 $\mathbb R$ 上的阶梯简单函数, 故可测. 由构造, 当 $m2^{-n}\le Y\left(\omega\right)<\left(m+1\right)2^{-n}$ 时 $f_{n}\left(X\left(\omega\right)\right)=m2^{-n}$, 因此 $f_{n}\left(X\right)$ 恰是把 $Y$ 向下取整到 $2^{-n}$ 的倍数:
+$f_{n}$ 是 $\mathbb R$ 上的阶梯简单函数, 故可测. 由构造, 当 $m2^{-n}\le Y\left(\omega\right)< \left(m+1\right)2^{-n}$ 时 $f_{n}\left(X\left(\omega\right)\right)=m2^{-n}$, 因此 $f_{n}\left(X\right)$ 恰是把 $Y$ 向下取整到 $2^{-n}$ 的倍数:
 
 $$
-f_{n}\left(X\left(\omega\right)\right)\le Y\left(\omega\right)<f_{n}\left(X\left(\omega\right)\right)+2^{-n}.
+f_{n}\left(X\left(\omega\right)\right)\le Y\left(\omega\right)< f_{n}\left(X\left(\omega\right)\right)+2^{-n}.
 $$
 
 于是
 
 $$
-\left|f_{n}\left(X\left(\omega\right)\right)-Y\left(\omega\right)\right|<2^{-n}\to 0,
+\left|f_{n}\left(X\left(\omega\right)\right)-Y\left(\omega\right)\right|< 2^{-n}\to 0,
 $$
 
 即 $f_{n}\left(X\right)\to Y$ 逐点.

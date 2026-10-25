@@ -1,12 +1,12 @@
 # Assignment 9
 
-> **Theorem 1.6.4** (Chebyshev's Inequality)<br>If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing and $\phi\left(a\right)>0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$.
+> **Theorem 1.6.4** (Chebyshev's Inequality)<br>If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing and $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$.
 
 > **Theorem 2.2.1** (Additivity of Variance for Uncorrelated Variables)<br>If $X_{1},\dots,X_{n}$ are square-integrable and pairwise uncorrelated, then $\mathrm{var}\left(X_{1}+\dots+X_{n}\right)=\mathrm{var}\left(X_{1}\right)+\dots+\mathrm{var}\left(X_{n}\right)$. For $c\in\mathbb R$ we have $\mathrm{var}\left(cY\right)=c^{2}\mathrm{var}\left(Y\right)$.
 
-> **Lemma 2.2.2** (L$^{p}$ Convergence Implies Convergence in Probability)<br>If $p>0$ and $E\left|Z_{n}\right|^{p}\to 0$, then $Z_{n}\to 0$ in probability. It is a direct consequence of Chebyshev's inequality with $\phi\left(x\right)=x^{p}$.
+> **Lemma 2.2.2** (L$^{p}$ Convergence Implies Convergence in Probability)<br>If $p> 0$ and $E\left|Z_{n}\right|^{p}\to 0$, then $Z_{n}\to 0$ in probability. It is a direct consequence of Chebyshev's inequality with $\phi\left(x\right)=x^{p}$.
 
-> **Theorem 2.2.3** (Weak Law of Large Numbers in L$^{2}$)<br>If $X_{1},X_{2},\dots$ are pairwise uncorrelated, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C<\infty$, $S_{n}=X_{1}+\dots+X_{n}$, then as $n\to\infty$ we have $S_{n}/n\to\mu$ in $L^{2}$ and in probability.
+> **Theorem 2.2.3** (Weak Law of Large Numbers in L$^{2}$)<br>If $X_{1},X_{2},\dots$ are pairwise uncorrelated, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, $S_{n}=X_{1}+\dots+X_{n}$, then as $n\to\infty$ we have $S_{n}/n\to\mu$ in $L^{2}$ and in probability.
 
 ### Problem 1
 
@@ -35,11 +35,11 @@ $$
 \frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\to 0.
 $$
 
-Since $\mathrm{var}\left(X_{i}\right)/i\to 0$, for any $\varepsilon>0$ there exists $N$ such that $\mathrm{var}\left(X_{i}\right)<\varepsilon i$ whenever $i\ge N$. Hence
+Since $\mathrm{var}\left(X_{i}\right)/i\to 0$, for any $\varepsilon> 0$ there exists $N$ such that $\mathrm{var}\left(X_{i}\right)< \varepsilon i$ whenever $i\ge N$. Hence
 
 $$
 \begin{aligned}&\;\;\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\\
-&\le\frac{1}{n^{2}}\sum_{i<N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\\
+&\le\frac{1}{n^{2}}\sum_{i< N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\\
 &\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
 \end{aligned}
 $$
@@ -47,7 +47,7 @@ $$
 where
 
 $$
-C=\sum_{i<N}\mathrm{var}\left(X_{i}\right)
+C=\sum_{i< N}\mathrm{var}\left(X_{i}\right)
 $$
 
 is a constant. Letting $n\to\infty$ gives
@@ -78,7 +78,7 @@ $$
 \sum_{i}EX_{i}^{2}\le n\,r\left(0\right).
 $$
 
-For the cross terms, when $i\ne j$: if $i<j$, the assumption directly gives $E\left(X_{i}X_{j}\right)\le r\left(j-i\right)$; if $i>j$, using $E\left(X_{i}X_{j}\right)=E\left(X_{j}X_{i}\right)$ and $j<i$, the assumption gives $E\left(X_{j}X_{i}\right)\le r\left(i-j\right)$. Hence for all $i\ne j$, $E\left(X_{i}X_{j}\right)\le r\left(\left|i-j\right|\right)$, and so
+For the cross terms, when $i\ne j$: if $i< j$, the assumption directly gives $E\left(X_{i}X_{j}\right)\le r\left(j-i\right)$; if $i> j$, using $E\left(X_{i}X_{j}\right)=E\left(X_{j}X_{i}\right)$ and $j< i$, the assumption gives $E\left(X_{j}X_{i}\right)\le r\left(i-j\right)$. Hence for all $i\ne j$, $E\left(X_{i}X_{j}\right)\le r\left(\left|i-j\right|\right)$, and so
 
 $$
 \begin{aligned}&\;\;\sum_{i\ne j}E\left(X_{i}X_{j}\right)\\

@@ -5,20 +5,20 @@
 > **Definition 1.2.2** (Distribution and Distribution Function)<br>The probability measure $\mu\left(A\right)=P\left(X\in A\right)$ induced by $X$ on $\left(\mathbb R,\mathcal R\right)$ is called the **distribution** of $X$; its **distribution function** is $F\left(x\right)=P\left(X\le x\right)$.
 
 > **Theorem 1.2.1** (Properties of Distribution Functions)
->
+> 
 > Let $F\left(x\right)=P\left(X\le x\right)$. Then:
->
+> 
 > (1) $F$ is nondecreasing;
->
+> 
 > (2) $\lim_{x\to\infty}F\left(x\right)=1$, $\lim_{x\to-\infty}F\left(x\right)=0$;
->
+> 
 > (3) $F$ is right-continuous, i.e. $\lim_{y\downarrow x}F\left(y\right)=F\left(x\right)$;
->
-> (4) if $F\left(x-\right)=\lim_{y\uparrow x}F\left(y\right)$, then $F\left(x-\right)=P\left(X<x\right)$;
->
+> 
+> (4) if $F\left(x-\right)=\lim_{y\uparrow x}F\left(y\right)$, then $F\left(x-\right)=P\left(X< x\right)$;
+> 
 > (5) $P\left(X=x\right)=F\left(x\right)-F\left(x-\right)$.
 
-> **Theorem 1.2.2** (Inverse of a Distribution Function)<br>Let $F$ be a distribution function. Define its inverse $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)<y\right\}$, $y\in\left(0,1\right)$. If $U$ follows the uniform distribution on $\left(0,1\right)$, then $F^{-1}\left(U\right)$ has distribution function $F$. This construction is also the standard method for generating random variables on a computer.
+> **Theorem 1.2.2** (Inverse of a Distribution Function)<br>Let $F$ be a distribution function. Define its inverse $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)< y\right\}$, $y\in\left(0,1\right)$. If $U$ follows the uniform distribution on $\left(0,1\right)$, then $F^{-1}\left(U\right)$ has distribution function $F$. This construction is also the standard method for generating random variables on a computer.
 
 ### Problem 1
 
@@ -40,17 +40,17 @@ Suppose $F\left(x\right)=P\left(X\le x\right)$ is continuous. Prove that $Y=F\le
 
 ### Solution to Problem 2
 
-Since $F$ is nondecreasing and continuous, define the generalized inverse ($0<y<1$):
+Since $F$ is nondecreasing and continuous, define the generalized inverse ($0< y< 1$):
 
 $$
 G\left(y\right)=\inf\left\{x:F\left(x\right)\ge y\right\}.
 $$
 
-Right-continuity of $F$ gives $F\left(G\left(y\right)\right)\ge y$; continuity of $F$ (hence also left-continuity) gives $F\left(G\left(y\right)\right)=y$; moreover $F\left(x\right)<y$ if and only if $x<G\left(y\right)$ (continuity rules out jumps).
+Right-continuity of $F$ gives $F\left(G\left(y\right)\right)\ge y$; continuity of $F$ (hence also left-continuity) gives $F\left(G\left(y\right)\right)=y$; moreover $F\left(x\right)< y$ if and only if $x< G\left(y\right)$ (continuity rules out jumps).
 
 We distinguish three cases for $0\le y\le 1$:
 
-(1) when $0<y<1$, since $F\left(X\right)\le y$ is equivalent to $X\le G\left(y\right)$,
+(1) when $0< y< 1$, since $F\left(X\right)\le y$ is equivalent to $X\le G\left(y\right)$,
 
 $$
 \begin{aligned}&\;\;P\left(Y\le y\right)\\

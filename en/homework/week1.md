@@ -1,45 +1,45 @@
 # Assignment 1
 
 > **Definition 1.1.1** ($\sigma$-Algebra)
->
+> 
 > Let $\Omega$ be nonempty. $\mathcal F\subset\mathcal P\left(\Omega\right)$ is called a **$\sigma$-algebra** on $\Omega$ if it satisfies:
->
+> 
 > (1) $\Omega\in\mathcal F$;
->
+> 
 > (2) closed under complementation: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
->
+> 
 > (3) closed under countable unions: $\left\{A_{i}\right\}_{i=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{i=1}^{\infty}A_{i}\in\mathcal F$.
->
+> 
 > Since $\cap_{i}A_{i}=\left(\cup_{i}A_{i}^{c}\right)^{c}$, a $\sigma$-algebra is also closed under countable intersections. Here "countable" means finite or countably infinite.
 
 > **Definition 1.1.2** (Algebra)
->
+> 
 > Let $\Omega$ be nonempty and $\mathcal F\subset\mathcal P\left(\Omega\right)$. $\mathcal F$ is called an **algebra** on $\Omega$ if it satisfies:
->
+> 
 > (1) $\Omega\in\mathcal F$;
->
+> 
 > (2) closed under complementation: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
->
+> 
 > (3) closed under finite unions: $A,B\in\mathcal F\Rightarrow A\cup B\in\mathcal F$.
 
 > **Definition 1.1.3** (Probability Space and Probability Measure)
->
+> 
 > A **probability space** is a triple $\left(\Omega,\mathcal F,P\right)$, where $\Omega$ is the sample space, $\mathcal F$ is the family of events (a $\sigma$-algebra), and $P:\mathcal F\to\left[0,1\right]$ is a **probability measure**, i.e. it satisfies:
->
+> 
 > (1) $P\left(\Omega\right)=1$;
->
+> 
 > (2) countable additivity: for any pairwise disjoint sequence of events $\left\{A_{i}\right\}$, $P\left(\cup_{i}A_{i}\right)=\sum_{i}P\left(A_{i}\right)$.
->
+> 
 > More generally, a nonnegative countably additive set function $\mu$ satisfying (2) and taking nonnegative values is called a **measure**.
 
 > **Theorem 1.1.1** (Properties of Probability Measures)
->
+> 
 > Let $\left(\Omega,\mathcal F,P\right)$ be a probability space. Then:
->
+> 
 > (1) $P\left(\varnothing\right)=0$;
->
+> 
 > (2) monotonicity: $A\subset B\Rightarrow P\left(A\right)\le P\left(B\right)$;
->
+> 
 > (3) if $A_{n}\uparrow A$ then $P\left(A_{n}\right)\uparrow P\left(A\right)$ (continuity from below); if $A_{n}\downarrow A$ then $P\left(A_{n}\right)\downarrow P\left(A\right)$ (continuity from above).
 
 ### Problem 1

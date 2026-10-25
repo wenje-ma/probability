@@ -1,6 +1,6 @@
 # 作业 10
 
-> **定理 1.6.4** (切比雪夫不等式)<br>若 $\phi:\mathbb R\to\mathbb R$ 非负、非降, $\phi\left(a\right)>0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(x\right)=x^{2}$ 得 $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y>a\right)\le EY/a$.
+> **定理 1.6.4** (切比雪夫不等式)<br>若 $\phi:\mathbb R\to\mathbb R$ 非负、非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(x\right)=x^{2}$ 得 $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
 
 > **定理 1.6.9** (换元公式)<br>若 $X$ 有密度 $f$ (在 $\left[0,1\right]$ 上), $U_{1}$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. 一般地, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, $\mu$ 为 $X$ 的分布.
 
@@ -11,7 +11,7 @@
 设 $f$ 是 $\left[0,1\right]$ 上的可测函数且
 
 $$
-\int_{0}^{1}\left|f\left(x\right)\right|^{2}\,\mathrm{d}x<\infty.
+\int_{0}^{1}\left|f\left(x\right)\right|^{2}\,\mathrm{d}x< \infty.
 $$
 
 $U_{1},U_{2},\dots$ 独立且均服从 $\left[0,1\right]$ 上的均匀分布,
@@ -24,7 +24,7 @@ $$
 I=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x.
 $$
 
-用切比雪夫不等式估计 $P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)$.
+用切比雪夫不等式估计 $P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)$.
 
 ### 解答 习题一
 
@@ -40,7 +40,7 @@ $$
 故 $EI_{n}=I$. 记
 
 $$
-\sigma^{2}=\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x<\infty,
+\sigma^{2}=\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x< \infty,
 $$
 
 由 $U_{i}$ 独立同分布,
@@ -65,7 +65,7 @@ $$
 由切比雪夫不等式 (**定理 1.6.4**, 取 $\phi\left(x\right)=x^{2}$, 均值 $I$),
 
 $$
-\begin{aligned}&\;\;P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\\
+\begin{aligned}&\;\;P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\\
 &\le\frac{\mathrm{var}\left(I_{n}\right)}{\left(a/n^{1/2}\right)^{2}}\\
 &\le\frac{\sigma^{2}/n}{a^{2}/n}\\
 &=\frac{\sigma^{2}}{a^{2}}.
@@ -75,7 +75,7 @@ $$
 即
 
 $$
-P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x.
+P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x.
 $$
 
 $\blacksquare$

@@ -1,45 +1,45 @@
 # 作业 1
 
 > **定义 1.1.1** ($\sigma$-代数)
->
+> 
 > 设 $\Omega$ 非空, 称 $\mathcal F\subset\mathcal P\left(\Omega\right)$ 为 $\Omega$ 上的一个 **$\sigma$-代数**, 若满足:
->
+> 
 > (1) $\Omega\in\mathcal F$;
->
+> 
 > (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
->
+> 
 > (3) 对可数并封闭: $\left\{A_{i}\right\}_{i=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{i=1}^{\infty}A_{i}\in\mathcal F$.
->
+> 
 > 由 $\cap_{i}A_{i}=\left(\cup_{i}A_{i}^{c}\right)^{c}$, $\sigma$-代数对可数交亦封闭. 此处"可数"指有限或可数无穷.
 
 > **定义 1.1.2** (代数)
->
+> 
 > 设 $\Omega$ 非空, $\mathcal F\subset\mathcal P\left(\Omega\right)$. 称 $\mathcal F$ 为 $\Omega$ 上的一个**代数**, 若满足:
->
+> 
 > (1) $\Omega\in\mathcal F$;
->
+> 
 > (2) 对补运算封闭: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
->
+> 
 > (3) 对有限并封闭: $A,B\in\mathcal F\Rightarrow A\cup B\in\mathcal F$.
 
 > **定义 1.1.3** (概率空间与概率测度)
->
+> 
 > **概率空间**是三元组 $\left(\Omega,\mathcal F,P\right)$, 其中 $\Omega$ 为样本空间, $\mathcal F$ 为事件族 ($\sigma$-代数), $P:\mathcal F\to\left[0,1\right]$ 为**概率测度**, 即满足:
->
+> 
 > (1) $P\left(\Omega\right)=1$;
->
+> 
 > (2) 可数可加性: 对两两不交的事件列 $\left\{A_{i}\right\}$, $P\left(\cup_{i}A_{i}\right)=\sum_{i}P\left(A_{i}\right)$.
->
+> 
 > 更一般地, 满足 (2) 且取值非负的非负可数可加集函数 $\mu$ 称为**测度**.
 
 > **定理 1.1.1** (概率测度的性质)
->
+> 
 > 设 $\left(\Omega,\mathcal F,P\right)$ 为概率空间, 则:
->
+> 
 > (1) $P\left(\varnothing\right)=0$;
->
+> 
 > (2) 单调性: $A\subset B\Rightarrow P\left(A\right)\le P\left(B\right)$;
->
+> 
 > (3) 若 $A_{n}\uparrow A$ 则 $P\left(A_{n}\right)\uparrow P\left(A\right)$ (下连续), 若 $A_{n}\downarrow A$ 则 $P\left(A_{n}\right)\downarrow P\left(A\right)$ (上连续).
 
 ### 习题一

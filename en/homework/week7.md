@@ -1,15 +1,15 @@
 # Assignment 7
 
-> **Theorem 1.7.2** (Fubini's Theorem)<br>If $f\ge 0$ or $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)<\infty$, then $$\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).$$ In particular, in the nonnegative case the order of integration may be exchanged (Tonelli).
+> **Theorem 1.7.2** (Fubini's Theorem)<br>If $f\ge 0$ or $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, then $$\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).$$ In particular, in the nonnegative case the order of integration may be exchanged (Tonelli).
 
 > **Definition 2.1.1** (Independent Events)<br>Events $A,B\in\mathcal F$ are independent if $P\left(A\cap B\right)=P\left(A\right)P\left(B\right)$. A sequence of events $A_{1},\dots,A_{n}$ is independent if for every $I\subset\left\{1,\dots,n\right\}$, $P\left(\cap_{i\in I}A_{i}\right)=\prod_{i\in I}P\left(A_{i}\right)$.
 
 > **Definition 2.1.2** (Independent Random Variables)<br>Random variables $X_{1},\dots,X_{n}$ are independent if for all Borel sets $B_{1},\dots,B_{n}$, $$P\left(X_{1}\in B_{1},\dots,X_{n}\in B_{n}\right)=\prod_{i=1}^{n}P\left(X_{i}\in B_{i}\right).$$
 
 > **Theorem 2.1.1** (Independence and $\sigma$-Algebras)
->
+> 
 > (1) If $X,Y$ are independent, then $\sigma\left(X\right)$ and $\sigma\left(Y\right)$ are independent;
->
+> 
 > (2) if $\mathcal A_{1},\dots,\mathcal A_{n}$ are independent, then $\sigma\left(\mathcal A_{1}\right),\dots,\sigma\left(\mathcal A_{n}\right)$ are independent (Theorem 2.1.7). Hence, to verify the independence of random variables, it suffices to check the generators.
 
 ### Problem 1
@@ -40,13 +40,13 @@ $$
 The integrand is nonnegative, so by Tonelli's theorem (**Theorem 1.7.2**) we exchange the order of integration:
 
 $$
-\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x=\int\int\mathbf{1}_{y-c\le x<y}\,\mathrm{d}x\,\mu\left(\mathrm{d}y\right).
+\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x=\int\int\mathbf{1}_{y-c\le x< y}\,\mathrm{d}x\,\mu\left(\mathrm{d}y\right).
 $$
 
 For fixed $y$,
 
 $$
-\int\mathbf{1}_{y-c\le x<y}\,\mathrm{d}x
+\int\mathbf{1}_{y-c\le x< y}\,\mathrm{d}x
 $$
 
 is the Lebesgue measure of the interval $\left[y-c,y\right)$ of length $c$, which equals $c$. Hence

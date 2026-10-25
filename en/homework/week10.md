@@ -1,6 +1,6 @@
 # Assignment 10
 
-> **Theorem 1.6.4** (Chebyshev's Inequality)<br>If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing and $\phi\left(a\right)>0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; taking $\phi\left(y\right)=y$ gives Markov's inequality $P\left(Y>a\right)\le EY/a$.
+> **Theorem 1.6.4** (Chebyshev's Inequality)<br>If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing and $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; taking $\phi\left(y\right)=y$ gives Markov's inequality $P\left(Y> a\right)\le EY/a$.
 
 > **Theorem 1.6.9** (Change of Variables)<br>If $X$ has density $f$ (on $\left[0,1\right]$) and $U_{1}$ follows the uniform distribution on $\left(0,1\right)$, then $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. More generally, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, where $\mu$ is the distribution of $X$.
 
@@ -11,7 +11,7 @@
 Let $f$ be a measurable function on $\left[0,1\right]$ such that
 
 $$
-\int_{0}^{1}\left|f\left(x\right)\right|^{2}\,\mathrm{d}x<\infty.
+\int_{0}^{1}\left|f\left(x\right)\right|^{2}\,\mathrm{d}x< \infty.
 $$
 
 $U_{1},U_{2},\dots$ are independent and each follows the uniform distribution on $\left[0,1\right]$,
@@ -24,7 +24,7 @@ $$
 I=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x.
 $$
 
-Use Chebyshev's inequality to estimate $P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)$.
+Use Chebyshev's inequality to estimate $P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)$.
 
 ### Solution to Problem 1
 
@@ -40,7 +40,7 @@ $$
 so $EI_{n}=I$. Set
 
 $$
-\sigma^{2}=\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x<\infty,
+\sigma^{2}=\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x< \infty,
 $$
 
 Since $U_{i}$ are independent and identically distributed,
@@ -65,7 +65,7 @@ $$
 By Chebyshev's inequality (**Theorem 1.6.4**, taking $\phi\left(x\right)=x^{2}$, with mean $I$),
 
 $$
-\begin{aligned}&\;\;P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\\
+\begin{aligned}&\;\;P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\\
 &\le\frac{\mathrm{var}\left(I_{n}\right)}{\left(a/n^{1/2}\right)^{2}}\\
 &\le\frac{\sigma^{2}/n}{a^{2}/n}\\
 &=\frac{\sigma^{2}}{a^{2}}.
@@ -75,7 +75,7 @@ $$
 i.e.
 
 $$
-P\left(\left|I_{n}-I\right|>a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x.
+P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x.
 $$
 
 $\blacksquare$

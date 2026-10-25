@@ -1,8 +1,8 @@
 # 作业 12
 
-> **定义 2.3.1** (依概率收敛)<br>$X_{n}\to X$ 依概率指对任意 $\varepsilon>0$, $P\left(\left|X_{n}-X\right|>\varepsilon\right)\to 0$.
+> **定义 2.3.1** (依概率收敛)<br>$X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
 
-> **定理 1.6.4** (切比雪夫不等式)<br>若 $\phi:\mathbb R\to\mathbb R$ 非负、非降, $\phi\left(a\right)>0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y>a\right)\le EY/a$.
+> **定理 1.6.4** (切比雪夫不等式)<br>若 $\phi:\mathbb R\to\mathbb R$ 非负、非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
 
 > **习题 1.4.1**<br>若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
 
@@ -58,13 +58,13 @@ $$
 
 取期望即得 $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$. 综上 $d$ 是度量.
 
-(b) 先证"依概率收敛 $\Rightarrow$ 度量收敛". 设 $X_{n}\to X$ 依概率. 对 $\varepsilon>0$, 因 $g\le 1$ 且在 $\left[0,\varepsilon\right]$ 上 $g\le g\left(\varepsilon\right)$,
+(b) 先证"依概率收敛 $\Rightarrow$ 度量收敛". 设 $X_{n}\to X$ 依概率. 对 $\varepsilon> 0$, 因 $g\le 1$ 且在 $\left[0,\varepsilon\right]$ 上 $g\le g\left(\varepsilon\right)$,
 
 $$
 \begin{aligned}&\;\;d\left(X_{n},X\right)\\
 &=E\,g\left(\left|X_{n}-X\right|\right)\\
-&\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|>\varepsilon\right)\\
-&\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|>\varepsilon\right).
+&\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\\
+&\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
 \end{aligned}
 $$
 
@@ -79,14 +79,14 @@ $$
 再证"度量收敛 $\Rightarrow$ 依概率收敛". 设 $d\left(X_{n},X\right)\to 0$. 因 $g$ 严格递增,
 
 $$
-\left\{\left|X_{n}-X\right|>\varepsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)>g\left(\varepsilon\right)\right\},
+\left\{\left|X_{n}-X\right|> \varepsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right\},
 $$
 
 由马尔可夫不等式 (**定理 1.6.4**),
 
 $$
-\begin{aligned}&\;\;P\left(\left|X_{n}-X\right|>\varepsilon\right)\\
-&=P\left(g\left(\left|X_{n}-X\right|\right)>g\left(\varepsilon\right)\right)\\
+\begin{aligned}&\;\;P\left(\left|X_{n}-X\right|> \varepsilon\right)\\
+&=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\\
 &\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}\\
 &=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\\
 &\to 0.

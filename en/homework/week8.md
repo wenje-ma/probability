@@ -2,9 +2,9 @@
 
 > **Theorem 2.1.16** (Densities and Independence)<br>Let $X_{1},\dots,X_{n}$ have joint density $f$. If $f$ can be written as $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ measurable), then $X_{1},\dots,X_{n}$ are independent; conversely, if $X_{1},\dots,X_{n}$ are independent and each has a density, then the joint density is the product of the marginal densities. (See Problem 2.1.1.)
 
-> **Theorem 2.1.13** (Expectation of a Product of Independent Variables)<br>If $X_{1},\dots,X_{n}$ are independent and (a) each $X_{i}\ge 0$, or (b) each $E\left|X_{i}\right|<\infty$, then $$E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.$$
+> **Theorem 2.1.13** (Expectation of a Product of Independent Variables)<br>If $X_{1},\dots,X_{n}$ are independent and (a) each $X_{i}\ge 0$, or (b) each $E\left|X_{i}\right|< \infty$, then $$E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.$$
 
-> **Definition 2.1.3** (Uncorrelated)<br>If $EX^{2},EY^{2}<\infty$ and $EXY=EX\cdot EY$, then $X,Y$ are called **uncorrelated**. Independence implies uncorrelatedness (by **Theorem 2.1.13**), but uncorrelatedness does not imply independence.
+> **Definition 2.1.3** (Uncorrelated)<br>If $EX^{2},EY^{2}< \infty$ and $EXY=EX\cdot EY$, then $X,Y$ are called **uncorrelated**. Independence implies uncorrelatedness (by **Theorem 2.1.13**), but uncorrelatedness does not imply independence.
 
 > **Example 1.6.13** (Poisson Distribution)<br>$Z$ follows the **Poisson distribution** with parameter $\lambda$, written $Z\sim\mathrm{泊松}\left(\lambda\right)$, meaning $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
 
@@ -111,31 +111,31 @@ $$
 
 Thus $X_{n}$ are pairwise uncorrelated (**Definition 2.1.3**).
 
-Next, we prove non-independence. Take $A=\left\{x:x>1/2\right\}$ and $B=\left\{x:x>\sqrt{3}/2\right\}$. From $\sin\left(2\pi\omega\right)>1/2$ we get
+Next, we prove non-independence. Take $A=\left\{x:x> 1/2\right\}$ and $B=\left\{x:x> \sqrt{3}/2\right\}$. From $\sin\left(2\pi\omega\right)> 1/2$ we get
 
 $$
 2\pi\omega\in\left(\pi/6,5\pi/6\right)\ \left(\mathrm{mod}\ 2\pi\right),
 $$
 
-i.e. $\omega\in\left(1/12,5/12\right)$, so $P\left(X_{1}>1/2\right)=\lambda\left(1/12,5/12\right)=1/3>0$; from $\sin\left(4\pi\omega\right)>\sqrt{3}/2$ we get
+i.e. $\omega\in\left(1/12,5/12\right)$, so $P\left(X_{1}> 1/2\right)=\lambda\left(1/12,5/12\right)=1/3> 0$; from $\sin\left(4\pi\omega\right)> \sqrt{3}/2$ we get
 
 $$
-\begin{aligned}&\;\;P\left(X_{2}>\sqrt{3}/2\right)\\
+\begin{aligned}&\;\;P\left(X_{2}> \sqrt{3}/2\right)\\
 &=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)\\
-&=1/6>0.
+&=1/6> 0.
 \end{aligned}
 $$
 
-But when $\omega\in\left(1/12,5/12\right)$, the maximum of $\sin\left(4\pi\omega\right)$ is $\sqrt{3}/2$ (attained at the endpoint $\omega=1/12$), so $X_{1}>1/2$ implies $X_{2}\le\sqrt{3}/2$, i.e.
+But when $\omega\in\left(1/12,5/12\right)$, the maximum of $\sin\left(4\pi\omega\right)$ is $\sqrt{3}/2$ (attained at the endpoint $\omega=1/12$), so $X_{1}> 1/2$ implies $X_{2}\le\sqrt{3}/2$, i.e.
 
 $$
-P\left(X_{1}>1/2,\,X_{2}>\sqrt{3}/2\right)=0,
+P\left(X_{1}> 1/2,\,X_{2}> \sqrt{3}/2\right)=0,
 $$
 
 whereas
 
 $$
-P\left(X_{1}>1/2\right)P\left(X_{2}>\sqrt{3}/2\right)=1/3\cdot 1/6>0,
+P\left(X_{1}> 1/2\right)P\left(X_{2}> \sqrt{3}/2\right)=1/3\cdot 1/6> 0,
 $$
 
 These are unequal, so $X_{1},X_{2}$ are not independent, and hence the whole sequence $X_{n}$ is not independent (**Definition 2.1.2**). $\blacksquare$

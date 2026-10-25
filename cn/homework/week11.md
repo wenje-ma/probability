@@ -1,6 +1,6 @@
 # 作业 11
 
-> **引理 2.2.13** (矩的尾部公式)<br>若 $Y\ge 0$ 且 $p>0$, 则 $$E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y>y\right)\,\mathrm{d}y.$$ 它是"对尾部 $P\left(Y>y\right)$ 逐层积分"思想的体现.
+> **引理 2.2.13** (矩的尾部公式)<br>若 $Y\ge 0$ 且 $p> 0$, 则 $$E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y> y\right)\,\mathrm{d}y.$$ 它是"对尾部 $P\left(Y> y\right)$ 逐层积分"思想的体现.
 
 > **定理 1.7.2** (富比尼/托内利定理)<br>对非负可测 $h$ 与任意随机变量 $X$, 若 $H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y$, 则由托内利定理 $$EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.$$ (半开区间含右端点, 故尾部用 $X\ge y$; 这是引理 2.2.13 的推广, 取 $h\left(y\right)=py^{p-1}\mathbf{1}_{\left\{y\ge 0\right\}}$ 即还原.)
 
@@ -48,7 +48,7 @@ $$
 EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
 $$
 
-特别情形 $H\left(x\right)=\exp\left(\theta x\right)$ ($\theta>0$) 时给出相应结论.
+特别情形 $H\left(x\right)=\exp\left(\theta x\right)$ ($\theta> 0$) 时给出相应结论.
 
 ### 解答 习题二
 
@@ -77,7 +77,7 @@ $$
 \end{aligned}
 $$
 
-当 $H\left(x\right)=\exp\left(\theta x\right)$、$\theta>0$ 时, $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, 代入得
+当 $H\left(x\right)=\exp\left(\theta x\right)$、$\theta> 0$ 时, $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, 代入得
 
 $$
 Ee^{\theta X}=\theta\int_{-\infty}^{\infty}e^{\theta y}P\left(X\ge y\right)\,\mathrm{d}y.

@@ -2,9 +2,9 @@
 
 > **定理 2.1.16** (密度与独立)<br>设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积. (见习题 2.1.1.)
 
-> **定理 2.1.13** (独立变量的乘积期望)<br>若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|<\infty$, 则 $$E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.$$
+> **定理 2.1.13** (独立变量的乘积期望)<br>若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则 $$E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.$$
 
-> **定义 2.1.3** (不相关)<br>若 $EX^{2},EY^{2}<\infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ **不相关**. 独立蕴含不相关 (由**定理 2.1.13**), 但不相关不蕴含独立.
+> **定义 2.1.3** (不相关)<br>若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ **不相关**. 独立蕴含不相关 (由**定理 2.1.13**), 但不相关不蕴含独立.
 
 > **例 1.6.13** (泊松分布)<br>$Z$ 服从参数为 $\lambda$ 的**泊松分布**, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
 
@@ -111,31 +111,31 @@ $$
 
 所以 $X_{n}$ 两两不相关 (**定义 2.1.3**).
 
-再证不独立. 取 $A=\left\{x:x>1/2\right\}$, $B=\left\{x:x>\sqrt{3}/2\right\}$. 由 $\sin\left(2\pi\omega\right)>1/2$ 得
+再证不独立. 取 $A=\left\{x:x> 1/2\right\}$, $B=\left\{x:x> \sqrt{3}/2\right\}$. 由 $\sin\left(2\pi\omega\right)> 1/2$ 得
 
 $$
 2\pi\omega\in\left(\pi/6,5\pi/6\right)\ \left(\mathrm{mod}\ 2\pi\right),
 $$
 
-即 $\omega\in\left(1/12,5/12\right)$, 故 $P\left(X_{1}>1/2\right)=\lambda\left(1/12,5/12\right)=1/3>0$; 由 $\sin\left(4\pi\omega\right)>\sqrt{3}/2$ 得
+即 $\omega\in\left(1/12,5/12\right)$, 故 $P\left(X_{1}> 1/2\right)=\lambda\left(1/12,5/12\right)=1/3> 0$; 由 $\sin\left(4\pi\omega\right)> \sqrt{3}/2$ 得
 
 $$
-\begin{aligned}&\;\;P\left(X_{2}>\sqrt{3}/2\right)\\
+\begin{aligned}&\;\;P\left(X_{2}> \sqrt{3}/2\right)\\
 &=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)\\
-&=1/6>0.
+&=1/6> 0.
 \end{aligned}
 $$
 
-但当 $\omega\in\left(1/12,5/12\right)$ 时, $\sin\left(4\pi\omega\right)$ 的最大值为 $\sqrt{3}/2$ (在端点 $\omega=1/12$ 处), 故 $X_{1}>1/2$ 蕴含 $X_{2}\le\sqrt{3}/2$, 即
+但当 $\omega\in\left(1/12,5/12\right)$ 时, $\sin\left(4\pi\omega\right)$ 的最大值为 $\sqrt{3}/2$ (在端点 $\omega=1/12$ 处), 故 $X_{1}> 1/2$ 蕴含 $X_{2}\le\sqrt{3}/2$, 即
 
 $$
-P\left(X_{1}>1/2,\,X_{2}>\sqrt{3}/2\right)=0,
+P\left(X_{1}> 1/2,\,X_{2}> \sqrt{3}/2\right)=0,
 $$
 
 而
 
 $$
-P\left(X_{1}>1/2\right)P\left(X_{2}>\sqrt{3}/2\right)=1/3\cdot 1/6>0,
+P\left(X_{1}> 1/2\right)P\left(X_{2}> \sqrt{3}/2\right)=1/3\cdot 1/6> 0,
 $$
 
 二者不等, 故 $X_{1},X_{2}$ 不独立, 从而整列 $X_{n}$ 不独立 (**定义 2.1.2**). $\blacksquare$

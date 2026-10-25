@@ -86,7 +86,7 @@ i.e. $Y=f\left(X\right)$. $\blacksquare$
 Give a constructive proof of Problem 2: from
 
 $$
-\left\{m2^{-n}\le Y<\left(m+1\right)2^{-n}\right\}=\left\{X\in B_{m,n}\right\}
+\left\{m2^{-n}\le Y< \left(m+1\right)2^{-n}\right\}=\left\{X\in B_{m,n}\right\}
 $$
 
 for some $B_{m,n}\in\mathcal R$, let $f_{n}\left(x\right)=m2^{-n}$ ($x\in B_{m,n}$). Prove that as $n\to\infty$, $f_{n}\left(x\right)\to f\left(x\right)$ and $Y=f\left(X\right)$.
@@ -96,7 +96,7 @@ for some $B_{m,n}\in\mathcal R$, let $f_{n}\left(x\right)=m2^{-n}$ ($x\in B_{m,n
 Since $Y$ is measurable with respect to $\sigma\left(X\right)$, the set
 
 $$
-\left\{m2^{-n}\le Y<\left(m+1\right)2^{-n}\right\}\in\sigma\left(X\right),
+\left\{m2^{-n}\le Y< \left(m+1\right)2^{-n}\right\}\in\sigma\left(X\right),
 $$
 
 so there exists $B_{m,n}\in\mathcal R$ such that this set equals $\left\{X\in B_{m,n}\right\}$. For each $n$, let
@@ -105,16 +105,16 @@ $$
 f_{n}\left(x\right)=\sum_{m}m2^{-n}\mathbf{1}_{B_{m,n}}\left(x\right),
 $$
 
-$f_{n}$ is a step simple function on $\mathbb R$, hence measurable. By construction, whenever $m2^{-n}\le Y\left(\omega\right)<\left(m+1\right)2^{-n}$ we have $f_{n}\left(X\left(\omega\right)\right)=m2^{-n}$; thus $f_{n}\left(X\right)$ is exactly $Y$ rounded down to a multiple of $2^{-n}$:
+$f_{n}$ is a step simple function on $\mathbb R$, hence measurable. By construction, whenever $m2^{-n}\le Y\left(\omega\right)< \left(m+1\right)2^{-n}$ we have $f_{n}\left(X\left(\omega\right)\right)=m2^{-n}$; thus $f_{n}\left(X\right)$ is exactly $Y$ rounded down to a multiple of $2^{-n}$:
 
 $$
-f_{n}\left(X\left(\omega\right)\right)\le Y\left(\omega\right)<f_{n}\left(X\left(\omega\right)\right)+2^{-n}.
+f_{n}\left(X\left(\omega\right)\right)\le Y\left(\omega\right)< f_{n}\left(X\left(\omega\right)\right)+2^{-n}.
 $$
 
 Hence
 
 $$
-\left|f_{n}\left(X\left(\omega\right)\right)-Y\left(\omega\right)\right|<2^{-n}\to 0,
+\left|f_{n}\left(X\left(\omega\right)\right)-Y\left(\omega\right)\right|< 2^{-n}\to 0,
 $$
 
 i.e. $f_{n}\left(X\right)\to Y$ pointwise.

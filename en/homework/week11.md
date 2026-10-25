@@ -1,6 +1,6 @@
 # Assignment 11
 
-> **Lemma 2.2.13** (Tail Formula for Moments)<br>If $Y\ge 0$ and $p>0$, then $$E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y>y\right)\,\mathrm{d}y.$$ It embodies the idea of "integrating layer by layer over the tail $P\left(Y>y\right)$".
+> **Lemma 2.2.13** (Tail Formula for Moments)<br>If $Y\ge 0$ and $p> 0$, then $$E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y> y\right)\,\mathrm{d}y.$$ It embodies the idea of "integrating layer by layer over the tail $P\left(Y> y\right)$".
 
 > **Theorem 1.7.2** (Fubini/Tonelli Theorem)<br>For a nonnegative measurable $h$ and any random variable $X$, if $H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y$, then by Tonelli's theorem $$EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.$$ (The half-open interval contains the right endpoint, so the tail uses $X\ge y$; this generalizes Lemma 2.2.13, recovered by taking $h\left(y\right)=py^{p-1}\mathbf{1}_{\left\{y\ge 0\right\}}$.)
 
@@ -48,7 +48,7 @@ $$
 EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
 $$
 
-The special case $H\left(x\right)=\exp\left(\theta x\right)$ ($\theta>0$) gives the corresponding conclusion.
+The special case $H\left(x\right)=\exp\left(\theta x\right)$ ($\theta> 0$) gives the corresponding conclusion.
 
 ### Solution to Problem 2
 
@@ -77,7 +77,7 @@ $$
 \end{aligned}
 $$
 
-When $H\left(x\right)=\exp\left(\theta x\right)$ with $\theta>0$, we have $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, and substituting gives
+When $H\left(x\right)=\exp\left(\theta x\right)$ with $\theta> 0$, we have $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, and substituting gives
 
 $$
 Ee^{\theta X}=\theta\int_{-\infty}^{\infty}e^{\theta y}P\left(X\ge y\right)\,\mathrm{d}y.
