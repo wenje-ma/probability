@@ -27,10 +27,7 @@ $$
 Letting $N\to\infty$ gives
 
 $$
-\begin{aligned}&\;\;\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)\\
-&=P\left(\cap_{n}A_{n}^{c}\right)\\
-&=0.
-\end{aligned}
+\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)=P\left(\cap_{n}A_{n}^{c}\right)=0.
 $$
 
 Suppose for contradiction that $\sum_{n}P\left(A_{n}\right)< \infty$. Since $P\left(A_{n}\right)< 1$ means $1-P\left(A_{n}\right)> 0$, and $\sum P\left(A_{n}\right)< \infty$ guarantees that
@@ -66,11 +63,7 @@ $$
 implies
 
 $$
-\begin{aligned}&\;\;P\left(X_{n}> A\ \text{无穷多次}\right)\\
-&\le P\left(\sup_{n}X_{n}> A\right)\\
-&=1-P\left(\sup_{n}X_{n}\le A\right)\\
-&< 1.
-\end{aligned}
+P\left(X_{n}> A\ \text{无穷多次}\right)\le P\left(\sup_{n}X_{n}> A\right)=1-P\left(\sup_{n}X_{n}\le A\right)< 1.
 $$
 
 Suppose for contradiction that $\sum_{n}P\left(X_{n}> A\right)=\infty$. Since $X_{n}$ are independent, **Theorem 2.3.7** (Second Borel–Cantelli) gives $P\left(X_{n}> A\ \text{无穷多次}\right)=1$, contradicting the above. Hence $\sum_{n}P\left(X_{n}> A\right)< \infty$. $\blacksquare$

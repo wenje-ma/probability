@@ -43,10 +43,7 @@ On one hand, by Problem 1 (1.3.4(i)) every continuous function is measurable wit
 On the other hand, for any open set $U\subset\mathbb R^{d}$, let $g_{U}\left(x\right)=d\left(x,U^{c}\right)$ be the distance from $x$ to the closed set $U^{c}$. The function $g_{U}$ is continuous, and $g_{U}\left(x\right)> 0$ if and only if $x\notin U^{c}$, i.e. $x\in U$. Hence
 
 $$
-\begin{aligned}&\;\;U\\
-&=\left\{x:g_{U}\left(x\right)> 0\right\}\\
-&=g_{U}^{-1}\left(\left(0,\infty\right)\right).
-\end{aligned}
+U=\left\{x:g_{U}\left(x\right)> 0\right\}=g_{U}^{-1}\left(\left(0,\infty\right)\right).
 $$
 
 Since $g_{U}$ is continuous, $g_{U}$ is measurable with respect to $\mathcal G$ (**Definition 1.3.1**), so $U\in\mathcal G$. All open sets $U$ generate $\mathcal R^{d}$, so $\mathcal R^{d}\subset\mathcal G$.

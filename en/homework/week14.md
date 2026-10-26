@@ -61,30 +61,19 @@ $$
 hence
 
 $$
-\begin{aligned}&\;\;\phi'\left(t\right)\\
-&=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\left(e^{-x^{2}/2}\right)\,\mathrm{d}x\\
-&=-\int_{-\infty}^{\infty}t\cos\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x\\
-&=-t\phi\left(t\right).
-\end{aligned}
+\phi'\left(t\right)=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\left(e^{-x^{2}/2}\right)\,\mathrm{d}x=-\int_{-\infty}^{\infty}t\cos\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x=-t\phi\left(t\right).
 $$
 
 Step four, solve the differential equation $\phi'\left(t\right)=-t\phi\left(t\right)$. Let $\psi\left(t\right)=\phi\left(t\right)e^{t^{2}/2}$. Then
 
 $$
-\begin{aligned}&\;\;\psi'\left(t\right)\\
-&=e^{t^{2}/2}\left(\phi'\left(t\right)+t\phi\left(t\right)\right)\\
-&=0.
-\end{aligned}
+\psi'\left(t\right)=e^{t^{2}/2}\left(\phi'\left(t\right)+t\phi\left(t\right)\right)=0.
 $$
 
 so $\psi$ is constant,
 
 $$
-\begin{aligned}&\;\;\psi\left(t\right)\\
-&=\psi\left(0\right)\\
-&=\phi\left(0\right)e^{0}\\
-&=1
-\end{aligned}
+\psi\left(t\right)=\psi\left(0\right)=\phi\left(0\right)e^{0}=1
 $$
 
 (since $\phi\left(0\right)=Ee^{0}=1$). Hence $\phi\left(t\right)e^{t^{2}/2}=1$, i.e.
@@ -116,10 +105,7 @@ By **Theorem 3.2.8** (Skorokhod Representation), there exist random variables $Y
 Since $g\ge 0$ and $g\left(Y_{n}\right)\ge 0$, by **Theorem 1.6.5** (Fatou's Lemma):
 
 $$
-\begin{aligned}&\;\;\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\\
-&\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)\\
-&=E\,g\left(Y_{\infty}\right).
-\end{aligned}
+\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)=E\,g\left(Y_{\infty}\right).
 $$
 
 The last step uses $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ almost surely. Since $Y_{n}=_{d}X_{n}$ and $Y_{\infty}=_{d}X_{\infty}$, we have $E\,g\left(Y_{n}\right)=E\,g\left(X_{n}\right)$ and $E\,g\left(Y_{\infty}\right)=E\,g\left(X_{\infty}\right)$. Substituting gives

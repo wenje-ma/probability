@@ -203,8 +203,7 @@ $$
 若 $f\ge 0$, 则 (托内利)
 
 $$
-\begin{aligned}\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)&=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\&=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
-\end{aligned}
+\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 $$
 
 若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的三重等式成立 (富比尼).
@@ -362,8 +361,7 @@ $$
 随机变量 $X$ 的特征函数为
 
 $$
-\begin{aligned}\phi_{X}\left(t\right)&=Ee^{itX}\\&=\int e^{itx}\,\mu\left(\mathrm{d}x\right),
-\end{aligned}
+\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right),
 $$
 
 其中 $\mu$ 为 $X$ 的分布.

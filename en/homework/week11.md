@@ -19,11 +19,7 @@ $$
 Write $X^{2}$ as a double sum and regroup by $\max$: there are exactly $2n-1$ ordered pairs of positive integers $\left(i,j\right)$ with $\max\left(i,j\right)=n$, so
 
 $$
-\begin{aligned}&\;\;X^{2}\\
-&=\left(\sum_{i\ge 1}\mathbf{1}_{\left\{X\ge i\right\}}\right)\left(\sum_{j\ge 1}\mathbf{1}_{\left\{X\ge j\right\}}\right)\\
-&=\sum_{i,j\ge 1}\mathbf{1}_{\left\{X\ge\max\left(i,j\right)\right\}}\\
-&=\sum_{n\ge 1}\left(2n-1\right)\mathbf{1}_{\left\{X\ge n\right\}}.
-\end{aligned}
+X^{2}=\left(\sum_{i\ge 1}\mathbf{1}_{\left\{X\ge i\right\}}\right)\left(\sum_{j\ge 1}\mathbf{1}_{\left\{X\ge j\right\}}\right)=\sum_{i,j\ge 1}\mathbf{1}_{\left\{X\ge\max\left(i,j\right)\right\}}=\sum_{n\ge 1}\left(2n-1\right)\mathbf{1}_{\left\{X\ge n\right\}}.
 $$
 
 Each term is nonnegative, so taking expectation by the monotone convergence theorem (**Theorem 1.5.7**):
@@ -61,20 +57,13 @@ $$
 substituting $X$ gives
 
 $$
-\begin{aligned}&\;\;H\left(X\right)\\
-&=\int_{\left(-\infty,X\right]}h\left(y\right)\,\mathrm{d}y\\
-&=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{y\le X\right\}}\,\mathrm{d}y\\
-&=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{X\ge y\right\}}\,\mathrm{d}y.
-\end{aligned}
+H\left(X\right)=\int_{\left(-\infty,X\right]}h\left(y\right)\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{y\le X\right\}}\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{X\ge y\right\}}\,\mathrm{d}y.
 $$
 
 The integrand is nonnegative, so by Tonelli's theorem (**Theorem 1.7.2**) we exchange the expectation and the integral:
 
 $$
-\begin{aligned}&\;\;EH\left(X\right)\\
-&=\int_{-\infty}^{\infty}h\left(y\right)E\left[\mathbf{1}_{\left\{X\ge y\right\}}\right]\,\mathrm{d}y\\
-&=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
-\end{aligned}
+EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)E\left[\mathbf{1}_{\left\{X\ge y\right\}}\right]\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
 $$
 
 When $H\left(x\right)=\exp\left(\theta x\right)$ with $\theta> 0$, we have $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, and substituting gives

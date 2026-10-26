@@ -33,13 +33,7 @@ Set $g\left(t\right)=t/\left(1+t\right)$ ($t\ge 0$).
 (a)(1) Since $g\ge 0$ and $g\left(t\right)=0$ if and only if $t=0$, by **Problem 1.4.1** (a nonnegative function with zero integral is zero almost everywhere),
 
 $$
-\begin{aligned}&\;\;d\left(X,Y\right)\\
-&=0\\
-&\iff E\,g\left(\left|X-Y\right|\right)=0\\
-&\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\\
-&\iff\left|X-Y\right|=0\ \text{几乎处处}\\
-&\iff X=Y\ \text{几乎处处}
-\end{aligned}
+d\left(X,Y\right)=0\iff E\,g\left(\left|X-Y\right|\right)=0\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\iff\left|X-Y\right|=0\ \text{几乎处处}\iff X=Y\ \text{几乎处处}
 $$
 
 (a)(2) Since $\left|X-Y\right|=\left|Y-X\right|$, we immediately get $d\left(X,Y\right)=d\left(Y,X\right)$.
@@ -61,11 +55,7 @@ Taking expectation gives $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\righ
 (b) We first prove "convergence in probability $\Rightarrow$ metric convergence". Suppose $X_{n}\to X$ in probability. For $\varepsilon> 0$, since $g\le 1$ and on $\left[0,\varepsilon\right]$ we have $g\le g\left(\varepsilon\right)$,
 
 $$
-\begin{aligned}&\;\;d\left(X_{n},X\right)\\
-&=E\,g\left(\left|X_{n}-X\right|\right)\\
-&\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\\
-&\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
-\end{aligned}
+d\left(X_{n},X\right)=E\,g\left(\left|X_{n}-X\right|\right)\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
 $$
 
 Letting $n\to\infty$ gives
@@ -85,12 +75,7 @@ $$
 by Markov's inequality (**Theorem 1.6.4**),
 
 $$
-\begin{aligned}&\;\;P\left(\left|X_{n}-X\right|> \varepsilon\right)\\
-&=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\\
-&\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}\\
-&=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\\
-&\to 0.
-\end{aligned}
+P\left(\left|X_{n}-X\right|> \varepsilon\right)=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\to 0.
 $$
 
 Hence $X_{n}\to X$ in probability (**Definition 2.3.1**). $\blacksquare$

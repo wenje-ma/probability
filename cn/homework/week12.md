@@ -33,13 +33,7 @@ $$
 (a)(1) 因 $g\ge 0$ 且 $g\left(t\right)=0$ 当且仅当 $t=0$, 由**习题 1.4.1** (非负函数积分为零蕴含几乎处处为零),
 
 $$
-\begin{aligned}&\;\;d\left(X,Y\right)\\
-&=0\\
-&\iff E\,g\left(\left|X-Y\right|\right)=0\\
-&\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\\
-&\iff\left|X-Y\right|=0\ \text{几乎处处}\\
-&\iff X=Y\ \text{几乎处处}
-\end{aligned}
+d\left(X,Y\right)=0\iff E\,g\left(\left|X-Y\right|\right)=0\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\iff\left|X-Y\right|=0\ \text{几乎处处}\iff X=Y\ \text{几乎处处}
 $$
 
 (a)(2) 由 $\left|X-Y\right|=\left|Y-X\right|$ 立即得 $d\left(X,Y\right)=d\left(Y,X\right)$.
@@ -61,11 +55,7 @@ $$
 (b) 先证"依概率收敛 $\Rightarrow$ 度量收敛". 设 $X_{n}\to X$ 依概率. 对 $\varepsilon> 0$, 因 $g\le 1$ 且在 $\left[0,\varepsilon\right]$ 上 $g\le g\left(\varepsilon\right)$,
 
 $$
-\begin{aligned}&\;\;d\left(X_{n},X\right)\\
-&=E\,g\left(\left|X_{n}-X\right|\right)\\
-&\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\\
-&\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
-\end{aligned}
+d\left(X_{n},X\right)=E\,g\left(\left|X_{n}-X\right|\right)\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
 $$
 
 令 $n\to\infty$ 得
@@ -85,12 +75,7 @@ $$
 由马尔可夫不等式 (**定理 1.6.4**),
 
 $$
-\begin{aligned}&\;\;P\left(\left|X_{n}-X\right|> \varepsilon\right)\\
-&=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\\
-&\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}\\
-&=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\\
-&\to 0.
-\end{aligned}
+P\left(\left|X_{n}-X\right|> \varepsilon\right)=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\to 0.
 $$
 
 故 $X_{n}\to X$ 依概率 (**定义 2.3.1**). $\blacksquare$

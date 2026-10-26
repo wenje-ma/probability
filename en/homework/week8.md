@@ -31,10 +31,7 @@ $$
 For any Borel sets $A_{1},\dots,A_{n}$, by the joint density and Tonelli's theorem (**Theorem 1.7.2**, the integrand is nonnegative and separable):
 
 $$
-\begin{aligned}&\;\;P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right)\\
-&=\int_{A_{1}\times\cdots\times A_{n}}f\left(x\right)\,\mathrm{d}x\\
-&=\prod_{i=1}^{n}\int_{A_{i}}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}.
-\end{aligned}
+P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right)=\int_{A_{1}\times\cdots\times A_{n}}f\left(x\right)\,\mathrm{d}x=\prod_{i=1}^{n}\int_{A_{i}}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}.
 $$
 
 On the other hand, substituting $A_{i}=\mathbb R$, since $f$ is a probability density so $\int f=1$, we get
@@ -46,28 +43,19 @@ $$
 The marginal distribution of $X_{i}$ is
 
 $$
-\begin{aligned}&\;\;P\left(X_{i}\in A_{i}\right)\\
-&=\int_{\mathbb R^{n}}\mathbf{1}_{A_{i}}\left(x_{i}\right)g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)\,\mathrm{d}x\\
-&=\left(\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}.
-\end{aligned}
+P\left(X_{i}\in A_{i}\right)=\int_{\mathbb R^{n}}\mathbf{1}_{A_{i}}\left(x_{i}\right)g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)\,\mathrm{d}x=\left(\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}.
 $$
 
 Hence
 
 $$
-\begin{aligned}&\;\;\prod_{i=1}^{n}P\left(X_{i}\in A_{i}\right)\\
-&=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{i=1}^{n}\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\\
-&=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\left(\prod_{j=1}^{n}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\right)^{n-1}.
-\end{aligned}
+\prod_{i=1}^{n}P\left(X_{i}\in A_{i}\right)=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{i=1}^{n}\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\left(\prod_{j=1}^{n}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\right)^{n-1}.
 $$
 
 Since $\prod_{j}\int_{\mathbb R}g_{j}=1$, we have
 
 $$
-\begin{aligned}&\;\;\prod_{i}P\left(X_{i}\in A_{i}\right)\\
-&=\prod_{i}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\\
-&=P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right).
-\end{aligned}
+\prod_{i}P\left(X_{i}\in A_{i}\right)=\prod_{i}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}=P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right).
 $$
 
 As $A_{i}$ were arbitrary, $X_{1},\dots,X_{n}$ are independent (**Definition 2.1.2**). $\blacksquare$
@@ -81,10 +69,7 @@ Let $\Omega=\left(0,1\right)$, let $\mathcal F$ be the Borel sets, and let $P$ b
 We first prove pairwise uncorrelatedness. For any positive integer $n$,
 
 $$
-\begin{aligned}&\;\;EX_{n}\\
-&=\int_{0}^{1}\sin\left(2\pi n\omega\right)\,\mathrm{d}\omega\\
-&=0,
-\end{aligned}
+EX_{n}=\int_{0}^{1}\sin\left(2\pi n\omega\right)\,\mathrm{d}\omega=0,
 $$
 
 (the integral of sine over a full period is zero). For $n\ne m$, by the product-to-sum formula
@@ -102,11 +87,7 @@ $$
 holds for every integer $k\ne 0$ (when $n\ne m$, both $n-m\ne 0$ and $n+m\ne 0$), so
 
 $$
-\begin{aligned}&\;\;EX_{n}X_{m}\\
-&=\frac{1}{2}\int_{0}^{1}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right)\,\mathrm{d}\omega\\
-&=0\\
-&=EX_{n}EX_{m}.
-\end{aligned}
+EX_{n}X_{m}=\frac{1}{2}\int_{0}^{1}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right)\,\mathrm{d}\omega=0=EX_{n}EX_{m}.
 $$
 
 Thus $X_{n}$ are pairwise uncorrelated (**Definition 2.1.3**).
@@ -120,10 +101,7 @@ $$
 i.e. $\omega\in\left(1/12,5/12\right)$, so $P\left(X_{1}> 1/2\right)=\lambda\left(1/12,5/12\right)=1/3> 0$; from $\sin\left(4\pi\omega\right)> \sqrt{3}/2$ we get
 
 $$
-\begin{aligned}&\;\;P\left(X_{2}> \sqrt{3}/2\right)\\
-&=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)\\
-&=1/6> 0.
-\end{aligned}
+P\left(X_{2}> \sqrt{3}/2\right)=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)=1/6> 0.
 $$
 
 But when $\omega\in\left(1/12,5/12\right)$, the maximum of $\sin\left(4\pi\omega\right)$ is $\sqrt{3}/2$ (attained at the endpoint $\omega=1/12$), so $X_{1}> 1/2$ implies $X_{2}\le\sqrt{3}/2$, i.e.
@@ -149,19 +127,13 @@ Let $X\sim\mathrm{泊松}\left(\lambda\right)$ and $Y\sim\mathrm{泊松}\left(\m
 $X,Y$ are independent and take nonnegative integer values. By the convolution formula (**Problem 2.1.10**), for $n\ge 0$,
 
 $$
-\begin{aligned}&\;\;P\left(X+Y=n\right)\\
-&=\sum_{m=0}^{n}P\left(X=m\right)P\left(Y=n-m\right)\\
-&=\sum_{m=0}^{n}\frac{e^{-\lambda}\lambda^{m}}{m!}\cdot\frac{e^{-\mu}\mu^{n-m}}{\left(n-m\right)!}.
-\end{aligned}
+P\left(X+Y=n\right)=\sum_{m=0}^{n}P\left(X=m\right)P\left(Y=n-m\right)=\sum_{m=0}^{n}\frac{e^{-\lambda}\lambda^{m}}{m!}\cdot\frac{e^{-\mu}\mu^{n-m}}{\left(n-m\right)!}.
 $$
 
 Factoring out the common term and using the binomial theorem:
 
 $$
-\begin{aligned}&\;\;P\left(X+Y=n\right)\\
-&=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\sum_{m=0}^{n}\frac{n!}{m!\left(n-m\right)!}\lambda^{m}\mu^{n-m}\\
-&=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\left(\lambda+\mu\right)^{n}.
-\end{aligned}
+P\left(X+Y=n\right)=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\sum_{m=0}^{n}\frac{n!}{m!\left(n-m\right)!}\lambda^{m}\mu^{n-m}=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\left(\lambda+\mu\right)^{n}.
 $$
 
 This is exactly the probability mass function of the Poisson distribution with parameter $\lambda+\mu$ (**Example 1.6.13**), so $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$. $\blacksquare$

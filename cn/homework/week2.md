@@ -53,31 +53,19 @@ $$
 (1) 当 $0< y< 1$ 时, 由 $F\left(X\right)\le y$ 与 $X\le G\left(y\right)$ 等价,
 
 $$
-\begin{aligned}&\;\;P\left(Y\le y\right)\\
-&=P\left(F\left(X\right)\le y\right)\\
-&=P\left(X\le G\left(y\right)\right)\\
-&=F\left(G\left(y\right)\right)\\
-&=y;
-\end{aligned}
+P\left(Y\le y\right)=P\left(F\left(X\right)\le y\right)=P\left(X\le G\left(y\right)\right)=F\left(G\left(y\right)\right)=y;
 $$
 
 (2) 当 $y=0$ 时,
 
 $$
-\begin{aligned}&\;\;G\left(0\right)\\
-&=\inf\left\{x:F\left(x\right)\ge 0\right\}\\
-&=-\infty,
-\end{aligned}
+G\left(0\right)=\inf\left\{x:F\left(x\right)\ge 0\right\}=-\infty,
 $$
 
 故
 
 $$
-\begin{aligned}&\;\;P\left(Y\le 0\right)\\
-&=P\left(F\left(X\right)=0\right)\\
-&=P\left(X\le G\left(0\right)\right)\\
-&=0;
-\end{aligned}
+P\left(Y\le 0\right)=P\left(F\left(X\right)=0\right)=P\left(X\le G\left(0\right)\right)=0;
 $$
 
 (3) 当 $y=1$ 时, $P\left(Y\le 1\right)=1$ 恒成立.

@@ -31,9 +31,7 @@ $$
 where $\left[x\right]$ is the greatest integer not exceeding $x$. $g_{n}$ is a step simple function taking finitely many values, and $g_{n}\uparrow g$ pointwise. Now take
 
 $$
-\begin{aligned}f_{n}&=f_{n}^{+}-f_{n}^{-},\\
-f_{n}^{\pm}&=\frac{\left[2^{n}f^{\pm}\right]}{2^{n}}\wedge n.
-\end{aligned}
+f_{n}=f_{n}^{+}-f_{n}^{-},;f_{n}^{\pm}=\frac{\left[2^{n}f^{\pm}\right]}{2^{n}}\wedge n.
 $$
 
 $f_{n}$ is the difference of two simple functions, hence still a simple function, so $f_{n}\in\mathcal M$; moreover $f_{n}\to f$ pointwise (since $f_{n}^{\pm}\to f^{\pm}$), and since $\mathcal M$ is closed under pointwise limits, $f\in\mathcal M$.
@@ -57,11 +55,7 @@ $$
 $\left(\Rightarrow\right)$ Suppose $Y$ is measurable with respect to $\sigma\left(X\right)$. First handle simple functions: if $\phi=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ is a $\sigma\left(X\right)$-measurable simple function, then $B_{m}\in\sigma\left(X\right)$, so $B_{m}=\left\{X\in C_{m}\right\}$ for some $C_{m}\in\mathcal R$. Hence
 
 $$
-\begin{aligned}&\;\;\phi\\
-&=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)\\
-&=g\left(X\right),\\
-g&=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\ \text{可测}.
-\end{aligned}
+\phi=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)=g\left(X\right),;g=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\ \text{可测}.
 $$
 
 By Problem 1, $Y$ is the pointwise limit of a sequence of $\sigma\left(X\right)$-measurable simple functions $\phi_{n}$, with each $\phi_{n}=g_{n}\left(X\right)$ and $g_{n}$ measurable. Let $f=\limsup_{n}g_{n}$; then $f$ is measurable (**Theorem 1.3.7**), and for every $\omega$,
@@ -73,10 +67,7 @@ $$
 hence
 
 $$
-\begin{aligned}&\;\;f\left(X\left(\omega\right)\right)\\
-&=\limsup_{n}g_{n}\left(X\left(\omega\right)\right)\\
-&=Y\left(\omega\right).
-\end{aligned}
+f\left(X\left(\omega\right)\right)=\limsup_{n}g_{n}\left(X\left(\omega\right)\right)=Y\left(\omega\right).
 $$
 
 i.e. $Y=f\left(X\right)$. $\blacksquare$
@@ -122,10 +113,7 @@ i.e. $f_{n}\left(X\right)\to Y$ pointwise.
 Let $f=\lim_{n}f_{n}$ (if some points do not converge, take $\limsup$ so that it is defined everywhere; by **Theorem 1.3.7**, $f$ is measurable). Then for every $\omega$
 
 $$
-\begin{aligned}&\;\;f\left(X\left(\omega\right)\right)\\
-&=\lim_{n}f_{n}\left(X\left(\omega\right)\right)\\
-&=Y\left(\omega\right),
-\end{aligned}
+f\left(X\left(\omega\right)\right)=\lim_{n}f_{n}\left(X\left(\omega\right)\right)=Y\left(\omega\right),
 $$
 
 i.e. $Y=f\left(X\right)$. $\blacksquare$

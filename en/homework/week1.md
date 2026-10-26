@@ -53,10 +53,7 @@ We first prove that $\mathcal F$ is a $\sigma$-algebra (**Definition 1.1.1**). S
 (1) there exists some $A_{j}$ such that $A_{j}^{c}$ is countable; then
 
 $$
-\begin{aligned}&\;\;\left(\cup_{i}A_{i}\right)^{c}\\
-&=\cap_{i}A_{i}^{c}\\
-&\subset A_{j}^{c}
-\end{aligned}
+\left(\cup_{i}A_{i}\right)^{c}=\cap_{i}A_{i}^{c}\subset A_{j}^{c}
 $$
 
 which is countable, hence $\cup_{i}A_{i}\in\mathcal F$;
@@ -72,28 +69,19 @@ Finally, we verify that $P$ is a probability measure (**Definition 1.1.3**). Cle
 (1) all $A_{i}$ are countable; then $\cup_{i}A_{i}$ is countable,
 
 $$
-\begin{aligned}&\;\;P\left(\cup_{i}A_{i}\right)\\
-&=0\\
-&=\sum_{i}P\left(A_{i}\right).
-\end{aligned}
+P\left(\cup_{i}A_{i}\right)=0=\sum_{i}P\left(A_{i}\right).
 $$
 
 (2) there exists some $A_{j}^{c}$ that is countable. Since $A_{i}\cap A_{j}=\varnothing$ implies $A_{i}\subset A_{j}^{c}$ for $i\ne j$, each $A_{i}$ with $i\ne j$ is countable and $P\left(A_{i}\right)=0$; moreover,
 
 $$
-\begin{aligned}&\;\;\left(\cup_{i}A_{i}\right)^{c}\\
-&=\cap_{i}A_{i}^{c}\\
-&\subset A_{j}^{c}
-\end{aligned}
+\left(\cup_{i}A_{i}\right)^{c}=\cap_{i}A_{i}^{c}\subset A_{j}^{c}
 $$
 
 which is countable, so $P\left(\cup_{i}A_{i}\right)=1=P\left(A_{j}\right)$. Hence
 
 $$
-\begin{aligned}&\;\;P\left(\cup_{i}A_{i}\right)\\
-&=1\\
-&=\sum_{i}P\left(A_{i}\right).
-\end{aligned}
+P\left(\cup_{i}A_{i}\right)=1=\sum_{i}P\left(A_{i}\right).
 $$
 
 In summary, $\left(\Omega,\mathcal F,P\right)$ is a probability space. $\blacksquare$

@@ -17,10 +17,7 @@ Let $X_{1},X_{2},\dots$ be pairwise uncorrelated, with $EX_{i}=\mu_{i}$ and $\ma
 By linearity of expectation, $E\left(S_{n}/n\right)=\nu_{n}$, so
 
 $$
-\begin{aligned}&\;\;E\left(\frac{S_{n}}{n}-\nu_{n}\right)^{2}\\
-&=\mathrm{var}\left(\frac{S_{n}}{n}\right)\\
-&=\frac{1}{n^{2}}\mathrm{var}\left(S_{n}\right).
-\end{aligned}
+E\left(\frac{S_{n}}{n}-\nu_{n}\right)^{2}=\mathrm{var}\left(\frac{S_{n}}{n}\right)=\frac{1}{n^{2}}\mathrm{var}\left(S_{n}\right).
 $$
 
 Since $X_{i}$ are pairwise uncorrelated, by **Theorem 2.2.1**,
@@ -38,10 +35,7 @@ $$
 Since $\mathrm{var}\left(X_{i}\right)/i\to 0$, for any $\varepsilon> 0$ there exists $N$ such that $\mathrm{var}\left(X_{i}\right)< \varepsilon i$ whenever $i\ge N$. Hence
 
 $$
-\begin{aligned}&\;\;\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\\
-&\le\frac{1}{n^{2}}\sum_{i< N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\\
-&\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
-\end{aligned}
+\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\frac{1}{n^{2}}\sum_{i< N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
 $$
 
 where
@@ -81,20 +75,13 @@ $$
 For the cross terms, when $i\ne j$: if $i< j$, the assumption directly gives $E\left(X_{i}X_{j}\right)\le r\left(j-i\right)$; if $i> j$, using $E\left(X_{i}X_{j}\right)=E\left(X_{j}X_{i}\right)$ and $j< i$, the assumption gives $E\left(X_{j}X_{i}\right)\le r\left(i-j\right)$. Hence for all $i\ne j$, $E\left(X_{i}X_{j}\right)\le r\left(\left|i-j\right|\right)$, and so
 
 $$
-\begin{aligned}&\;\;\sum_{i\ne j}E\left(X_{i}X_{j}\right)\\
-&\le\sum_{i\ne j}r\left(\left|i-j\right|\right)\\
-&=2\sum_{k=1}^{n-1}\left(n-k\right)r\left(k\right)\\
-&\le 2n\sum_{k=1}^{n-1}r\left(k\right).
-\end{aligned}
+\sum_{i\ne j}E\left(X_{i}X_{j}\right)\le\sum_{i\ne j}r\left(\left|i-j\right|\right)=2\sum_{k=1}^{n-1}\left(n-k\right)r\left(k\right)\le 2n\sum_{k=1}^{n-1}r\left(k\right).
 $$
 
 Combining gives
 
 $$
-\begin{aligned}&\;\;E\left(\frac{S_{n}}{n}\right)^{2}\\
-&=\frac{E\left(S_{n}^{2}\right)}{n^{2}}\\
-&\le\frac{r\left(0\right)}{n}+\frac{2}{n}\sum_{k=1}^{n-1}r\left(k\right).
-\end{aligned}
+E\left(\frac{S_{n}}{n}\right)^{2}=\frac{E\left(S_{n}^{2}\right)}{n^{2}}\le\frac{r\left(0\right)}{n}+\frac{2}{n}\sum_{k=1}^{n-1}r\left(k\right).
 $$
 
 Since $r\left(k\right)\to 0$, its arithmetic mean

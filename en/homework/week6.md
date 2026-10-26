@@ -31,31 +31,19 @@ We verify class by class using the four-step method of **Theorem 1.6.9**.
 (1) Indicator functions. Let $g=\mathbf{1}_{B}$ ($B\in\mathcal R$). Then by the assumption,
 
 $$
-\begin{aligned}&\;\;\int\mathbf{1}_{B}\left(x\right)\,\mu\left(\mathrm{d}x\right)\\
-&=\mu\left(B\right)\\
-&=\int_{B}f\left(x\right)\,\mathrm{d}x\\
-&=\int\mathbf{1}_{B}\left(x\right)f\left(x\right)\,\mathrm{d}x.
-\end{aligned}
+\int\mathbf{1}_{B}\left(x\right)\,\mu\left(\mathrm{d}x\right)=\mu\left(B\right)=\int_{B}f\left(x\right)\,\mathrm{d}x=\int\mathbf{1}_{B}\left(x\right)f\left(x\right)\,\mathrm{d}x.
 $$
 
 (2) Simple functions. Let $g=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ ($c_{m}\in\mathbb R$, $B_{m}\in\mathcal R$). By linearity of the integral and of expectation (**Theorem 1.4.7**),
 
 $$
-\begin{aligned}&\;\;\int g\,\mathrm{d}\mu\\
-&=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}\,\mathrm{d}\mu\\
-&=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}f\,\mathrm{d}x\\
-&=\int gf\,\mathrm{d}x.
-\end{aligned}
+\int g\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
 $$
 
 (3) Nonnegative functions. Let $g\ge 0$, and take $g_{n}=\left(\left[2^{n}g\right]/2^{n}\right)\wedge n$; then $g_{n}$ is a simple function and $g_{n}\uparrow g$. By (2) and **Theorem 1.5.7** (monotone convergence),
 
 $$
-\begin{aligned}&\;\;\int g\,\mathrm{d}\mu\\
-&=\lim_{n}\int g_{n}\,\mathrm{d}\mu\\
-&=\lim_{n}\int g_{n}f\,\mathrm{d}x\\
-&=\int gf\,\mathrm{d}x.
-\end{aligned}
+\int g\,\mathrm{d}\mu=\lim_{n}\int g_{n}\,\mathrm{d}\mu=\lim_{n}\int g_{n}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
 $$
 
 (4) General integrable functions. Suppose
@@ -73,11 +61,7 @@ $$
 Subtracting gives
 
 $$
-\begin{aligned}&\;\;\int g\,\mathrm{d}\mu\\
-&=\int g^{+}\,\mathrm{d}\mu-\int g^{-}\,\mathrm{d}\mu\\
-&=\int g^{+}f\,\mathrm{d}x-\int g^{-}f\,\mathrm{d}x\\
-&=\int gf\,\mathrm{d}x.
-\end{aligned}
+\int g\,\mathrm{d}\mu=\int g^{+}\,\mathrm{d}\mu-\int g^{-}\,\mathrm{d}\mu=\int g^{+}f\,\mathrm{d}x-\int g^{-}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
 $$
 
 Combining the four steps gives the conclusion. $\blacksquare$
@@ -93,10 +77,7 @@ $$
 prove that
 
 $$
-\begin{aligned}&\;\;\int_{X}\int_{Y}f\left(x,y\right)\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)\\
-&=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\
-&=\int_{Y}\int_{X}f\left(x,y\right)\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
-\end{aligned}
+\int_{X}\int_{Y}f\left(x,y\right)\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\left(x,y\right)\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 $$
 
 ### Solution to Problem 2
@@ -110,10 +91,7 @@ $$
 so $f$ is integrable with respect to $\nu$. By **Theorem 1.7.2** (Fubini), the integrable function $f$ satisfies
 
 $$
-\begin{aligned}&\;\;\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)\\
-&=\int_{X\times Y}f\,\mathrm{d}\nu\\
-&=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right),
-\end{aligned}
+\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\nu=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right),
 $$
 
 This is exactly the conclusion to be proved. $\blacksquare$

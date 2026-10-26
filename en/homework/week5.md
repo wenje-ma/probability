@@ -43,11 +43,7 @@ $$
 Suppose for contradiction that $\mu\left(E\right)> 0$. Then there exists some $n$ such that $\mu\left(E_{n}\right)> 0$. Since $f\ge\left(1/n\right)\mathbf{1}_{E_{n}}$ and by monotonicity of the integral (**Theorem 1.4.7** (1)(4)),
 
 $$
-\begin{aligned}&\;\;\int f\,\mathrm{d}\mu\\
-&\ge\int\frac{1}{n}\mathbf{1}_{E_{n}}\,\mathrm{d}\mu\\
-&=\frac{1}{n}\mu\left(E_{n}\right)\\
-&> 0,
-\end{aligned}
+\int f\,\mathrm{d}\mu\ge\int\frac{1}{n}\mathbf{1}_{E_{n}}\,\mathrm{d}\mu=\frac{1}{n}\mu\left(E_{n}\right)> 0,
 $$
 
 which contradicts $\int f\,\mathrm{d}\mu=0$. Hence $\mu\left(E\right)=0$, i.e. $f=0$ almost everywhere. $\blacksquare$

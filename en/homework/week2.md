@@ -53,31 +53,19 @@ We distinguish three cases for $0\le y\le 1$:
 (1) when $0< y< 1$, since $F\left(X\right)\le y$ is equivalent to $X\le G\left(y\right)$,
 
 $$
-\begin{aligned}&\;\;P\left(Y\le y\right)\\
-&=P\left(F\left(X\right)\le y\right)\\
-&=P\left(X\le G\left(y\right)\right)\\
-&=F\left(G\left(y\right)\right)\\
-&=y;
-\end{aligned}
+P\left(Y\le y\right)=P\left(F\left(X\right)\le y\right)=P\left(X\le G\left(y\right)\right)=F\left(G\left(y\right)\right)=y;
 $$
 
 (2) when $y=0$,
 
 $$
-\begin{aligned}&\;\;G\left(0\right)\\
-&=\inf\left\{x:F\left(x\right)\ge 0\right\}\\
-&=-\infty,
-\end{aligned}
+G\left(0\right)=\inf\left\{x:F\left(x\right)\ge 0\right\}=-\infty,
 $$
 
 hence
 
 $$
-\begin{aligned}&\;\;P\left(Y\le 0\right)\\
-&=P\left(F\left(X\right)=0\right)\\
-&=P\left(X\le G\left(0\right)\right)\\
-&=0;
-\end{aligned}
+P\left(Y\le 0\right)=P\left(F\left(X\right)=0\right)=P\left(X\le G\left(0\right)\right)=0;
 $$
 
 (3) when $y=1$, $P\left(Y\le 1\right)=1$ always holds.

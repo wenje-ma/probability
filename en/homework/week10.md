@@ -31,10 +31,7 @@ Use Chebyshev's inequality to estimate $P\left(\left|I_{n}-I\right|> a/n^{1/2}\r
 Since $U_{1}$ follows the uniform distribution on $\left(0,1\right)$, by **Theorem 1.6.9** (Change of Variables),
 
 $$
-\begin{aligned}&\;\;Ef\left(U_{1}\right)\\
-&=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x\\
-&=I,
-\end{aligned}
+Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x=I,
 $$
 
 so $EI_{n}=I$. Set
@@ -46,30 +43,21 @@ $$
 Since $U_{i}$ are independent and identically distributed,
 
 $$
-\begin{aligned}&\;\;\mathrm{var}\left(I_{n}\right)\\
-&=\frac{1}{n}\mathrm{var}\left(f\left(U_{1}\right)\right)\\
-&\le\frac{1}{n}Ef\left(U_{1}\right)^{2}\\
-&=\frac{\sigma^{2}}{n},
-\end{aligned}
+\mathrm{var}\left(I_{n}\right)=\frac{1}{n}\mathrm{var}\left(f\left(U_{1}\right)\right)\le\frac{1}{n}Ef\left(U_{1}\right)^{2}=\frac{\sigma^{2}}{n},
 $$
 
 where
 
 $$
-\begin{aligned}&\;\;\mathrm{var}\left(Y\right)
-&=EY^{2}-\left(EY\right)^{2}
-&\le EY^{2}.
-\end{aligned}
+\mathrm{var}\left(Y\right)
+=EY^{2}-\left(EY\right)^{2}
+\le EY^{2}.
 $$
 
 By Chebyshev's inequality (**Theorem 1.6.4**, taking $\phi\left(x\right)=x^{2}$, with mean $I$),
 
 $$
-\begin{aligned}&\;\;P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\\
-&\le\frac{\mathrm{var}\left(I_{n}\right)}{\left(a/n^{1/2}\right)^{2}}\\
-&\le\frac{\sigma^{2}/n}{a^{2}/n}\\
-&=\frac{\sigma^{2}}{a^{2}}.
-\end{aligned}
+P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\le\frac{\mathrm{var}\left(I_{n}\right)}{\left(a/n^{1/2}\right)^{2}}\le\frac{\sigma^{2}/n}{a^{2}/n}=\frac{\sigma^{2}}{a^{2}}.
 $$
 
 i.e.
@@ -89,11 +77,7 @@ Prove that if $X\ge 0$ is integer-valued, then $EX=\sum_{n\ge 1}P\left(X\ge n\ri
 For any $\omega$, write $X\left(\omega\right)=N$ (a nonnegative integer). Then $\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)=1$ if and only if $k\le N$, so
 
 $$
-\begin{aligned}&\;\;\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)\\
-&=\#\left\{k\ge 1:k\le N\right\}\\
-&=N\\
-&=X\left(\omega\right).
-\end{aligned}
+\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)=\#\left\{k\ge 1:k\le N\right\}=N=X\left(\omega\right).
 $$
 
 i.e.
@@ -105,10 +89,7 @@ $$
 holds pointwise. Each term is nonnegative, so taking expectation by the monotone convergence theorem for expectations (**Theorem 1.5.7**):
 
 $$
-\begin{aligned}&\;\;EX\\
-&=E\left[\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\right]\\
-&=\sum_{k=1}^{\infty}P\left(X\ge k\right),
-\end{aligned}
+EX=E\left[\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\right]=\sum_{k=1}^{\infty}P\left(X\ge k\right),
 $$
 
 i.e. $EX=\sum_{n\ge 1}P\left(X\ge n\right)$. $\blacksquare$

@@ -27,10 +27,7 @@ $$
 令 $N\to\infty$ 得
 
 $$
-\begin{aligned}&\;\;\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)\\
-&=P\left(\cap_{n}A_{n}^{c}\right)\\
-&=0.
-\end{aligned}
+\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)=P\left(\cap_{n}A_{n}^{c}\right)=0.
 $$
 
 反设 $\sum_{n}P\left(A_{n}\right)< \infty$. 因 $P\left(A_{n}\right)< 1$ 即 $1-P\left(A_{n}\right)> 0$, 且 $\sum P\left(A_{n}\right)< \infty$ 保证
@@ -66,11 +63,7 @@ $$
 蕴含
 
 $$
-\begin{aligned}&\;\;P\left(X_{n}> A\ \text{无穷多次}\right)\\
-&\le P\left(\sup_{n}X_{n}> A\right)\\
-&=1-P\left(\sup_{n}X_{n}\le A\right)\\
-&< 1.
-\end{aligned}
+P\left(X_{n}> A\ \text{无穷多次}\right)\le P\left(\sup_{n}X_{n}> A\right)=1-P\left(\sup_{n}X_{n}\le A\right)< 1.
 $$
 
 反设 $\sum_{n}P\left(X_{n}> A\right)=\infty$. 因 $X_{n}$ 独立, 由**定理 2.3.7** (第二博雷尔-坎泰利) 得 $P\left(X_{n}> A\ \text{无穷多次}\right)=1$, 与上式矛盾. 故 $\sum_{n}P\left(X_{n}> A\right)< \infty$. $\blacksquare$

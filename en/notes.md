@@ -203,8 +203,7 @@ The proof uses the four-step method: indicator functions, simple functions, nonn
 If $f\ge 0$, then (Tonelli)
 
 $$
-\begin{aligned}\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)&=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)\\&=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
-\end{aligned}
+\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 $$
 
 If $f$ is integrable, i.e. $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, then the same triple equality holds (Fubini).
@@ -362,8 +361,7 @@ If the $A_{n}$ are independent and $\sum_{n}P\left(A_{n}\right)=\infty$, then $P
 The characteristic function of a random variable $X$ is
 
 $$
-\begin{aligned}\phi_{X}\left(t\right)&=Ee^{itX}\\&=\int e^{itx}\,\mu\left(\mathrm{d}x\right),
-\end{aligned}
+\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right),
 $$
 
 where $\mu$ is the distribution of $X$.

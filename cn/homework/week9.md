@@ -17,10 +17,7 @@
 由期望的线性, $E\left(S_{n}/n\right)=\nu_{n}$, 故
 
 $$
-\begin{aligned}&\;\;E\left(\frac{S_{n}}{n}-\nu_{n}\right)^{2}\\
-&=\mathrm{var}\left(\frac{S_{n}}{n}\right)\\
-&=\frac{1}{n^{2}}\mathrm{var}\left(S_{n}\right).
-\end{aligned}
+E\left(\frac{S_{n}}{n}-\nu_{n}\right)^{2}=\mathrm{var}\left(\frac{S_{n}}{n}\right)=\frac{1}{n^{2}}\mathrm{var}\left(S_{n}\right).
 $$
 
 由 $X_{i}$ 两两不相关及**定理 2.2.1**,
@@ -38,10 +35,7 @@ $$
 由 $\mathrm{var}\left(X_{i}\right)/i\to 0$, 对任意 $\varepsilon> 0$ 存在 $N$ 使 $i\ge N$ 时 $\mathrm{var}\left(X_{i}\right)< \varepsilon i$. 于是
 
 $$
-\begin{aligned}&\;\;\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\\
-&\le\frac{1}{n^{2}}\sum_{i< N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\\
-&\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
-\end{aligned}
+\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\frac{1}{n^{2}}\sum_{i< N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
 $$
 
 其中
@@ -81,20 +75,13 @@ $$
 对交叉项, $i\ne j$ 时若 $i< j$ 直接由假设得 $E\left(X_{i}X_{j}\right)\le r\left(j-i\right)$; 若 $i> j$, 利用 $E\left(X_{i}X_{j}\right)=E\left(X_{j}X_{i}\right)$ 且 $j< i$, 由假设得 $E\left(X_{j}X_{i}\right)\le r\left(i-j\right)$. 故对一切 $i\ne j$ 有 $E\left(X_{i}X_{j}\right)\le r\left(\left|i-j\right|\right)$, 于是
 
 $$
-\begin{aligned}&\;\;\sum_{i\ne j}E\left(X_{i}X_{j}\right)\\
-&\le\sum_{i\ne j}r\left(\left|i-j\right|\right)\\
-&=2\sum_{k=1}^{n-1}\left(n-k\right)r\left(k\right)\\
-&\le 2n\sum_{k=1}^{n-1}r\left(k\right).
-\end{aligned}
+\sum_{i\ne j}E\left(X_{i}X_{j}\right)\le\sum_{i\ne j}r\left(\left|i-j\right|\right)=2\sum_{k=1}^{n-1}\left(n-k\right)r\left(k\right)\le 2n\sum_{k=1}^{n-1}r\left(k\right).
 $$
 
 合并得
 
 $$
-\begin{aligned}&\;\;E\left(\frac{S_{n}}{n}\right)^{2}\\
-&=\frac{E\left(S_{n}^{2}\right)}{n^{2}}\\
-&\le\frac{r\left(0\right)}{n}+\frac{2}{n}\sum_{k=1}^{n-1}r\left(k\right).
-\end{aligned}
+E\left(\frac{S_{n}}{n}\right)^{2}=\frac{E\left(S_{n}^{2}\right)}{n^{2}}\le\frac{r\left(0\right)}{n}+\frac{2}{n}\sum_{k=1}^{n-1}r\left(k\right).
 $$
 
 由 $r\left(k\right)\to 0$, 其算术平均

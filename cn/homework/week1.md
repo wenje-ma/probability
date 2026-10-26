@@ -53,10 +53,7 @@
 (1) 存在某个 $A_{j}$ 使 $A_{j}^{c}$ 可数, 则
 
 $$
-\begin{aligned}&\;\;\left(\cup_{i}A_{i}\right)^{c}\\
-&=\cap_{i}A_{i}^{c}\\
-&\subset A_{j}^{c}
-\end{aligned}
+\left(\cup_{i}A_{i}\right)^{c}=\cap_{i}A_{i}^{c}\subset A_{j}^{c}
 $$
 
 可数, 故 $\cup_{i}A_{i}\in\mathcal F$;
@@ -72,28 +69,19 @@ $$
 (1) 所有 $A_{i}$ 可数, 则 $\cup_{i}A_{i}$ 可数,
 
 $$
-\begin{aligned}&\;\;P\left(\cup_{i}A_{i}\right)\\
-&=0\\
-&=\sum_{i}P\left(A_{i}\right).
-\end{aligned}
+P\left(\cup_{i}A_{i}\right)=0=\sum_{i}P\left(A_{i}\right).
 $$
 
 (2) 存在某个 $A_{j}^{c}$ 可数. 因 $A_{i}\cap A_{j}=\varnothing$ 蕴含 $A_{i}\subset A_{j}^{c}$ 对 $i\ne j$, 故每个 $i\ne j$ 的 $A_{i}$ 可数, $P\left(A_{i}\right)=0$; 又
 
 $$
-\begin{aligned}&\;\;\left(\cup_{i}A_{i}\right)^{c}\\
-&=\cap_{i}A_{i}^{c}\\
-&\subset A_{j}^{c}
-\end{aligned}
+\left(\cup_{i}A_{i}\right)^{c}=\cap_{i}A_{i}^{c}\subset A_{j}^{c}
 $$
 
 可数, 故 $P\left(\cup_{i}A_{i}\right)=1=P\left(A_{j}\right)$. 于是
 
 $$
-\begin{aligned}&\;\;P\left(\cup_{i}A_{i}\right)\\
-&=1\\
-&=\sum_{i}P\left(A_{i}\right).
-\end{aligned}
+P\left(\cup_{i}A_{i}\right)=1=\sum_{i}P\left(A_{i}\right).
 $$
 
 综上 $\left(\Omega,\mathcal F,P\right)$ 是概率空间. $\blacksquare$
