@@ -1,16 +1,26 @@
-# 作业 8
+# week8
 
-> **定理 2.1.16** (密度与独立)<br>设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积. (见习题 2.1.1.)
+> **例 1.6.13 (泊松分布)**<br>$Z$ 服从参数为 $\lambda$ 的泊松分布, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
 
-> **定理 2.1.13** (独立变量的乘积期望)<br>若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则 $$E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.$$
+> **定理 1.7.2 (富比尼定理)**<br>若 $f\ge 0$, 则 (托内利) 二重积分可交换顺序; 若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的积分交换顺序成立 (富比尼).
 
-> **定义 2.1.3** (不相关)<br>若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ **不相关**. 独立蕴含不相关 (由**定理 2.1.13**), 但不相关不蕴含独立.
+> **定义 2.1.2 (独立随机变量)**<br>随机变量 $X_{1},\dots,X_{n}$ 称为独立的, 若对任意 Borel 集 $A_{1},\dots,A_{n}$, $P\left(\bigcap_{i}\left\{X_{i}\in A_{i}\right\}\right)=\prod_{i}P\left(X_{i}\in A_{i}\right)$.
 
-> **例 1.6.13** (泊松分布)<br>$Z$ 服从参数为 $\lambda$ 的**泊松分布**, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
+> **定义 2.1.3 (不相关)**<br>若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ 不相关. 独立蕴含不相关, 但不相关不蕴含独立.
 
-> **习题 2.1.10** (卷积公式)<br>若 $X,Y$ 独立且取整数值, 则 $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
+> **习题 2.1.10 (卷积公式)**<br>若 $X,Y$ 独立且取整数值, 则 $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
 
-### 习题一
+> **定理 2.1.13 (独立变量的乘积期望)**<br>若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则
+
+$$
+E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.
+$$
+
+> **定理 2.1.16 (密度与独立)**<br>设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积.
+
+---
+
+## 1
 
 设 $\left(X_{1},\dots,X_{n}\right)$ 有密度 $f\left(x_{1},\dots,x_{n}\right)$, 即
 
@@ -26,9 +36,9 @@ $$
 
 ($g_{m}\ge 0$ 可测, 不必是概率密度), 证明 $X_{1},\dots,X_{n}$ 独立.
 
-### 解答 习题一
+### 解答 1
 
-对任意博雷尔集 $A_{1},\dots,A_{n}$, 由联合密度与托内利定理 (**定理 1.7.2**, 被积函数非负可分离):
+对任意博雷尔集 $A_{1},\dots,A_{n}$, 由联合密度与托内利定理 (**定理 1.7.2 (富比尼定理)**, 被积函数非负可分离):
 
 $$
 P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right)=\int_{A_{1}\times\cdots\times A_{n}}f\left(x\right)\,\mathrm{d}x=\prod_{i=1}^{n}\int_{A_{i}}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}.
@@ -58,13 +68,15 @@ $$
 \prod_{i}P\left(X_{i}\in A_{i}\right)=\prod_{i}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}=P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right).
 $$
 
-由 $A_{i}$ 任意, $X_{1},\dots,X_{n}$ 独立 (**定义 2.1.2**). $\blacksquare$
+由 $A_{i}$ 任意, $X_{1},\dots,X_{n}$ 独立 (**定义 2.1.2 (独立随机变量)**). $\blacksquare$
 
-### 习题二
+---
+
+## 2
 
 设 $\Omega=\left(0,1\right)$, $\mathcal F$ 为博雷尔集, $P$ 为勒贝格测度. 证明 $X_{n}\left(\omega\right)=\sin\left(2\pi n\omega\right)$ ($n=1,2,\dots$) 两两不相关但不独立.
 
-### 解答 习题二
+### 解答 2
 
 先证两两不相关. 对任意正整数 $n$,
 
@@ -90,7 +102,7 @@ $$
 EX_{n}X_{m}=\frac{1}{2}\int_{0}^{1}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right)\,\mathrm{d}\omega=0=EX_{n}EX_{m}.
 $$
 
-所以 $X_{n}$ 两两不相关 (**定义 2.1.3**).
+所以 $X_{n}$ 两两不相关 (**定义 2.1.3 (不相关)**).
 
 再证不独立. 取 $A=\left\{x:x> 1/2\right\}$, $B=\left\{x:x> \sqrt{3}/2\right\}$. 由 $\sin\left(2\pi\omega\right)> 1/2$ 得
 
@@ -116,15 +128,17 @@ $$
 P\left(X_{1}> 1/2\right)P\left(X_{2}> \sqrt{3}/2\right)=1/3\cdot 1/6> 0,
 $$
 
-二者不等, 故 $X_{1},X_{2}$ 不独立, 从而整列 $X_{n}$ 不独立 (**定义 2.1.2**). $\blacksquare$
+二者不等, 故 $X_{1},X_{2}$ 不独立, 从而整列 $X_{n}$ 不独立 (**定义 2.1.2 (独立随机变量)**). $\blacksquare$
 
-### 习题三
+---
+
+## 3
 
 设 $X\sim\mathrm{泊松}\left(\lambda\right)$, $Y\sim\mathrm{泊松}\left(\mu\right)$ 独立, 用卷积公式证明 $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$.
 
-### 解答 习题三
+### 解答 3
 
-$X,Y$ 独立且取非负整数值, 由卷积公式 (**习题 2.1.10**), 对 $n\ge 0$,
+$X,Y$ 独立且取非负整数值, 由卷积公式 (**习题 2.1.10 (卷积公式)**), 对 $n\ge 0$,
 
 $$
 P\left(X+Y=n\right)=\sum_{m=0}^{n}P\left(X=m\right)P\left(Y=n-m\right)=\sum_{m=0}^{n}\frac{e^{-\lambda}\lambda^{m}}{m!}\cdot\frac{e^{-\mu}\mu^{n-m}}{\left(n-m\right)!}.
@@ -136,4 +150,4 @@ $$
 P\left(X+Y=n\right)=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\sum_{m=0}^{n}\frac{n!}{m!\left(n-m\right)!}\lambda^{m}\mu^{n-m}=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\left(\lambda+\mu\right)^{n}.
 $$
 
-这正是参数为 $\lambda+\mu$ 的泊松分布的概率质量函数 (**例 1.6.13**), 故 $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$. $\blacksquare$
+这正是参数为 $\lambda+\mu$ 的泊松分布的概率质量函数 (**例 1.6.13 (泊松分布)**), 故 $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$. $\blacksquare$

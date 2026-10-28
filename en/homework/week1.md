@@ -1,84 +1,52 @@
-# Assignment 1
+# week1
 
-> **Definition 1.1.1** ($\sigma$-Algebra)
-> 
-> Let $\Omega$ be nonempty. $\mathcal F\subset\mathcal P\left(\Omega\right)$ is called a **$\sigma$-algebra** on $\Omega$ if it satisfies:
-> 
-> (1) $\Omega\in\mathcal F$;
-> 
-> (2) closed under complementation: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
-> 
-> (3) closed under countable unions: $\left\{A_{i}\right\}_{i=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{i=1}^{\infty}A_{i}\in\mathcal F$.
-> 
-> Since $\cap_{i}A_{i}=\left(\cup_{i}A_{i}^{c}\right)^{c}$, a $\sigma$-algebra is also closed under countable intersections. Here "countable" means finite or countably infinite.
+> **Definition 1.1.1 ($\sigma$-algebra)**<br>Let $\Omega$ be nonempty. A collection $\mathcal F\subset\mathcal P\left(\Omega\right)$ is called a $\sigma$-algebra on $\Omega$ if: (1) $\Omega\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{i}\right\}_{i=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{i=1}^{\infty}A_{i}\in\mathcal F$. Since $\cap_{i}A_{i}=\left(\cup_{i}A_{i}^{c}\right)^{c}$, a $\sigma$-algebra is also closed under countable intersections. Here "countable" means finite or countably infinite.
 
-> **Definition 1.1.2** (Algebra)
-> 
-> Let $\Omega$ be nonempty and $\mathcal F\subset\mathcal P\left(\Omega\right)$. $\mathcal F$ is called an **algebra** on $\Omega$ if it satisfies:
-> 
-> (1) $\Omega\in\mathcal F$;
-> 
-> (2) closed under complementation: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$;
-> 
-> (3) closed under finite unions: $A,B\in\mathcal F\Rightarrow A\cup B\in\mathcal F$.
+> **Theorem 1.1.1 (Properties of a Probability Measure)**<br>Let $\left(\Omega,\mathcal F,P\right)$ be a probability space. Then: (1) $P\left(\varnothing\right)=0$; (2) monotonicity: $A\subset B\Rightarrow P\left(A\right)\le P\left(B\right)$; (3) if $A_{n}\uparrow A$ then $P\left(A_{n}\right)\uparrow P\left(A\right)$ (continuity from below), and if $A_{n}\downarrow A$ then $P\left(A_{n}\right)\downarrow P\left(A\right)$ (continuity from above).
 
-> **Definition 1.1.3** (Probability Space and Probability Measure)
-> 
-> A **probability space** is a triple $\left(\Omega,\mathcal F,P\right)$, where $\Omega$ is the sample space, $\mathcal F$ is the family of events (a $\sigma$-algebra), and $P:\mathcal F\to\left[0,1\right]$ is a **probability measure**, i.e. it satisfies:
-> 
-> (1) $P\left(\Omega\right)=1$;
-> 
-> (2) countable additivity: for any pairwise disjoint sequence of events $\left\{A_{i}\right\}$, $P\left(\cup_{i}A_{i}\right)=\sum_{i}P\left(A_{i}\right)$.
-> 
-> More generally, a nonnegative countably additive set function $\mu$ satisfying (2) and taking nonnegative values is called a **measure**.
+> **Definition 1.1.2 (Algebra)**<br>Let $\Omega$ be nonempty, $\mathcal F\subset\mathcal P\left(\Omega\right)$. $\mathcal F$ is called an algebra on $\Omega$ if: (1) $\Omega\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under finite unions: $A,B\in\mathcal F\Rightarrow A\cup B\in\mathcal F$.
 
-> **Theorem 1.1.1** (Properties of Probability Measures)
-> 
-> Let $\left(\Omega,\mathcal F,P\right)$ be a probability space. Then:
-> 
-> (1) $P\left(\varnothing\right)=0$;
-> 
-> (2) monotonicity: $A\subset B\Rightarrow P\left(A\right)\le P\left(B\right)$;
-> 
-> (3) if $A_{n}\uparrow A$ then $P\left(A_{n}\right)\uparrow P\left(A\right)$ (continuity from below); if $A_{n}\downarrow A$ then $P\left(A_{n}\right)\downarrow P\left(A\right)$ (continuity from above).
+> **Definition 1.1.3 (Probability Space and Probability Measure)**<br>A probability space is a triple $\left(\Omega,\mathcal F,P\right)$, where $\Omega$ is the sample space, $\mathcal F$ is the event family ($\sigma$-algebra), and $P:\mathcal F\to\left[0,1\right]$ is a probability measure, i.e. satisfying: (1) $P\left(\Omega\right)=1$; (2) countable additivity: for pairwise disjoint events $\left\{A_{i}\right\}$, $P\left(\cup_{i}A_{i}\right)=\sum_{i}P\left(A_{i}\right)$. More generally, a nonnegative countably additive set function $\mu$ satisfying (2) is called a measure.
 
-### Problem 1
+---
 
-Let $\Omega=\mathbb R$, and let $\mathcal F$ be all subsets satisfying "$A$ or $A^{c}$ is countable", with $P\left(A\right)=0$ (if $A$ is countable) and $P\left(A\right)=1$ (if $A^{c}$ is countable). Prove that $\left(\Omega,\mathcal F,P\right)$ is a probability space.
+## 1
 
-### Solution to Problem 1
+Let $\Omega=\mathbb R$, let $\mathcal F$ be the collection of all subsets such that "either $A$ or $A^{c}$ is countable", and define $P\left(A\right)=0$ (if $A$ is countable) and $P\left(A\right)=1$ (if $A^{c}$ is countable). Prove that $\left(\Omega,\mathcal F,P\right)$ is a probability space.
 
-We first prove that $\mathcal F$ is a $\sigma$-algebra (**Definition 1.1.1**). Since $\Omega^{c}=\varnothing$ is countable, $\Omega\in\mathcal F$. If $A\in\mathcal F$, then $A^{c}$ satisfies "$A^{c}$ or $\left(A^{c}\right)^{c}=A$ is countable", so $A^{c}\in\mathcal F$. Let $\left\{A_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$ be a countable sequence. There are two cases:
+### Solution 1
 
-(1) there exists some $A_{j}$ such that $A_{j}^{c}$ is countable; then
+First show that $\mathcal F$ is a $\sigma$-algebra (**Definition 1.1.1 ($\sigma$-algebra)**). Since $\Omega^{c}=\varnothing$ is countable, $\Omega\in\mathcal F$. If $A\in\mathcal F$, then $A^{c}$ satisfies "either $A^{c}$ or $\left(A^{c}\right)^{c}=A$ is countable", so $A^{c}\in\mathcal F$. Let $\left\{A_{i}\right\}_{i=1}^{\infty}\subset\mathcal F$ be a countable sequence; consider two cases:
+
+(1) There is some $A_{j}$ for which $A_{j}^{c}$ is countable; then
 
 $$
 \left(\cup_{i}A_{i}\right)^{c}=\cap_{i}A_{i}^{c}\subset A_{j}^{c}
 $$
 
-which is countable, hence $\cup_{i}A_{i}\in\mathcal F$;
+is countable, so $\cup_{i}A_{i}\in\mathcal F$;
 
-(2) all $A_{i}$ are countable; then $\cup_{i}A_{i}$ is countable, hence $\cup_{i}A_{i}\in\mathcal F$.
+(2) All $A_{i}$ are countable; then $\cup_{i}A_{i}$ is countable, so $\cup_{i}A_{i}\in\mathcal F$.
 
 Thus $\mathcal F$ is a $\sigma$-algebra.
 
-Next, we prove that $P$ is well defined. If $A$ and $A^{c}$ were both countable, then $\mathbb R=A\cup A^{c}$ would be countable, contradicting the fact that $\mathbb R$ is uncountable. Hence "$A$ is countable" and "$A^{c}$ is countable" are mutually exclusive, so the two possible values of $P$ never conflict.
+Now show that $P$ is well-defined. If both $A$ and $A^{c}$ were countable, then $\mathbb R=A\cup A^{c}$ would be countable, contradicting that $\mathbb R$ is uncountable; hence " $A$ is countable" and " $A^{c}$ is countable" are mutually exclusive, so the two possible values of $P$ do not conflict.
 
-Finally, we verify that $P$ is a probability measure (**Definition 1.1.3**). Clearly $P\left(\Omega\right)=1$ (since $\Omega^{c}=\varnothing$ is countable). Let $\left\{A_{i}\right\}$ be pairwise disjoint. There are two cases:
+Finally verify that $P$ is a probability measure (**Definition 1.1.3 (Probability Space and Probability Measure)**). Clearly $P\left(\Omega\right)=1$ (since $\Omega^{c}=\varnothing$ is countable). Let $\left\{A_{i}\right\}$ be pairwise disjoint; consider two cases:
 
-(1) all $A_{i}$ are countable; then $\cup_{i}A_{i}$ is countable,
+(1) All $A_{i}$ are countable; then $\cup_{i}A_{i}$ is countable,
 
 $$
 P\left(\cup_{i}A_{i}\right)=0=\sum_{i}P\left(A_{i}\right).
 $$
 
-(2) there exists some $A_{j}^{c}$ that is countable. Since $A_{i}\cap A_{j}=\varnothing$ implies $A_{i}\subset A_{j}^{c}$ for $i\ne j$, each $A_{i}$ with $i\ne j$ is countable and $P\left(A_{i}\right)=0$; moreover,
+(2) Some $A_{j}^{c}$ is countable. Since $A_{i}\cap A_{j}=\varnothing$ implies $A_{i}\subset A_{j}^{c}$ for $i\ne j$, each $A_{i}$ with $i\ne j$ is countable and $P\left(A_{i}\right)=0$; moreover
 
 $$
 \left(\cup_{i}A_{i}\right)^{c}=\cap_{i}A_{i}^{c}\subset A_{j}^{c}
 $$
 
-which is countable, so $P\left(\cup_{i}A_{i}\right)=1=P\left(A_{j}\right)$. Hence
+is countable, so $P\left(\cup_{i}A_{i}\right)=1=P\left(A_{j}\right). Hence
 
 $$
 P\left(\cup_{i}A_{i}\right)=1=\sum_{i}P\left(A_{i}\right).
@@ -86,26 +54,28 @@ $$
 
 In summary, $\left(\Omega,\mathcal F,P\right)$ is a probability space. $\blacksquare$
 
-### Problem 2
+---
+
+## 2
 
 Let $\mathcal F_{1}\subset\mathcal F_{2}\subset\cdots$ be a sequence of $\sigma$-algebras. Give an example showing that $\cup_{i}\mathcal F_{i}$ need not be a $\sigma$-algebra.
 
-### Solution to Problem 2
+### Solution 2
 
-Take $\Omega=\mathbb N$, and for each $i$ let $\mathcal F_{i}$ be the $\sigma$-algebra generated by the first $i$ singletons
+Take $\Omega=\mathbb N$, and for each $i$ let $\mathcal F_{i}$ be the $\sigma$-algebra generated by the first $i$ singletons:
 
 $$
 \sigma\left(\left\{1\right\},\left\{2\right\},\dots,\left\{i\right\}\right)
 $$
 
-(**Definition 1.1.1**). Thus $A\in\mathcal F_{i}$ if and only if $A$ is finite, or $A^{c}$ is finite and all its elements belong to the first $i$. Consequently,
+(**Definition 1.1.1 ($\sigma$-algebra)**). Then $A\in\mathcal F_{i}$ iff $A$ is finite or $A^{c}$ is finite and its elements all belong to the first $i$. Hence
 
 $$
-\cup_{i}\mathcal F_{i}=\left\{A\subset\mathbb N:A\text{ 有限或 }A^{c}\text{ 有限}\right\},
+\cup_{i}\mathcal F_{i}=\left\{A\subset\mathbb N:A\text{ finite or }A^{c}\text{ finite}\right\},
 $$
 
-i.e. the "finite-cofinite algebra".
+the "finite-cofinite algebra".
 
-Now take $A_{k}=\left\{2k\right\}$. Then each $A_{k}\in\cup_{i}\mathcal F_{i}$ (a singleton is finite), but both $\cup_{k}A_{k}=\left\{2,4,6,\dots\right\}$ and its complement $\left\{1,3,5,\dots\right\}$ are neither finite nor cofinite, so $\cup_{k}A_{k}\notin\cup_{i}\mathcal F_{i}$. This shows that $\cup_{i}\mathcal F_{i}$ is not closed under countable unions and is not a $\sigma$-algebra (**Definition 1.1.1**, (3) is not satisfied).
+Now take $A_{k}=\left\{2k\right\}$; each $A_{k}\in\cup_{i}\mathcal F_{i}$ (a singleton is finite), but $\cup_{k}A_{k}=\left\{2,4,6,\dots\right\}$ and its complement $\left\{1,3,5,\dots\right\}$ are neither finite nor cofinite, so $\cup_{k}A_{k}\notin\cup_{i}\mathcal F_{i}$. This shows that $\cup_{i}\mathcal F_{i}$ is not closed under countable unions and is not a $\sigma$-algebra (condition (3) of **Definition 1.1.1 ($\sigma$-algebra)** fails).
 
-On the other hand, $\cup_{i}\mathcal F_{i}$ is indeed an algebra (finite unions, finite intersections and complementation all preserve "finite or cofinite", **Definition 1.1.2**), which illustrates the fact that a $\sigma$-algebra requires, in addition to an algebra, closure under countable unions. $\blacksquare$
+On the other hand, $\cup_{i}\mathcal F_{i}$ is indeed an algebra (finite unions, finite intersections, and complements all preserve "finite or cofinite", by **Definition 1.1.2 (Algebra)**), which illustrates that a $\sigma$-algebra requires the additional condition of closure under countable unions. $\blacksquare$

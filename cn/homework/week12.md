@@ -1,14 +1,16 @@
-# 作业 12
+# week12
 
-> **定义 2.3.1** (依概率收敛)<br>$X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
+> **基础知识: 函数 $g\left(t\right)=t/\left(1+t\right)$ 的性质**<br>对 $t\ge 0$, $g$ 满足: $g\left(t\right)=0\iff t=0$; $g$ 严格递增, $g\le 1$; $g$ 次可加: $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$.
 
-> **定理 1.6.4** (切比雪夫不等式)<br>若 $\phi:\mathbb R\to\mathbb R$ 非负、非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
+> **习题 1.4.1 (积分为零蕴含几乎处处为零)**<br>若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
 
-> **习题 1.4.1**<br>若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
+> **定理 1.6.4 (切比雪夫不等式)**<br>若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
 
-> **性质** (函数 $g\left(t\right)=t/\left(1+t\right)$)<br>对 $t\ge 0$, $g$ 满足: $g\left(t\right)=0\iff t=0$; $g$ 严格递增, $g\le 1$; $g$ 次可加: $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$.
+> **定义 2.3.1 (依概率收敛)**<br>$X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
 
-### 习题一
+---
+
+## 1
 
 证明 (a)
 
@@ -26,14 +28,14 @@ $$
 
 (b) $d\left(X_{n},X\right)\to 0$ ($n\to\infty$) 当且仅当 $X_{n}\to X$ 依概率.
 
-### 解答 习题一
+### 解答 1
 
 记 $g\left(t\right)=t/\left(1+t\right)$ ($t\ge 0$).
 
-(a)(1) 因 $g\ge 0$ 且 $g\left(t\right)=0$ 当且仅当 $t=0$, 由**习题 1.4.1** (非负函数积分为零蕴含几乎处处为零),
+(a)(1) 因 $g\ge 0$ 且 $g\left(t\right)=0$ 当且仅当 $t=0$, 由**习题 1.4.1 (积分为零蕴含几乎处处为零)**,
 
 $$
-d\left(X,Y\right)=0\iff E\,g\left(\left|X-Y\right|\right)=0\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\iff\left|X-Y\right|=0\ \text{几乎处处}\iff X=Y\ \text{几乎处处}
+d\left(X,Y\right)=0\iff E\,g\left(\left|X-Y\right|\right)=0\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\iff\left|X-Y\right|=0\ \text{几乎处处}\iff X=Y\ \text{几乎处处}.
 $$
 
 (a)(2) 由 $\left|X-Y\right|=\left|Y-X\right|$ 立即得 $d\left(X,Y\right)=d\left(Y,X\right)$.
@@ -72,10 +74,10 @@ $$
 \left\{\left|X_{n}-X\right|> \varepsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right\},
 $$
 
-由马尔可夫不等式 (**定理 1.6.4**),
+由马尔可夫不等式 (**定理 1.6.4 (切比雪夫不等式)**),
 
 $$
 P\left(\left|X_{n}-X\right|> \varepsilon\right)=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\to 0.
 $$
 
-故 $X_{n}\to X$ 依概率 (**定义 2.3.1**). $\blacksquare$
+故 $X_{n}\to X$ 依概率 (**定义 2.3.1 (依概率收敛)**). $\blacksquare$
