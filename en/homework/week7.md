@@ -1,7 +1,7 @@
 # week7
 
 > **Theorem 1.7.2 (Fubini's Theorem)**
->
+> 
 > If $f\ge 0$ or $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, then
 
 $$
@@ -11,15 +11,15 @@ $$
 In particular, for nonnegative $f$ the order of integration may be exchanged (Tonelli).
 
 > **Definition 2.1.1 (Independent Events)**
->
+> 
 > Events $A,B\in\mathcal F$ are independent if $P\left(A\cap B\right)=P\left(A\right)P\left(B\right)$. A sequence $A_{1},\dots,A_{n}$ is independent if for every $I\subset\left\{1,\dots,n\right\}$, $P\left(\cap_{i\in I}A_{i}\right)=\prod_{i\in I}P\left(A_{i}\right)$.
 
 > **Theorem 2.1.1 (Independence and $\sigma$-algebras)**
->
+> 
 > (1) If $X,Y$ are independent, then $\sigma\left(X\right)$ and $\sigma\left(Y\right)$ are independent; (2) if $\mathcal A_{1},\dots,\mathcal A_{n}$ are independent, then $\sigma\left(\mathcal A_{1}\right),\dots,\sigma\left(\mathcal A_{n}\right)$ are independent. Hence to verify independence of random variables it suffices to check on generators.
 
 > **Definition 2.1.2 (Independent Random Variables)**
->
+> 
 > Random variables $X_{1},\dots,X_{n}$ are independent if for all Borel sets $B_{1},\dots,B_{n}$,
 
 $$

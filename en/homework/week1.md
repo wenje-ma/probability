@@ -1,19 +1,19 @@
 # week1
 
 > **Definition 1.1.1 ($\sigma$-algebra)**
->
+> 
 > Let $\Omega$ be nonempty. A collection $\mathcal F\subset\mathcal P\left(\Omega\right)$ is called a $\sigma$-algebra on $\Omega$ if: (1) $\Omega\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under countable unions: $\left\{A_{i}\right\}_{i=1}^{\infty}\subset\mathcal F\Rightarrow\bigcup_{i=1}^{\infty}A_{i}\in\mathcal F$. Since $\cap_{i}A_{i}=\left(\cup_{i}A_{i}^{c}\right)^{c}$, a $\sigma$-algebra is also closed under countable intersections. Here "countable" means finite or countably infinite.
 
 > **Theorem 1.1.1 (Properties of a Probability Measure)**
->
+> 
 > Let $\left(\Omega,\mathcal F,P\right)$ be a probability space. Then: (1) $P\left(\varnothing\right)=0$; (2) monotonicity: $A\subset B\Rightarrow P\left(A\right)\le P\left(B\right)$; (3) if $A_{n}\uparrow A$ then $P\left(A_{n}\right)\uparrow P\left(A\right)$ (continuity from below), and if $A_{n}\downarrow A$ then $P\left(A_{n}\right)\downarrow P\left(A\right)$ (continuity from above).
 
 > **Definition 1.1.2 (Algebra)**
->
+> 
 > Let $\Omega$ be nonempty, $\mathcal F\subset\mathcal P\left(\Omega\right)$. $\mathcal F$ is called an algebra on $\Omega$ if: (1) $\Omega\in\mathcal F$; (2) closed under complements: $A\in\mathcal F\Rightarrow A^{c}\in\mathcal F$; (3) closed under finite unions: $A,B\in\mathcal F\Rightarrow A\cup B\in\mathcal F$.
 
 > **Definition 1.1.3 (Probability Space and Probability Measure)**
->
+> 
 > A probability space is a triple $\left(\Omega,\mathcal F,P\right)$, where $\Omega$ is the sample space, $\mathcal F$ is the event family ($\sigma$-algebra), and $P:\mathcal F\to\left[0,1\right]$ is a probability measure, i.e. satisfying: (1) $P\left(\Omega\right)=1$; (2) countable additivity: for pairwise disjoint events $\left\{A_{i}\right\}$, $P\left(\cup_{i}A_{i}\right)=\sum_{i}P\left(A_{i}\right)$. More generally, a nonnegative countably additive set function $\mu$ satisfying (2) is called a measure.
 
 ---
@@ -76,7 +76,7 @@ $$
 \sigma\left(\left\{1\right\},\left\{2\right\},\dots,\left\{i\right\}\right)
 $$
 
-(**Definition 1.1.1 ($\sigma$-algebra)**). Then $A\in\mathcal F_{i}$ iff $A$ is finite or $A^{c}$ is finite and its elements all belong to the first $i$. Hence
+\left(**Definition 1.1.1 \left($\sigma$-algebra\right)**\right). Then $A\in\mathcal F_{i}$ iff $A$ is finite or $A^{c}$ is finite and its elements all belong to the first $i$. Hence
 
 $$
 \cup_{i}\mathcal F_{i}=\left\{A\subset\mathbb N:A\text{ finite or }A^{c}\text{ finite}\right\},
@@ -84,6 +84,6 @@ $$
 
 the "finite-cofinite algebra".
 
-Now take $A_{k}=\left\{2k\right\}$; each $A_{k}\in\cup_{i}\mathcal F_{i}$ (a singleton is finite), but $\cup_{k}A_{k}=\left\{2,4,6,\dots\right\}$ and its complement $\left\{1,3,5,\dots\right\}$ are neither finite nor cofinite, so $\cup_{k}A_{k}\notin\cup_{i}\mathcal F_{i}$. This shows that $\cup_{i}\mathcal F_{i}$ is not closed under countable unions and is not a $\sigma$-algebra (condition (3) of **Definition 1.1.1 ($\sigma$-algebra)** fails).
+Now take $A_{k}=\left\{2k\right\}$; each $A_{k}\in\cup_{i}\mathcal F_{i}$ \left(a singleton is finite\right), but $\cup_{k}A_{k}=\left\{2,4,6,\dots\right\}$ and its complement $\left\{1,3,5,\dots\right\}$ are neither finite nor cofinite, so $\cup_{k}A_{k}\notin\cup_{i}\mathcal F_{i}$. This shows that $\cup_{i}\mathcal F_{i}$ is not closed under countable unions and is not a $\sigma$-algebra \left(condition \left(3\right) of **Definition 1.1.1 \left($\sigma$-algebra\right)** fails\right).
 
-On the other hand, $\cup_{i}\mathcal F_{i}$ is indeed an algebra (finite unions, finite intersections, and complements all preserve "finite or cofinite", by **Definition 1.1.2 (Algebra)**), which illustrates that a $\sigma$-algebra requires the additional condition of closure under countable unions. $\blacksquare$
+On the other hand, $\cup_{i}\mathcal F_{i}$ is indeed an algebra \left(finite unions, finite intersections, and complements all preserve "finite or cofinite", by **Definition 1.1.2 \left(Algebra\right)**\right), which illustrates that a $\sigma$-algebra requires the additional condition of closure under countable unions. $\blacksquare$

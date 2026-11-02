@@ -1,19 +1,19 @@
 # week2
 
 > **Definition 1.2.1 (Random Variable)**
->
+> 
 > Let $X$ be a real-valued function on $\left(\Omega,\mathcal F,P\right)$. If for every Borel set $B\subset\mathbb R$ one has $X^{-1}\left(B\right)\in\mathcal F$, then $X$ is called a random variable (or $\mathcal F$-measurable).
 
 > **Theorem 1.2.1 (Properties of a Distribution Function)**
->
+> 
 > Let $F\left(x\right)=P\left(X\le x\right)$. Then: (1) $F$ is nondecreasing; (2) $\lim_{x\to\infty}F\left(x\right)=1$, $\lim_{x\to-\infty}F\left(x\right)=0$; (3) $F$ is right-continuous, i.e. $\lim_{y\downarrow x}F\left(y\right)=F\left(x\right)$; (4) if $F\left(x-\right)=\lim_{y\uparrow x}F\left(y\right)$, then $F\left(x-\right)=P\left(X< x\right)$; (5) $P\left(X=x\right)=F\left(x\right)-F\left(x-\right)$.
 
 > **Definition 1.2.2 (Distribution and Distribution Function)**
->
+> 
 > The probability measure $\mu\left(A\right)=P\left(X\in A\right)$ induced by $X$ on $\left(\mathbb R,\mathcal R\right)$ is called the distribution of $X$; its distribution function is $F\left(x\right)=P\left(X\le x\right)$.
 
 > **Theorem 1.2.2 (Inverse of a Distribution Function)**
->
+> 
 > Let $F$ be a distribution function. Define its inverse by $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)< y\right\}$, $y\in\left(0,1\right)$. If $U$ is uniform on $\left(0,1\right\right)$, then $F^{-1}\left(U\right)$ has distribution function $F$. This construction is also the standard method for generating random variables on a computer.
 
 ---

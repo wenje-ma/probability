@@ -1,19 +1,19 @@
 # week12
 
 > **基础知识: 函数 $g\left(t\right)=t/\left(1+t\right)$ 的性质**
->
+> 
 > 对 $t\ge 0$, $g$ 满足: $g\left(t\right)=0\iff t=0$; $g$ 严格递增, $g\le 1$; $g$ 次可加: $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$.
 
 > **习题 1.4.1 (积分为零蕴含几乎处处为零)**
->
+> 
 > 若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
 
 > **定理 1.6.4 (切比雪夫不等式)**
->
+> 
 > 若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
 
 > **定义 2.3.1 (依概率收敛)**
->
+> 
 > $X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
 
 ---

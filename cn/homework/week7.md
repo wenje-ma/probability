@@ -1,7 +1,7 @@
 # week7
 
 > **定理 1.7.2 (富比尼定理)**
->
+> 
 > 若 $f\ge 0$ 或 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则
 
 $$
@@ -11,15 +11,15 @@ $$
 特别地, 非负情形可交换积分次序 (托内利).
 
 > **定义 2.1.1 (独立事件)**
->
+> 
 > 事件 $A,B\in\mathcal F$ 独立指 $P\left(A\cap B\right)=P\left(A\right)P\left(B\right)$. 事件列 $A_{1},\dots,A_{n}$ 独立指对任意 $I\subset\left\{1,\dots,n\right\}$ 有 $P\left(\cap_{i\in I}A_{i}\right)=\prod_{i\in I}P\left(A_{i}\right)$.
 
 > **定理 2.1.1 (独立与 $\sigma$-代数)**
->
+> 
 > (1) 若 $X,Y$ 独立, 则 $\sigma\left(X\right)$ 与 $\sigma\left(Y\right)$ 独立; (2) 若 $\mathcal A_{1},\dots,\mathcal A_{n}$ 独立, 则 $\sigma\left(\mathcal A_{1}\right),\dots,\sigma\left(\mathcal A_{n}\right)$ 独立. 故验证随机变量独立可只对生成元进行.
 
 > **定义 2.1.2 (独立随机变量)**
->
+> 
 > 随机变量 $X_{1},\dots,X_{n}$ 独立指对一切博雷尔集 $B_{1},\dots,B_{n}$ 有
 
 $$

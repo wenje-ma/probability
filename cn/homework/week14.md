@@ -1,27 +1,27 @@
 # week14
 
 > **定理 1.6.5 (法图引理)**
->
+> 
 > 若 $Z_{n}\ge 0$, 则 $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
 
 > **定义 3.2.1 (依分布收敛)**
->
+> 
 > $X_{n}\Rightarrow X_{\infty}$ (依分布收敛) 指分布函数 $F_{n}\left(x\right)\to F_{\infty}\left(x\right)$ 在 $F_{\infty}$ 的一切连续点上成立.
 
 > **定理 3.2.8 (斯科罗霍德表示)**
->
+> 
 > 若 $X_{n}\Rightarrow X_{\infty}$, 则存在同一概率空间上的随机变量 $Y_{n}=_{d}X_{n}$ 使 $Y_{n}\to Y_{\infty}=_{d}X_{\infty}$ 几乎处处.
 
 > **定义 3.3.1 (特征函数)**
->
+> 
 > 随机变量 $X$ 的特征函数为 $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, 其中 $\mu$ 为 $X$ 的分布.
 
 > **定理 3.3.1 (特征函数的性质)**
->
+> 
 > (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le 1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, 故 $\phi$ 在 $\mathbb R$ 上一致连续; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
 
 > **定理 3.3.2 (独立和的特征函数)**
->
+> 
 > 若 $X_{1},X_{2}$ 独立且特征函数为 $\phi_{1},\phi_{2}$, 则 $X_{1}+X_{2}$ 的特征函数为 $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.
 
 ---

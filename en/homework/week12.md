@@ -1,19 +1,19 @@
 # week12
 
 > **Basic Knowledge: Properties of $g\left(t\right)=t/\left(1+t\right)$**
->
+> 
 > For $t\ge 0$, $g$ satisfies: $g\left(t\right)=0\iff t=0$; $g$ is strictly increasing and $g\le 1$; $g$ is subadditive: $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$.
 
 > **Exercise 1.4.1 (Zero Integral Implies Zero Almost Everywhere)**
->
+> 
 > If $f\ge 0$ and $\int f\,\mathrm{d}\mu=0$, then $f=0$ almost everywhere.
 
 > **Theorem 1.6.4 (Chebyshev's Inequality)**
->
+> 
 > If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing with $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(y\right)=y$ gives Markov's inequality $P\left(Y> a\right)\le EY/a$.
 
 > **Definition 2.3.1 (Convergence in Probability)**
->
+> 
 > $X_{n}\to X$ in probability means that for every $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
 
 ---

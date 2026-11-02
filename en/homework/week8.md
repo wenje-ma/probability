@@ -1,27 +1,27 @@
 # week8
 
 > **Example 1.6.13 (Poisson Distribution)**
->
+> 
 > $Z$ has the Poisson distribution with parameter $\lambda$, written $Z\sim\mathrm{Poisson}\left(\lambda\right)$, meaning $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$ for $k=0,1,2,\dots$.
 
 > **Theorem 1.7.2 (Fubini's Theorem)**
->
+> 
 > If $f\ge 0$, then (Tonelli) the order of integration in a double integral may be interchanged; if $f$ is integrable, i.e. $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, then the same interchange holds (Fubini).
 
 > **Definition 2.1.2 (Independent Random Variables)**
->
+> 
 > Random variables $X_{1},\dots,X_{n}$ are independent if for any Borel sets $A_{1},\dots,A_{n}$, $P\left(\bigcap_{i}\left\{X_{i}\in A_{i}\right\}\right)=\prod_{i}P\left(X_{i}\in A_{i}\right)$.
 
 > **Definition 2.1.3 (Uncorrelated)**
->
+> 
 > If $EX^{2},EY^{2}< \infty$ and $EXY=EX\cdot EY$, then $X,Y$ are uncorrelated. Independence implies uncorrelatedness, but uncorrelatedness does not imply independence.
 
 > **Exercise 2.1.10 (Convolution Formula)**
->
+> 
 > If $X,Y$ are independent and integer-valued, then $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
 
 > **Theorem 2.1.13 (Expectation of a Product of Independent Variables)**
->
+> 
 > If $X_{1},\dots,X_{n}$ are independent and either (a) each $X_{i}\ge 0$, or (b) each $E\left|X_{i}\right|< \infty$, then
 
 $$
@@ -29,7 +29,7 @@ E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.
 $$
 
 > **Theorem 2.1.16 (Density and Independence)**
->
+> 
 > Let $X_{1},\dots,X_{n}$ have joint density $f$. If $f$ can be written as $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ measurable), then $X_{1},\dots,X_{n}$ are independent; conversely, if $X_{1},\dots,X_{n}$ are independent and each has a density, then the joint density is the product of the marginal densities.
 
 ---
