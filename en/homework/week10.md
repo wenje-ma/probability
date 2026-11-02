@@ -1,12 +1,20 @@
 # week10
 
-> **Basic Knowledge: Tail Sum Formula**<br>If $X\ge 0$ is integer-valued, then $X=\sum_{k\ge 1}\mathbf{1}_{\left\{X\ge k\right\}}$, and by monotone convergence $EX=\sum_{n\ge 1}P\left(X\ge n\right)$.
+> **Basic Knowledge: Tail Sum Formula**
+>
+> If $X\ge 0$ is integer-valued, then $X=\sum_{k\ge 1}\mathbf{1}_{\left\{X\ge k\right\}}$, and by monotone convergence $EX=\sum_{n\ge 1}P\left(X\ge n\right)$.
 
-> **Theorem 1.5.7 (Monotone Convergence Theorem)**<br>If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+> **Theorem 1.5.7 (Monotone Convergence Theorem)**
+>
+> If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
-> **Theorem 1.6.4 (Chebyshev's Inequality)**<br>If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing with $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; taking $\phi\left(y\right)=y$ gives Markov's inequality $P\left(Y> a\right)\le EY/a$.
+> **Theorem 1.6.4 (Chebyshev's Inequality)**
+>
+> If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing with $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; taking $\phi\left(y\right)=y$ gives Markov's inequality $P\left(Y> a\right)\le EY/a$.
 
-> **Theorem 1.6.9 (Change of Variables Formula)**<br>If $X$ has density $f$ (on $\left[0,1\right]$) and $U_{1}$ is uniform on $\left(0,1\right)$, then $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. More generally, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, where $\mu$ is the distribution of $X$.
+> **Theorem 1.6.9 (Change of Variables Formula)**
+>
+> If $X$ has density $f$ (on $\left[0,1\right]$) and $U_{1}$ is uniform on $\left(0,1\right)$, then $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. More generally, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, where $\mu$ is the distribution of $X$.
 
 ---
 

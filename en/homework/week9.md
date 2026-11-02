@@ -1,12 +1,20 @@
 # week9
 
-> **Theorem 1.6.4 (Chebyshev's Inequality)**<br>If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing with $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$.
+> **Theorem 1.6.4 (Chebyshev's Inequality)**
+>
+> If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing with $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(x\right)=x^{2}$ gives $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$.
 
-> **Theorem 2.2.1 (Additivity of Variance for Uncorrelated Variables)**<br>If $X_{1},\dots,X_{n}$ are square-integrable and pairwise uncorrelated, then $\mathrm{var}\left(X_{1}+\dots+X_{n}\right)=\mathrm{var}\left(X_{1}\right)+\dots+\mathrm{var}\left(X_{n}\right)$. For $c\in\mathbb R$, $\mathrm{var}\left(cY\right)=c^{2}\mathrm{var}\left(Y\right)$.
+> **Theorem 2.2.1 (Additivity of Variance for Uncorrelated Variables)**
+>
+> If $X_{1},\dots,X_{n}$ are square-integrable and pairwise uncorrelated, then $\mathrm{var}\left(X_{1}+\dots+X_{n}\right)=\mathrm{var}\left(X_{1}\right)+\dots+\mathrm{var}\left(X_{n}\right)$. For $c\in\mathbb R$, $\mathrm{var}\left(cY\right)=c^{2}\mathrm{var}\left(Y\right)$.
 
-> **Lemma 2.2.2 ($L^{p}$ Convergence Implies Convergence in Probability)**<br>If $p> 0$ and $E\left|Z_{n}\right|^{p}\to 0$, then $Z_{n}\to 0$ in probability. This is a direct consequence of Chebyshev's inequality with $\phi\left(x\right)=x^{p}$.
+> **Lemma 2.2.2 ($L^{p}$ Convergence Implies Convergence in Probability)**
+>
+> If $p> 0$ and $E\left|Z_{n}\right|^{p}\to 0$, then $Z_{n}\to 0$ in probability. This is a direct consequence of Chebyshev's inequality with $\phi\left(x\right)=x^{p}$.
 
-> **Theorem 2.2.3 ($L^{2}$ Weak Law of Large Numbers)**<br>If $X_{1},X_{2},\dots$ are pairwise uncorrelated, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, and $S_{n}=X_{1}+\dots+X_{n}$, then as $n\to\infty$, $S_{n}/n\to\mu$ in $L^{2}$ and in probability.
+> **Theorem 2.2.3 ($L^{2}$ Weak Law of Large Numbers)**
+>
+> If $X_{1},X_{2},\dots$ are pairwise uncorrelated, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, and $S_{n}=X_{1}+\dots+X_{n}$, then as $n\to\infty$, $S_{n}/n\to\mu$ in $L^{2}$ and in probability.
 
 ---
 

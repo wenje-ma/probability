@@ -1,10 +1,16 @@
 # week6
 
-> **定理 1.4.7 (积分的基本性质)**<br>设 $f,g$ 可积, 则: (1) 若 $f\ge 0$ 几乎处处, 则 $\int f\,\mathrm{d}\mu\ge 0$; (2) 对 $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) 若 $g\le f$ 几乎处处, 则 $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
+> **定理 1.4.7 (积分的基本性质)**
+>
+> 设 $f,g$ 可积, 则: (1) 若 $f\ge 0$ 几乎处处, 则 $\int f\,\mathrm{d}\mu\ge 0$; (2) 对 $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) 若 $g\le f$ 几乎处处, 则 $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
 
-> **定理 1.5.7 (单调收敛定理)**<br>若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+> **定理 1.5.7 (单调收敛定理)**
+>
+> 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
-> **定理 1.6.9 (换元公式)**<br>设 $X$ 是取值于 $\left(S,\mathcal S\right)$ 的随机元, 分布为 $\mu$ (即 $\mu\left(A\right)=P\left(X\in A\right)$). 若 $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ 可测且 $f\ge 0$ 或 $E\left|f\left(X\right)\right|< \infty$, 则
+> **定理 1.6.9 (换元公式)**
+>
+> 设 $X$ 是取值于 $\left(S,\mathcal S\right)$ 的随机元, 分布为 $\mu$ (即 $\mu\left(A\right)=P\left(X\in A\right)$). 若 $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ 可测且 $f\ge 0$ 或 $E\left|f\left(X\right)\right|< \infty$, 则
 
 $$
 Ef\left(X\right)=\int_{S}f\left(y\right)\,\mu\left(\mathrm{d}y\right).
@@ -12,7 +18,9 @@ $$
 
 证明用四步法: 指示函数, 简单函数, 非负函数, 一般函数.
 
-> **定理 1.7.2 (富比尼定理)**<br>若 $f\ge 0$, 则 (托内利)
+> **定理 1.7.2 (富比尼定理)**
+>
+> 若 $f\ge 0$, 则 (托内利)
 
 $$
 \int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).

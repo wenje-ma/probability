@@ -1,16 +1,28 @@
 # week14
 
-> **Theorem 1.6.5 (Fatou's Lemma)**<br>If $Z_{n}\ge 0$, then $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
+> **Theorem 1.6.5 (Fatou's Lemma)**
+>
+> If $Z_{n}\ge 0$, then $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
 
-> **Definition 3.2.1 (Convergence in Distribution)**<br>$X_{n}\Rightarrow X_{\infty}$ (convergence in distribution) means that the distribution functions satisfy $F_{n}\left(x\right)\to F_{\infty}\left(x\right)$ at every continuity point $x$ of $F_{\infty}$.
+> **Definition 3.2.1 (Convergence in Distribution)**
+>
+> $X_{n}\Rightarrow X_{\infty}$ (convergence in distribution) means that the distribution functions satisfy $F_{n}\left(x\right)\to F_{\infty}\left(x\right)$ at every continuity point $x$ of $F_{\infty}$.
 
-> **Theorem 3.2.8 (Skorokhod Representation)**<br>If $X_{n}\Rightarrow X_{\infty}$, then there exist random variables $Y_{n}=_{d}X_{n}$ on the same probability space such that $Y_{n}\to Y_{\infty}=_{d}X_{\infty}$ almost everywhere.
+> **Theorem 3.2.8 (Skorokhod Representation)**
+>
+> If $X_{n}\Rightarrow X_{\infty}$, then there exist random variables $Y_{n}=_{d}X_{n}$ on the same probability space such that $Y_{n}\to Y_{\infty}=_{d}X_{\infty}$ almost everywhere.
 
-> **Definition 3.3.1 (Characteristic Function)**<br>The characteristic function of a random variable $X$ is $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, where $\mu$ is the distribution of $X$.
+> **Definition 3.3.1 (Characteristic Function)**
+>
+> The characteristic function of a random variable $X$ is $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, where $\mu$ is the distribution of $X$.
 
-> **Theorem 3.3.1 (Properties of Characteristic Functions)**<br>(1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le 1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, so $\phi$ is uniformly continuous on $\mathbb R$; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
+> **Theorem 3.3.1 (Properties of Characteristic Functions)**
+>
+> (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le 1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, so $\phi$ is uniformly continuous on $\mathbb R$; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
 
-> **Theorem 3.3.2 (Characteristic Function of a Sum of Independent Variables)**<br>If $X_{1},X_{2}$ are independent with characteristic functions $\phi_{1},\phi_{2}$, then the characteristic function of $X_{1}+X_{2}$ is $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.
+> **Theorem 3.3.2 (Characteristic Function of a Sum of Independent Variables)**
+>
+> If $X_{1},X_{2}$ are independent with characteristic functions $\phi_{1},\phi_{2}$, then the characteristic function of $X_{1}+X_{2}$ is $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.
 
 ---
 

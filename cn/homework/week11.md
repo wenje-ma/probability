@@ -1,8 +1,12 @@
 # week11
 
-> **定理 1.5.7 (单调收敛定理)**<br>若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+> **定理 1.5.7 (单调收敛定理)**
+>
+> 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
-> **定理 1.7.2 (富比尼/托内利定理)**<br>对非负可测 $h$ 与任意随机变量 $X$, 若 $H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y$, 则由托内利定理
+> **定理 1.7.2 (富比尼/托内利定理)**
+>
+> 对非负可测 $h$ 与任意随机变量 $X$, 若 $H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y$, 则由托内利定理
 
 $$
 EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
@@ -10,7 +14,9 @@ $$
 
 (半开区间含右端点, 故尾部用 $X\ge y$; 这是引理 2.2.13 的推广, 取 $h\left(y\right)=py^{p-1}\mathbf{1}_{\left\{y\ge 0\right\}}$ 即还原.)
 
-> **引理 2.2.13 (矩的尾部公式)**<br>若 $Y\ge 0$ 且 $p> 0$, 则
+> **引理 2.2.13 (矩的尾部公式)**
+>
+> 若 $Y\ge 0$ 且 $p> 0$, 则
 
 $$
 E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y> y\right)\,\mathrm{d}y.

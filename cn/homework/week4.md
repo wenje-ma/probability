@@ -1,10 +1,16 @@
 # week4
 
-> **公式 1.3.1 (由 $X$ 生成的 $\sigma$-代数)**<br>$\sigma\left(X\right)=\left\{\left\{X\in B\right\}:B\in\mathcal S\right\}$ 是使 $X$ 可测的最小 $\sigma$-代数.
+> **公式 1.3.1 (由 $X$ 生成的 $\sigma$-代数)**
+>
+> $\sigma\left(X\right)=\left\{\left\{X\in B\right\}:B\in\mathcal S\right\}$ 是使 $X$ 可测的最小 $\sigma$-代数.
 
-> **定义 1.3.3 (简单函数)**<br>函数 $\phi:\Omega\to\mathbb R$ 称为简单函数, 若 $\phi\left(\omega\right)=\sum_{m=1}^{n}c_{m}\mathbf{1}_{A_{m}}\left(\omega\right)$, 其中 $c_{m}\in\mathbb R$, $A_{m}\in\mathcal F$.
+> **定义 1.3.3 (简单函数)**
+>
+> 函数 $\phi:\Omega\to\mathbb R$ 称为简单函数, 若 $\phi\left(\omega\right)=\sum_{m=1}^{n}c_{m}\mathbf{1}_{A_{m}}\left(\omega\right)$, 其中 $c_{m}\in\mathbb R$, $A_{m}\in\mathcal F$.
 
-> **定理 1.3.7 (随机变量的极限运算)**<br>若 $X_{1},X_{2},\dots$ 是随机变量, 则 $\inf_{n}X_{n}$, $\sup_{n}X_{n}$, $\limsup_{n}X_{n}$, $\liminf_{n}X_{n}$ 都是随机变量. 故 $\left\{\omega:\lim_{n}X_{n}\text{ 存在}\right\}=\left\{\omega:\limsup_{n}X_{n}-\liminf_{n}X_{n}=0\right\}$ 是可测集.
+> **定理 1.3.7 (随机变量的极限运算)**
+>
+> 若 $X_{1},X_{2},\dots$ 是随机变量, 则 $\inf_{n}X_{n}$, $\sup_{n}X_{n}$, $\limsup_{n}X_{n}$, $\liminf_{n}X_{n}$ 都是随机变量. 故 $\left\{\omega:\lim_{n}X_{n}\text{ 存在}\right\}=\left\{\omega:\limsup_{n}X_{n}-\liminf_{n}X_{n}=0\right\}$ 是可测集.
 
 ---
 

@@ -1,10 +1,16 @@
 # week13
 
-> **基础知识: 记号 $A_{n}$ 无穷多次**<br>$A_{n}$ 无穷多次 (无穷多次发生) 指 $\limsup_{n}A_{n}=\cap_{n}\cup_{m\ge n}A_{m}$.
+> **基础知识: 记号 $A_{n}$ 无穷多次**
+>
+> $A_{n}$ 无穷多次 (无穷多次发生) 指 $\limsup_{n}A_{n}=\cap_{n}\cup_{m\ge n}A_{m}$.
 
-> **定理 2.3.1 (博雷尔-坎泰利引理)**<br>若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)< \infty$ 得 $N=\sum\mathbf{1}_{A_{k}}< \infty$ 几乎处处.)
+> **定理 2.3.1 (博雷尔-坎泰利引理)**
+>
+> 若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)< \infty$ 得 $N=\sum\mathbf{1}_{A_{k}}< \infty$ 几乎处处.)
 
-> **定理 2.3.7 (第二博雷尔-坎泰利引理)**<br>若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=1$. (用 $1-x\le e^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
+> **定理 2.3.7 (第二博雷尔-坎泰利引理)**
+>
+> 若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=1$. (用 $1-x\le e^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
 
 ---
 

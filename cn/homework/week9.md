@@ -1,12 +1,20 @@
 # week9
 
-> **定理 1.6.4 (切比雪夫不等式)**<br>若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(x\right)=x^{2}$ 得 $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$.
+> **定理 1.6.4 (切比雪夫不等式)**
+>
+> 若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(x\right)=x^{2}$ 得 $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$.
 
-> **定理 2.2.1 (不相关变量的方差可加)**<br>若 $X_{1},\dots,X_{n}$ 平方可积且两两不相关, 则 $\mathrm{var}\left(X_{1}+\dots+X_{n}\right)=\mathrm{var}\left(X_{1}\right)+\dots+\mathrm{var}\left(X_{n}\right)$. 对 $c\in\mathbb R$ 有 $\mathrm{var}\left(cY\right)=c^{2}\mathrm{var}\left(Y\right)$.
+> **定理 2.2.1 (不相关变量的方差可加)**
+>
+> 若 $X_{1},\dots,X_{n}$ 平方可积且两两不相关, 则 $\mathrm{var}\left(X_{1}+\dots+X_{n}\right)=\mathrm{var}\left(X_{1}\right)+\dots+\mathrm{var}\left(X_{n}\right)$. 对 $c\in\mathbb R$ 有 $\mathrm{var}\left(cY\right)=c^{2}\mathrm{var}\left(Y\right)$.
 
-> **引理 2.2.2 ($L^{p}$ 收敛蕴含依概率收敛)**<br>若 $p> 0$ 且 $E\left|Z_{n}\right|^{p}\to 0$, 则 $Z_{n}\to 0$ 依概率. 它是切比雪夫不等式取 $\phi\left(x\right)=x^{p}$ 的直接推论.
+> **引理 2.2.2 ($L^{p}$ 收敛蕴含依概率收敛)**
+>
+> 若 $p> 0$ 且 $E\left|Z_{n}\right|^{p}\to 0$, 则 $Z_{n}\to 0$ 依概率. 它是切比雪夫不等式取 $\phi\left(x\right)=x^{p}$ 的直接推论.
 
-> **定理 2.2.3 ($L^{2}$ 弱大数定律)**<br>若 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, $S_{n}=X_{1}+\dots+X_{n}$, 则当 $n\to\infty$ 时 $S_{n}/n\to\mu$ 在 $L^{2}$ 中且依概率.
+> **定理 2.2.3 ($L^{2}$ 弱大数定律)**
+>
+> 若 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, $S_{n}=X_{1}+\dots+X_{n}$, 则当 $n\to\infty$ 时 $S_{n}/n\to\mu$ 在 $L^{2}$ 中且依概率.
 
 ---
 

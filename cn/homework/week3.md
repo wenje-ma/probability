@@ -1,12 +1,20 @@
 # week3
 
-> **定义 1.3.1 (可测映射)**<br>设 $\left(\Omega,\mathcal F\right)$, $\left(S,\mathcal S\right)$ 为可测空间. 若对一切 $B\in\mathcal S$ 有 $X^{-1}\left(B\right)\in\mathcal F$, 则称 $X:\Omega\to S$ 为可测映射. 当 $S=\mathbb R^{d}$, $\mathcal S=\mathcal R^{d}$ 且 $d> 1$ 时, $X$ 称为随机向量; $d=1$ 时称为随机变量.
+> **定义 1.3.1 (可测映射)**
+>
+> 设 $\left(\Omega,\mathcal F\right)$, $\left(S,\mathcal S\right)$ 为可测空间. 若对一切 $B\in\mathcal S$ 有 $X^{-1}\left(B\right)\in\mathcal F$, 则称 $X:\Omega\to S$ 为可测映射. 当 $S=\mathbb R^{d}$, $\mathcal S=\mathcal R^{d}$ 且 $d> 1$ 时, $X$ 称为随机向量; $d=1$ 时称为随机变量.
 
-> **定理 1.3.1 (可测性的生成元判据)**<br>设 $\mathcal A$ 生成 $\mathcal S$ (即 $\mathcal S$ 是包含 $\mathcal A$ 的最小 $\sigma$-代数). 若对一切 $A\in\mathcal A$ 有 $\left\{X\in A\right\}\in\mathcal F$, 则 $X$ 可测.
+> **定理 1.3.1 (可测性的生成元判据)**
+>
+> 设 $\mathcal A$ 生成 $\mathcal S$ (即 $\mathcal S$ 是包含 $\mathcal A$ 的最小 $\sigma$-代数). 若对一切 $A\in\mathcal A$ 有 $\left\{X\in A\right\}\in\mathcal F$, 则 $X$ 可测.
 
-> **例 1.3.2 (生成元的选择)**<br>在 $\left(\mathbb R,\mathcal R\right)$ 上, 生成元可取 $\left\{\left(-\infty,x\right]:x\in\mathbb R\right\}$ 或 $\left\{\left(-\infty,x\right):x\in\mathbb Q\right\}$; 在 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 上, 可取 $\left\{\left(a_{1},b_{1}\right)\times\cdots\times\left(a_{d},b_{d}\right):a_{i}< b_{i}\right\}$ 或开集族.
+> **例 1.3.2 (生成元的选择)**
+>
+> 在 $\left(\mathbb R,\mathcal R\right)$ 上, 生成元可取 $\left\{\left(-\infty,x\right]:x\in\mathbb R\right\}$ 或 $\left\{\left(-\infty,x\right):x\in\mathbb Q\right\}$; 在 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 上, 可取 $\left\{\left(a_{1},b_{1}\right)\times\cdots\times\left(a_{d},b_{d}\right):a_{i}< b_{i}\right\}$ 或开集族.
 
-> **定理 1.3.4 (复合可测)**<br>若 $X:\left(\Omega,\mathcal F\right)\to\left(S,\mathcal S\right)$ 与 $f:\left(S,\mathcal S\right)\to\left(T,\mathcal T\right)$ 均可测, 则 $f\left(X\right)$ 是 $\left(\Omega,\mathcal F\right)\to\left(T,\mathcal T\right)$ 的可测映射. 特别地, $cX$, $X^{2}$, $\sin X$ 等均为随机变量.
+> **定理 1.3.4 (复合可测)**
+>
+> 若 $X:\left(\Omega,\mathcal F\right)\to\left(S,\mathcal S\right)$ 与 $f:\left(S,\mathcal S\right)\to\left(T,\mathcal T\right)$ 均可测, 则 $f\left(X\right)$ 是 $\left(\Omega,\mathcal F\right)\to\left(T,\mathcal T\right)$ 的可测映射. 特别地, $cX$, $X^{2}$, $\sin X$ 等均为随机变量.
 
 ---
 

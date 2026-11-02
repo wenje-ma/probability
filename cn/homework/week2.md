@@ -1,12 +1,20 @@
 # week2
 
-> **定义 1.2.1 (随机变量)**<br>设 $X$ 是 $\left(\Omega,\mathcal F,P\right)$ 上的实值函数, 若对每个博雷尔集 $B\subset\mathbb R$ 有 $X^{-1}\left(B\right)\in\mathcal F$, 则称 $X$ 为随机变量 (或称 $\mathcal F$-可测).
+> **定义 1.2.1 (随机变量)**
+>
+> 设 $X$ 是 $\left(\Omega,\mathcal F,P\right)$ 上的实值函数, 若对每个博雷尔集 $B\subset\mathbb R$ 有 $X^{-1}\left(B\right)\in\mathcal F$, 则称 $X$ 为随机变量 (或称 $\mathcal F$-可测).
 
-> **定理 1.2.1 (分布函数的性质)**<br>设 $F\left(x\right)=P\left(X\le x\right)$, 则: (1) $F$ 非降; (2) $\lim_{x\to\infty}F\left(x\right)=1$, $\lim_{x\to-\infty}F\left(x\right)=0$; (3) $F$ 右连续, 即 $\lim_{y\downarrow x}F\left(y\right)=F\left(x\right)$; (4) 若 $F\left(x-\right)=\lim_{y\uparrow x}F\left(y\right)$, 则 $F\left(x-\right)=P\left(X< x\right)$; (5) $P\left(X=x\right)=F\left(x\right)-F\left(x-\right)$.
+> **定理 1.2.1 (分布函数的性质)**
+>
+> 设 $F\left(x\right)=P\left(X\le x\right)$, 则: (1) $F$ 非降; (2) $\lim_{x\to\infty}F\left(x\right)=1$, $\lim_{x\to-\infty}F\left(x\right)=0$; (3) $F$ 右连续, 即 $\lim_{y\downarrow x}F\left(y\right)=F\left(x\right)$; (4) 若 $F\left(x-\right)=\lim_{y\uparrow x}F\left(y\right)$, 则 $F\left(x-\right)=P\left(X< x\right)$; (5) $P\left(X=x\right)=F\left(x\right)-F\left(x-\right)$.
 
-> **定义 1.2.2 (分布与分布函数)**<br>$X$ 在 $\left(\mathbb R,\mathcal R\right)$ 上诱导的概率测度 $\mu\left(A\right)=P\left(X\in A\right)$ 称为 $X$ 的分布; 其分布函数为 $F\left(x\right)=P\left(X\le x\right)$.
+> **定义 1.2.2 (分布与分布函数)**
+>
+> $X$ 在 $\left(\mathbb R,\mathcal R\right)$ 上诱导的概率测度 $\mu\left(A\right)=P\left(X\in A\right)$ 称为 $X$ 的分布; 其分布函数为 $F\left(x\right)=P\left(X\le x\right)$.
 
-> **定理 1.2.2 (分布函数的逆)**<br>设 $F$ 是分布函数. 定义其逆 $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)< y\right\}$, $y\in\left(0,1\right)$. 若 $U$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $F^{-1}\left(U\right)$ 以 $F$ 为分布函数. 该构造也是计算机生成随机变量的标准方法.
+> **定理 1.2.2 (分布函数的逆)**
+>
+> 设 $F$ 是分布函数. 定义其逆 $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)< y\right\}$, $y\in\left(0,1\right)$. 若 $U$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $F^{-1}\left(U\right)$ 以 $F$ 为分布函数. 该构造也是计算机生成随机变量的标准方法.
 
 ---
 

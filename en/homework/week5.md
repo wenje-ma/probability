@@ -1,12 +1,20 @@
 # week5
 
-> **Theorem 1.1.1 (Properties of Probability Measures)**<br>Let $\mu$ be a probability measure. Then: (1) $\mu\left(\varnothing\right)=0$; (2) countable additivity: for pairwise disjoint $\left\{E_{n}\right\}$, $\mu\left(\bigcup_{n}E_{n}\right)=\sum_{n}\mu\left(E_{n}\right)$; (3) continuity from below: if $E_{n}\uparrow E$, then $\mu\left(E_{n}\right)\uparrow\mu\left(E\right)$.
+> **Theorem 1.1.1 (Properties of Probability Measures)**
+>
+> Let $\mu$ be a probability measure. Then: (1) $\mu\left(\varnothing\right)=0$; (2) countable additivity: for pairwise disjoint $\left\{E_{n}\right\}$, $\mu\left(\bigcup_{n}E_{n}\right)=\sum_{n}\mu\left(E_{n}\right)$; (3) continuity from below: if $E_{n}\uparrow E$, then $\mu\left(E_{n}\right)\uparrow\mu\left(E\right)$.
 
-> **Definition 1.4.1 (Four-Step Definition of the Integral)**<br>Let $\mu$ be a $\sigma$-finite measure on $\left(\Omega,\mathcal F\right)$. (1) For a simple function $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ pairwise disjoint, $\mu\left(A_{i}\right)< \infty$), $\int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right)$; (2) for a nonnegative bounded $f$ vanishing outside a finite-measure set, $\int f\,\mathrm{d}\mu=\sup_{\phi\le f}\int\phi\,\mathrm{d}\mu$; (3) for a nonnegative measurable $f$, $\int f\,\mathrm{d}\mu=\sup\left\{\int h\,\mathrm{d}\mu:0\le h\le f,\ h\text{ bounded and }\mu\left(\left\{h> 0\right\}\right)< \infty\right\}$; (4) for a general measurable $f$, if $\int\left|f\right|\,\mathrm{d}\mu< \infty$ then $f$ is integrable, and $\int f\,\mathrm{d}\mu=\int f^{+}\,\mathrm{d}\mu-\int f^{-}\,\mathrm{d}\mu$, where $f^{+}=f\vee 0$ and $f^{-}=\left(-f\right)\vee 0$.
+> **Definition 1.4.1 (Four-Step Definition of the Integral)**
+>
+> Let $\mu$ be a $\sigma$-finite measure on $\left(\Omega,\mathcal F\right)$. (1) For a simple function $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ pairwise disjoint, $\mu\left(A_{i}\right)< \infty$), $\int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right)$; (2) for a nonnegative bounded $f$ vanishing outside a finite-measure set, $\int f\,\mathrm{d}\mu=\sup_{\phi\le f}\int\phi\,\mathrm{d}\mu$; (3) for a nonnegative measurable $f$, $\int f\,\mathrm{d}\mu=\sup\left\{\int h\,\mathrm{d}\mu:0\le h\le f,\ h\text{ bounded and }\mu\left(\left\{h> 0\right\}\right)< \infty\right\}$; (4) for a general measurable $f$, if $\int\left|f\right|\,\mathrm{d}\mu< \infty$ then $f$ is integrable, and $\int f\,\mathrm{d}\mu=\int f^{+}\,\mathrm{d}\mu-\int f^{-}\,\mathrm{d}\mu$, where $f^{+}=f\vee 0$ and $f^{-}=\left(-f\right)\vee 0$.
 
-> **Theorem 1.4.7 (Basic Properties of the Integral)**<br>Let $f,g$ be integrable. Then: (1) if $f\ge 0$ almost everywhere, then $\int f\,\mathrm{d}\mu\ge 0$; (2) for $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) if $g\le f$ almost everywhere, then $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
+> **Theorem 1.4.7 (Basic Properties of the Integral)**
+>
+> Let $f,g$ be integrable. Then: (1) if $f\ge 0$ almost everywhere, then $\int f\,\mathrm{d}\mu\ge 0$; (2) for $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) if $g\le f$ almost everywhere, then $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
 
-> **Theorem 1.5.7 (Monotone Convergence Theorem)**<br>If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+> **Theorem 1.5.7 (Monotone Convergence Theorem)**
+>
+> If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
 ---
 

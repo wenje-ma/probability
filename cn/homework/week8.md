@@ -1,22 +1,36 @@
 # week8
 
-> **例 1.6.13 (泊松分布)**<br>$Z$ 服从参数为 $\lambda$ 的泊松分布, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
+> **例 1.6.13 (泊松分布)**
+>
+> $Z$ 服从参数为 $\lambda$ 的泊松分布, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
 
-> **定理 1.7.2 (富比尼定理)**<br>若 $f\ge 0$, 则 (托内利) 二重积分可交换顺序; 若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的积分交换顺序成立 (富比尼).
+> **定理 1.7.2 (富比尼定理)**
+>
+> 若 $f\ge 0$, 则 (托内利) 二重积分可交换顺序; 若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的积分交换顺序成立 (富比尼).
 
-> **定义 2.1.2 (独立随机变量)**<br>随机变量 $X_{1},\dots,X_{n}$ 称为独立的, 若对任意 Borel 集 $A_{1},\dots,A_{n}$, $P\left(\bigcap_{i}\left\{X_{i}\in A_{i}\right\}\right)=\prod_{i}P\left(X_{i}\in A_{i}\right)$.
+> **定义 2.1.2 (独立随机变量)**
+>
+> 随机变量 $X_{1},\dots,X_{n}$ 称为独立的, 若对任意 Borel 集 $A_{1},\dots,A_{n}$, $P\left(\bigcap_{i}\left\{X_{i}\in A_{i}\right\}\right)=\prod_{i}P\left(X_{i}\in A_{i}\right)$.
 
-> **定义 2.1.3 (不相关)**<br>若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ 不相关. 独立蕴含不相关, 但不相关不蕴含独立.
+> **定义 2.1.3 (不相关)**
+>
+> 若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ 不相关. 独立蕴含不相关, 但不相关不蕴含独立.
 
-> **习题 2.1.10 (卷积公式)**<br>若 $X,Y$ 独立且取整数值, 则 $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
+> **习题 2.1.10 (卷积公式)**
+>
+> 若 $X,Y$ 独立且取整数值, 则 $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
 
-> **定理 2.1.13 (独立变量的乘积期望)**<br>若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则
+> **定理 2.1.13 (独立变量的乘积期望)**
+>
+> 若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则
 
 $$
 E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.
 $$
 
-> **定理 2.1.16 (密度与独立)**<br>设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积.
+> **定理 2.1.16 (密度与独立)**
+>
+> 设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积.
 
 ---
 

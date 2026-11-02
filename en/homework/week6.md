@@ -1,10 +1,16 @@
 # week6
 
-> **Theorem 1.4.7 (Basic Properties of the Integral)**<br>Let $f,g$ be integrable. Then: (1) if $f\ge 0$ almost everywhere, then $\int f\,\mathrm{d}\mu\ge 0$; (2) for $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) if $g\le f$ almost everywhere, then $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
+> **Theorem 1.4.7 (Basic Properties of the Integral)**
+>
+> Let $f,g$ be integrable. Then: (1) if $f\ge 0$ almost everywhere, then $\int f\,\mathrm{d}\mu\ge 0$; (2) for $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) if $g\le f$ almost everywhere, then $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
 
-> **Theorem 1.5.7 (Monotone Convergence Theorem)**<br>If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+> **Theorem 1.5.7 (Monotone Convergence Theorem)**
+>
+> If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
-> **Theorem 1.6.9 (Change of Variables Formula)**<br>Let $X$ be a random element taking values in $\left(S,\mathcal S\right)$ with distribution $\mu$ (i.e. $\mu\left(A\right)=P\left(X\in A\right)$). If $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ is measurable and either $f\ge 0$ or $E\left|f\left(X\right)\right|< \infty$, then
+> **Theorem 1.6.9 (Change of Variables Formula)**
+>
+> Let $X$ be a random element taking values in $\left(S,\mathcal S\right)$ with distribution $\mu$ (i.e. $\mu\left(A\right)=P\left(X\in A\right)$). If $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ is measurable and either $f\ge 0$ or $E\left|f\left(X\right)\right|< \infty$, then
 
 $$
 Ef\left(X\right)=\int_{S}f\left(y\right)\,\mu\left(\mathrm{d}y\right).
@@ -12,7 +18,9 @@ $$
 
 The proof uses a four-step argument: indicator functions, simple functions, nonnegative functions, and general functions.
 
-> **Theorem 1.7.2 (Fubini's Theorem)**<br>If $f\ge 0$, then (Tonelli)
+> **Theorem 1.7.2 (Fubini's Theorem)**
+>
+> If $f\ge 0$, then (Tonelli)
 
 $$
 \int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).

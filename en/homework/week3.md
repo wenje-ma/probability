@@ -1,12 +1,20 @@
 # week3
 
-> **Definition 1.3.1 (Measurable Map)**<br>Let $\left(\Omega,\mathcal F\right)$ and $\left(S,\mathcal S\right)$ be measurable spaces. If $X^{-1}\left(B\right)\in\mathcal F$ for every $B\in\mathcal S$, then $X:\Omega\to S$ is called a measurable map. When $S=\mathbb R^{d}$ with $\mathcal S=\mathcal R^{d}$ and $d> 1$, $X$ is called a random vector; when $d=1$, a random variable.
+> **Definition 1.3.1 (Measurable Map)**
+>
+> Let $\left(\Omega,\mathcal F\right)$ and $\left(S,\mathcal S\right)$ be measurable spaces. If $X^{-1}\left(B\right)\in\mathcal F$ for every $B\in\mathcal S$, then $X:\Omega\to S$ is called a measurable map. When $S=\mathbb R^{d}$ with $\mathcal S=\mathcal R^{d}$ and $d> 1$, $X$ is called a random vector; when $d=1$, a random variable.
 
-> **Theorem 1.3.1 (Generator Criterion for Measurability)**<br>Let $\mathcal A$ generate $\mathcal S$ (i.e. $\mathcal S$ is the smallest $\sigma$-algebra containing $\mathcal A$). If $\left\{X\in A\right\}\in\mathcal F$ for every $A\in\mathcal A$, then $X$ is measurable.
+> **Theorem 1.3.1 (Generator Criterion for Measurability)**
+>
+> Let $\mathcal A$ generate $\mathcal S$ (i.e. $\mathcal S$ is the smallest $\sigma$-algebra containing $\mathcal A$). If $\left\{X\in A\right\}\in\mathcal F$ for every $A\in\mathcal A$, then $X$ is measurable.
 
-> **Example 1.3.2 (Choice of Generators)**<br>On $\left(\mathbb R,\mathcal R\right)$, one may take $\left\{\left(-\infty,x\right]:x\in\mathbb R\right\}$ or $\left\{\left(-\infty,x\right):x\in\mathbb Q\right\}$ as generators; on $\left(\mathbb R^{d},\mathcal R^{d}\right)$, one may take $\left\{\left(a_{1},b_{1}\right)\times\cdots\times\left(a_{d},b_{d}\right):a_{i}< b_{i}\right\}$ or the family of open sets.
+> **Example 1.3.2 (Choice of Generators)**
+>
+> On $\left(\mathbb R,\mathcal R\right)$, one may take $\left\{\left(-\infty,x\right]:x\in\mathbb R\right\}$ or $\left\{\left(-\infty,x\right):x\in\mathbb Q\right\}$ as generators; on $\left(\mathbb R^{d},\mathcal R^{d}\right)$, one may take $\left\{\left(a_{1},b_{1}\right)\times\cdots\times\left(a_{d},b_{d}\right):a_{i}< b_{i}\right\}$ or the family of open sets.
 
-> **Theorem 1.3.4 (Composition of Measurable Maps)**<br>If $X:\left(\Omega,\mathcal F\right)\to\left(S,\mathcal S\right)$ and $f:\left(S,\mathcal S\right)\to\left(T,\mathcal T\right)$ are both measurable, then $f\left(X\right)$ is a measurable map from $\left(\Omega,\mathcal F\right)$ to $\left(T,\mathcal T\right)$. In particular, $cX$, $X^{2}$, $\sin X$, etc. are all random variables.
+> **Theorem 1.3.4 (Composition of Measurable Maps)**
+>
+> If $X:\left(\Omega,\mathcal F\right)\to\left(S,\mathcal S\right)$ and $f:\left(S,\mathcal S\right)\to\left(T,\mathcal T\right)$ are both measurable, then $f\left(X\right)$ is a measurable map from $\left(\Omega,\mathcal F\right)$ to $\left(T,\mathcal T\right)$. In particular, $cX$, $X^{2}$, $\sin X$, etc. are all random variables.
 
 ---
 
