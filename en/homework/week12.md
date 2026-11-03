@@ -1,9 +1,5 @@
 # week12
 
-> **Basic Knowledge: Properties of $g\left(t\right)=t/\left(1+t\right)$**
-> 
-> For $t\ge 0$, $g$ satisfies: $g\left(t\right)=0\iff t=0$; $g$ is strictly increasing and $g\le 1$; $g$ is subadditive: $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$.
-
 > **Exercise 1.4.1 (Zero Integral Implies Zero Almost Everywhere)**
 > 
 > If $f\ge 0$ and $\int f\,\mathrm{d}\mu=0$, then $f=0$ almost everywhere.

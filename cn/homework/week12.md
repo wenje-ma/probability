@@ -1,9 +1,5 @@
 # week12
 
-> **基础知识: 函数 $g\left(t\right)=t/\left(1+t\right)$ 的性质**
-> 
-> 对 $t\ge 0$, $g$ 满足: $g\left(t\right)=0\iff t=0$; $g$ 严格递增, $g\le 1$; $g$ 次可加: $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$.
-
 > **习题 1.4.1 (积分为零蕴含几乎处处为零)**
 > 
 > 若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.

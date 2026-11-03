@@ -1,9 +1,5 @@
 # week13
 
-> **Basic Knowledge: Notation $A_{n}$ infinitely often**
-> 
-> $A_{n}$ infinitely often (i.o.) means $\limsup_{n}A_{n}=\cap_{n}\cup_{m\ge n}A_{m}$.
-
 > **Theorem 2.3.1 (Borel-Cantelli Lemma)**
 > 
 > If $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, then $P\left(A_{n}\ \text{i.o.}\right)=0$. (No independence needed; from $EN=\sum P\left(A_{k}\right)< \infty$ it follows that $N=\sum\mathbf{1}_{A_{k}}< \infty$ almost everywhere.)

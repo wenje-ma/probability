@@ -1,9 +1,5 @@
 # week10
 
-> **Basic Knowledge: Tail Sum Formula**
-> 
-> If $X\ge 0$ is integer-valued, then $X=\sum_{k\ge 1}\mathbf{1}_{\left\{X\ge k\right\}}$, and by monotone convergence $EX=\sum_{n\ge 1}P\left(X\ge n\right)$.
-
 > **Theorem 1.5.7 (Monotone Convergence Theorem)**
 > 
 > If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.

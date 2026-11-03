@@ -1,9 +1,5 @@
 # week10
 
-> **基础知识: 尾部求和公式**
-> 
-> 若 $X\ge 0$ 取整数值, 则 $X=\sum_{k\ge 1}\mathbf{1}_{\left\{X\ge k\right\}}$, 从而由单调收敛 $EX=\sum_{n\ge 1}P\left(X\ge n\right)$.
-
 > **定理 1.5.7 (单调收敛定理)**
 > 
 > 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
