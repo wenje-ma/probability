@@ -26,8 +26,6 @@ $$
 P\left(X_{1}\in B_{1},\dots,X_{n}\in B_{n}\right)=\prod_{i=1}^{n}P\left(X_{i}\in B_{i}\right).
 $$
 
----
-
 ## 1
 
 Let $\mu$ be a finite measure on $\mathbb R$, and let $F\left(x\right)=\mu\left(\left(-\infty,x\right]\right)$. Prove that
@@ -69,8 +67,6 @@ $$
 $$
 
 $\blacksquare$
-
----
 
 ## 2
 

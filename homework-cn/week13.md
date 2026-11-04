@@ -8,8 +8,6 @@
 > 
 > 若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=1$. (用 $1-x\le e^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
 
----
-
 ## 1
 
 设 $A_{n}$ 是一列独立事件且对一切 $n$ 有 $P\left(A_{n}\right)< 1$. 证明 $P\left(\cup_{n}A_{n}\right)=1$ 蕴含 $\sum_{n}P\left(A_{n}\right)=\infty$, 从而 $P\left(A_{n}\ \text{无穷多次}\right)=1$.
@@ -49,8 +47,6 @@ $$
 矛盾. 所以 $\sum_{n}P\left(A_{n}\right)=\infty$.
 
 由**定理 2.3.7 (第二博雷尔-坎泰利引理)** ($A_{n}$ 独立且 $\sum P\left(A_{n}\right)=\infty$), $P\left(A_{n}\ \text{无穷多次}\right)=1$. $\blacksquare$
-
----
 
 ## 2
 

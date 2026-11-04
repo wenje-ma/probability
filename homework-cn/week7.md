@@ -26,8 +26,6 @@ $$
 P\left(X_{1}\in B_{1},\dots,X_{n}\in B_{n}\right)=\prod_{i=1}^{n}P\left(X_{i}\in B_{i}\right).
 $$
 
----
-
 ## 1
 
 设 $\mu$ 是 $\mathbb R$ 上的有限测度, $F\left(x\right)=\mu\left(\left(-\infty,x\right]\right)$. 证明
@@ -69,8 +67,6 @@ $$
 $$
 
 $\blacksquare$
-
----
 
 ## 2
 

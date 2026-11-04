@@ -16,8 +16,6 @@
 > 
 > 若 $X:\left(\Omega,\mathcal F\right)\to\left(S,\mathcal S\right)$ 与 $f:\left(S,\mathcal S\right)\to\left(T,\mathcal T\right)$ 均可测, 则 $f\left(X\right)$ 是 $\left(\Omega,\mathcal F\right)\to\left(T,\mathcal T\right)$ 的可测映射. 特别地, $cX$, $X^{2}$, $\sin X$ 等均为随机变量.
 
----
-
 ## 1
 
 证明: 从 $\mathbb R^{d}\to\mathbb R$ 的连续函数是从 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 到 $\left(\mathbb R,\mathcal R\right)$ 的可测映射.
@@ -39,8 +37,6 @@ $$
 $$
 
 由**例 1.3.2 (生成元的选择)**, $\mathcal A$ 生成 $\mathcal R$ (仅 $\left\{\left(-\infty,a\right):a\in\mathbb Q\right\}$ 已生成之); 而上面已证对一切 $a$ 有 $\left\{f< a\right\}\in\mathcal R^{d}$, 故 $f$ 可测. $\blacksquare$
-
----
 
 ## 2
 

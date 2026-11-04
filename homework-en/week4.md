@@ -12,8 +12,6 @@
 > 
 > If $X_{1},X_{2},\dots$ are random variables, then $\inf_{n}X_{n}$, $\sup_{n}X_{n}$, $\limsup_{n}X_{n}$, and $\liminf_{n}X_{n}$ are all random variables. Hence $\left\{\omega:\lim_{n}X_{n}\text{ exists}\right\}=\left\{\omega:\limsup_{n}X_{n}-\liminf_{n}X_{n}=0\right\}$ is a measurable set.
 
----
-
 ## 1
 
 Let
@@ -45,8 +43,6 @@ $$
 Each $f_{n}$ is the difference of two simple functions, hence is itself simple, so $f_{n}\in\mathcal M$; also $f_{n}\to f$ pointwise (since $f_{n}^{\pm}\to f^{\pm}$), and by closure of $\mathcal M$ under pointwise limits, $f\in\mathcal M$.
 
 In summary, the class of measurable functions is exactly the smallest class containing simple functions and closed under pointwise limits. $\blacksquare$
-
----
 
 ## 2
 
@@ -81,8 +77,6 @@ f\left(X\left(\omega\right)\right)=\limsup_{n}g_{n}\left(X\left(\omega\right)\ri
 $$
 
 That is, $Y=f\left(X\right)$. $\blacksquare$
-
----
 
 ## 3
 

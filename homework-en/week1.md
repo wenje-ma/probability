@@ -16,8 +16,6 @@
 > 
 > A probability space is a triple $\left(\Omega,\mathcal F,P\right)$, where $\Omega$ is the sample space, $\mathcal F$ is the event family ($\sigma$-algebra), and $P:\mathcal F\to\left[0,1\right]$ is a probability measure, i.e. satisfying: (1) $P\left(\Omega\right)=1$; (2) countable additivity: for pairwise disjoint events $\left\{A_{i}\right\}$, $P\left(\cup_{i}A_{i}\right)=\sum_{i}P\left(A_{i}\right)$. More generally, a nonnegative countably additive set function $\mu$ satisfying (2) is called a measure.
 
----
-
 ## 1
 
 Let $\Omega=\mathbb R$, let $\mathcal F$ be the collection of all subsets such that "either $A$ or $A^{c}$ is countable", and define $P\left(A\right)=0$ (if $A$ is countable) and $P\left(A\right)=1$ (if $A^{c}$ is countable). Prove that $\left(\Omega,\mathcal F,P\right)$ is a probability space.
@@ -61,8 +59,6 @@ P\left(\cup_{i}A_{i}\right)=1=\sum_{i}P\left(A_{i}\right).
 $$
 
 In summary, $\left(\Omega,\mathcal F,P\right)$ is a probability space. $\blacksquare$
-
----
 
 ## 2
 

@@ -12,8 +12,6 @@
 > 
 > 若 $X$ 有密度 $f$ (在 $\left[0,1\right]$ 上), $U_{1}$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. 一般地, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, $\mu$ 为 $X$ 的分布.
 
----
-
 ## 1
 
 设 $f$ 是 $\left[0,1\right]$ 上的可测函数且
@@ -73,8 +71,6 @@ P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\lef
 $$
 
 $\blacksquare$
-
----
 
 ## 2
 

@@ -16,8 +16,6 @@
 > 
 > Let $F$ be a distribution function. Define its inverse by $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)< y\right\}$, $y\in\left(0,1\right)$. If $U$ is uniform on $\left(0,1\right\right)$, then $F^{-1}\left(U\right)$ has distribution function $F$. This construction is also the standard method for generating random variables on a computer.
 
----
-
 ## 1
 
 Let $X,Y$ be random variables on $\left(\Omega,\mathcal F,P\right)$, and $A\in\mathcal F$. If $Z\left(\omega\right)=X\left(\omega\right)$ when $\omega\in A$, and $Z\left(\omega\right)=Y\left(\omega\right)$ when $\omega\in A^{c}$, prove that $Z$ is a random variable.
@@ -31,8 +29,6 @@ Z^{-1}\left(B\right)=\left(A\cap\left\{\omega:X\left(\omega\right)\in B\right\}\
 $$
 
 Since $X,Y$ are random variables, $\left\{X\in B\right\},\left\{Y\in B\right\}\in\mathcal F$; also $A\in\mathcal F$ and $\mathcal F$ is a $\sigma$-algebra, so $A^{c}\in\mathcal F$, and hence $Z^{-1}\left(B\right)\in\mathcal F$. Since $B$ was arbitrary, $Z$ is a random variable. $\blacksquare$
-
----
 
 ## 2
 

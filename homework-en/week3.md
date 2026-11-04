@@ -16,8 +16,6 @@
 > 
 > If $X:\left(\Omega,\mathcal F\right)\to\left(S,\mathcal S\right)$ and $f:\left(S,\mathcal S\right)\to\left(T,\mathcal T\right)$ are both measurable, then $f\left(X\right)$ is a measurable map from $\left(\Omega,\mathcal F\right)$ to $\left(T,\mathcal T\right)$. In particular, $cX$, $X^{2}$, $\sin X$, etc. are all random variables.
 
----
-
 ## 1
 
 Prove: a continuous function from $\mathbb R^{d}$ to $\mathbb R$ is a measurable map from $\left(\mathbb R^{d},\mathcal R^{d}\right)$ to $\left(\mathbb R,\mathcal R\right)$.
@@ -39,8 +37,6 @@ $$
 $$
 
 By **Example 1.3.2 (Choice of Generators)**, $\mathcal A$ generates $\mathcal R$ (already $\left\{\left(-\infty,a\right):a\in\mathbb Q\right\}$ generates it); and since we have shown $\left\{f< a\right\}\in\mathcal R^{d}$ for all $a$, $f$ is measurable. $\blacksquare$
-
----
 
 ## 2
 

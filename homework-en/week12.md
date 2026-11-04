@@ -12,8 +12,6 @@
 > 
 > $X_{n}\to X$ in probability means that for every $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
 
----
-
 ## 1
 
 Prove (a) that

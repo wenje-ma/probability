@@ -28,8 +28,6 @@ $$
 
 If $f$ is integrable, i.e. $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, then the same triple identity holds (Fubini).
 
----
-
 ## 1
 
 Let a probability measure $\mu$ satisfy
@@ -91,8 +89,6 @@ $$
 $$
 
 Combining all four steps gives the conclusion. $\blacksquare$
-
----
 
 ## 2
 

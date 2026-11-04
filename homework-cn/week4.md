@@ -12,8 +12,6 @@
 > 
 > 若 $X_{1},X_{2},\dots$ 是随机变量, 则 $\inf_{n}X_{n}$, $\sup_{n}X_{n}$, $\limsup_{n}X_{n}$, $\liminf_{n}X_{n}$ 都是随机变量. 故 $\left\{\omega:\lim_{n}X_{n}\text{ 存在}\right\}=\left\{\omega:\limsup_{n}X_{n}-\liminf_{n}X_{n}=0\right\}$ 是可测集.
 
----
-
 ## 1
 
 设
@@ -45,8 +43,6 @@ $$
 $f_{n}$ 是两个简单函数之差, 仍是简单函数, 故 $f_{n}\in\mathcal M$; 又 $f_{n}\to f$ 逐点 (因 $f_{n}^{\pm}\to f^{\pm}$), 由 $\mathcal M$ 对逐点极限封闭知 $f\in\mathcal M$.
 
 综上, 可测函数类恰为包含简单函数且对逐点极限封闭的最小类. $\blacksquare$
-
----
 
 ## 2
 
@@ -81,8 +77,6 @@ f\left(X\left(\omega\right)\right)=\limsup_{n}g_{n}\left(X\left(\omega\right)\ri
 $$
 
 即 $Y=f\left(X\right)$. $\blacksquare$
-
----
 
 ## 3
 

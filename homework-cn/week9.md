@@ -16,8 +16,6 @@
 > 
 > 若 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, $S_{n}=X_{1}+\dots+X_{n}$, 则当 $n\to\infty$ 时 $S_{n}/n\to\mu$ 在 $L^{2}$ 中且依概率.
 
----
-
 ## 1
 
 设 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu_{i}$, 且当 $i\to\infty$ 时 $\mathrm{var}\left(X_{i}\right)/i\to 0$. 设 $S_{n}=X_{1}+\dots+X_{n}$, $\nu_{n}=ES_{n}/n$. 证明当 $n\to\infty$ 时 $S_{n}/n-\nu_{n}\to 0$ 在 $L^{2}$ 中且依概率.
@@ -63,8 +61,6 @@ $$
 再令 $\varepsilon\to 0$ 得极限为 $0$. 故 $S_{n}/n-\nu_{n}\to 0$ 在 $L^{2}$ 中.
 
 又由**引理 2.2.2 ($L^{p}$ 收敛蕴含依概率收敛)** (取 $p=2$, $Z_{n}=S_{n}/n-\nu_{n}$), $L^{2}$ 收敛蕴含依概率收敛, 故 $S_{n}/n-\nu_{n}\to 0$ 依概率. $\blacksquare$
-
----
 
 ## 2
 

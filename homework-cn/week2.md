@@ -16,8 +16,6 @@
 > 
 > 设 $F$ 是分布函数. 定义其逆 $F^{-1}\left(y\right)=\sup\left\{x:F\left(x\right)< y\right\}$, $y\in\left(0,1\right)$. 若 $U$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $F^{-1}\left(U\right)$ 以 $F$ 为分布函数. 该构造也是计算机生成随机变量的标准方法.
 
----
-
 ## 1
 
 设 $X,Y$ 是 $\left(\Omega,\mathcal F,P\right)$ 上的随机变量, $A\in\mathcal F$. 若 $Z\left(\omega\right)=X\left(\omega\right)$ (当 $\omega\in A$), $Z\left(\omega\right)=Y\left(\omega\right)$ (当 $\omega\in A^{c}$), 证明 $Z$ 是随机变量.
@@ -31,8 +29,6 @@ Z^{-1}\left(B\right)=\left(A\cap\left\{\omega:X\left(\omega\right)\in B\right\}\
 $$
 
 因 $X,Y$ 是随机变量, $\left\{X\in B\right\},\left\{Y\in B\right\}\in\mathcal F$; 又 $A\in\mathcal F$ 且 $\mathcal F$ 是 $\sigma$-代数, 故 $A^{c}\in\mathcal F$, 进而 $Z^{-1}\left(B\right)\in\mathcal F$. 由 $B$ 任意, $Z$ 是随机变量. $\blacksquare$
-
----
 
 ## 2
 

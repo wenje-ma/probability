@@ -24,8 +24,6 @@
 > 
 > If $X_{1},X_{2}$ are independent with characteristic functions $\phi_{1},\phi_{2}$, then the characteristic function of $X_{1}+X_{2}$ is $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.
 
----
-
 ## 1
 
 Let $X\sim N\left(0,1\right)$ with density $\left(2\pi\right)^{-1/2}e^{-x^{2}/2}$. Complete the in-class computation of its characteristic function and prove that $\phi\left(t\right)=Ee^{itX}=e^{-t^{2}/2}$.
@@ -93,8 +91,6 @@ $$
 $$
 
 and the latter integral is the integral of a Gaussian density with mean $it$, which equals $1$.) $\blacksquare$
-
----
 
 ## 2
 

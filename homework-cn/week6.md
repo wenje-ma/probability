@@ -28,8 +28,6 @@ $$
 
 若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的三重等式成立 (富比尼).
 
----
-
 ## 1
 
 设概率测度 $\mu$ 满足
@@ -91,8 +89,6 @@ $$
 $$
 
 四步合起来即得结论. $\blacksquare$
-
----
 
 ## 2
 

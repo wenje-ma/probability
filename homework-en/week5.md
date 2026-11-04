@@ -16,8 +16,6 @@
 > 
 > If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
----
-
 ## 1
 
 Prove: if $f\ge 0$ and $\int f\,\mathrm{d}\mu=0$, then $f=0$ almost everywhere.
@@ -39,8 +37,6 @@ $$
 $$
 
 contradicting $\int f\,\mathrm{d}\mu=0$. Hence $\mu\left(E\right)=0$, i.e. $f=0$ almost everywhere. $\blacksquare$
-
----
 
 ## 2
 

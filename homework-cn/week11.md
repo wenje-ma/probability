@@ -24,8 +24,6 @@ $$
 
 它是"对尾部 $P\left(Y> y\right)$ 逐层积分"思想的体现.
 
----
-
 ## 1
 
 若 $X\ge 0$ 取整数值, 写出 $EX^{2}$ 的类似表达式.
@@ -51,8 +49,6 @@ EX^{2}=\sum_{n\ge 1}\left(2n-1\right)P\left(X\ge n\right).
 $$
 
 这就是 $EX^{2}$ 的尾部表达式. $\blacksquare$
-
----
 
 ## 2
 

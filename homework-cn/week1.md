@@ -16,8 +16,6 @@
 > 
 > 概率空间是三元组 $\left(\Omega,\mathcal F,P\right)$, 其中 $\Omega$ 为样本空间, $\mathcal F$ 为事件族 ($\sigma$-代数), $P:\mathcal F\to\left[0,1\right]$ 为概率测度, 即满足: (1) $P\left(\Omega\right)=1$; (2) 可数可加性: 对两两不交的事件列 $\left\{A_{i}\right\}$, $P\left(\cup_{i}A_{i}\right)=\sum_{i}P\left(A_{i}\right)$. 更一般地, 满足 (2) 且取值非负的非负可数可加集函数 $\mu$ 称为测度.
 
----
-
 ## 1
 
 设 $\Omega=\mathbb R$, $\mathcal F$ 为所有满足"$A$ 或 $A^{c}$ 可数"的子集, $P\left(A\right)=0$ (若 $A$ 可数), $P\left(A\right)=1$ (若 $A^{c}$ 可数). 证明 $\left(\Omega,\mathcal F,P\right)$ 是概率空间.
@@ -61,8 +59,6 @@ P\left(\cup_{i}A_{i}\right)=1=\sum_{i}P\left(A_{i}\right).
 $$
 
 综上 $\left(\Omega,\mathcal F,P\right)$ 是概率空间. $\blacksquare$
-
----
 
 ## 2
 

@@ -16,8 +16,6 @@
 > 
 > 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
----
-
 ## 1
 
 证明: 若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
@@ -39,8 +37,6 @@ $$
 $$
 
 与 $\int f\,\mathrm{d}\mu=0$ 矛盾. 故 $\mu\left(E\right)=0$, 即 $f=0$ 几乎处处. $\blacksquare$
-
----
 
 ## 2
 

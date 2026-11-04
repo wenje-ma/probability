@@ -12,8 +12,6 @@
 > 
 > $X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
 
----
-
 ## 1
 
 证明 (a)

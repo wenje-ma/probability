@@ -32,8 +32,6 @@ $$
 > 
 > Let $X_{1},\dots,X_{n}$ have joint density $f$. If $f$ can be written as $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ measurable), then $X_{1},\dots,X_{n}$ are independent; conversely, if $X_{1},\dots,X_{n}$ are independent and each has a density, then the joint density is the product of the marginal densities.
 
----
-
 ## 1
 
 Let $\left(X_{1},\dots,X_{n}\right)$ have density $f\left(x_{1},\dots,x_{n}\right)$, i.e.
@@ -83,8 +81,6 @@ $$
 $$
 
 Since the $A_{i}$ are arbitrary, $X_{1},\dots,X_{n}$ are independent (**Definition 2.1.2 (Independent Random Variables)**). $\blacksquare$
-
----
 
 ## 2
 
@@ -143,8 +139,6 @@ P\left(X_{1}> 1/2\right)P\left(X_{2}> \sqrt{3}/2\right)=1/3\cdot 1/6> 0.
 $$
 
 These are unequal, so $X_{1},X_{2}$ are not independent, and hence the whole sequence $X_{n}$ is not independent (**Definition 2.1.2 (Independent Random Variables)**). $\blacksquare$
-
----
 
 ## 3
 

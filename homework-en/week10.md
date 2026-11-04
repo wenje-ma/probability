@@ -12,8 +12,6 @@
 > 
 > If $X$ has density $f$ (on $\left[0,1\right]$) and $U_{1}$ is uniform on $\left(0,1\right)$, then $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. More generally, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, where $\mu$ is the distribution of $X$.
 
----
-
 ## 1
 
 Let $f$ be measurable on $\left[0,1\right]$ with
@@ -75,8 +73,6 @@ P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\lef
 $$
 
 $\blacksquare$
-
----
 
 ## 2
 

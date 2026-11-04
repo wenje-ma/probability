@@ -8,8 +8,6 @@
 > 
 > If the $A_{n}$ are independent and $\sum_{n}P\left(A_{n}\right)=\infty$, then $P\left(A_{n}\ \text{i.o.}\right)=1$. (Estimate $\prod\left(1-P\left(A_{n}\right)\right)$ using $1-x\le e^{-x}$.)
 
----
-
 ## 1
 
 Let $A_{n}$ be a sequence of independent events with $P\left(A_{n}\right)< 1$ for all $n$. Prove that $P\left(\cup_{n}A_{n}\right)=1$ implies $\sum_{n}P\left(A_{n}\right)=\infty$, and hence $P\left(A_{n}\ \text{i.o.}\right)=1$.
@@ -49,8 +47,6 @@ $$
 a contradiction. Hence $\sum_{n}P\left(A_{n}\right)=\infty$.
 
 By **Theorem 2.3.7 (Second Borel-Cantelli Lemma)** (the $A_{n}$ are independent and $\sum P\left(A_{n}\right)=\infty$), $P\left(A_{n}\ \text{i.o.}\right)=1$. $\blacksquare$
-
----
 
 ## 2
 

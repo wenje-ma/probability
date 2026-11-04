@@ -24,8 +24,6 @@ $$
 
 This embodies the idea of "integrating layer by layer over the tail $P\left(Y> y\right)$".
 
----
-
 ## 1
 
 If $X\ge 0$ is integer-valued, write down a similar expression for $EX^{2}$.
@@ -51,8 +49,6 @@ EX^{2}=\sum_{n\ge 1}\left(2n-1\right)P\left(X\ge n\right).
 $$
 
 This is the tail expression for $EX^{2}$. $\blacksquare$
-
----
 
 ## 2
 

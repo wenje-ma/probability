@@ -16,8 +16,6 @@
 > 
 > If $X_{1},X_{2},\dots$ are pairwise uncorrelated, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, and $S_{n}=X_{1}+\dots+X_{n}$, then as $n\to\infty$, $S_{n}/n\to\mu$ in $L^{2}$ and in probability.
 
----
-
 ## 1
 
 Let $X_{1},X_{2},\dots$ be pairwise uncorrelated, $EX_{i}=\mu_{i}$, and $\mathrm{var}\left(X_{i}\right)/i\to 0$ as $i\to\infty$. Let $S_{n}=X_{1}+\dots+X_{n}$ and $\nu_{n}=ES_{n}/n$. Prove that as $n\to\infty$, $S_{n}/n-\nu_{n}\to 0$ in $L^{2}$ and in probability.
@@ -63,8 +61,6 @@ $$
 and letting $\varepsilon\to 0$ gives the limit $0$. Thus $S_{n}/n-\nu_{n}\to 0$ in $L^{2}$.
 
 By **Lemma 2.2.2 ($L^{p}$ Convergence Implies Convergence in Probability)** (taking $p=2$ and $Z_{n}=S_{n}/n-\nu_{n}$), $L^{2}$ convergence implies convergence in probability, so $S_{n}/n-\nu_{n}\to 0$ in probability. $\blacksquare$
-
----
 
 ## 2
 
