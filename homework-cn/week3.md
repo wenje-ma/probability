@@ -1,59 +1,79 @@
 # week3
 
-> **定义 1.3.1 (可测映射)**
+> **公式 1.3.1 (由 $X$ 生成的 $\sigma$-代数)**
 > 
-> 设 $\left(\Omega,\mathcal F\right)$, $\left(S,\mathcal S\right)$ 为可测空间. 若对一切 $B\in\mathcal S$ 有 $X^{-1}\left(B\right)\in\mathcal F$, 则称 $X:\Omega\to S$ 为可测映射. 当 $S=\mathbb R^{d}$, $\mathcal S=\mathcal R^{d}$ 且 $d> 1$ 时, $X$ 称为随机向量; $d=1$ 时称为随机变量.
+> $\sigma\left(X\right)=\left\{\left\{X\in B\right\}:B\in\mathcal S\right\}$ 是使 $X$ 可测的最小 $\sigma$-代数.
 
-> **定理 1.3.1 (可测性的生成元判据)**
+> **定义 1.3.3 (简单函数)**
 > 
-> 设 $\mathcal A$ 生成 $\mathcal S$ (即 $\mathcal S$ 是包含 $\mathcal A$ 的最小 $\sigma$-代数). 若对一切 $A\in\mathcal A$ 有 $\left\{X\in A\right\}\in\mathcal F$, 则 $X$ 可测.
+> 函数 $\phi:\Omega\to\mathbb R$ 称为简单函数, 若 $\phi\left(\omega\right)=\sum_{m=1}^{n}c_{m}\mathbf{1}_{A_{m}}\left(\omega\right)$, 其中 $c_{m}\in\mathbb R$, $A_{m}\in\mathcal F$.
 
-> **例 1.3.2 (生成元的选择)**
+> **定理 1.3.7 (随机变量的极限运算)**
 > 
-> 在 $\left(\mathbb R,\mathcal R\right)$ 上, 生成元可取 $\left\{\left(-\infty,x\right]:x\in\mathbb R\right\}$ 或 $\left\{\left(-\infty,x\right):x\in\mathbb Q\right\}$; 在 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 上, 可取 $\left\{\left(a_{1},b_{1}\right)\times\cdots\times\left(a_{d},b_{d}\right):a_{i}< b_{i}\right\}$ 或开集族.
-
-> **定理 1.3.4 (复合可测)**
-> 
-> 若 $X:\left(\Omega,\mathcal F\right)\to\left(S,\mathcal S\right)$ 与 $f:\left(S,\mathcal S\right)\to\left(T,\mathcal T\right)$ 均可测, 则 $f\left(X\right)$ 是 $\left(\Omega,\mathcal F\right)\to\left(T,\mathcal T\right)$ 的可测映射. 特别地, $cX$, $X^{2}$, $\sin X$ 等均为随机变量.
+> 若 $X_{1},X_{2},\dots$ 是随机变量, 则 $\inf_{n}X_{n}$, $\sup_{n}X_{n}$, $\limsup_{n}X_{n}$, $\liminf_{n}X_{n}$ 都是随机变量. 故 $\left\{\omega:\lim_{n}X_{n}\text{ 存在}\right\}=\left\{\omega:\limsup_{n}X_{n}-\liminf_{n}X_{n}=0\right\}$ 是可测集.
 
 ## 1
 
-证明: 从 $\mathbb R^{d}\to\mathbb R$ 的连续函数是从 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 到 $\left(\mathbb R,\mathcal R\right)$ 的可测映射.
+设
+
+$$
+\phi\left(\omega\right)=\sum_{m=1}^{n}c_{m}\mathbf{1}_{A_{m}}\left(\omega\right),
+$$
+
+其中 $c_{m}\in\mathbb R$, $A_{m}\in\mathcal F$. 证明: $\mathcal F$-可测函数类是最小的包含所有简单函数且对逐点极限封闭的类.
 
 ### 解答 1
 
-设 $f:\mathbb R^{d}\to\mathbb R$ 连续. 对任意 $a\in\mathbb R$, 集合
+设 $\mathcal M$ 是包含所有简单函数且对逐点极限封闭的最小函数类.
+
+先证 $\mathcal M$ 中的函数都可测. 简单函数显然可测 (**定义 1.3.3 (简单函数)**); 可测函数类对逐点极限封闭 (依据**定理 1.3.7 (随机变量的极限运算)**, $\lim_{n}f_{n}=\limsup_{n}f_{n}$ 可测), 故由 $\mathcal M$ 的最小性知 $\mathcal M\subset\left\{\text{可测函数}\right\}$.
+
+再证每个可测函数 $f$ 属于 $\mathcal M$. 分解 $f=f^{+}-f^{-}$, 其中 $f^{+}=f\vee 0$, $f^{-}=\left(-f\right)\vee 0$. 对非负可测函数 $g$, 构造
 
 $$
-\left\{x:f\left(x\right)< a\right\}=f^{-1}\left(\left(-\infty,a\right)\right)
+g_{n}\left(x\right)=\frac{\left[2^{n}g\left(x\right)\right]}{2^{n}}\wedge n,
 $$
 
-是开集, 因为 $\left(-\infty,a\right)$ 是开集而 $f$ 连续. 而 $\mathbb R^{d}$ 中开集均属于博雷尔 $\sigma$-代数 $\mathcal R^{d}$, 故 $\left\{x:f\left(x\right)< a\right\}\in\mathcal R^{d}$.
-
-依据**定理 1.3.1 (可测性的生成元判据)**, 取生成元族
+其中 $\left[x\right]$ 为不超过 $x$ 的最大整数. $g_{n}$ 是取有限值的阶梯简单函数, 且 $g_{n}\uparrow g$ 逐点. 于是取
 
 $$
-\mathcal A=\left\{\left(-\infty,a\right):a\in\mathbb R\right\}.
+f_{n}=f_{n}^{+}-f_{n}^{-},\qquad f_{n}^{\pm}=\frac{\left[2^{n}f^{\pm}\right]}{2^{n}}\wedge n.
 $$
 
-由**例 1.3.2 (生成元的选择)**, $\mathcal A$ 生成 $\mathcal R$ (仅 $\left\{\left(-\infty,a\right):a\in\mathbb Q\right\}$ 已生成之); 而上面已证对一切 $a$ 有 $\left\{f< a\right\}\in\mathcal R^{d}$, 故 $f$ 可测. $\blacksquare$
+$f_{n}$ 是两个简单函数之差, 仍是简单函数, 故 $f_{n}\in\mathcal M$; 又 $f_{n}\to f$ 逐点 (因 $f_{n}^{\pm}\to f^{\pm}$), 由 $\mathcal M$ 对逐点极限封闭知 $f\in\mathcal M$.
+
+综上, 可测函数类恰为包含简单函数且对逐点极限封闭的最小类. $\blacksquare$
 
 ## 2
 
-证明: $\mathcal R^{d}$ 是使所有连续函数都可测的最小 $\sigma$-代数.
+利用上一题结论证明: $Y$ 关于 $\sigma\left(X\right)$ 可测当且仅当 $Y=f\left(X\right)$, 其中 $f:\mathbb R\to\mathbb R$ 可测.
 
 ### 解答 2
 
-设 $\mathcal G$ 为使所有连续函数 $f:\mathbb R^{d}\to\mathbb R$ 都可测的最小 $\sigma$-代数, 即 $\mathcal G$ 是包含所有 $\left\{x:f\left(x\right)\in B\right\}$ ($f$ 连续, $B\in\mathcal R$) 的最小 $\sigma$-代数.
-
-一方面, 由**解答 1** 知每个连续函数对 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 可测, 故 $\mathcal R^{d}$ 是"使所有连续函数可测"的 $\sigma$-代数之一, 从而 $\mathcal G\subset\mathcal R^{d}$.
-
-另一方面, 对任意开集 $U\subset\mathbb R^{d}$, 令 $g_{U}\left(x\right)=d\left(x,U^{c}\right)$ 为 $x$ 到闭集 $U^{c}$ 的距离. 函数 $g_{U}$ 连续, 且 $g_{U}\left(x\right)> 0$ 当且仅当 $x\notin U^{c}$, 即 $x\in U$. 于是
+$\left(\Leftarrow\right)$ 若 $Y=f\left(X\right)$ 且 $f$ 可测, 则对任意博雷尔集 $B$ 有
 
 $$
-U=\left\{x:g_{U}\left(x\right)> 0\right\}=g_{U}^{-1}\left(\left(0,\infty\right)\right).
+\left\{Y\in B\right\}=\left\{X\in f^{-1}\left(B\right)\right\}\in\sigma\left(X\right)
 $$
 
-因 $g_{U}$ 连续, $g_{U}$ 对 $\mathcal G$ 可测 (**定义 1.3.1 (可测映射)**), 故 $U\in\mathcal G$. 所有开集 $U$ 生成 $\mathcal R^{d}$, 故 $\mathcal R^{d}\subset\mathcal G$.
+(因 $f^{-1}\left(B\right)\in\mathcal R$, 见**公式 1.3.1 (由 $X$ 生成的 $\sigma$-代数)**), 故 $Y$ 关于 $\sigma\left(X\right)$ 可测.
 
-两方向合起来得 $\mathcal G=\mathcal R^{d}$. $\blacksquare$
+$\left(\Rightarrow\right)$ 设 $Y$ 关于 $\sigma\left(X\right)$ 可测. 先处理简单函数: 若 $\phi=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ 是 $\sigma\left(X\right)$-可测简单函数, 则 $B_{m}\in\sigma\left(X\right)$, 故 $B_{m}=\left\{X\in C_{m}\right\}$ (某 $C_{m}\in\mathcal R$), 于是
+
+$$
+\phi=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)=g\left(X\right),\qquad g=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\ \text{可测}.
+$$
+
+由**解答 1**, $Y$ 是 $\sigma\left(X\right)$-可测简单函数列 $\phi_{n}$ 的逐点极限, 每个 $\phi_{n}=g_{n}\left(X\right)$ 且 $g_{n}$ 可测. 令 $f=\limsup_{n}g_{n}$, 则 $f$ 可测 (**定理 1.3.7 (随机变量的极限运算)**), 且对每个 $\omega$,
+
+$$
+g_{n}\left(X\left(\omega\right)\right)\to Y\left(\omega\right),
+$$
+
+故
+
+$$
+f\left(X\left(\omega\right)\right)=\limsup_{n}g_{n}\left(X\left(\omega\right)\right)=Y\left(\omega\right).
+$$
+
+即 $Y=f\left(X\right)$. $\blacksquare$

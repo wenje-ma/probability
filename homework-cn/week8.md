@@ -1,161 +1,101 @@
 # week8
 
-> **例 1.6.13 (泊松分布)**
+> **定理 1.6.4 (切比雪夫不等式)**
 > 
-> $Z$ 服从参数为 $\lambda$ 的泊松分布, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
+> 若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
 
-> **定理 1.7.2 (富比尼定理)**
+> **定理 2.2.1 (不相关变量的方差可加)**
 > 
-> 若 $f\ge 0$, 则 (托内利) 二重积分可交换顺序; 若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的积分交换顺序成立 (富比尼).
+> 若 $X_{1},\dots,X_{n}$ 平方可积且两两不相关, 则 $\mathrm{var}\left(X_{1}+\dots+X_{n}\right)=\mathrm{var}\left(X_{1}\right)+\dots+\mathrm{var}\left(X_{n}\right)$. 对 $c\in\mathbb R$ 有 $\mathrm{var}\left(cY\right)=c^{2}\mathrm{var}\left(Y\right)$.
 
-> **定义 2.1.2 (独立随机变量)**
+> **引理 2.2.2 ($L^{p}$ 收敛蕴含依概率收敛)**
 > 
-> 随机变量 $X_{1},\dots,X_{n}$ 称为独立的, 若对任意 Borel 集 $A_{1},\dots,A_{n}$, $P\left(\bigcap_{i}\left\{X_{i}\in A_{i}\right\}\right)=\prod_{i}P\left(X_{i}\in A_{i}\right)$.
+> 若 $p> 0$ 且 $E\left|Z_{n}\right|^{p}\to 0$, 则 $Z_{n}\to 0$ 依概率. 它是切比雪夫不等式取 $\phi\left(x\right)=x^{p}$ 的直接推论.
 
-> **定义 2.1.3 (不相关)**
+> **定理 2.2.3 ($L^{2}$ 弱大数定律)**
 > 
-> 若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ 不相关. 独立蕴含不相关, 但不相关不蕴含独立.
-
-> **习题 2.1.10 (卷积公式)**
-> 
-> 若 $X,Y$ 独立且取整数值, 则 $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
-
-> **定理 2.1.13 (独立变量的乘积期望)**
-> 
-> 若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则
-
-$$
-E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.
-$$
-
-> **定理 2.1.16 (密度与独立)**
-> 
-> 设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积.
+> 若 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu$, $\mathrm{var}\left(X_{i}\right)\le C< \infty$, $S_{n}=X_{1}+\dots+X_{n}$, 则当 $n\to\infty$ 时 $S_{n}/n\to\mu$ 在 $L^{2}$ 中且依概率.
 
 ## 1
 
-设 $\left(X_{1},\dots,X_{n}\right)$ 有密度 $f\left(x_{1},\dots,x_{n}\right)$, 即
-
-$$
-P\left(\left(X_{1},\dots,X_{n}\right)\in A\right)=\int_{A}f\left(x\right)\,\mathrm{d}x
-$$
-
-($A\in\mathcal R^{n}$). 若 $f$ 可写成
-
-$$
-f\left(x\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)
-$$
-
-($g_{m}\ge 0$ 可测, 不必是概率密度), 证明 $X_{1},\dots,X_{n}$ 独立.
+设 $X_{1},X_{2},\dots$ 两两不相关, $EX_{i}=\mu_{i}$, 且当 $i\to\infty$ 时 $\mathrm{var}\left(X_{i}\right)/i\to 0$. 设 $S_{n}=X_{1}+\dots+X_{n}$, $\nu_{n}=ES_{n}/n$. 证明当 $n\to\infty$ 时 $S_{n}/n-\nu_{n}\to 0$ 在 $L^{2}$ 中且依概率.
 
 ### 解答 1
 
-对任意博雷尔集 $A_{1},\dots,A_{n}$, 由联合密度与托内利定理 (**定理 1.7.2 (富比尼定理)**, 被积函数非负可分离):
+由期望的线性, $E\left(S_{n}/n\right)=\nu_{n}$, 故
 
 $$
-P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right)=\int_{A_{1}\times\cdots\times A_{n}}f\left(x\right)\,\mathrm{d}x=\prod_{i=1}^{n}\int_{A_{i}}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}.
+E\left(\frac{S_{n}}{n}-\nu_{n}\right)^{2}=\mathrm{var}\left(\frac{S_{n}}{n}\right)=\frac{1}{n^{2}}\mathrm{var}\left(S_{n}\right).
 $$
 
-另一方面, 取 $A_{i}=\mathbb R$ 代入, 因 $f$ 是概率密度故 $\int f=1$, 得
+由 $X_{i}$ 两两不相关及**定理 2.2.1 (不相关变量的方差可加)**,
 
 $$
-\prod_{i=1}^{n}\int_{\mathbb R}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}=1.
+\mathrm{var}\left(S_{n}\right)=\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right).
 $$
 
-而 $X_{i}$ 的边缘分布为
+下面证
 
 $$
-P\left(X_{i}\in A_{i}\right)=\int_{\mathbb R^{n}}\mathbf{1}_{A_{i}}\left(x_{i}\right)g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)\,\mathrm{d}x=\left(\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}.
+\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\to 0.
 $$
 
-于是
+由 $\mathrm{var}\left(X_{i}\right)/i\to 0$, 对任意 $\varepsilon> 0$ 存在 $N$ 使 $i\ge N$ 时 $\mathrm{var}\left(X_{i}\right)< \varepsilon i$. 于是
 
 $$
-\prod_{i=1}^{n}P\left(X_{i}\in A_{i}\right)=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{i=1}^{n}\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\left(\prod_{j=1}^{n}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\right)^{n-1}.
+\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\frac{1}{n^{2}}\sum_{i< N}\mathrm{var}\left(X_{i}\right)+\frac{\varepsilon}{n^{2}}\sum_{i=N}^{n}i\le\frac{C}{n^{2}}+\frac{\varepsilon}{n^{2}}\cdot\frac{n\left(n+1\right)}{2},
 $$
 
-因 $\prod_{j}\int_{\mathbb R}g_{j}=1$, 故
+其中
 
 $$
-\prod_{i}P\left(X_{i}\in A_{i}\right)=\prod_{i}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}=P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right).
+C=\sum_{i< N}\mathrm{var}\left(X_{i}\right)
 $$
 
-由 $A_{i}$ 任意, $X_{1},\dots,X_{n}$ 独立 (**定义 2.1.2 (独立随机变量)**). $\blacksquare$
+为常数. 令 $n\to\infty$ 得
+
+$$
+\limsup_{n}\frac{1}{n^{2}}\sum_{i=1}^{n}\mathrm{var}\left(X_{i}\right)\le\varepsilon/2,
+$$
+
+再令 $\varepsilon\to 0$ 得极限为 $0$. 故 $S_{n}/n-\nu_{n}\to 0$ 在 $L^{2}$ 中.
+
+又由**引理 2.2.2 ($L^{p}$ 收敛蕴含依概率收敛)** (取 $p=2$, $Z_{n}=S_{n}/n-\nu_{n}$), $L^{2}$ 收敛蕴含依概率收敛, 故 $S_{n}/n-\nu_{n}\to 0$ 依概率. $\blacksquare$
 
 ## 2
 
-设 $\Omega=\left(0,1\right)$, $\mathcal F$ 为博雷尔集, $P$ 为勒贝格测度. 证明 $X_{n}\left(\omega\right)=\sin\left(2\pi n\omega\right)$ ($n=1,2,\dots$) 两两不相关但不独立.
+$L^{2}$ 弱大数定律可推广到某些相依序列. 设 $EX_{n}=0$, 且当 $m\le n$ 时 $EX_{n}X_{m}\le r\left(n-m\right)$ (左边不加绝对值!), 其中 $r\left(k\right)\to 0$ ($k\to\infty$). 证明 $\left(X_{1}+\dots+X_{n}\right)/n\to 0$ 依概率.
 
 ### 解答 2
 
-先证两两不相关. 对任意正整数 $n$,
+记 $S_{n}=X_{1}+\dots+X_{n}$. 因 $EX_{n}=0$, $E\left(S_{n}/n\right)=0$. 展开 $E\left(S_{n}^{2}\right)$:
 
 $$
-EX_{n}=\int_{0}^{1}\sin\left(2\pi n\omega\right)\,\mathrm{d}\omega=0,
+E\left(S_{n}^{2}\right)=\sum_{i=1}^{n}EX_{i}^{2}+\sum_{i\ne j}E\left(X_{i}X_{j}\right).
 $$
 
-(正弦在一个整周期上的积分为零). 对 $n\ne m$, 由积化和差公式
+由假设取 $m=n=i$ 得 $EX_{i}^{2}\le r\left(0\right)$, 故对角项
 
 $$
-\sin\left(2\pi n\omega\right)\sin\left(2\pi m\omega\right)=\frac{1}{2}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right).
+\sum_{i}EX_{i}^{2}\le n\,r\left(0\right).
 $$
 
-而
+对交叉项, $i\ne j$ 时若 $i< j$ 直接由假设得 $E\left(X_{i}X_{j}\right)\le r\left(j-i\right)$; 若 $i> j$, 利用 $E\left(X_{i}X_{j}\right)=E\left(X_{j}X_{i}\right)$ 且 $j< i$, 由假设得 $E\left(X_{j}X_{i}\right)\le r\left(i-j\right)$. 故对一切 $i\ne j$ 有 $E\left(X_{i}X_{j}\right)\le r\left(\left|i-j\right|\right)$, 于是
 
 $$
-\int_{0}^{1}\cos\left(2\pi k\omega\right)\,\mathrm{d}\omega=0
+\sum_{i\ne j}E\left(X_{i}X_{j}\right)\le\sum_{i\ne j}r\left(\left|i-j\right|\right)=2\sum_{k=1}^{n-1}\left(n-k\right)r\left(k\right)\le 2n\sum_{k=1}^{n-1}r\left(k\right).
 $$
 
-对一切整数 $k\ne 0$ 成立 ($n\ne m$ 时 $n-m\ne 0$ 且 $n+m\ne 0$), 故
+合并得
 
 $$
-EX_{n}X_{m}=\frac{1}{2}\int_{0}^{1}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right)\,\mathrm{d}\omega=0=EX_{n}EX_{m}.
+E\left(\frac{S_{n}}{n}\right)^{2}=\frac{E\left(S_{n}^{2}\right)}{n^{2}}\le\frac{r\left(0\right)}{n}+\frac{2}{n}\sum_{k=1}^{n-1}r\left(k\right).
 $$
 
-所以 $X_{n}$ 两两不相关 (**定义 2.1.3 (不相关)**).
-
-再证不独立. 取 $A=\left\{x:x> 1/2\right\}$, $B=\left\{x:x> \sqrt{3}/2\right\}$. 由 $\sin\left(2\pi\omega\right)> 1/2$ 得
+由 $r\left(k\right)\to 0$, 其算术平均
 
 $$
-2\pi\omega\in\left(\pi/6,5\pi/6\right)\ \left(\mathrm{mod}\ 2\pi\right),
+\frac{1}{n}\sum_{k=1}^{n-1}r\left(k\right)\to 0
 $$
 
-即 $\omega\in\left(1/12,5/12\right)$, 故 $P\left(X_{1}> 1/2\right)=\lambda\left(1/12,5/12\right)=1/3> 0$; 由 $\sin\left(4\pi\omega\right)> \sqrt{3}/2$ 得
-
-$$
-P\left(X_{2}> \sqrt{3}/2\right)=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)=1/6> 0.
-$$
-
-但当 $\omega\in\left(1/12,5/12\right)$ 时, $\sin\left(4\pi\omega\right)$ 的最大值为 $\sqrt{3}/2$ (在端点 $\omega=1/12$ 处), 故 $X_{1}> 1/2$ 蕴含 $X_{2}\le\sqrt{3}/2$, 即
-
-$$
-P\left(X_{1}> 1/2,\,X_{2}> \sqrt{3}/2\right)=0,
-$$
-
-而
-
-$$
-P\left(X_{1}> 1/2\right)P\left(X_{2}> \sqrt{3}/2\right)=1/3\cdot 1/6> 0,
-$$
-
-二者不等, 故 $X_{1},X_{2}$ 不独立, 从而整列 $X_{n}$ 不独立 (**定义 2.1.2 (独立随机变量)**). $\blacksquare$
-
-## 3
-
-设 $X\sim\mathrm{泊松}\left(\lambda\right)$, $Y\sim\mathrm{泊松}\left(\mu\right)$ 独立, 用卷积公式证明 $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$.
-
-### 解答 3
-
-$X,Y$ 独立且取非负整数值, 由卷积公式 (**习题 2.1.10 (卷积公式)**), 对 $n\ge 0$,
-
-$$
-P\left(X+Y=n\right)=\sum_{m=0}^{n}P\left(X=m\right)P\left(Y=n-m\right)=\sum_{m=0}^{n}\frac{e^{-\lambda}\lambda^{m}}{m!}\cdot\frac{e^{-\mu}\mu^{n-m}}{\left(n-m\right)!}.
-$$
-
-提出公因子并用二项式定理:
-
-$$
-P\left(X+Y=n\right)=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\sum_{m=0}^{n}\frac{n!}{m!\left(n-m\right)!}\lambda^{m}\mu^{n-m}=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\left(\lambda+\mu\right)^{n}.
-$$
-
-这正是参数为 $\lambda+\mu$ 的泊松分布的概率质量函数 (**例 1.6.13 (泊松分布)**), 故 $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$. $\blacksquare$
+(切萨罗平均收敛). 故 $E\left(S_{n}/n\right)^{2}\to 0$, 即 $S_{n}/n\to 0$ 在 $L^{2}$ 中, 再由**引理 2.2.2 ($L^{p}$ 收敛蕴含依概率收敛)** 得 $S_{n}/n\to 0$ 依概率. $\blacksquare$

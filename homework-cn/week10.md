@@ -1,99 +1,141 @@
 # week10
 
+> **习题 1.4.1 (积分为零蕴含几乎处处为零)**
+> 
+> 若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
+
 > **定理 1.5.7 (单调收敛定理)**
 > 
 > 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
 > **定理 1.6.4 (切比雪夫不等式)**
 > 
-> 若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(x\right)=x^{2}$ 得 $P\left(\left|X-EX\right|\ge a\right)\le\mathrm{var}\left(X\right)/a^{2}$; 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
+> 若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
 
-> **定理 1.6.9 (换元公式)**
+> **定理 1.7.2 (富比尼/托内利定理)**
 > 
-> 若 $X$ 有密度 $f$ (在 $\left[0,1\right]$ 上), $U_{1}$ 服从 $\left(0,1\right)$ 上的均匀分布, 则 $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. 一般地, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, $\mu$ 为 $X$ 的分布.
+> 对非负可测 $h$ 与任意随机变量 $X$, 若 $H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y$, 则由托内利定理
+
+> **引理 2.2.13 (矩的尾部公式)**
+> 
+> 若 $Y\ge 0$ 且 $p> 0$, 则
+
+> **定义 2.3.1 (依概率收敛)**
+> 
+> $X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
 
 ## 1
 
-设 $f$ 是 $\left[0,1\right]$ 上的可测函数且
+推广**引理 2.2.13 (矩的尾部公式)** 证明: 若
 
 $$
-\int_{0}^{1}\left|f\left(x\right)\right|^{2}\,\mathrm{d}x< \infty.
+H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y
 $$
 
-$U_{1},U_{2},\dots$ 独立且均服从 $\left[0,1\right]$ 上的均匀分布,
+且 $h\left(y\right)\ge 0$, 则
 
 $$
-I_{n}=n^{-1}\left(f\left(U_{1}\right)+\dots+f\left(U_{n}\right)\right),
+EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
 $$
 
-$$
-I=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x.
-$$
-
-用切比雪夫不等式估计 $P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)$.
+特别情形 $H\left(x\right)=\exp\left(\theta x\right)$ ($\theta> 0$) 时给出相应结论.
 
 ### 解答 1
 
-由 $U_{1}$ 服从 $\left(0,1\right)$ 上的均匀分布及**定理 1.6.9 (换元公式)**,
+将 $H$ 写成尾部积分的指示形式. 因
 
 $$
-Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x=I,
+H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y,
 $$
 
-故 $EI_{n}=I$. 记
+代入 $X$ 得
 
 $$
-\sigma^{2}=\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x< \infty,
+H\left(X\right)=\int_{\left(-\infty,X\right]}h\left(y\right)\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{y\le X\right\}}\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{X\ge y\right\}}\,\mathrm{d}y.
 $$
 
-由 $U_{i}$ 独立同分布,
+被积函数非负, 由托内利定理 (**定理 1.7.2 (富比尼/托内利定理)**) 交换期望与积分:
 
 $$
-\mathrm{var}\left(I_{n}\right)=\frac{1}{n}\mathrm{var}\left(f\left(U_{1}\right)\right)\le\frac{1}{n}Ef\left(U_{1}\right)^{2}=\frac{\sigma^{2}}{n},
+EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)E\left[\mathbf{1}_{\left\{X\ge y\right\}}\right]\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
 $$
 
-其中
+当 $H\left(x\right)=\exp\left(\theta x\right)$, $\theta> 0$ 时, $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, 代入得
 
 $$
-\mathrm{var}\left(Y\right)=EY^{2}-\left(EY\right)^{2}\le EY^{2}.
-$$
-
-由切比雪夫不等式 (**定理 1.6.4 (切比雪夫不等式)**, 取 $\phi\left(x\right)=x^{2}$, 均值 $I$),
-
-$$
-P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\le\frac{\mathrm{var}\left(I_{n}\right)}{\left(a/n^{1/2}\right)^{2}}\le\frac{\sigma^{2}/n}{a^{2}/n}=\frac{\sigma^{2}}{a^{2}}.
-$$
-
-即
-
-$$
-P\left(\left|I_{n}-I\right|> a/n^{1/2}\right)\le\frac{1}{a^{2}}\int_{0}^{1}f\left(x\right)^{2}\,\mathrm{d}x.
+Ee^{\theta X}=\theta\int_{-\infty}^{\infty}e^{\theta y}P\left(X\ge y\right)\,\mathrm{d}y.
 $$
 
 $\blacksquare$
 
 ## 2
 
-证明: 若 $X\ge 0$ 取整数值, 则 $EX=\sum_{n\ge 1}P\left(X\ge n\right)$.
+证明 (a)
+
+$$
+d\left(X,Y\right)=E\left(\frac{\left|X-Y\right|}{1+\left|X-Y\right|}\right)
+$$
+
+在随机变量集合上定义了一个度量, 即满足:
+
+(1) $d\left(X,Y\right)=0$ 当且仅当 $X=Y$ 几乎处处;
+
+(2) $d\left(X,Y\right)=d\left(Y,X\right)$;
+
+(3) $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$;
+
+(b) $d\left(X_{n},X\right)\to 0$ ($n\to\infty$) 当且仅当 $X_{n}\to X$ 依概率.
 
 ### 解答 2
 
-对任意 $\omega$, 记 $X\left(\omega\right)=N$ (非负整数). 则 $\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)=1$ 当且仅当 $k\le N$, 故
+记 $g\left(t\right)=t/\left(1+t\right)$ ($t\ge 0$).
+
+(a)(1) 因 $g\ge 0$ 且 $g\left(t\right)=0$ 当且仅当 $t=0$, 由**习题 1.4.1 (积分为零蕴含几乎处处为零)**,
 
 $$
-\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\left(\omega\right)=\#\left\{k\ge 1:k\le N\right\}=N=X\left(\omega\right).
+d\left(X,Y\right)=0\iff E\,g\left(\left|X-Y\right|\right)=0\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\iff\left|X-Y\right|=0\ \text{几乎处处}\iff X=Y\ \text{几乎处处}.
 $$
 
-即
+(a)(2) 由 $\left|X-Y\right|=\left|Y-X\right|$ 立即得 $d\left(X,Y\right)=d\left(Y,X\right)$.
+
+(a)(3) $g$ 非降, 故 $\left|X-Z\right|\le\left|X-Y\right|+\left|Y-Z\right|$ 蕴含
 
 $$
-X=\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}
+g\left(\left|X-Z\right|\right)\le g\left(\left|X-Y\right|+\left|Y-Z\right|\right);
 $$
 
-逐点成立. 各项非负, 由期望的单调收敛定理 (**定理 1.5.7 (单调收敛定理)**) 取期望:
+又 $g$ 次可加, $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$, 故
 
 $$
-EX=E\left[\sum_{k=1}^{\infty}\mathbf{1}_{\left\{X\ge k\right\}}\right]=\sum_{k=1}^{\infty}P\left(X\ge k\right),
+g\left(\left|X-Z\right|\right)\le g\left(\left|X-Y\right|\right)+g\left(\left|Y-Z\right|\right).
 $$
 
-即 $EX=\sum_{n\ge 1}P\left(X\ge n\right)$. $\blacksquare$
+取期望即得 $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$. 综上 $d$ 是度量.
+
+(b) 先证"依概率收敛 $\Rightarrow$ 度量收敛". 设 $X_{n}\to X$ 依概率. 对 $\varepsilon> 0$, 因 $g\le 1$ 且在 $\left[0,\varepsilon\right]$ 上 $g\le g\left(\varepsilon\right)$,
+
+$$
+d\left(X_{n},X\right)=E\,g\left(\left|X_{n}-X\right|\right)\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
+$$
+
+令 $n\to\infty$ 得
+
+$$
+\limsup_{n}d\left(X_{n},X\right)\le g\left(\varepsilon\right),
+$$
+
+再令 $\varepsilon\to 0$ 得 $d\left(X_{n},X\right)\to 0$.
+
+再证"度量收敛 $\Rightarrow$ 依概率收敛". 设 $d\left(X_{n},X\right)\to 0$. 因 $g$ 严格递增,
+
+$$
+\left\{\left|X_{n}-X\right|> \varepsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right\},
+$$
+
+由马尔可夫不等式 (**定理 1.6.4 (切比雪夫不等式)**),
+
+$$
+P\left(\left|X_{n}-X\right|> \varepsilon\right)=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\to 0.
+$$
+
+故 $X_{n}\to X$ 依概率 (**定义 2.3.1 (依概率收敛)**). $\blacksquare$

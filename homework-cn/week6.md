@@ -1,22 +1,8 @@
 # week6
 
-> **定理 1.4.7 (积分的基本性质)**
+> **例 1.6.13 (泊松分布)**
 > 
-> 设 $f,g$ 可积, 则: (1) 若 $f\ge 0$ 几乎处处, 则 $\int f\,\mathrm{d}\mu\ge 0$; (2) 对 $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) 若 $g\le f$ 几乎处处, 则 $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
-
-> **定理 1.5.7 (单调收敛定理)**
-> 
-> 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
-
-> **定理 1.6.9 (换元公式)**
-> 
-> 设 $X$ 是取值于 $\left(S,\mathcal S\right)$ 的随机元, 分布为 $\mu$ (即 $\mu\left(A\right)=P\left(X\in A\right)$). 若 $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ 可测且 $f\ge 0$ 或 $E\left|f\left(X\right)\right|< \infty$, 则
-
-$$
-Ef\left(X\right)=\int_{S}f\left(y\right)\,\mu\left(\mathrm{d}y\right).
-$$
-
-证明用四步法: 指示函数, 简单函数, 非负函数, 一般函数.
+> $Z$ 服从参数为 $\lambda$ 的泊松分布, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
 
 > **定理 1.7.2 (富比尼定理)**
 > 
@@ -25,97 +11,158 @@ $$
 $$
 \int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 $$
+特别地, 非负情形可交换积分次序 (托内利).
 
-若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的三重等式成立 (富比尼).
+> **定义 2.1.1 (独立事件)**
+> 
+> 事件 $A,B\in\mathcal F$ 独立指 $P\left(A\cap B\right)=P\left(A\right)P\left(B\right)$. 事件列 $A_{1},\dots,A_{n}$ 独立指对任意 $I\subset\left\{1,\dots,n\right\}$ 有 $P\left(\cap_{i\in I}A_{i}\right)=\prod_{i\in I}P\left(A_{i}\right)$.
+
+> **定理 2.1.1 (独立与 $\sigma$-代数)**
+> 
+> (1) 若 $X,Y$ 独立, 则 $\sigma\left(X\right)$ 与 $\sigma\left(Y\right)$ 独立; (2) 若 $\mathcal A_{1},\dots,\mathcal A_{n}$ 独立, 则 $\sigma\left(\mathcal A_{1}\right),\dots,\sigma\left(\mathcal A_{n}\right)$ 独立. 故验证随机变量独立可只对生成元进行.
+
+> **定义 2.1.2 (独立随机变量)**
+> 
+> 随机变量 $X_{1},\dots,X_{n}$ 独立指对一切博雷尔集 $B_{1},\dots,B_{n}$ 有
+
+$$
+P\left(X_{1}\in B_{1},\dots,X_{n}\in B_{n}\right)=\prod_{i=1}^{n}P\left(X_{i}\in B_{i}\right).
+$$
+
+> **定义 2.1.3 (不相关)**
+> 
+> 若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ 不相关. 独立蕴含不相关, 但不相关不蕴含独立.
+
+> **习题 2.1.10 (卷积公式)**
+> 
+> 若 $X,Y$ 独立且取整数值, 则 $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
+
+> **定理 2.1.13 (独立变量的乘积期望)**
+> 
+> 若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则
+
+$$
+E\left(\prod_{i=1}^{n}X_{i}\right)=\prod_{i=1}^{n}EX_{i}.
+$$
+
+> **定理 2.1.16 (密度与独立)**
+> 
+> 设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积.
 
 ## 1
 
-设概率测度 $\mu$ 满足
+设 $\mu$ 是 $\mathbb R$ 上的有限测度, $F\left(x\right)=\mu\left(\left(-\infty,x\right]\right)$. 证明
 
 $$
-\mu\left(A\right)=\int_{A}f\left(x\right)\,\mathrm{d}x
-$$
-
-对一切 $A\in\mathcal R$. 仿照**定理 1.6.9 (换元公式)** 的分步证法, 证明对满足 $g\ge 0$ 或
-
-$$
-\int\left|g\left(x\right)\right|\,\mu\left(\mathrm{d}x\right)< \infty
-$$
-
-的 $g$, 有
-
-$$
-\int g\left(x\right)\,\mu\left(\mathrm{d}x\right)=\int g\left(x\right)f\left(x\right)\,\mathrm{d}x.
+\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x=c\mu\left(\mathbb R\right).
 $$
 
 ### 解答 1
 
-按**定理 1.6.9 (换元公式)** 的四步法逐类验证.
-
-(1) 指示函数. 设 $g=\mathbf{1}_{B}$ ($B\in\mathcal R$), 则由假设
+由分布函数性质,
 
 $$
-\int\mathbf{1}_{B}\left(x\right)\,\mu\left(\mathrm{d}x\right)=\mu\left(B\right)=\int_{B}f\left(x\right)\,\mathrm{d}x=\int\mathbf{1}_{B}\left(x\right)f\left(x\right)\,\mathrm{d}x.
+F\left(x+c\right)-F\left(x\right)=\mu\left(\left(x,x+c\right]\right).
 $$
 
-(2) 简单函数. 设 $g=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ ($c_{m}\in\mathbb R$, $B_{m}\in\mathcal R$), 由积分与期望的线性 (**定理 1.4.7 (积分的基本性质)**),
+于是
 
 $$
-\int g\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
+\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x=\int\mu\left(\left(x,x+c\right]\right)\,\mathrm{d}x=\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x.
 $$
 
-(3) 非负函数. 设 $g\ge 0$, 取 $g_{n}=\left(\left[2^{n}g\right]/2^{n}\right)\wedge n$, 则 $g_{n}$ 是简单函数且 $g_{n}\uparrow g$. 由 (2) 与**定理 1.5.7 (单调收敛定理)**,
+被积函数非负, 由托内利定理 (**定理 1.7.2 (富比尼定理)**) 交换积分次序:
 
 $$
-\int g\,\mathrm{d}\mu=\lim_{n}\int g_{n}\,\mathrm{d}\mu=\lim_{n}\int g_{n}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
+\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x=\int\int\mathbf{1}_{y-c\le x< y}\,\mathrm{d}x\,\mu\left(\mathrm{d}y\right).
 $$
 
-(4) 一般可积函数. 设
+对固定的 $y$,
 
 $$
-\int\left|g\right|\,\mathrm{d}\mu< \infty,
+\int\mathbf{1}_{y-c\le x< y}\,\mathrm{d}x
 $$
 
-分解 $g=g^{+}-g^{-}$, $g^{\pm}\ge 0$. 由 (3) 作用于 $g^{+},g^{-}$ 得
+是长度为 $c$ 的区间 $\left[y-c,y\right)$ 的勒贝格测度, 等于 $c$. 故
 
 $$
-\int g^{\pm}\,\mathrm{d}\mu=\int g^{\pm}f\,\mathrm{d}x,
+\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x=\int c\,\mu\left(\mathrm{d}y\right)=c\mu\left(\mathbb R\right).
 $$
 
-相减得
-
-$$
-\int g\,\mathrm{d}\mu=\int g^{+}\,\mathrm{d}\mu-\int g^{-}\,\mathrm{d}\mu=\int g^{+}f\,\mathrm{d}x-\int g^{-}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
-$$
-
-四步合起来即得结论. $\blacksquare$
+$\blacksquare$
 
 ## 2
 
-若
-
-$$
-\int_{X}\int_{Y}\left|f\left(x,y\right)\right|\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)< \infty,
-$$
-
-证明
-
-$$
-\int_{X}\int_{Y}f\left(x,y\right)\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\left(x,y\right)\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
-$$
+直接从定义证明: 若 $X$ 与 $Y$ 独立, $f,g$ 是可测函数, 则 $f\left(X\right)$ 与 $g\left(Y\right)$ 独立.
 
 ### 解答 2
 
-设 $\nu=\mu_{1}\times\mu_{2}$ 为乘积测度. 由托内利定理 (**定理 1.7.2 (富比尼定理)**, $f\ge 0$ 情形),
+对任意博雷尔集 $A,B\in\mathcal R$, 记
 
 $$
-\int_{X\times Y}\left|f\right|\,\mathrm{d}\nu=\int_{X}\int_{Y}\left|f\left(x,y\right)\right|\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)< \infty,
+\left\{f\left(X\right)\in A\right\}=\left\{X\in f^{-1}\left(A\right)\right\},\qquad\left\{g\left(Y\right)\in B\right\}=\left\{Y\in g^{-1}\left(B\right)\right\}.
 $$
 
-故 $f$ 关于 $\nu$ 可积. 依据**定理 1.7.2 (富比尼定理)**, 可积函数 $f$ 满足
+因 $f,g$ 可测, $f^{-1}\left(A\right),g^{-1}\left(B\right)\in\mathcal R$. 由 $X,Y$ 独立的定义 (**定义 2.1.2 (独立随机变量)**, 对一切博雷尔集成立),
 
 $$
-\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\nu=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right),
+P\left(X\in f^{-1}\left(A\right),\,Y\in g^{-1}\left(B\right)\right)=P\left(X\in f^{-1}\left(A\right)\right)P\left(Y\in g^{-1}\left(B\right)\right).
 $$
 
-这正是要证的结论. $\blacksquare$
+即
+
+$$
+P\left(f\left(X\right)\in A,\,g\left(Y\right)\in B\right)=P\left(f\left(X\right)\in A\right)P\left(g\left(Y\right)\in B\right).
+$$
+
+由于 $A,B$ 任意, $f\left(X\right)$ 与 $g\left(Y\right)$ 独立. $\blacksquare$
+
+## 3
+
+设 $\left(X_{1},\dots,X_{n}\right)$ 有密度 $f\left(x_{1},\dots,x_{n}\right)$, 即
+
+$$
+P\left(\left(X_{1},\dots,X_{n}\right)\in A\right)=\int_{A}f\left(x\right)\,\mathrm{d}x
+$$
+
+($A\in\mathcal R^{n}$). 若 $f$ 可写成
+
+$$
+f\left(x\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)
+$$
+
+($g_{m}\ge 0$ 可测, 不必是概率密度), 证明 $X_{1},\dots,X_{n}$ 独立.
+
+### 解答 3
+
+对任意博雷尔集 $A_{1},\dots,A_{n}$, 由联合密度与托内利定理 (**定理 1.7.2 (富比尼定理)**, 被积函数非负可分离):
+
+$$
+P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right)=\int_{A_{1}\times\cdots\times A_{n}}f\left(x\right)\,\mathrm{d}x=\prod_{i=1}^{n}\int_{A_{i}}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}.
+$$
+
+另一方面, 取 $A_{i}=\mathbb R$ 代入, 因 $f$ 是概率密度故 $\int f=1$, 得
+
+$$
+\prod_{i=1}^{n}\int_{\mathbb R}g_{i}\left(x_{i}\right)\,\mathrm{d}x_{i}=1.
+$$
+
+而 $X_{i}$ 的边缘分布为
+
+$$
+P\left(X_{i}\in A_{i}\right)=\int_{\mathbb R^{n}}\mathbf{1}_{A_{i}}\left(x_{i}\right)g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)\,\mathrm{d}x=\left(\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}.
+$$
+
+于是
+
+$$
+\prod_{i=1}^{n}P\left(X_{i}\in A_{i}\right)=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\prod_{i=1}^{n}\prod_{j\ne i}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}=\left(\prod_{i=1}^{n}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}\right)\left(\prod_{j=1}^{n}\int_{\mathbb R}g_{j}\,\mathrm{d}x_{j}\right)^{n-1}.
+$$
+
+因 $\prod_{j}\int_{\mathbb R}g_{j}=1$, 故
+
+$$
+\prod_{i}P\left(X_{i}\in A_{i}\right)=\prod_{i}\int_{A_{i}}g_{i}\,\mathrm{d}x_{i}=P\left(X_{1}\in A_{1},\dots,X_{n}\in A_{n}\right).
+$$
+
+由 $A_{i}$ 任意, $X_{1},\dots,X_{n}$ 独立 (**定义 2.1.2 (独立随机变量)**). $\blacksquare$

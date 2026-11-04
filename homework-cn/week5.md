@@ -1,13 +1,5 @@
 # week5
 
-> **定理 1.1.1 (概率测度的性质)**
-> 
-> 设 $\mu$ 为概率测度. 则: (1) $\mu\left(\varnothing\right)=0$; (2) 可数可加性: 对两两不交 $\left\{E_{n}\right\}$, $\mu\left(\bigcup_{n}E_{n}\right)=\sum_{n}\mu\left(E_{n}\right)$; (3) 下连续性: 若 $E_{n}\uparrow E$, 则 $\mu\left(E_{n}\right)\uparrow\mu\left(E\right)$.
-
-> **定义 1.4.1 (积分的四步定义)**
-> 
-> 设 $\mu$ 是 $\left(\Omega,\mathcal F\right)$ 上的 $\sigma$-有限测度. (1) 简单函数 $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ 两两不交, $\mu\left(A_{i}\right)< \infty$) 的积分为 $\int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right)$; (2) 非负有界,在有限测度集外为零的 $f$ 的积分为 $\int f\,\mathrm{d}\mu=\sup_{\phi\le f}\int\phi\,\mathrm{d}\mu$; (3) 非负可测 $f$ 的积分为 $\int f\,\mathrm{d}\mu=\sup\left\{\int h\,\mathrm{d}\mu:0\le h\le f,\ h\text{ 有界且 }\mu\left(\left\{h> 0\right\}\right)< \infty\right\}$; (4) 一般可测 $f$ 若 $\int\left|f\right|\,\mathrm{d}\mu< \infty$ 称可积, $\int f\,\mathrm{d}\mu=\int f^{+}\,\mathrm{d}\mu-\int f^{-}\,\mathrm{d}\mu$, 其中 $f^{+}=f\vee 0$, $f^{-}=\left(-f\right)\vee 0$.
-
 > **定理 1.4.7 (积分的基本性质)**
 > 
 > 设 $f,g$ 可积, 则: (1) 若 $f\ge 0$ 几乎处处, 则 $\int f\,\mathrm{d}\mu\ge 0$; (2) 对 $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) 若 $g\le f$ 几乎处处, 则 $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
@@ -16,66 +8,112 @@
 > 
 > 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
+> **定理 1.6.9 (换元公式)**
+> 
+> 设 $X$ 是取值于 $\left(S,\mathcal S\right)$ 的随机元, 分布为 $\mu$ (即 $\mu\left(A\right)=P\left(X\in A\right)$). 若 $f:\left(S,\mathcal S\right)\to\left(\mathbb R,\mathcal R\right)$ 可测且 $f\ge 0$ 或 $E\left|f\left(X\right)\right|< \infty$, 则
+
+$$
+Ef\left(X\right)=\int_{S}f\left(y\right)\,\mu\left(\mathrm{d}y\right).
+$$
+证明用四步法: 指示函数, 简单函数, 非负函数, 一般函数.
+
+> **定理 1.7.2 (富比尼定理)**
+> 
+> 若 $f\ge 0$, 则 (托内利)
+
+$$
+\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
+$$
+若 $f$ 可积, 即 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则同样的三重等式成立 (富比尼).
+
 ## 1
 
-证明: 若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
+设概率测度 $\mu$ 满足
+
+$$
+\mu\left(A\right)=\int_{A}f\left(x\right)\,\mathrm{d}x
+$$
+
+对一切 $A\in\mathcal R$. 仿照**定理 1.6.9 (换元公式)** 的分步证法, 证明对满足 $g\ge 0$ 或
+
+$$
+\int\left|g\left(x\right)\right|\,\mu\left(\mathrm{d}x\right)< \infty
+$$
+
+的 $g$, 有
+
+$$
+\int g\left(x\right)\,\mu\left(\mathrm{d}x\right)=\int g\left(x\right)f\left(x\right)\,\mathrm{d}x.
+$$
 
 ### 解答 1
 
-设 $E=\left\{x:f\left(x\right)> 0\right\}$. 对每个 $n\ge 1$ 记 $E_{n}=\left\{x:f\left(x\right)\ge 1/n\right\}$, 则 $E_{n}\uparrow E$, 故
+按**定理 1.6.9 (换元公式)** 的四步法逐类验证.
+
+(1) 指示函数. 设 $g=\mathbf{1}_{B}$ ($B\in\mathcal R$), 则由假设
 
 $$
-\mu\left(E\right)=\lim_{n}\mu\left(E_{n}\right)
+\int\mathbf{1}_{B}\left(x\right)\,\mu\left(\mathrm{d}x\right)=\mu\left(B\right)=\int_{B}f\left(x\right)\,\mathrm{d}x=\int\mathbf{1}_{B}\left(x\right)f\left(x\right)\,\mathrm{d}x.
 $$
 
-(测度的下连续性, **定理 1.1.1 (概率测度的性质)** 第 (3) 条).
-
-反设 $\mu\left(E\right)> 0$, 则存在 $n$ 使 $\mu\left(E_{n}\right)> 0$. 由 $f\ge\left(1/n\right)\mathbf{1}_{E_{n}}$ 及积分的单调性 (**定理 1.4.7 (积分的基本性质)** 第 (1)(4) 条),
+(2) 简单函数. 设 $g=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ ($c_{m}\in\mathbb R$, $B_{m}\in\mathcal R$), 由积分与期望的线性 (**定理 1.4.7 (积分的基本性质)**),
 
 $$
-\int f\,\mathrm{d}\mu\ge\int\frac{1}{n}\mathbf{1}_{E_{n}}\,\mathrm{d}\mu=\frac{1}{n}\mu\left(E_{n}\right)> 0,
+\int g\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
 $$
 
-与 $\int f\,\mathrm{d}\mu=0$ 矛盾. 故 $\mu\left(E\right)=0$, 即 $f=0$ 几乎处处. $\blacksquare$
+(3) 非负函数. 设 $g\ge 0$, 取 $g_{n}=\left(\left[2^{n}g\right]/2^{n}\right)\wedge n$, 则 $g_{n}$ 是简单函数且 $g_{n}\uparrow g$. 由 (2) 与**定理 1.5.7 (单调收敛定理)**,
+
+$$
+\int g\,\mathrm{d}\mu=\lim_{n}\int g_{n}\,\mathrm{d}\mu=\lim_{n}\int g_{n}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
+$$
+
+(4) 一般可积函数. 设
+
+$$
+\int\left|g\right|\,\mathrm{d}\mu< \infty,
+$$
+
+分解 $g=g^{+}-g^{-}$, $g^{\pm}\ge 0$. 由 (3) 作用于 $g^{+},g^{-}$ 得
+
+$$
+\int g^{\pm}\,\mathrm{d}\mu=\int g^{\pm}f\,\mathrm{d}x,
+$$
+
+相减得
+
+$$
+\int g\,\mathrm{d}\mu=\int g^{+}\,\mathrm{d}\mu-\int g^{-}\,\mathrm{d}\mu=\int g^{+}f\,\mathrm{d}x-\int g^{-}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
+$$
+
+四步合起来即得结论. $\blacksquare$
 
 ## 2
 
-设 $f\ge 0$,
+若
 
 $$
-E_{n,m}=\left\{x:m/2^{n}\le f\left(x\right)< \left(m+1\right)/2^{n}\right\}.
+\int_{X}\int_{Y}\left|f\left(x,y\right)\right|\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)< \infty,
 $$
 
-证明当 $n\uparrow\infty$ 时
+证明
 
 $$
-\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right)\uparrow\int f\,\mathrm{d}\mu.
+\int_{X}\int_{Y}f\left(x,y\right)\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\left(x,y\right)\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 $$
 
 ### 解答 2
 
-对每个 $n$, 定义简单函数
+设 $\nu=\mu_{1}\times\mu_{2}$ 为乘积测度. 由托内利定理 (**定理 1.7.2 (富比尼定理)**, $f\ge 0$ 情形),
 
 $$
-f_{n}\left(x\right)=\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mathbf{1}_{E_{n,m}}\left(x\right).
+\int_{X\times Y}\left|f\right|\,\mathrm{d}\nu=\int_{X}\int_{Y}\left|f\left(x,y\right)\right|\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)< \infty,
 $$
 
-由 $E_{n,m}$ 的定义, 在 $f$ 取有限值处有
+故 $f$ 关于 $\nu$ 可积. 依据**定理 1.7.2 (富比尼定理)**, 可积函数 $f$ 满足
 
 $$
-f_{n}\left(x\right)\le f\left(x\right)< f_{n}\left(x\right)+2^{-n},
-$$
-
-故 $f_{n}\uparrow f$ 逐点 (二分法细分使 $f_{n}$ 单调不减且逼近 $f$). 由简单函数积分的定义 (**定义 1.4.1 (积分的四步定义)** 第 (1) 条),
-
-$$
-\int f_{n}\,\mathrm{d}\mu=\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right).
-$$
-
-依据**定理 1.5.7 (单调收敛定理)**, 由 $f_{n}\uparrow f$ 得
-
-$$
-\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right)=\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu.
+\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\nu=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right),
 $$
 
 这正是要证的结论. $\blacksquare$

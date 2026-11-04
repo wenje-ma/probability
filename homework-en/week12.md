@@ -1,85 +1,119 @@
 # week12
 
-> **Exercise 1.4.1 (Zero Integral Implies Zero Almost Everywhere)**
+> **Theorem 1.6.5 (Fatou's Lemma)**
 > 
-> If $f\ge 0$ and $\int f\,\mathrm{d}\mu=0$, then $f=0$ almost everywhere.
+> If $Z_{n}\ge 0$, then $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
 
-> **Theorem 1.6.4 (Chebyshev's Inequality)**
+> **Definition 3.2.1 (Convergence in Distribution)**
 > 
-> If $\phi:\mathbb R\to\mathbb R$ is nonnegative and nondecreasing with $\phi\left(a\right)> 0$, then $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. Taking $\phi\left(y\right)=y$ gives Markov's inequality $P\left(Y> a\right)\le EY/a$.
+> $X_{n}\Rightarrow X_{\infty}$ (convergence in distribution) means that the distribution functions satisfy $F_{n}\left(x\right)\to F_{\infty}\left(x\right)$ at every continuity point $x$ of $F_{\infty}$.
 
-> **Definition 2.3.1 (Convergence in Probability)**
+> **Theorem 3.2.8 (Skorokhod Representation)**
 > 
-> $X_{n}\to X$ in probability means that for every $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
+> If $X_{n}\Rightarrow X_{\infty}$, then there exist random variables $Y_{n}=_{d}X_{n}$ on the same probability space such that $Y_{n}\to Y_{\infty}=_{d}X_{\infty}$ almost everywhere.
+
+> **Definition 3.3.1 (Characteristic Function)**
+> 
+> The characteristic function of a random variable $X$ is $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, where $\mu$ is the distribution of $X$.
+
+> **Theorem 3.3.1 (Properties of Characteristic Functions)**
+> 
+> (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le 1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, so $\phi$ is uniformly continuous on $\mathbb R$; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
+
+> **Theorem 3.3.2 (Characteristic Function of a Sum of Independent Variables)**
+> 
+> If $X_{1},X_{2}$ are independent with characteristic functions $\phi_{1},\phi_{2}$, then the characteristic function of $X_{1}+X_{2}$ is $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.
 
 ## 1
 
-Prove (a) that
+Let $X\sim N\left(0,1\right)$ with density $\left(2\pi\right)^{-1/2}e^{-x^{2}/2}$. Complete the in-class computation of its characteristic function and prove that $\phi\left(t\right)=Ee^{itX}=e^{-t^{2}/2}$.
+
+### Solution to 1
+
+The characteristic function is
 
 $$
-d\left(X,Y\right)=E\left(\frac{\left|X-Y\right|}{1+\left|X-Y\right|}\right)
+\phi\left(t\right)=\int_{-\infty}^{\infty}e^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x.
 $$
 
-defines a metric on the space of random variables, i.e. it satisfies:
-
-(1) $d\left(X,Y\right)=0$ iff $X=Y$ almost everywhere;
-
-(2) $d\left(X,Y\right)=d\left(Y,X\right)$;
-
-(3) $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$;
-
-(b) $d\left(X_{n},X\right)\to 0$ ($n\to\infty$) iff $X_{n}\to X$ in probability.
-
-### Solution 1
-
-Let $g\left(t\right)=t/\left(1+t\right)$ ($t\ge 0$).
-
-(a)(1) Since $g\ge 0$ and $g\left(t\right)=0$ iff $t=0$, by **Exercise 1.4.1 (Zero Integral Implies Zero Almost Everywhere)**,
+Step 1, remove the imaginary part. By Euler's formula $e^{itx}=\cos\left(tx\right)+i\sin\left(tx\right)$, and since $\sin\left(tx\right)$ is odd in $x$ while $e^{-x^{2}/2}$ is even,
 
 $$
-d\left(X,Y\right)=0\iff E\,g\left(\left|X-Y\right|\right)=0\iff g\left(\left|X-Y\right|\right)=0\ \text{a.e.}\iff\left|X-Y\right|=0\ \text{a.e.}\iff X=Y\ \text{a.e.}
+\int\sin\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x=0,
 $$
 
-(a)(2) Since $\left|X-Y\right|=\left|Y-X\right|$, immediately $d\left(X,Y\right)=d\left(Y,X\right)$.
-
-(a)(3) Since $g$ is nondecreasing, $\left|X-Z\right|\le\left|X-Y\right|+\left|Y-Z\right|$ implies
+leaving
 
 $$
-g\left(\left|X-Z\right|\right)\le g\left(\left|X-Y\right|+\left|Y-Z\right|\right).
+\phi\left(t\right)=\int_{-\infty}^{\infty}\cos\left(tx\right)\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x.
 $$
 
-Since $g$ is subadditive, $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$,
+Step 2, differentiate with respect to $t$ (differentiating under the integral, with an integrable dominating bound for the $t$-derivative):
 
 $$
-g\left(\left|X-Z\right|\right)\le g\left(\left|X-Y\right|\right)+g\left(\left|Y-Z\right|\right).
+\phi'\left(t\right)=\int_{-\infty}^{\infty}\left(-x\right)\sin\left(tx\right)\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x.
 $$
 
-Taking expectations gives $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$. Thus $d$ is a metric.
-
-(b) First prove "convergence in probability $\Rightarrow$ metric convergence". Suppose $X_{n}\to X$ in probability. For $\varepsilon> 0$, since $g\le 1$ and $g\le g\left(\varepsilon\right)$ on $\left[0,\varepsilon\right]$,
+Step 3, integrate by parts. Let $u=\sin\left(tx\right)$ and $\mathrm{d}v=\left(-x\right)e^{-x^{2}/2}\,\mathrm{d}x$, so $v=e^{-x^{2}/2}$. The boundary term
 
 $$
-d\left(X_{n},X\right)=E\,g\left(\left|X_{n}-X\right|\right)\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
+\left[\sin\left(tx\right)e^{-x^{2}/2}\right]_{-\infty}^{\infty}=0,
 $$
 
-Letting $n\to\infty$,
+so
 
 $$
-\limsup_{n}d\left(X_{n},X\right)\le g\left(\varepsilon\right),
+\phi'\left(t\right)=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\left(e^{-x^{2}/2}\right)\,\mathrm{d}x=-\int_{-\infty}^{\infty}t\cos\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x=-t\phi\left(t\right).
 $$
 
-and letting $\varepsilon\to 0$ gives $d\left(X_{n},X\right)\to 0$.
-
-Now prove "metric convergence $\Rightarrow$ convergence in probability". Suppose $d\left(X_{n},X\right)\to 0$. Since $g$ is strictly increasing,
+Step 4, solve the ODE $\phi'\left(t\right)=-t\phi\left(t\right)$. Let $\psi\left(t\right)=\phi\left(t\right)e^{t^{2}/2}$; then
 
 $$
-\left\{\left|X_{n}-X\right|> \varepsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right\}.
+\psi'\left(t\right)=e^{t^{2}/2}\left(\phi'\left(t\right)+t\phi\left(t\right)\right)=0.
 $$
 
-By Markov's inequality (**Theorem 1.6.4 (Chebyshev's Inequality)**),
+Thus $\psi$ is constant, and
 
 $$
-P\left(\left|X_{n}-X\right|> \varepsilon\right)=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\to 0.
+\psi\left(t\right)=\psi\left(0\right)=\phi\left(0\right)e^{0}=1
 $$
 
-Thus $X_{n}\to X$ in probability (**Definition 2.3.1 (Convergence in Probability)**). $\blacksquare$
+(since $\phi\left(0\right)=Ee^{0}=1$). Hence $\phi\left(t\right)e^{t^{2}/2}=1$, i.e.
+
+$$
+\phi\left(t\right)=e^{-t^{2}/2}.
+$$
+
+(Remark: the complex shift gives a quick verification:
+
+$$
+\int e^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x=e^{-t^{2}/2}\int\left(2\pi\right)^{-1/2}e^{-\left(x-it\right)^{2}/2}\,\mathrm{d}x,
+$$
+
+and the latter integral is the integral of a Gaussian density with mean $it$, which equals $1$.) $\blacksquare$
+
+## 2
+
+Let $g\ge 0$ be continuous. If $X_{n}\Rightarrow X_{\infty}$, prove that
+
+$$
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+$$
+
+### Solution to 2
+
+By **Theorem 3.2.8 (Skorokhod Representation)**, there exist random variables $Y_{n}=_{d}X_{n}$ and $Y_{\infty}=_{d}X_{\infty}$ on the same probability space such that $Y_{n}\to Y_{\infty}$ almost everywhere. Since $g$ is continuous, $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ almost everywhere.
+
+Since $g\ge 0$ and $g\left(Y_{n}\right)\ge 0$, by **Theorem 1.6.5 (Fatou's Lemma)**:
+
+$$
+\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)=E\,g\left(Y_{\infty}\right).
+$$
+
+The last step uses $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ a.e. Since $Y_{n}=_{d}X_{n}$ and $Y_{\infty}=_{d}X_{\infty}$, we have $E\,g\left(Y_{n}\right)=E\,g\left(X_{n}\right)$ and $E\,g\left(Y_{\infty}\right)=E\,g\left(X_{\infty}\right)$, and substituting gives
+
+$$
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+$$
+
+$\blacksquare$

@@ -1,95 +1,71 @@
 # week11
 
-> **定理 1.5.7 (单调收敛定理)**
+> **定理 2.3.1 (博雷尔-坎泰利引理)**
 > 
-> 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+> 若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)< \infty$ 得 $N=\sum\mathbf{1}_{A_{k}}< \infty$ 几乎处处.)
 
-> **定理 1.7.2 (富比尼/托内利定理)**
+> **定理 2.3.7 (第二博雷尔-坎泰利引理)**
 > 
-> 对非负可测 $h$ 与任意随机变量 $X$, 若 $H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y$, 则由托内利定理
-
-$$
-EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
-$$
-
-(半开区间含右端点, 故尾部用 $X\ge y$; 这是引理 2.2.13 的推广, 取 $h\left(y\right)=py^{p-1}\mathbf{1}_{\left\{y\ge 0\right\}}$ 即还原.)
-
-> **引理 2.2.13 (矩的尾部公式)**
-> 
-> 若 $Y\ge 0$ 且 $p> 0$, 则
-
-$$
-E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y> y\right)\,\mathrm{d}y.
-$$
-
-它是"对尾部 $P\left(Y> y\right)$ 逐层积分"思想的体现.
+> 若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=1$. (用 $1-x\le e^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
 
 ## 1
 
-若 $X\ge 0$ 取整数值, 写出 $EX^{2}$ 的类似表达式.
+设 $A_{n}$ 是一列独立事件且对一切 $n$ 有 $P\left(A_{n}\right)< 1$. 证明 $P\left(\cup_{n}A_{n}\right)=1$ 蕴含 $\sum_{n}P\left(A_{n}\right)=\infty$, 从而 $P\left(A_{n}\ \text{无穷多次}\right)=1$.
 
 ### 解答 1
 
-用尾部求和的记号
+由 $P\left(\cup_{n}A_{n}\right)=1$ 得 $P\left(\cap_{n}A_{n}^{c}\right)=0$. 因 $A_{n}$ 独立, $A_{n}^{c}$ 亦独立, 即对有限个:
 
 $$
-X=\sum_{k\ge 1}\mathbf{1}_{\left\{X\ge k\right\}}.
+P\left(\cap_{n=1}^{N}A_{n}^{c}\right)=\prod_{n=1}^{N}P\left(A_{n}^{c}\right).
 $$
 
-将 $X^{2}$ 写成二重和并按 $\max$ 重组: 使 $\max\left(i,j\right)=n$ 的有序正整数对 $\left(i,j\right)$ 恰有 $2n-1$ 个, 故
+故对每个 $N$,
 
 $$
-X^{2}=\left(\sum_{i\ge 1}\mathbf{1}_{\left\{X\ge i\right\}}\right)\left(\sum_{j\ge 1}\mathbf{1}_{\left\{X\ge j\right\}}\right)=\sum_{i,j\ge 1}\mathbf{1}_{\left\{X\ge\max\left(i,j\right)\right\}}=\sum_{n\ge 1}\left(2n-1\right)\mathbf{1}_{\left\{X\ge n\right\}}.
+P\left(\bigcap_{n=1}^{N}A_{n}^{c}\right)=\prod_{n=1}^{N}\left(1-P\left(A_{n}\right)\right).
 $$
 
-各项非负, 由单调收敛定理 (**定理 1.5.7 (单调收敛定理)**) 取期望:
+令 $N\to\infty$ 得
 
 $$
-EX^{2}=\sum_{n\ge 1}\left(2n-1\right)P\left(X\ge n\right).
+\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)=P\left(\cap_{n}A_{n}^{c}\right)=0.
 $$
 
-这就是 $EX^{2}$ 的尾部表达式. $\blacksquare$
+反设 $\sum_{n}P\left(A_{n}\right)< \infty$. 因 $P\left(A_{n}\right)< 1$ 即 $1-P\left(A_{n}\right)> 0$, 且 $\sum P\left(A_{n}\right)< \infty$ 保证
+
+$$
+\sum\log\left(1-P\left(A_{n}\right)\right)
+$$
+
+收敛 ($\log\left(1-x\right)\sim-x$), 故
+
+$$
+\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)> 0,
+$$
+
+矛盾. 所以 $\sum_{n}P\left(A_{n}\right)=\infty$.
+
+由**定理 2.3.7 (第二博雷尔-坎泰利引理)** ($A_{n}$ 独立且 $\sum P\left(A_{n}\right)=\infty$), $P\left(A_{n}\ \text{无穷多次}\right)=1$. $\blacksquare$
 
 ## 2
 
-推广**引理 2.2.13 (矩的尾部公式)** 证明: 若
-
-$$
-H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y
-$$
-
-且 $h\left(y\right)\ge 0$, 则
-
-$$
-EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
-$$
-
-特别情形 $H\left(x\right)=\exp\left(\theta x\right)$ ($\theta> 0$) 时给出相应结论.
+设 $X_{1},X_{2},\dots$ 独立. 证明 $\sup_{n}X_{n}< \infty$ 几乎处处当且仅当存在 $A$ 使 $\sum_{n}P\left(X_{n}> A\right)< \infty$.
 
 ### 解答 2
 
-将 $H$ 写成尾部积分的指示形式. 因
+$\left(\Leftarrow\right)$ 设存在 $A$ 使 $\sum_{n}P\left(X_{n}> A\right)< \infty$. 事件 $\left\{X_{n}> A\right\}$ 满足**定理 2.3.1 (博雷尔-坎泰利引理)** 的条件, 故 $P\left(X_{n}> A\ \text{无穷多次}\right)=0$, 即几乎处处只有有限个 $X_{n}$ 超过 $A$. 因此 $\sup_{n}X_{n}\le A< \infty$ 几乎处处 (注: 此方向不需独立性).
+
+$\left(\Rightarrow\right)$ 设 $\sup_{n}X_{n}< \infty$ 几乎处处. 则存在 $A$ 使 $P\left(\sup_{n}X_{n}\le A\right)> 0$ (因 $\sup_{n}X_{n}$ 几乎处处有限, $\cup_{A}\left\{\sup\le A\right\}$ 覆盖几乎处处全空间). 于是
 
 $$
-H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y,
+\left\{X_{n}> A\ \text{无穷多次}\right\}\subset\left\{\sup_{n}X_{n}> A\right\}
 $$
 
-代入 $X$ 得
+蕴含
 
 $$
-H\left(X\right)=\int_{\left(-\infty,X\right]}h\left(y\right)\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{y\le X\right\}}\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{X\ge y\right\}}\,\mathrm{d}y.
+P\left(X_{n}> A\ \text{无穷多次}\right)\le P\left(\sup_{n}X_{n}> A\right)=1-P\left(\sup_{n}X_{n}\le A\right)< 1.
 $$
 
-被积函数非负, 由托内利定理 (**定理 1.7.2 (富比尼/托内利定理)**) 交换期望与积分:
-
-$$
-EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)E\left[\mathbf{1}_{\left\{X\ge y\right\}}\right]\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
-$$
-
-当 $H\left(x\right)=\exp\left(\theta x\right)$, $\theta> 0$ 时, $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, 代入得
-
-$$
-Ee^{\theta X}=\theta\int_{-\infty}^{\infty}e^{\theta y}P\left(X\ge y\right)\,\mathrm{d}y.
-$$
-
-$\blacksquare$
+反设 $\sum_{n}P\left(X_{n}> A\right)=\infty$. 因 $X_{n}$ 独立, 由**定理 2.3.7 (第二博雷尔-坎泰利引理)** 得 $P\left(X_{n}> A\ \text{无穷多次}\right)=1$, 与上式矛盾. 故 $\sum_{n}P\left(X_{n}> A\right)< \infty$. $\blacksquare$

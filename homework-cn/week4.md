@@ -1,5 +1,9 @@
 # week4
 
+> **定理 1.1.1 (概率测度的性质)**
+> 
+> 设 $\mu$ 为概率测度. 则: (1) $\mu\left(\varnothing\right)=0$; (2) 可数可加性: 对两两不交 $\left\{E_{n}\right\}$, $\mu\left(\bigcup_{n}E_{n}\right)=\sum_{n}\mu\left(E_{n}\right)$; (3) 下连续性: 若 $E_{n}\uparrow E$, 则 $\mu\left(E_{n}\right)\uparrow\mu\left(E\right)$.
+
 > **公式 1.3.1 (由 $X$ 生成的 $\sigma$-代数)**
 > 
 > $\sigma\left(X\right)=\left\{\left\{X\in B\right\}:B\in\mathcal S\right\}$ 是使 $X$ 可测的最小 $\sigma$-代数.
@@ -12,73 +16,19 @@
 > 
 > 若 $X_{1},X_{2},\dots$ 是随机变量, 则 $\inf_{n}X_{n}$, $\sup_{n}X_{n}$, $\limsup_{n}X_{n}$, $\liminf_{n}X_{n}$ 都是随机变量. 故 $\left\{\omega:\lim_{n}X_{n}\text{ 存在}\right\}=\left\{\omega:\limsup_{n}X_{n}-\liminf_{n}X_{n}=0\right\}$ 是可测集.
 
+> **定义 1.4.1 (积分的四步定义)**
+> 
+> 设 $\mu$ 是 $\left(\Omega,\mathcal F\right)$ 上的 $\sigma$-有限测度. (1) 简单函数 $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ 两两不交, $\mu\left(A_{i}\right)< \infty$) 的积分为 $\int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right)$; (2) 非负有界,在有限测度集外为零的 $f$ 的积分为 $\int f\,\mathrm{d}\mu=\sup_{\phi\le f}\int\phi\,\mathrm{d}\mu$; (3) 非负可测 $f$ 的积分为 $\int f\,\mathrm{d}\mu=\sup\left\{\int h\,\mathrm{d}\mu:0\le h\le f,\ h\text{ 有界且 }\mu\left(\left\{h> 0\right\}\right)< \infty\right\}$; (4) 一般可测 $f$ 若 $\int\left|f\right|\,\mathrm{d}\mu< \infty$ 称可积, $\int f\,\mathrm{d}\mu=\int f^{+}\,\mathrm{d}\mu-\int f^{-}\,\mathrm{d}\mu$, 其中 $f^{+}=f\vee 0$, $f^{-}=\left(-f\right)\vee 0$.
+
+> **定理 1.4.7 (积分的基本性质)**
+> 
+> 设 $f,g$ 可积, 则: (1) 若 $f\ge 0$ 几乎处处, 则 $\int f\,\mathrm{d}\mu\ge 0$; (2) 对 $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) 若 $g\le f$ 几乎处处, 则 $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
+
+> **定理 1.5.7 (单调收敛定理)**
+> 
+> 若 $0\le f_{n}$ 且 $f_{n}\uparrow f$ 逐点, 则 $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+
 ## 1
-
-设
-
-$$
-\phi\left(\omega\right)=\sum_{m=1}^{n}c_{m}\mathbf{1}_{A_{m}}\left(\omega\right),
-$$
-
-其中 $c_{m}\in\mathbb R$, $A_{m}\in\mathcal F$. 证明: $\mathcal F$-可测函数类是最小的包含所有简单函数且对逐点极限封闭的类.
-
-### 解答 1
-
-设 $\mathcal M$ 是包含所有简单函数且对逐点极限封闭的最小函数类.
-
-先证 $\mathcal M$ 中的函数都可测. 简单函数显然可测 (**定义 1.3.3 (简单函数)**); 可测函数类对逐点极限封闭 (依据**定理 1.3.7 (随机变量的极限运算)**, $\lim_{n}f_{n}=\limsup_{n}f_{n}$ 可测), 故由 $\mathcal M$ 的最小性知 $\mathcal M\subset\left\{\text{可测函数}\right\}$.
-
-再证每个可测函数 $f$ 属于 $\mathcal M$. 分解 $f=f^{+}-f^{-}$, 其中 $f^{+}=f\vee 0$, $f^{-}=\left(-f\right)\vee 0$. 对非负可测函数 $g$, 构造
-
-$$
-g_{n}\left(x\right)=\frac{\left[2^{n}g\left(x\right)\right]}{2^{n}}\wedge n,
-$$
-
-其中 $\left[x\right]$ 为不超过 $x$ 的最大整数. $g_{n}$ 是取有限值的阶梯简单函数, 且 $g_{n}\uparrow g$ 逐点. 于是取
-
-$$
-f_{n}=f_{n}^{+}-f_{n}^{-},\qquad f_{n}^{\pm}=\frac{\left[2^{n}f^{\pm}\right]}{2^{n}}\wedge n.
-$$
-
-$f_{n}$ 是两个简单函数之差, 仍是简单函数, 故 $f_{n}\in\mathcal M$; 又 $f_{n}\to f$ 逐点 (因 $f_{n}^{\pm}\to f^{\pm}$), 由 $\mathcal M$ 对逐点极限封闭知 $f\in\mathcal M$.
-
-综上, 可测函数类恰为包含简单函数且对逐点极限封闭的最小类. $\blacksquare$
-
-## 2
-
-利用上一题结论证明: $Y$ 关于 $\sigma\left(X\right)$ 可测当且仅当 $Y=f\left(X\right)$, 其中 $f:\mathbb R\to\mathbb R$ 可测.
-
-### 解答 2
-
-$\left(\Leftarrow\right)$ 若 $Y=f\left(X\right)$ 且 $f$ 可测, 则对任意博雷尔集 $B$ 有
-
-$$
-\left\{Y\in B\right\}=\left\{X\in f^{-1}\left(B\right)\right\}\in\sigma\left(X\right)
-$$
-
-(因 $f^{-1}\left(B\right)\in\mathcal R$, 见**公式 1.3.1 (由 $X$ 生成的 $\sigma$-代数)**), 故 $Y$ 关于 $\sigma\left(X\right)$ 可测.
-
-$\left(\Rightarrow\right)$ 设 $Y$ 关于 $\sigma\left(X\right)$ 可测. 先处理简单函数: 若 $\phi=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ 是 $\sigma\left(X\right)$-可测简单函数, 则 $B_{m}\in\sigma\left(X\right)$, 故 $B_{m}=\left\{X\in C_{m}\right\}$ (某 $C_{m}\in\mathcal R$), 于是
-
-$$
-\phi=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)=g\left(X\right),\qquad g=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\ \text{可测}.
-$$
-
-由**解答 1**, $Y$ 是 $\sigma\left(X\right)$-可测简单函数列 $\phi_{n}$ 的逐点极限, 每个 $\phi_{n}=g_{n}\left(X\right)$ 且 $g_{n}$ 可测. 令 $f=\limsup_{n}g_{n}$, 则 $f$ 可测 (**定理 1.3.7 (随机变量的极限运算)**), 且对每个 $\omega$,
-
-$$
-g_{n}\left(X\left(\omega\right)\right)\to Y\left(\omega\right),
-$$
-
-故
-
-$$
-f\left(X\left(\omega\right)\right)=\limsup_{n}g_{n}\left(X\left(\omega\right)\right)=Y\left(\omega\right).
-$$
-
-即 $Y=f\left(X\right)$. $\blacksquare$
-
-## 3
 
 给出**解答 2**的构造性证明: 由
 
@@ -88,7 +38,7 @@ $$
 
 (某 $B_{m,n}\in\mathcal R$), 令 $f_{n}\left(x\right)=m2^{-n}$ ($x\in B_{m,n}$), 证明当 $n\to\infty$ 时 $f_{n}\left(x\right)\to f\left(x\right)$ 且 $Y=f\left(X\right)$.
 
-### 解答 3
+### 解答 1
 
 因 $Y$ 关于 $\sigma\left(X\right)$ 可测, 集合
 
@@ -123,3 +73,67 @@ f\left(X\left(\omega\right)\right)=\lim_{n}f_{n}\left(X\left(\omega\right)\right
 $$
 
 即 $Y=f\left(X\right)$. $\blacksquare$
+
+## 2
+
+证明: 若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
+
+### 解答 2
+
+设 $E=\left\{x:f\left(x\right)> 0\right\}$. 对每个 $n\ge 1$ 记 $E_{n}=\left\{x:f\left(x\right)\ge 1/n\right\}$, 则 $E_{n}\uparrow E$, 故
+
+$$
+\mu\left(E\right)=\lim_{n}\mu\left(E_{n}\right)
+$$
+
+(测度的下连续性, **定理 1.1.1 (概率测度的性质)** 第 (3) 条).
+
+反设 $\mu\left(E\right)> 0$, 则存在 $n$ 使 $\mu\left(E_{n}\right)> 0$. 由 $f\ge\left(1/n\right)\mathbf{1}_{E_{n}}$ 及积分的单调性 (**定理 1.4.7 (积分的基本性质)** 第 (1)(4) 条),
+
+$$
+\int f\,\mathrm{d}\mu\ge\int\frac{1}{n}\mathbf{1}_{E_{n}}\,\mathrm{d}\mu=\frac{1}{n}\mu\left(E_{n}\right)> 0,
+$$
+
+与 $\int f\,\mathrm{d}\mu=0$ 矛盾. 故 $\mu\left(E\right)=0$, 即 $f=0$ 几乎处处. $\blacksquare$
+
+## 3
+
+设 $f\ge 0$,
+
+$$
+E_{n,m}=\left\{x:m/2^{n}\le f\left(x\right)< \left(m+1\right)/2^{n}\right\}.
+$$
+
+证明当 $n\uparrow\infty$ 时
+
+$$
+\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right)\uparrow\int f\,\mathrm{d}\mu.
+$$
+
+### 解答 3
+
+对每个 $n$, 定义简单函数
+
+$$
+f_{n}\left(x\right)=\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mathbf{1}_{E_{n,m}}\left(x\right).
+$$
+
+由 $E_{n,m}$ 的定义, 在 $f$ 取有限值处有
+
+$$
+f_{n}\left(x\right)\le f\left(x\right)< f_{n}\left(x\right)+2^{-n},
+$$
+
+故 $f_{n}\uparrow f$ 逐点 (二分法细分使 $f_{n}$ 单调不减且逼近 $f$). 由简单函数积分的定义 (**定义 1.4.1 (积分的四步定义)** 第 (1) 条),
+
+$$
+\int f_{n}\,\mathrm{d}\mu=\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right).
+$$
+
+依据**定理 1.5.7 (单调收敛定理)**, 由 $f_{n}\uparrow f$ 得
+
+$$
+\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right)=\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu.
+$$
+
+这正是要证的结论. $\blacksquare$

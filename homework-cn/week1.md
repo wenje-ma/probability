@@ -6,7 +6,7 @@
 
 > **定理 1.1.1 (概率测度的性质)**
 > 
-> 设 $\left(\Omega,\mathcal F,P\right)$ 为概率空间, 则: (1) $P\left(\varnothing\right)=0$; (2) 单调性: $A\subset B\Rightarrow P\left(A\right)\le P\left(B\right)$; (3) 若 $A_{n}\uparrow A$ 则 $P\left(A_{n}\right)\uparrow P\left(A\right)$ (下连续), 若 $A_{n}\downarrow A$ 则 $P\left(A_{n}\right)\downarrow P\left(A\right)$ (上连续).
+> 设 $\mu$ 为概率测度. 则: (1) $\mu\left(\varnothing\right)=0$; (2) 可数可加性: 对两两不交 $\left\{E_{n}\right\}$, $\mu\left(\bigcup_{n}E_{n}\right)=\sum_{n}\mu\left(E_{n}\right)$; (3) 下连续性: 若 $E_{n}\uparrow E$, 则 $\mu\left(E_{n}\right)\uparrow\mu\left(E\right)$.
 
 > **定义 1.1.2 (代数)**
 > 

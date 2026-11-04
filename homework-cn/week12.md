@@ -1,85 +1,119 @@
 # week12
 
-> **习题 1.4.1 (积分为零蕴含几乎处处为零)**
+> **定理 1.6.5 (法图引理)**
 > 
-> 若 $f\ge 0$ 且 $\int f\,\mathrm{d}\mu=0$, 则 $f=0$ 几乎处处.
+> 若 $Z_{n}\ge 0$, 则 $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
 
-> **定理 1.6.4 (切比雪夫不等式)**
+> **定义 3.2.1 (依分布收敛)**
 > 
-> 若 $\phi:\mathbb R\to\mathbb R$ 非负, 非降, $\phi\left(a\right)> 0$, 则 $P\left(X\ge a\right)\le E\phi\left(X\right)/\phi\left(a\right)$. 取 $\phi\left(y\right)=y$ 得马尔可夫不等式 $P\left(Y> a\right)\le EY/a$.
+> $X_{n}\Rightarrow X_{\infty}$ (依分布收敛) 指分布函数 $F_{n}\left(x\right)\to F_{\infty}\left(x\right)$ 在 $F_{\infty}$ 的一切连续点上成立.
 
-> **定义 2.3.1 (依概率收敛)**
+> **定理 3.2.8 (斯科罗霍德表示)**
 > 
-> $X_{n}\to X$ 依概率指对任意 $\varepsilon> 0$, $P\left(\left|X_{n}-X\right|> \varepsilon\right)\to 0$.
+> 若 $X_{n}\Rightarrow X_{\infty}$, 则存在同一概率空间上的随机变量 $Y_{n}=_{d}X_{n}$ 使 $Y_{n}\to Y_{\infty}=_{d}X_{\infty}$ 几乎处处.
+
+> **定义 3.3.1 (特征函数)**
+> 
+> 随机变量 $X$ 的特征函数为 $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, 其中 $\mu$ 为 $X$ 的分布.
+
+> **定理 3.3.1 (特征函数的性质)**
+> 
+> (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le 1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, 故 $\phi$ 在 $\mathbb R$ 上一致连续; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
+
+> **定理 3.3.2 (独立和的特征函数)**
+> 
+> 若 $X_{1},X_{2}$ 独立且特征函数为 $\phi_{1},\phi_{2}$, 则 $X_{1}+X_{2}$ 的特征函数为 $\phi_{1}\left(t\right)\phi_{2}\left(t\right)$.
 
 ## 1
 
-证明 (a)
-
-$$
-d\left(X,Y\right)=E\left(\frac{\left|X-Y\right|}{1+\left|X-Y\right|}\right)
-$$
-
-在随机变量集合上定义了一个度量, 即满足:
-
-(1) $d\left(X,Y\right)=0$ 当且仅当 $X=Y$ 几乎处处;
-
-(2) $d\left(X,Y\right)=d\left(Y,X\right)$;
-
-(3) $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$;
-
-(b) $d\left(X_{n},X\right)\to 0$ ($n\to\infty$) 当且仅当 $X_{n}\to X$ 依概率.
+设 $X\sim N\left(0,1\right)$, 密度为 $\left(2\pi\right)^{-1/2}e^{-x^{2}/2}$. 补充完整课堂上关于其特征函数的计算, 证明 $\phi\left(t\right)=Ee^{itX}=e^{-t^{2}/2}$.
 
 ### 解答 1
 
-记 $g\left(t\right)=t/\left(1+t\right)$ ($t\ge 0$).
-
-(a)(1) 因 $g\ge 0$ 且 $g\left(t\right)=0$ 当且仅当 $t=0$, 由**习题 1.4.1 (积分为零蕴含几乎处处为零)**,
+特征函数为
 
 $$
-d\left(X,Y\right)=0\iff E\,g\left(\left|X-Y\right|\right)=0\iff g\left(\left|X-Y\right|\right)=0\ \text{几乎处处}\iff\left|X-Y\right|=0\ \text{几乎处处}\iff X=Y\ \text{几乎处处}.
+\phi\left(t\right)=\int_{-\infty}^{\infty}e^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x.
 $$
 
-(a)(2) 由 $\left|X-Y\right|=\left|Y-X\right|$ 立即得 $d\left(X,Y\right)=d\left(Y,X\right)$.
-
-(a)(3) $g$ 非降, 故 $\left|X-Z\right|\le\left|X-Y\right|+\left|Y-Z\right|$ 蕴含
+第一步, 去掉虚部. 由欧拉公式 $e^{itx}=\cos\left(tx\right)+i\sin\left(tx\right)$, 而 $\sin\left(tx\right)$ 关于 $x$ 是奇函数, $e^{-x^{2}/2}$ 是偶函数, 故
 
 $$
-g\left(\left|X-Z\right|\right)\le g\left(\left|X-Y\right|+\left|Y-Z\right|\right);
+\int\sin\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x=0,
 $$
 
-又 $g$ 次可加, $g\left(a+b\right)\le g\left(a\right)+g\left(b\right)$, 故
+只剩
 
 $$
-g\left(\left|X-Z\right|\right)\le g\left(\left|X-Y\right|\right)+g\left(\left|Y-Z\right|\right).
+\phi\left(t\right)=\int_{-\infty}^{\infty}\cos\left(tx\right)\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x.
 $$
 
-取期望即得 $d\left(X,Z\right)\le d\left(X,Y\right)+d\left(Y,Z\right)$. 综上 $d$ 是度量.
-
-(b) 先证"依概率收敛 $\Rightarrow$ 度量收敛". 设 $X_{n}\to X$ 依概率. 对 $\varepsilon> 0$, 因 $g\le 1$ 且在 $\left[0,\varepsilon\right]$ 上 $g\le g\left(\varepsilon\right)$,
+第二步, 对 $t$ 求导 (在积分号下求导, 被积函数关于 $t$ 的导数有可积控制):
 
 $$
-d\left(X_{n},X\right)=E\,g\left(\left|X_{n}-X\right|\right)\le g\left(\varepsilon\right)P\left(\left|X_{n}-X\right|\le\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right)\le g\left(\varepsilon\right)+P\left(\left|X_{n}-X\right|> \varepsilon\right).
+\phi'\left(t\right)=\int_{-\infty}^{\infty}\left(-x\right)\sin\left(tx\right)\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x.
 $$
 
-令 $n\to\infty$ 得
+第三步, 对上式分部积分. 令 $u=\sin\left(tx\right)$, $\mathrm{d}v=\left(-x\right)e^{-x^{2}/2}\,\mathrm{d}x$, 则 $v=e^{-x^{2}/2}$, 边界项
 
 $$
-\limsup_{n}d\left(X_{n},X\right)\le g\left(\varepsilon\right),
+\left[\sin\left(tx\right)e^{-x^{2}/2}\right]_{-\infty}^{\infty}=0,
 $$
 
-再令 $\varepsilon\to 0$ 得 $d\left(X_{n},X\right)\to 0$.
-
-再证"度量收敛 $\Rightarrow$ 依概率收敛". 设 $d\left(X_{n},X\right)\to 0$. 因 $g$ 严格递增,
+故
 
 $$
-\left\{\left|X_{n}-X\right|> \varepsilon\right\}=\left\{g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right\},
+\phi'\left(t\right)=\int_{-\infty}^{\infty}\sin\left(tx\right)\frac{\mathrm{d}}{\mathrm{d}x}\left(e^{-x^{2}/2}\right)\,\mathrm{d}x=-\int_{-\infty}^{\infty}t\cos\left(tx\right)e^{-x^{2}/2}\,\mathrm{d}x=-t\phi\left(t\right).
 $$
 
-由马尔可夫不等式 (**定理 1.6.4 (切比雪夫不等式)**),
+第四步, 解微分方程 $\phi'\left(t\right)=-t\phi\left(t\right)$. 令 $\psi\left(t\right)=\phi\left(t\right)e^{t^{2}/2}$, 则
 
 $$
-P\left(\left|X_{n}-X\right|> \varepsilon\right)=P\left(g\left(\left|X_{n}-X\right|\right)> g\left(\varepsilon\right)\right)\le\frac{E\,g\left(\left|X_{n}-X\right|\right)}{g\left(\varepsilon\right)}=\frac{d\left(X_{n},X\right)}{g\left(\varepsilon\right)}\to 0.
+\psi'\left(t\right)=e^{t^{2}/2}\left(\phi'\left(t\right)+t\phi\left(t\right)\right)=0.
 $$
 
-故 $X_{n}\to X$ 依概率 (**定义 2.3.1 (依概率收敛)**). $\blacksquare$
+故 $\psi$ 为常数,
+
+$$
+\psi\left(t\right)=\psi\left(0\right)=\phi\left(0\right)e^{0}=1
+$$
+
+(因 $\phi\left(0\right)=Ee^{0}=1$). 于是 $\phi\left(t\right)e^{t^{2}/2}=1$, 即
+
+$$
+\phi\left(t\right)=e^{-t^{2}/2}.
+$$
+
+(补充: 复平移的物理证明可快速验证:
+
+$$
+\int e^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x=e^{-t^{2}/2}\int\left(2\pi\right)^{-1/2}e^{-\left(x-it\right)^{2}/2}\,\mathrm{d}x,
+$$
+
+括号内是以均值 $it$ 的正态密度积分, 等于 $1$.) $\blacksquare$
+
+## 2
+
+设 $g\ge 0$ 连续. 若 $X_{n}\Rightarrow X_{\infty}$, 证明
+
+$$
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+$$
+
+### 解答 2
+
+由**定理 3.2.8 (斯科罗霍德表示)**, 存在同一概率空间上的随机变量 $Y_{n}=_{d}X_{n}$ 与 $Y_{\infty}=_{d}X_{\infty}$, 使 $Y_{n}\to Y_{\infty}$ 几乎处处. 因 $g$ 连续, $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ 几乎处处.
+
+$g\ge 0$ 且 $g\left(Y_{n}\right)\ge 0$, 由**定理 1.6.5 (法图引理)**:
+
+$$
+\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)=E\,g\left(Y_{\infty}\right).
+$$
+
+最后一步用 $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ 几乎处处. 因 $Y_{n}=_{d}X_{n}$ 与 $Y_{\infty}=_{d}X_{\infty}$, $E\,g\left(Y_{n}\right)=E\,g\left(X_{n}\right)$, $E\,g\left(Y_{\infty}\right)=E\,g\left(X_{\infty}\right)$, 代入得
+
+$$
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+$$
+
+$\blacksquare$

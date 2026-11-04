@@ -1,13 +1,5 @@
 # week5
 
-> **Theorem 1.1.1 (Properties of Probability Measures)**
-> 
-> Let $\mu$ be a probability measure. Then: (1) $\mu\left(\varnothing\right)=0$; (2) countable additivity: for pairwise disjoint $\left\{E_{n}\right\}$, $\mu\left(\bigcup_{n}E_{n}\right)=\sum_{n}\mu\left(E_{n}\right)$; (3) continuity from below: if $E_{n}\uparrow E$, then $\mu\left(E_{n}\right)\uparrow\mu\left(E\right)$.
-
-> **Definition 1.4.1 (Four-Step Definition of the Integral)**
-> 
-> Let $\mu$ be a $\sigma$-finite measure on $\left(\Omega,\mathcal F\right)$. (1) For a simple function $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ pairwise disjoint, $\mu\left(A_{i}\right)< \infty$), $\int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right)$; (2) for a nonnegative bounded $f$ vanishing outside a finite-measure set, $\int f\,\mathrm{d}\mu=\sup_{\phi\le f}\int\phi\,\mathrm{d}\mu$; (3) for a nonnegative measurable $f$, $\int f\,\mathrm{d}\mu=\sup\left\{\int h\,\mathrm{d}\mu:0\le h\le f,\ h\text{ bounded and }\mu\left(\left\{h> 0\right\}\right)< \infty\right\}$; (4) for a general measurable $f$, if $\int\left|f\right|\,\mathrm{d}\mu< \infty$ then $f$ is integrable, and $\int f\,\mathrm{d}\mu=\int f^{+}\,\mathrm{d}\mu-\int f^{-}\,\mathrm{d}\mu$, where $f^{+}=f\vee 0$ and $f^{-}=\left(-f\right)\vee 0$.
-
 > **Theorem 1.4.7 (Basic Properties of the Integral)**
 > 
 > Let $f,g$ be integrable. Then: (1) if $f\ge 0$ almost everywhere, then $\int f\,\mathrm{d}\mu\ge 0$; (2) for $a\in\mathbb R$, $\int af\,\mathrm{d}\mu=a\int f\,\mathrm{d}\mu$; (3) $\int\left(f+g\right)\,\mathrm{d}\mu=\int f\,\mathrm{d}\mu+\int g\,\mathrm{d}\mu$; (4) if $g\le f$ almost everywhere, then $\int g\,\mathrm{d}\mu\le\int f\,\mathrm{d}\mu$.
@@ -16,66 +8,112 @@
 > 
 > If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
 
+> **Theorem 1.6.9 (Change of Variables Formula)**
+> 
+> If $X$ has density $f$ (on $\left[0,1\right]$) and $U_{1}$ is uniform on $\left(0,1\right)$, then $Ef\left(U_{1}\right)=\int_{0}^{1}f\left(x\right)\,\mathrm{d}x$. More generally, $Ef\left(X\right)=\int f\left(y\right)\,\mu\left(\mathrm{d}y\right)$, where $\mu$ is the distribution of $X$.
+
+$$
+Ef\left(X\right)=\int_{S}f\left(y\right)\,\mu\left(\mathrm{d}y\right).
+$$
+The proof uses a four-step argument: indicator functions, simple functions, nonnegative functions, and general functions.
+
+> **Theorem 1.7.2 (Fubini's Theorem)**
+> 
+> If $f\ge 0$, then (Tonelli)
+
+$$
+\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
+$$
+If $f$ is integrable, i.e. $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, then the same triple identity holds (Fubini).
+
 ## 1
 
-Prove: if $f\ge 0$ and $\int f\,\mathrm{d}\mu=0$, then $f=0$ almost everywhere.
-
-### Solution 1
-
-Let $E=\left\{x:f\left(x\right)> 0\right\}$. For each $n\ge 1$, set $E_{n}=\left\{x:f\left(x\right)\ge 1/n\right\}$; then $E_{n}\uparrow E$, so
+Let a probability measure $\mu$ satisfy
 
 $$
-\mu\left(E\right)=\lim_{n}\mu\left(E_{n}\right)
+\mu\left(A\right)=\int_{A}f\left(x\right)\,\mathrm{d}x
 $$
 
-(continuity from below of the measure, **Theorem 1.1.1 (Properties of a Probability Measure)**, condition (3)).
-
-Suppose for contradiction that $\mu\left(E\right)> 0$; then there exists $n$ such that $\mu\left(E_{n}\right)> 0$. Since $f\ge\left(1/n\right)\mathbf{1}_{E_{n}}$ and by monotonicity of the integral (**Theorem 1.4.7 (Basic Properties of the Integral)**, conditions (1) and (4)),
+for all $A\in\mathcal R$. Following the step-by-step proof of **Theorem 1.6.9 (Change of Variables Formula)**, prove that for $g$ satisfying $g\ge 0$ or
 
 $$
-\int f\,\mathrm{d}\mu\ge\int\frac{1}{n}\mathbf{1}_{E_{n}}\,\mathrm{d}\mu=\frac{1}{n}\mu\left(E_{n}\right)> 0,
+\int\left|g\left(x\right)\right|\,\mu\left(\mathrm{d}x\right)< \infty,
 $$
 
-contradicting $\int f\,\mathrm{d}\mu=0$. Hence $\mu\left(E\right)=0$, i.e. $f=0$ almost everywhere. $\blacksquare$
+one has
+
+$$
+\int g\left(x\right)\,\mu\left(\mathrm{d}x\right)=\int g\left(x\right)f\left(x\right)\,\mathrm{d}x.
+$$
+
+### Solution to 1
+
+Verify by the four-step method of **Theorem 1.6.9 (Change of Variables Formula)**.
+
+(1) Indicator functions. Let $g=\mathbf{1}_{B}$ ($B\in\mathcal R$). By assumption,
+
+$$
+\int\mathbf{1}_{B}\left(x\right)\,\mu\left(\mathrm{d}x\right)=\mu\left(B\right)=\int_{B}f\left(x\right)\,\mathrm{d}x=\int\mathbf{1}_{B}\left(x\right)f\left(x\right)\,\mathrm{d}x.
+$$
+
+(2) Simple functions. Let $g=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ ($c_{m}\in\mathbb R$, $B_{m}\in\mathcal R$). By linearity of the integral (**Theorem 1.4.7 (Basic Properties of the Integral)**),
+
+$$
+\int g\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}\,\mathrm{d}\mu=\sum_{m}c_{m}\int\mathbf{1}_{B_{m}}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
+$$
+
+(3) Nonnegative functions. Let $g\ge 0$, and set $g_{n}=\left(\left[2^{n}g\right]/2^{n}\right)\wedge n$. Then $g_{n}$ is a simple function and $g_{n}\uparrow g$. By (2) and **Theorem 1.5.7 (Monotone Convergence Theorem)**,
+
+$$
+\int g\,\mathrm{d}\mu=\lim_{n}\int g_{n}\,\mathrm{d}\mu=\lim_{n}\int g_{n}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
+$$
+
+(4) General integrable functions. Let
+
+$$
+\int\left|g\right|\,\mathrm{d}\mu< \infty.
+$$
+
+Decompose $g=g^{+}-g^{-}$ with $g^{\pm}\ge 0$. Applying (3) to $g^{+}$ and $g^{-}$ gives
+
+$$
+\int g^{\pm}\,\mathrm{d}\mu=\int g^{\pm}f\,\mathrm{d}x,
+$$
+
+and subtracting yields
+
+$$
+\int g\,\mathrm{d}\mu=\int g^{+}\,\mathrm{d}\mu-\int g^{-}\,\mathrm{d}\mu=\int g^{+}f\,\mathrm{d}x-\int g^{-}f\,\mathrm{d}x=\int gf\,\mathrm{d}x.
+$$
+
+Combining all four steps gives the conclusion. $\blacksquare$
 
 ## 2
 
-Let $f\ge 0$ and
+If
 
 $$
-E_{n,m}=\left\{x:m/2^{n}\le f\left(x\right)< \left(m+1\right)/2^{n}\right\}.
+\int_{X}\int_{Y}\left|f\left(x,y\right)\right|\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)< \infty,
 $$
 
-Prove that as $n\uparrow\infty$,
+prove that
 
 $$
-\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right)\uparrow\int f\,\mathrm{d}\mu.
+\int_{X}\int_{Y}f\left(x,y\right)\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\left(x,y\right)\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
 $$
 
-### Solution 2
+### Solution to 2
 
-For each $n$, define the simple function
-
-$$
-f_{n}\left(x\right)=\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mathbf{1}_{E_{n,m}}\left(x\right).
-$$
-
-By the definition of $E_{n,m}$, at points where $f$ takes finite values,
+Let $\nu=\mu_{1}\times\mu_{2}$ be the product measure. By Tonelli's theorem (**Theorem 1.7.2 (Fubini's Theorem)**, the $f\ge 0$ case),
 
 $$
-f_{n}\left(x\right)\le f\left(x\right)< f_{n}\left(x\right)+2^{-n},
+\int_{X\times Y}\left|f\right|\,\mathrm{d}\nu=\int_{X}\int_{Y}\left|f\left(x,y\right)\right|\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)< \infty,
 $$
 
-so $f_{n}\uparrow f$ pointwise (dyadic subdivision makes $f_{n}$ nondecreasing and approximate $f$). By the definition of the integral of a simple function (**Definition 1.4.1 (Four-Step Definition of the Integral)**, condition (1)),
+so $f$ is integrable with respect to $\nu$. By **Theorem 1.7.2 (Fubini's Theorem)**, the integrable function $f$ satisfies
 
 $$
-\int f_{n}\,\mathrm{d}\mu=\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right).
+\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\nu=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right),
 $$
 
-By **Theorem 1.5.7 (Monotone Convergence Theorem)**, since $f_{n}\uparrow f$,
-
-$$
-\sum_{m=1}^{\infty}\frac{m}{2^{n}}\mu\left(E_{n,m}\right)=\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu.
-$$
-
-This is exactly the desired conclusion. $\blacksquare$
+which is exactly the desired conclusion. $\blacksquare$

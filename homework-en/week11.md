@@ -1,95 +1,71 @@
 # week11
 
-> **Theorem 1.5.7 (Monotone Convergence Theorem)**
+> **Theorem 2.3.1 (Borel-Cantelli Lemma)**
 > 
-> If $0\le f_{n}$ and $f_{n}\uparrow f$ pointwise, then $\int f_{n}\,\mathrm{d}\mu\uparrow\int f\,\mathrm{d}\mu$.
+> If $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, then $P\left(A_{n}\ \text{i.o.}\right)=0$. (No independence needed; from $EN=\sum P\left(A_{k}\right)< \infty$ it follows that $N=\sum\mathbf{1}_{A_{k}}< \infty$ almost everywhere.)
 
-> **Theorem 1.7.2 (Fubini/Tonelli Theorem)**
+> **Theorem 2.3.7 (Second Borel-Cantelli Lemma)**
 > 
-> For a nonnegative measurable $h$ and any random variable $X$, if $H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y$, then by Tonelli's theorem
-
-$$
-EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
-$$
-
-(The half-open interval includes the right endpoint, so the tail uses $X\ge y$; this generalizes Lemma 2.2.13, recovered by taking $h\left(y\right)=py^{p-1}\mathbf{1}_{\left\{y\ge 0\right\}}$.)
-
-> **Lemma 2.2.13 (Tail Formula for Moments)**
-> 
-> If $Y\ge 0$ and $p> 0$, then
-
-$$
-E\left(Y^{p}\right)=\int_{0}^{\infty}py^{p-1}P\left(Y> y\right)\,\mathrm{d}y.
-$$
-
-This embodies the idea of "integrating layer by layer over the tail $P\left(Y> y\right)$".
+> If the $A_{n}$ are independent and $\sum_{n}P\left(A_{n}\right)=\infty$, then $P\left(A_{n}\ \text{i.o.}\right)=1$. (Estimate $\prod\left(1-P\left(A_{n}\right)\right)$ using $1-x\le e^{-x}$.)
 
 ## 1
 
-If $X\ge 0$ is integer-valued, write down a similar expression for $EX^{2}$.
+Let $A_{n}$ be a sequence of independent events with $P\left(A_{n}\right)< 1$ for all $n$. Prove that $P\left(\cup_{n}A_{n}\right)=1$ implies $\sum_{n}P\left(A_{n}\right)=\infty$, and hence $P\left(A_{n}\ \text{i.o.}\right)=1$.
 
-### Solution 1
+### Solution to 1
 
-Using the tail-sum notation,
-
-$$
-X=\sum_{k\ge 1}\mathbf{1}_{\left\{X\ge k\right\}}.
-$$
-
-Write $X^{2}$ as a double sum and regroup by $\max$: there are exactly $2n-1$ ordered pairs $\left(i,j\right)$ of positive integers with $\max\left(i,j\right)=n$, so
+From $P\left(\cup_{n}A_{n}\right)=1$ we get $P\left(\cap_{n}A_{n}^{c}\right)=0$. Since the $A_{n}$ are independent, the $A_{n}^{c}$ are also independent, i.e. for finitely many,
 
 $$
-X^{2}=\left(\sum_{i\ge 1}\mathbf{1}_{\left\{X\ge i\right\}}\right)\left(\sum_{j\ge 1}\mathbf{1}_{\left\{X\ge j\right\}}\right)=\sum_{i,j\ge 1}\mathbf{1}_{\left\{X\ge\max\left(i,j\right)\right\}}=\sum_{n\ge 1}\left(2n-1\right)\mathbf{1}_{\left\{X\ge n\right\}}.
+P\left(\cap_{n=1}^{N}A_{n}^{c}\right)=\prod_{n=1}^{N}P\left(A_{n}^{c}\right).
 $$
 
-Each term is nonnegative, so taking expectations by monotone convergence (**Theorem 1.5.7 (Monotone Convergence Theorem)**) gives
+Thus for each $N$,
 
 $$
-EX^{2}=\sum_{n\ge 1}\left(2n-1\right)P\left(X\ge n\right).
+P\left(\bigcap_{n=1}^{N}A_{n}^{c}\right)=\prod_{n=1}^{N}\left(1-P\left(A_{n}\right)\right).
 $$
 
-This is the tail expression for $EX^{2}$. $\blacksquare$
+Letting $N\to\infty$,
+
+$$
+\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)=P\left(\cap_{n}A_{n}^{c}\right)=0.
+$$
+
+Suppose for contradiction that $\sum_{n}P\left(A_{n}\right)< \infty$. Since $P\left(A_{n}\right)< 1$ means $1-P\left(A_{n}\right)> 0$, and $\sum P\left(A_{n}\right)< \infty$ ensures that
+
+$$
+\sum\log\left(1-P\left(A_{n}\right)\right)
+$$
+
+converges ($\log\left(1-x\right)\sim-x$), we have
+
+$$
+\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)> 0,
+$$
+
+a contradiction. Hence $\sum_{n}P\left(A_{n}\right)=\infty$.
+
+By **Theorem 2.3.7 (Second Borel-Cantelli Lemma)** (the $A_{n}$ are independent and $\sum P\left(A_{n}\right)=\infty$), $P\left(A_{n}\ \text{i.o.}\right)=1$. $\blacksquare$
 
 ## 2
 
-Generalize **Lemma 2.2.13 (Tail Formula for Moments)** and prove: if
+Let $X_{1},X_{2},\dots$ be independent. Prove that $\sup_{n}X_{n}< \infty$ almost everywhere iff there exists $A$ such that $\sum_{n}P\left(X_{n}> A\right)< \infty$.
+
+### Solution to 2
+
+$\left(\Leftarrow\right)$ Suppose there exists $A$ with $\sum_{n}P\left(X_{n}> A\right)< \infty$. The events $\left\{X_{n}> A\right\}$ satisfy the hypothesis of **Theorem 2.3.1 (Borel-Cantelli Lemma)**, so $P\left(X_{n}> A\ \text{i.o.}\right)=0$, i.e. almost everywhere only finitely many $X_{n}$ exceed $A$. Hence $\sup_{n}X_{n}\le A< \infty$ almost everywhere (note: this direction does not require independence).
+
+$\left(\Rightarrow\right)$ Suppose $\sup_{n}X_{n}< \infty$ almost everywhere. Then there exists $A$ with $P\left(\sup_{n}X_{n}\le A\right)> 0$ (since $\sup_{n}X_{n}$ is finite a.e., $\cup_{A}\left\{\sup\le A\right\}$ covers the whole space a.e.). Therefore
 
 $$
-H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y
+\left\{X_{n}> A\ \text{i.o.}\right\}\subset\left\{\sup_{n}X_{n}> A\right\}
 $$
 
-and $h\left(y\right)\ge 0$, then
+implies
 
 $$
-EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
+P\left(X_{n}> A\ \text{i.o.}\right)\le P\left(\sup_{n}X_{n}> A\right)=1-P\left(\sup_{n}X_{n}\le A\right)< 1.
 $$
 
-Derive the corresponding conclusion for the special case $H\left(x\right)=\exp\left(\theta x\right)$ ($\theta> 0$).
-
-### Solution 2
-
-Write $H$ in indicator-tail form. Since
-
-$$
-H\left(x\right)=\int_{\left(-\infty,x\right]}h\left(y\right)\,\mathrm{d}y,
-$$
-
-substituting $X$ gives
-
-$$
-H\left(X\right)=\int_{\left(-\infty,X\right]}h\left(y\right)\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{y\le X\right\}}\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)\mathbf{1}_{\left\{X\ge y\right\}}\,\mathrm{d}y.
-$$
-
-The integrand is nonnegative, so by Tonelli's theorem (**Theorem 1.7.2 (Fubini/Tonelli Theorem)**) exchange expectation and integral:
-
-$$
-EH\left(X\right)=\int_{-\infty}^{\infty}h\left(y\right)E\left[\mathbf{1}_{\left\{X\ge y\right\}}\right]\,\mathrm{d}y=\int_{-\infty}^{\infty}h\left(y\right)P\left(X\ge y\right)\,\mathrm{d}y.
-$$
-
-For $H\left(x\right)=\exp\left(\theta x\right)$ with $\theta> 0$, we have $h\left(y\right)=H'\left(y\right)=\theta e^{\theta y}$, and substitution gives
-
-$$
-Ee^{\theta X}=\theta\int_{-\infty}^{\infty}e^{\theta y}P\left(X\ge y\right)\,\mathrm{d}y.
-$$
-
-$\blacksquare$
+Suppose for contradiction that $\sum_{n}P\left(X_{n}> A\right)=\infty$. Since the $X_{n}$ are independent, by **Theorem 2.3.7 (Second Borel-Cantelli Lemma)**, $P\left(X_{n}> A\ \text{i.o.}\right)=1$, contradicting the above. Hence $\sum_{n}P\left(X_{n}> A\right)< \infty$. $\blacksquare$

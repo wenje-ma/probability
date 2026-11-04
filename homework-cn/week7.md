@@ -1,95 +1,107 @@
 # week7
 
+> **例 1.6.13 (泊松分布)**
+> 
+> $Z$ 服从参数为 $\lambda$ 的泊松分布, 记 $Z\sim\mathrm{泊松}\left(\lambda\right)$, 指 $P\left(Z=k\right)=e^{-\lambda}\lambda^{k}/k!$, $k=0,1,2,\dots$.
+
 > **定理 1.7.2 (富比尼定理)**
 > 
-> 若 $f\ge 0$ 或 $\int\left|f\right|\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)< \infty$, 则
-
-$$
-\int_{X}\int_{Y}f\,\mu_{2}\left(\mathrm{d}y\right)\mu_{1}\left(\mathrm{d}x\right)=\int_{X\times Y}f\,\mathrm{d}\left(\mu_{1}\times\mu_{2}\right)=\int_{Y}\int_{X}f\,\mu_{1}\left(\mathrm{d}x\right)\mu_{2}\left(\mathrm{d}y\right).
-$$
-
-特别地, 非负情形可交换积分次序 (托内利).
-
-> **定义 2.1.1 (独立事件)**
-> 
-> 事件 $A,B\in\mathcal F$ 独立指 $P\left(A\cap B\right)=P\left(A\right)P\left(B\right)$. 事件列 $A_{1},\dots,A_{n}$ 独立指对任意 $I\subset\left\{1,\dots,n\right\}$ 有 $P\left(\cap_{i\in I}A_{i}\right)=\prod_{i\in I}P\left(A_{i}\right)$.
-
-> **定理 2.1.1 (独立与 $\sigma$-代数)**
-> 
-> (1) 若 $X,Y$ 独立, 则 $\sigma\left(X\right)$ 与 $\sigma\left(Y\right)$ 独立; (2) 若 $\mathcal A_{1},\dots,\mathcal A_{n}$ 独立, 则 $\sigma\left(\mathcal A_{1}\right),\dots,\sigma\left(\mathcal A_{n}\right)$ 独立. 故验证随机变量独立可只对生成元进行.
+> 若 $f\ge 0$, 则 (托内利)
 
 > **定义 2.1.2 (独立随机变量)**
 > 
 > 随机变量 $X_{1},\dots,X_{n}$ 独立指对一切博雷尔集 $B_{1},\dots,B_{n}$ 有
 
-$$
-P\left(X_{1}\in B_{1},\dots,X_{n}\in B_{n}\right)=\prod_{i=1}^{n}P\left(X_{i}\in B_{i}\right).
-$$
+> **定义 2.1.3 (不相关)**
+> 
+> 若 $EX^{2},EY^{2}< \infty$ 且 $EXY=EX\cdot EY$, 称 $X,Y$ 不相关. 独立蕴含不相关, 但不相关不蕴含独立.
+
+> **习题 2.1.10 (卷积公式)**
+> 
+> 若 $X,Y$ 独立且取整数值, 则 $P\left(X+Y=n\right)=\sum_{m}P\left(X=m\right)P\left(Y=n-m\right)$.
+
+> **定理 2.1.13 (独立变量的乘积期望)**
+> 
+> 若 $X_{1},\dots,X_{n}$ 独立且 (a) 各 $X_{i}\ge 0$, 或 (b) 各 $E\left|X_{i}\right|< \infty$, 则
+
+> **定理 2.1.16 (密度与独立)**
+> 
+> 设 $X_{1},\dots,X_{n}$ 有联合密度 $f$. 若 $f$ 可写成 $f\left(x_{1},\dots,x_{n}\right)=g_{1}\left(x_{1}\right)\cdots g_{n}\left(x_{n}\right)$ ($g_{i}\ge 0$ 可测), 则 $X_{1},\dots,X_{n}$ 独立; 反之, 若 $X_{1},\dots,X_{n}$ 独立且各有密度, 则联合密度为边缘密度之积.
 
 ## 1
 
-设 $\mu$ 是 $\mathbb R$ 上的有限测度, $F\left(x\right)=\mu\left(\left(-\infty,x\right]\right)$. 证明
-
-$$
-\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x=c\mu\left(\mathbb R\right).
-$$
+设 $\Omega=\left(0,1\right)$, $\mathcal F$ 为博雷尔集, $P$ 为勒贝格测度. 证明 $X_{n}\left(\omega\right)=\sin\left(2\pi n\omega\right)$ ($n=1,2,\dots$) 两两不相关但不独立.
 
 ### 解答 1
 
-由分布函数性质,
+先证两两不相关. 对任意正整数 $n$,
 
 $$
-F\left(x+c\right)-F\left(x\right)=\mu\left(\left(x,x+c\right]\right).
+EX_{n}=\int_{0}^{1}\sin\left(2\pi n\omega\right)\,\mathrm{d}\omega=0,
 $$
 
-于是
+(正弦在一个整周期上的积分为零). 对 $n\ne m$, 由积化和差公式
 
 $$
-\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x=\int\mu\left(\left(x,x+c\right]\right)\,\mathrm{d}x=\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x.
+\sin\left(2\pi n\omega\right)\sin\left(2\pi m\omega\right)=\frac{1}{2}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right).
 $$
 
-被积函数非负, 由托内利定理 (**定理 1.7.2 (富比尼定理)**) 交换积分次序:
+而
 
 $$
-\int\int\mathbf{1}_{\left(x,x+c\right]}\left(y\right)\,\mu\left(\mathrm{d}y\right)\,\mathrm{d}x=\int\int\mathbf{1}_{y-c\le x< y}\,\mathrm{d}x\,\mu\left(\mathrm{d}y\right).
+\int_{0}^{1}\cos\left(2\pi k\omega\right)\,\mathrm{d}\omega=0
 $$
 
-对固定的 $y$,
+对一切整数 $k\ne 0$ 成立 ($n\ne m$ 时 $n-m\ne 0$ 且 $n+m\ne 0$), 故
 
 $$
-\int\mathbf{1}_{y-c\le x< y}\,\mathrm{d}x
+EX_{n}X_{m}=\frac{1}{2}\int_{0}^{1}\left(\cos\left(2\pi\left(n-m\right)\omega\right)-\cos\left(2\pi\left(n+m\right)\omega\right)\right)\,\mathrm{d}\omega=0=EX_{n}EX_{m}.
 $$
 
-是长度为 $c$ 的区间 $\left[y-c,y\right)$ 的勒贝格测度, 等于 $c$. 故
+所以 $X_{n}$ 两两不相关 (**定义 2.1.3 (不相关)**).
+
+再证不独立. 取 $A=\left\{x:x> 1/2\right\}$, $B=\left\{x:x> \sqrt{3}/2\right\}$. 由 $\sin\left(2\pi\omega\right)> 1/2$ 得
 
 $$
-\int\left(F\left(x+c\right)-F\left(x\right)\right)\,\mathrm{d}x=\int c\,\mu\left(\mathrm{d}y\right)=c\mu\left(\mathbb R\right).
+2\pi\omega\in\left(\pi/6,5\pi/6\right)\ \left(\mathrm{mod}\ 2\pi\right),
 $$
 
-$\blacksquare$
+即 $\omega\in\left(1/12,5/12\right)$, 故 $P\left(X_{1}> 1/2\right)=\lambda\left(1/12,5/12\right)=1/3> 0$; 由 $\sin\left(4\pi\omega\right)> \sqrt{3}/2$ 得
+
+$$
+P\left(X_{2}> \sqrt{3}/2\right)=\lambda\left(\left(1/12,1/6\right)\cup\left(7/12,2/3\right)\right)=1/6> 0.
+$$
+
+但当 $\omega\in\left(1/12,5/12\right)$ 时, $\sin\left(4\pi\omega\right)$ 的最大值为 $\sqrt{3}/2$ (在端点 $\omega=1/12$ 处), 故 $X_{1}> 1/2$ 蕴含 $X_{2}\le\sqrt{3}/2$, 即
+
+$$
+P\left(X_{1}> 1/2,\,X_{2}> \sqrt{3}/2\right)=0,
+$$
+
+而
+
+$$
+P\left(X_{1}> 1/2\right)P\left(X_{2}> \sqrt{3}/2\right)=1/3\cdot 1/6> 0,
+$$
+
+二者不等, 故 $X_{1},X_{2}$ 不独立, 从而整列 $X_{n}$ 不独立 (**定义 2.1.2 (独立随机变量)**). $\blacksquare$
 
 ## 2
 
-直接从定义证明: 若 $X$ 与 $Y$ 独立, $f,g$ 是可测函数, 则 $f\left(X\right)$ 与 $g\left(Y\right)$ 独立.
+设 $X\sim\mathrm{泊松}\left(\lambda\right)$, $Y\sim\mathrm{泊松}\left(\mu\right)$ 独立, 用卷积公式证明 $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$.
 
 ### 解答 2
 
-对任意博雷尔集 $A,B\in\mathcal R$, 记
+$X,Y$ 独立且取非负整数值, 由卷积公式 (**习题 2.1.10 (卷积公式)**), 对 $n\ge 0$,
 
 $$
-\left\{f\left(X\right)\in A\right\}=\left\{X\in f^{-1}\left(A\right)\right\},\qquad\left\{g\left(Y\right)\in B\right\}=\left\{Y\in g^{-1}\left(B\right)\right\}.
+P\left(X+Y=n\right)=\sum_{m=0}^{n}P\left(X=m\right)P\left(Y=n-m\right)=\sum_{m=0}^{n}\frac{e^{-\lambda}\lambda^{m}}{m!}\cdot\frac{e^{-\mu}\mu^{n-m}}{\left(n-m\right)!}.
 $$
 
-因 $f,g$ 可测, $f^{-1}\left(A\right),g^{-1}\left(B\right)\in\mathcal R$. 由 $X,Y$ 独立的定义 (**定义 2.1.2 (独立随机变量)**, 对一切博雷尔集成立),
+提出公因子并用二项式定理:
 
 $$
-P\left(X\in f^{-1}\left(A\right),\,Y\in g^{-1}\left(B\right)\right)=P\left(X\in f^{-1}\left(A\right)\right)P\left(Y\in g^{-1}\left(B\right)\right).
+P\left(X+Y=n\right)=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\sum_{m=0}^{n}\frac{n!}{m!\left(n-m\right)!}\lambda^{m}\mu^{n-m}=\frac{e^{-\left(\lambda+\mu\right)}}{n!}\left(\lambda+\mu\right)^{n}.
 $$
 
-即
-
-$$
-P\left(f\left(X\right)\in A,\,g\left(Y\right)\in B\right)=P\left(f\left(X\right)\in A\right)P\left(g\left(Y\right)\in B\right).
-$$
-
-由于 $A,B$ 任意, $f\left(X\right)$ 与 $g\left(Y\right)$ 独立. $\blacksquare$
+这正是参数为 $\lambda+\mu$ 的泊松分布的概率质量函数 (**例 1.6.13 (泊松分布)**), 故 $X+Y\sim\mathrm{泊松}\left(\lambda+\mu\right)$. $\blacksquare$
