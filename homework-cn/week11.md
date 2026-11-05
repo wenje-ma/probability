@@ -2,15 +2,15 @@
 
 > **定理 2.3.1 (博雷尔-坎泰利引理)**
 > 
-> 若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)< \infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum P\left(A_{k}\right)< \infty$ 得 $N=\sum\mathbf{1}_{A_{k}}< \infty$ 几乎处处.)
+> 若 $\sum_{n=1}^{\infty}P\left(A_{n}\right)<\infty$, 则 $P\left(A_{n}\,\text{无穷多次}\right)=0$. (不需独立性; 由 $EN=\sum{P}\left(A_{k}\right)<\infty$ 得 $N=\sum\mathbf{1}_{A_{k}}<\infty$ 几乎处处.)
 
 > **定理 2.3.7 (第二博雷尔-坎泰利引理)**
 > 
-> 若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\ \text{无穷多次}\right)=1$. (用 $1-x\le e^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
+> 若 $A_{n}$ 独立且 $\sum_{n}P\left(A_{n}\right)=\infty$, 则 $P\left(A_{n}\,\text{无穷多次}\right)=1$. (用 $1-x\le{e}^{-x}$ 估计 $\prod\left(1-P\left(A_{n}\right)\right)$.)
 
 ## 1
 
-设 $A_{n}$ 是一列独立事件且对一切 $n$ 有 $P\left(A_{n}\right)< 1$. 证明 $P\left(\cup_{n}A_{n}\right)=1$ 蕴含 $\sum_{n}P\left(A_{n}\right)=\infty$, 从而 $P\left(A_{n}\ \text{无穷多次}\right)=1$.
+设 $A_{n}$ 是一列独立事件且对一切 $n$ 有 $P\left(A_{n}\right)<1$. 证明 $P\left(\cup_{n}A_{n}\right)=1$ 蕴含 $\sum_{n}P\left(A_{n}\right)=\infty$, 从而 $P\left(A_{n}\,\text{无穷多次}\right)=1$.
 
 ### 解答 1
 
@@ -32,7 +32,7 @@ $$
 \prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)=P\left(\cap_{n}A_{n}^{c}\right)=0.
 $$
 
-反设 $\sum_{n}P\left(A_{n}\right)< \infty$. 因 $P\left(A_{n}\right)< 1$ 即 $1-P\left(A_{n}\right)> 0$, 且 $\sum P\left(A_{n}\right)< \infty$ 保证
+反设 $\sum_{n}P\left(A_{n}\right)<\infty$. 因 $P\left(A_{n}\right)<1$ 即 $1-P\left(A_{n}\right)>0$, 且 $\sum{P}\left(A_{n}\right)<\infty$ 保证
 
 $$
 \sum\log\left(1-P\left(A_{n}\right)\right)
@@ -41,31 +41,31 @@ $$
 收敛 ($\log\left(1-x\right)\sim-x$), 故
 
 $$
-\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)> 0,
+\prod_{n=1}^{\infty}\left(1-P\left(A_{n}\right)\right)>0,
 $$
 
 矛盾. 所以 $\sum_{n}P\left(A_{n}\right)=\infty$.
 
-由**定理 2.3.7 (第二博雷尔-坎泰利引理)** ($A_{n}$ 独立且 $\sum P\left(A_{n}\right)=\infty$), $P\left(A_{n}\ \text{无穷多次}\right)=1$. $\blacksquare$
+由**定理 2.3.7 (第二博雷尔-坎泰利引理)** ($A_{n}$ 独立且 $\sum{P}\left(A_{n}\right)=\infty$), $P\left(A_{n}\,\text{无穷多次}\right)=1$. $\blacksquare$
 
 ## 2
 
-设 $X_{1},X_{2},\dots$ 独立. 证明 $\sup_{n}X_{n}< \infty$ 几乎处处当且仅当存在 $A$ 使 $\sum_{n}P\left(X_{n}> A\right)< \infty$.
+设 $X_{1},X_{2},\dots$ 独立. 证明 $\sup_{n}X_{n}<\infty$ 几乎处处当且仅当存在 $A$ 使 $\sum_{n}P\left(X_{n}>{}A\right)<\infty$.
 
 ### 解答 2
 
-$\left(\Leftarrow\right)$ 设存在 $A$ 使 $\sum_{n}P\left(X_{n}> A\right)< \infty$. 事件 $\left\{X_{n}> A\right\}$ 满足**定理 2.3.1 (博雷尔-坎泰利引理)** 的条件, 故 $P\left(X_{n}> A\ \text{无穷多次}\right)=0$, 即几乎处处只有有限个 $X_{n}$ 超过 $A$. 因此 $\sup_{n}X_{n}\le A< \infty$ 几乎处处 (注: 此方向不需独立性).
+$\left(\Leftarrow\right)$ 设存在 $A$ 使 $\sum_{n}P\left(X_{n}>{}A\right)<\infty$. 事件 $\left\{X_{n}>{}A\right\}$ 满足**定理 2.3.1 (博雷尔-坎泰利引理)** 的条件, 故 $P\left(X_{n}>{}A\,\text{无穷多次}\right)=0$, 即几乎处处只有有限个 $X_{n}$ 超过 $A$. 因此 $\sup_{n}X_{n}\le{A}<\infty$ 几乎处处 (注: 此方向不需独立性).
 
-$\left(\Rightarrow\right)$ 设 $\sup_{n}X_{n}< \infty$ 几乎处处. 则存在 $A$ 使 $P\left(\sup_{n}X_{n}\le A\right)> 0$ (因 $\sup_{n}X_{n}$ 几乎处处有限, $\cup_{A}\left\{\sup\le A\right\}$ 覆盖几乎处处全空间). 于是
+$\left(\Rightarrow\right)$ 设 $\sup_{n}X_{n}<\infty$ 几乎处处. 则存在 $A$ 使 $P\left(\sup_{n}X_{n}\le{A}\right)>0$ (因 $\sup_{n}X_{n}$ 几乎处处有限, $\cup_{A}\left\{\sup\le{A}\right\}$ 覆盖几乎处处全空间). 于是
 
 $$
-\left\{X_{n}> A\ \text{无穷多次}\right\}\subset\left\{\sup_{n}X_{n}> A\right\}
+\left\{X_{n}>{}A\,\text{无穷多次}\right\}\subset\left\{\sup_{n}X_{n}>{}A\right\}
 $$
 
 蕴含
 
 $$
-P\left(X_{n}> A\ \text{无穷多次}\right)\le P\left(\sup_{n}X_{n}> A\right)=1-P\left(\sup_{n}X_{n}\le A\right)< 1.
+P\left(X_{n}>{}A\,\text{无穷多次}\right)\le{P}\left(\sup_{n}X_{n}>{}A\right)=1-P\left(\sup_{n}X_{n}\le{A}\right)<1.
 $$
 
-反设 $\sum_{n}P\left(X_{n}> A\right)=\infty$. 因 $X_{n}$ 独立, 由**定理 2.3.7 (第二博雷尔-坎泰利引理)** 得 $P\left(X_{n}> A\ \text{无穷多次}\right)=1$, 与上式矛盾. 故 $\sum_{n}P\left(X_{n}> A\right)< \infty$. $\blacksquare$
+反设 $\sum_{n}P\left(X_{n}>{}A\right)=\infty$. 因 $X_{n}$ 独立, 由**定理 2.3.7 (第二博雷尔-坎泰利引理)** 得 $P\left(X_{n}>{}A\,\text{无穷多次}\right)=1$, 与上式矛盾. 故 $\sum_{n}P\left(X_{n}>{}A\right)<\infty$. $\blacksquare$

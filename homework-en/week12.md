@@ -2,23 +2,23 @@
 
 > **Theorem 1.6.5 (Fatou's Lemma)**
 > 
-> If $Z_{n}\ge 0$, then $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
+> If $Z_{n}\ge0$, then $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
 
 > **Definition 3.2.1 (Convergence in Distribution)**
 > 
-> $X_{n}\Rightarrow X_{\infty}$ (convergence in distribution) means that the distribution functions satisfy $F_{n}\left(x\right)\to F_{\infty}\left(x\right)$ at every continuity point $x$ of $F_{\infty}$.
+> $X_{n}\Rightarrow{X}_{\infty}$ (convergence in distribution) means that the distribution functions satisfy $F_{n}\left(x\right)\to{F}_{\infty}\left(x\right)$ at every continuity point $x$ of $F_{\infty}$.
 
 > **Theorem 3.2.8 (Skorokhod Representation)**
 > 
-> If $X_{n}\Rightarrow X_{\infty}$, then there exist random variables $Y_{n}=_{d}X_{n}$ on the same probability space such that $Y_{n}\to Y_{\infty}=_{d}X_{\infty}$ almost everywhere.
+> If $X_{n}\Rightarrow{X}_{\infty}$, then there exist random variables $Y_{n}=_{d}X_{n}$ on the same probability space such that $Y_{n}\to{Y}_{\infty}=_{d}X_{\infty}$ almost everywhere.
 
 > **Definition 3.3.1 (Characteristic Function)**
 > 
-> The characteristic function of a random variable $X$ is $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, where $\mu$ is the distribution of $X$.
+> The characteristic function of a random variable $X$ is $\phi_{X}\left(t\right)=Ee^{itX}=\int{e}^{itx}\,\mu\left(\mathrm{d}x\right)$, where $\mu$ is the distribution of $X$.
 
 > **Theorem 3.3.1 (Properties of Characteristic Functions)**
 > 
-> (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le 1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, so $\phi$ is uniformly continuous on $\mathbb R$; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
+> (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le{E}\left|e^{ihX}-1\right|$, so $\phi$ is uniformly continuous on $\mathbb{R}$; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
 
 > **Theorem 3.3.2 (Characteristic Function of a Sum of Independent Variables)**
 > 
@@ -26,7 +26,7 @@
 
 ## 1
 
-Let $X\sim N\left(0,1\right)$ with density $\left(2\pi\right)^{-1/2}e^{-x^{2}/2}$. Complete the in-class computation of its characteristic function and prove that $\phi\left(t\right)=Ee^{itX}=e^{-t^{2}/2}$.
+Let $X\sim{N}\left(0,1\right)$ with density $\left(2\pi\right)^{-1/2}e^{-x^{2}/2}$. Complete the in-class computation of its characteristic function and prove that $\phi\left(t\right)=Ee^{itX}=e^{-t^{2}/2}$.
 
 ### Solution to 1
 
@@ -87,33 +87,33 @@ $$
 (Remark: the complex shift gives a quick verification:
 
 $$
-\int e^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x=e^{-t^{2}/2}\int\left(2\pi\right)^{-1/2}e^{-\left(x-it\right)^{2}/2}\,\mathrm{d}x,
+\int{e}^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x=e^{-t^{2}/2}\int\left(2\pi\right)^{-1/2}e^{-\left(x-it\right)^{2}/2}\,\mathrm{d}x,
 $$
 
 and the latter integral is the integral of a Gaussian density with mean $it$, which equals $1$.) $\blacksquare$
 
 ## 2
 
-Let $g\ge 0$ be continuous. If $X_{n}\Rightarrow X_{\infty}$, prove that
+Let $g\ge0$ be continuous. If $X_{n}\Rightarrow{X}_{\infty}$, prove that
 
 $$
-\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge{E}g\left(X_{\infty}\right).
 $$
 
 ### Solution to 2
 
-By **Theorem 3.2.8 (Skorokhod Representation)**, there exist random variables $Y_{n}=_{d}X_{n}$ and $Y_{\infty}=_{d}X_{\infty}$ on the same probability space such that $Y_{n}\to Y_{\infty}$ almost everywhere. Since $g$ is continuous, $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ almost everywhere.
+By **Theorem 3.2.8 (Skorokhod Representation)**, there exist random variables $Y_{n}=_{d}X_{n}$ and $Y_{\infty}=_{d}X_{\infty}$ on the same probability space such that $Y_{n}\to{Y}_{\infty}$ almost everywhere. Since $g$ is continuous, $g\left(Y_{n}\right)\to{g}\left(Y_{\infty}\right)$ almost everywhere.
 
-Since $g\ge 0$ and $g\left(Y_{n}\right)\ge 0$, by **Theorem 1.6.5 (Fatou's Lemma)**:
-
-$$
-\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)=E\,g\left(Y_{\infty}\right).
-$$
-
-The last step uses $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ a.e. Since $Y_{n}=_{d}X_{n}$ and $Y_{\infty}=_{d}X_{\infty}$, we have $E\,g\left(Y_{n}\right)=E\,g\left(X_{n}\right)$ and $E\,g\left(Y_{\infty}\right)=E\,g\left(X_{\infty}\right)$, and substituting gives
+Since $g\ge0$ and $g\left(Y_{n}\right)\ge0$, by **Theorem 1.6.5 (Fatou's Lemma)**:
 
 $$
-\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\ge{E}\liminf_{n\to\infty}g\left(Y_{n}\right)=E\,g\left(Y_{\infty}\right).
+$$
+
+The last step uses $g\left(Y_{n}\right)\to{g}\left(Y_{\infty}\right)$ a.e. Since $Y_{n}=_{d}X_{n}$ and $Y_{\infty}=_{d}X_{\infty}$, we have $E\,g\left(Y_{n}\right)=E\,g\left(X_{n}\right)$ and $E\,g\left(Y_{\infty}\right)=E\,g\left(X_{\infty}\right)$, and substituting gives
+
+$$
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge{E}g\left(X_{\infty}\right).
 $$
 
 $\blacksquare$

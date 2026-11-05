@@ -2,23 +2,23 @@
 
 > **定理 1.6.5 (法图引理)**
 > 
-> 若 $Z_{n}\ge 0$, 则 $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
+> 若 $Z_{n}\ge0$, 则 $E\liminf_{n}Z_{n}\le\liminf_{n}EZ_{n}$.
 
 > **定义 3.2.1 (依分布收敛)**
 > 
-> $X_{n}\Rightarrow X_{\infty}$ (依分布收敛) 指分布函数 $F_{n}\left(x\right)\to F_{\infty}\left(x\right)$ 在 $F_{\infty}$ 的一切连续点上成立.
+> $X_{n}\Rightarrow{X}_{\infty}$ (依分布收敛) 指分布函数 $F_{n}\left(x\right)\to{F}_{\infty}\left(x\right)$ 在 $F_{\infty}$ 的一切连续点上成立.
 
 > **定理 3.2.8 (斯科罗霍德表示)**
 > 
-> 若 $X_{n}\Rightarrow X_{\infty}$, 则存在同一概率空间上的随机变量 $Y_{n}=_{d}X_{n}$ 使 $Y_{n}\to Y_{\infty}=_{d}X_{\infty}$ 几乎处处.
+> 若 $X_{n}\Rightarrow{X}_{\infty}$, 则存在同一概率空间上的随机变量 $Y_{n}=_{d}X_{n}$ 使 $Y_{n}\to{Y}_{\infty}=_{d}X_{\infty}$ 几乎处处.
 
 > **定义 3.3.1 (特征函数)**
 > 
-> 随机变量 $X$ 的特征函数为 $\phi_{X}\left(t\right)=Ee^{itX}=\int e^{itx}\,\mu\left(\mathrm{d}x\right)$, 其中 $\mu$ 为 $X$ 的分布.
+> 随机变量 $X$ 的特征函数为 $\phi_{X}\left(t\right)=Ee^{itX}=\int{e}^{itx}\,\mu\left(\mathrm{d}x\right)$, 其中 $\mu$ 为 $X$ 的分布.
 
 > **定理 3.3.1 (特征函数的性质)**
 > 
-> (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le 1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le E\left|e^{ihX}-1\right|$, 故 $\phi$ 在 $\mathbb R$ 上一致连续; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
+> (1) $\phi\left(0\right)=1$; (2) $\phi\left(-t\right)=\overline{\phi\left(t\right)}$; (3) $\left|\phi\left(t\right)\right|\le1$; (4) $\left|\phi\left(t+h\right)-\phi\left(t\right)\right|\le{E}\left|e^{ihX}-1\right|$, 故 $\phi$ 在 $\mathbb{R}$ 上一致连续; (5) $Ee^{it\left(aX+b\right)}=e^{itb}\phi\left(at\right)$.
 
 > **定理 3.3.2 (独立和的特征函数)**
 > 
@@ -26,7 +26,7 @@
 
 ## 1
 
-设 $X\sim N\left(0,1\right)$, 密度为 $\left(2\pi\right)^{-1/2}e^{-x^{2}/2}$. 补充完整课堂上关于其特征函数的计算, 证明 $\phi\left(t\right)=Ee^{itX}=e^{-t^{2}/2}$.
+设 $X\sim{N}\left(0,1\right)$, 密度为 $\left(2\pi\right)^{-1/2}e^{-x^{2}/2}$. 补充完整课堂上关于其特征函数的计算, 证明 $\phi\left(t\right)=Ee^{itX}=e^{-t^{2}/2}$.
 
 ### 解答 1
 
@@ -87,33 +87,33 @@ $$
 (补充: 复平移的物理证明可快速验证:
 
 $$
-\int e^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x=e^{-t^{2}/2}\int\left(2\pi\right)^{-1/2}e^{-\left(x-it\right)^{2}/2}\,\mathrm{d}x,
+\int{e}^{itx}\left(2\pi\right)^{-1/2}e^{-x^{2}/2}\,\mathrm{d}x=e^{-t^{2}/2}\int\left(2\pi\right)^{-1/2}e^{-\left(x-it\right)^{2}/2}\,\mathrm{d}x,
 $$
 
 括号内是以均值 $it$ 的正态密度积分, 等于 $1$.) $\blacksquare$
 
 ## 2
 
-设 $g\ge 0$ 连续. 若 $X_{n}\Rightarrow X_{\infty}$, 证明
+设 $g\ge0$ 连续. 若 $X_{n}\Rightarrow{X}_{\infty}$, 证明
 
 $$
-\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge{E}g\left(X_{\infty}\right).
 $$
 
 ### 解答 2
 
-由**定理 3.2.8 (斯科罗霍德表示)**, 存在同一概率空间上的随机变量 $Y_{n}=_{d}X_{n}$ 与 $Y_{\infty}=_{d}X_{\infty}$, 使 $Y_{n}\to Y_{\infty}$ 几乎处处. 因 $g$ 连续, $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ 几乎处处.
+由**定理 3.2.8 (斯科罗霍德表示)**, 存在同一概率空间上的随机变量 $Y_{n}=_{d}X_{n}$ 与 $Y_{\infty}=_{d}X_{\infty}$, 使 $Y_{n}\to{Y}_{\infty}$ 几乎处处. 因 $g$ 连续, $g\left(Y_{n}\right)\to{g}\left(Y_{\infty}\right)$ 几乎处处.
 
-$g\ge 0$ 且 $g\left(Y_{n}\right)\ge 0$, 由**定理 1.6.5 (法图引理)**:
-
-$$
-\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\ge E\liminf_{n\to\infty}g\left(Y_{n}\right)=E\,g\left(Y_{\infty}\right).
-$$
-
-最后一步用 $g\left(Y_{n}\right)\to g\left(Y_{\infty}\right)$ 几乎处处. 因 $Y_{n}=_{d}X_{n}$ 与 $Y_{\infty}=_{d}X_{\infty}$, $E\,g\left(Y_{n}\right)=E\,g\left(X_{n}\right)$, $E\,g\left(Y_{\infty}\right)=E\,g\left(X_{\infty}\right)$, 代入得
+$g\ge0$ 且 $g\left(Y_{n}\right)\ge0$, 由**定理 1.6.5 (法图引理)**:
 
 $$
-\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge Eg\left(X_{\infty}\right).
+\liminf_{n\to\infty}E\,g\left(Y_{n}\right)\ge{E}\liminf_{n\to\infty}g\left(Y_{n}\right)=E\,g\left(Y_{\infty}\right).
+$$
+
+最后一步用 $g\left(Y_{n}\right)\to{g}\left(Y_{\infty}\right)$ 几乎处处. 因 $Y_{n}=_{d}X_{n}$ 与 $Y_{\infty}=_{d}X_{\infty}$, $E\,g\left(Y_{n}\right)=E\,g\left(X_{n}\right)$, $E\,g\left(Y_{\infty}\right)=E\,g\left(X_{\infty}\right)$, 代入得
+
+$$
+\liminf_{n\to\infty}Eg\left(X_{n}\right)\ge{E}g\left(X_{\infty}\right).
 $$
 
 $\blacksquare$
