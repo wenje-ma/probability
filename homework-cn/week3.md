@@ -64,7 +64,7 @@ $$
 \phi=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)=g\left(X\right),\qquad g=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\ \text{可测}.
 $$
 
-由**解答 1**, $Y$ 是 $\sigma\left(X\right)$-可测简单函数列 $\phi_{n}$ 的逐点极限, 每个 $\phi_{n}=g_{n}\left(X\right)$ 且 $g_{n}$ 可测. 令 $f=\limsup_{n}g_{n}$, 则 $f$ 可测 (**定理 1.3.7 (随机变量的极限运算)**), 且对每个 $\omega$,
+由解答 1, $Y$ 是 $\sigma\left(X\right)$-可测简单函数列 $\phi_{n}$ 的逐点极限, 每个 $\phi_{n}=g_{n}\left(X\right)$ 且 $g_{n}$ 可测. 令 $f=\limsup_{n}g_{n}$, 则 $f$ 可测 (**定理 1.3.7 (随机变量的极限运算)**), 且对每个 $\omega$,
 
 $$
 g_{n}\left(X\left(\omega\right)\right)\to Y\left(\omega\right),

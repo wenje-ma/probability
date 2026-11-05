@@ -34,7 +34,7 @@
 
 ## 1
 
-Give a constructive proof of **Solution 2**: from
+Give a constructive proof of Solution 2: from
 
 $$
 \left\{m2^{-n}\le Y< \left(m+1\right)2^{-n}\right\}=\left\{X\in B_{m,n}\right\}

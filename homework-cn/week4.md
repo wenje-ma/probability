@@ -30,7 +30,7 @@
 
 ## 1
 
-给出**解答 2**的构造性证明: 由
+给出解答 2的构造性证明: 由
 
 $$
 \left\{m2^{-n}\le Y< \left(m+1\right)2^{-n}\right\}=\left\{X\in B_{m,n}\right\}

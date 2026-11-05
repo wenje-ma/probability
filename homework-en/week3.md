@@ -64,7 +64,7 @@ $$
 \phi=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)=g\left(X\right),\qquad g=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\ \text{is measurable}.
 $$
 
-By **Solution 1**, $Y$ is the pointwise limit of $\sigma\left(X\right)$-measurable simple functions $\phi_{n}$, each of the form $\phi_{n}=g_{n}\left(X\right)$ with $g_{n}$ measurable. Set $f=\limsup_{n}g_{n}$; then $f$ is measurable (**Theorem 1.3.7 (Limit Operations on Random Variables)**), and for every $\omega$,
+By Solution 1, $Y$ is the pointwise limit of $\sigma\left(X\right)$-measurable simple functions $\phi_{n}$, each of the form $\phi_{n}=g_{n}\left(X\right)$ with $g_{n}$ measurable. Set $f=\limsup_{n}g_{n}$; then $f$ is measurable (**Theorem 1.3.7 (Limit Operations on Random Variables)**), and for every $\omega$,
 
 $$
 g_{n}\left(X\left(\omega\right)\right)\to Y\left(\omega\right),

@@ -114,7 +114,7 @@ Prove: $\mathcal R^{d}$ is the smallest $\sigma$-algebra making all continuous f
 
 Let $\mathcal G$ be the smallest $\sigma$-algebra making all continuous functions $f:\mathbb R^{d}\to\mathbb R$ measurable, i.e. the smallest $\sigma$-algebra containing all sets $\left\{x:f\left(x\right)\in B\right\}$ ($f$ continuous, $B\in\mathcal R$).
 
-On one hand, by **Solution 1**, every continuous function is measurable with respect to $\left(\mathbb R^{d},\mathcal R^{d}\right)$, so $\mathcal R^{d}$ is one of the $\sigma$-algebras making all continuous functions measurable, and hence $\mathcal G\subset\mathcal R^{d}$.
+On one hand, by Solution 1, every continuous function is measurable with respect to $\left(\mathbb R^{d},\mathcal R^{d}\right)$, so $\mathcal R^{d}$ is one of the $\sigma$-algebras making all continuous functions measurable, and hence $\mathcal G\subset\mathcal R^{d}$.
 
 On the other hand, for any open set $U\subset\mathbb R^{d}$, let $g_{U}\left(x\right)=d\left(x,U^{c}\right)$ be the distance from $x$ to the closed set $U^{c}$. The function $g_{U}$ is continuous, and $g_{U}\left(x\right)> 0$ iff $x\notin U^{c}$, i.e. $x\in U$. Hence
 

@@ -114,7 +114,7 @@ $$
 
 设 $\mathcal G$ 为使所有连续函数 $f:\mathbb R^{d}\to\mathbb R$ 都可测的最小 $\sigma$-代数, 即 $\mathcal G$ 是包含所有 $\left\{x:f\left(x\right)\in B\right\}$ ($f$ 连续, $B\in\mathcal R$) 的最小 $\sigma$-代数.
 
-一方面, 由**解答 1** 知每个连续函数对 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 可测, 故 $\mathcal R^{d}$ 是"使所有连续函数可测"的 $\sigma$-代数之一, 从而 $\mathcal G\subset\mathcal R^{d}$.
+一方面, 由解答 1 知每个连续函数对 $\left(\mathbb R^{d},\mathcal R^{d}\right)$ 可测, 故 $\mathcal R^{d}$ 是"使所有连续函数可测"的 $\sigma$-代数之一, 从而 $\mathcal G\subset\mathcal R^{d}$.
 
 另一方面, 对任意开集 $U\subset\mathbb R^{d}$, 令 $g_{U}\left(x\right)=d\left(x,U^{c}\right)$ 为 $x$ 到闭集 $U^{c}$ 的距离. 函数 $g_{U}$ 连续, 且 $g_{U}\left(x\right)> 0$ 当且仅当 $x\notin U^{c}$, 即 $x\in U$. 于是
 
