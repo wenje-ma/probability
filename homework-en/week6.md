@@ -100,19 +100,19 @@ Prove directly from the definition: if $X$ and $Y$ are independent and $f,g$ are
 For any Borel sets $A,B\in\mathcal{R}$, write
 
 $$
-\left\{f\left(X\right)\in{A}\right\}=\left\{X\in{f}^{-1}\left(A\right)\right\},\qquad\left\{g\left(Y\right)\in{B}\right\}=\left\{Y\in{g}^{-1}\left(B\right)\right\}.
+\left\{f\left(X\right)\in{A}\right\}=\left\{X\in{f}^{-1}\left(A\right)\right\},\quad\left\{g\left(Y\right)\in{B}\right\}=\left\{Y\in{g}^{-1}\left(B\right)\right\}.
 $$
 
 Since $f,g$ are measurable, $f^{-1}\left(A\right),g^{-1}\left(B\right)\in\mathcal{R}$. By the definition of independence of $X,Y$ (**Definition 2.1.2 (Independent Random Variables)**, holding for all Borel sets),
 
 $$
-P\left(X\in{f}^{-1}\left(A\right),\,Y\in{g}^{-1}\left(B\right)\right)=P\left(X\in{f}^{-1}\left(A\right)\right)P\left(Y\in{g}^{-1}\left(B\right)\right).
+P\left(X\in{f}^{-1}\left(A\right),Y\in{g}^{-1}\left(B\right)\right)=P\left(X\in{f}^{-1}\left(A\right)\right)P\left(Y\in{g}^{-1}\left(B\right)\right).
 $$
 
 That is,
 
 $$
-P\left(f\left(X\right)\in{A},\,g\left(Y\right)\in{B}\right)=P\left(f\left(X\right)\in{A}\right)P\left(g\left(Y\right)\in{B}\right).
+P\left(f\left(X\right)\in{A},g\left(Y\right)\in{B}\right)=P\left(f\left(X\right)\in{A}\right)P\left(g\left(Y\right)\in{B}\right).
 $$
 
 Since $A,B$ are arbitrary, $f\left(X\right)$ and $g\left(Y\right)$ are independent. $\blacksquare$

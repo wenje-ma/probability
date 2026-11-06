@@ -75,7 +75,7 @@ $$
 但当 $\omega\in\left(1/12,5/12\right)$ 时, $\sin\left(4\pi\omega\right)$ 的最大值为 $\sqrt{3}/2$ (在端点 $\omega=1/12$ 处), 故 $X_{1}>1/2$ 蕴含 $X_{2}\le\sqrt{3}/2$, 即
 
 $$
-P\left(X_{1}>1/2,\,X_{2}>\sqrt{3}/2\right)=0,
+P\left(X_{1}>1/2,X_{2}>\sqrt{3}/2\right)=0,
 $$
 
 而

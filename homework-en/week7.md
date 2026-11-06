@@ -75,7 +75,7 @@ $$
 But when $\omega\in\left(1/12,5/12\right)$, the maximum of $\sin\left(4\pi\omega\right)$ is $\sqrt{3}/2$ (attained at the endpoint $\omega=1/12$), so $X_{1}>1/2$ implies $X_{2}\le\sqrt{3}/2$, i.e.
 
 $$
-P\left(X_{1}>1/2,\,X_{2}>\sqrt{3}/2\right)=0,
+P\left(X_{1}>1/2,X_{2}>\sqrt{3}/2\right)=0,
 $$
 
 whereas

@@ -93,7 +93,7 @@ $$
 (a)(1) 因 $g\ge0$ 且 $g\left(t\right)=0$ 当且仅当 $t=0$, 由**习题 1.4.1 (积分为零蕴含几乎处处为零)**,
 
 $$
-d\left(X,Y\right)=0\iff{E}\,g\left(\left|X-Y\right|\right)=0\iff{g}\left(\left|X-Y\right|\right)=0\,\text{几乎处处}\iff\left|X-Y\right|=0\,\text{几乎处处}\iff{X}=Y\,\text{几乎处处}.
+d\left(X,Y\right)=0\iff{E}\,g\left(\left|X-Y\right|\right)=0\iff{g}\left(\left|X-Y\right|\right)=0\;\text{几乎处处}\iff\left|X-Y\right|=0\;\text{几乎处处}\iff{X}=Y\;\text{几乎处处}.
 $$
 
 (a)(2) 由 $\left|X-Y\right|=\left|Y-X\right|$ 立即得 $d\left(X,Y\right)=d\left(Y,X\right)$.

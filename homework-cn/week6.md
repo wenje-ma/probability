@@ -100,19 +100,19 @@ $\blacksquare$
 对任意博雷尔集 $A,B\in\mathcal{R}$, 记
 
 $$
-\left\{f\left(X\right)\in{A}\right\}=\left\{X\in{f}^{-1}\left(A\right)\right\},\qquad\left\{g\left(Y\right)\in{B}\right\}=\left\{Y\in{g}^{-1}\left(B\right)\right\}.
+\left\{f\left(X\right)\in{A}\right\}=\left\{X\in{f}^{-1}\left(A\right)\right\},\quad\left\{g\left(Y\right)\in{B}\right\}=\left\{Y\in{g}^{-1}\left(B\right)\right\}.
 $$
 
 因 $f,g$ 可测, $f^{-1}\left(A\right),g^{-1}\left(B\right)\in\mathcal{R}$. 由 $X,Y$ 独立的定义 (**定义 2.1.2 (独立随机变量)**, 对一切博雷尔集成立),
 
 $$
-P\left(X\in{f}^{-1}\left(A\right),\,Y\in{g}^{-1}\left(B\right)\right)=P\left(X\in{f}^{-1}\left(A\right)\right)P\left(Y\in{g}^{-1}\left(B\right)\right).
+P\left(X\in{f}^{-1}\left(A\right),Y\in{g}^{-1}\left(B\right)\right)=P\left(X\in{f}^{-1}\left(A\right)\right)P\left(Y\in{g}^{-1}\left(B\right)\right).
 $$
 
 即
 
 $$
-P\left(f\left(X\right)\in{A},\,g\left(Y\right)\in{B}\right)=P\left(f\left(X\right)\in{A}\right)P\left(g\left(Y\right)\in{B}\right).
+P\left(f\left(X\right)\in{A},g\left(Y\right)\in{B}\right)=P\left(f\left(X\right)\in{A}\right)P\left(g\left(Y\right)\in{B}\right).
 $$
 
 由于 $A,B$ 任意, $f\left(X\right)$ 与 $g\left(Y\right)$ 独立. $\blacksquare$

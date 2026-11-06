@@ -18,7 +18,7 @@
 
 > **定义 1.4.1 (积分的四步定义)**
 > 
-> 设 $\mu$ 是 $\left(\Omega,\mathcal{F}\right)$ 上的 $\sigma$-有限测度. (1) 简单函数 $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ 两两不交, $\mu\left(A_{i}\right)<\infty$) 的积分为 $\int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right)$; (2) 非负有界,在有限测度集外为零的 $f$ 的积分为 $\int{f}\,\mathrm{d}\mu=\sup_{\phi\le{f}}\int\phi\,\mathrm{d}\mu$; (3) 非负可测 $f$ 的积分为 $\int{f}\,\mathrm{d}\mu=\sup\left\{\int{h}\,\mathrm{d}\mu:0\le{h}\le{f},\,h\text{~有界且~}\mu\left(\left\{h>0\right\}\right)<\infty\right\}$; (4) 一般可测 $f$ 若 $\int\left|f\right|\,\mathrm{d}\mu<\infty$ 称可积, $\int{f}\,\mathrm{d}\mu=\int{f}^{+}\,\mathrm{d}\mu-\int{f}^{-}\,\mathrm{d}\mu$, 其中 $f^{+}=f\vee0$, $f^{-}=\left(-f\right)\vee0$.
+> 设 $\mu$ 是 $\left(\Omega,\mathcal{F}\right)$ 上的 $\sigma$-有限测度. (1) 简单函数 $\phi=\sum_{i}a_{i}\mathbf{1}_{A_{i}}$ ($A_{i}$ 两两不交, $\mu\left(A_{i}\right)<\infty$) 的积分为 $\int\phi\,\mathrm{d}\mu=\sum_{i}a_{i}\mu\left(A_{i}\right)$; (2) 非负有界,在有限测度集外为零的 $f$ 的积分为 $\int{f}\,\mathrm{d}\mu=\sup_{\phi\le{f}}\int\phi\,\mathrm{d}\mu$; (3) 非负可测 $f$ 的积分为 $\int{f}\,\mathrm{d}\mu=\sup\left\{\int{h}\,\mathrm{d}\mu:0\le{h}\le{f},h\text{~有界且~}\mu\left(\left\{h>0\right\}\right)<\infty\right\}$; (4) 一般可测 $f$ 若 $\int\left|f\right|\,\mathrm{d}\mu<\infty$ 称可积, $\int{f}\,\mathrm{d}\mu=\int{f}^{+}\,\mathrm{d}\mu-\int{f}^{-}\,\mathrm{d}\mu$, 其中 $f^{+}=f\vee0$, $f^{-}=\left(-f\right)\vee0$.
 
 > **定理 1.4.7 (积分的基本性质)**
 > 

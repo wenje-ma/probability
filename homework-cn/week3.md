@@ -37,7 +37,7 @@ $$
 其中 $\left[x\right]$ 为不超过 $x$ 的最大整数. $g_{n}$ 是取有限值的阶梯简单函数, 且 $g_{n}\uparrow{g}$ 逐点. 于是取
 
 $$
-f_{n}=f_{n}^{+}-f_{n}^{-},\qquad{f}_{n}^{\pm}=\frac{\left[2^{n}f^{\pm}\right]}{2^{n}}\wedge{n}.
+f_{n}=f_{n}^{+}-f_{n}^{-},\quad{f}_{n}^{\pm}=\frac{\left[2^{n}f^{\pm}\right]}{2^{n}}\wedge{n}.
 $$
 
 $f_{n}$ 是两个简单函数之差, 仍是简单函数, 故 $f_{n}\in\mathcal{M}$; 又 $f_{n}\to{f}$ 逐点 (因 $f_{n}^{\pm}\to{f}^{\pm}$), 由 $\mathcal{M}$ 对逐点极限封闭知 $f\in\mathcal{M}$.
@@ -61,7 +61,7 @@ $$
 $\left(\Rightarrow\right)$ 设 $Y$ 关于 $\sigma\left(X\right)$ 可测. 先处理简单函数: 若 $\phi=\sum_{m}c_{m}\mathbf{1}_{B_{m}}$ 是 $\sigma\left(X\right)$-可测简单函数, 则 $B_{m}\in\sigma\left(X\right)$, 故 $B_{m}=\left\{X\in{C}_{m}\right\}$ (某 $C_{m}\in\mathcal{R}$), 于是
 
 $$
-\phi=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)=g\left(X\right),\qquad{g}=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\,\text{可测}.
+\phi=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\left(X\right)=g\left(X\right),\quad{g}=\sum_{m}c_{m}\mathbf{1}_{C_{m}}\;\text{可测}.
 $$
 
 由解答 1, $Y$ 是 $\sigma\left(X\right)$-可测简单函数列 $\phi_{n}$ 的逐点极限, 每个 $\phi_{n}=g_{n}\left(X\right)$ 且 $g_{n}$ 可测. 令 $f=\limsup_{n}g_{n}$, 则 $f$ 可测 (**定理 1.3.7 (随机变量的极限运算)**), 且对每个 $\omega$,
