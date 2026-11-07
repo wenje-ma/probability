@@ -93,7 +93,7 @@ Let $g\left(t\right)=t/\left(1+t\right)$ ($t\ge0$).
 (a)(1) Since $g\ge0$ and $g\left(t\right)=0$ iff $t=0$, by **Exercise 1.4.1 (Zero Integral Implies Zero Almost Everywhere)**,
 
 $$
-d\left(X,Y\right)=0\iff{E}\,g\left(\left|X-Y\right|\right)=0\iff{g}\left(\left|X-Y\right|\right)=0\;\text{a.e.}\iff\left|X-Y\right|=0\;\text{a.e.}\iff{X}=Y\;\text{a.e.}
+d\left(X,Y\right)=0\Leftrightarrow{E}\,g\left(\left|X-Y\right|\right)=0\Leftrightarrow{g}\left(\left|X-Y\right|\right)=0\;\text{a.e.}\Leftrightarrow\left|X-Y\right|=0\;\text{a.e.}\Leftrightarrow{X}=Y\;\text{a.e.}
 $$
 
 (a)(2) Since $\left|X-Y\right|=\left|Y-X\right|$, immediately $d\left(X,Y\right)=d\left(Y,X\right)$.
